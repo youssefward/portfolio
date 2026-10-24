@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 43" width="40" height="43">
+  <!-- Minimalist Geometric YW Monogram -->
+  <path d="M4 8l16-6 16 6v12c0 10-8 18-16 21C12 38 4 30 4 20V8z" fill="none" stroke="#20211f" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Cinematic Aperture Iris Element in Accent Red -->
+  <circle cx="20" cy="18" r="5" fill="#bc171b"/>
+  <path d="M14 14l12 8M26 14l-12 8" stroke="#f6f5f1" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
