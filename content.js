@@ -1174,7 +1174,7 @@ window.CONTENT = {
       year: '2023',
       featured: true,
       role: { en: 'Brand Identity Designer & Art Director', ar: 'مصمم هوية بصرية وتوجيه فني' },
-      deliverables: ['Visual Identity Guidelines', 'Linen Tote Bag & Packaging', 'Stationery & Coaster Items'],
+      deliverables: ['Visual Identity Guidelines', 'Kufic Emblem Grid Construction', 'Linen Tote Bag & Cultural Packaging', 'Stationery & Coaster Items'],
       description: {
         en: 'Brand identity system, stationery, and cultural merchandise for Diwan Publishing House, combining literary heritage with contemporary layout principles.',
         ar: 'تصميم الهوية البصرية الشاملة، المنظومة الطباعية والمقتنيات الثقافية (الحقيبة القماشية، الكوستر، وبطاقات الهوية) لدار ديوان للنشر.'
@@ -1195,16 +1195,37 @@ window.CONTENT = {
       },
       images: [
         {
-          src: 'assets/images/design/diwan-tote-bag.jpg',
-          thumb: 'assets/images/design/diwan-tote-bag-thumb.jpg',
-          alt: 'Diwan Merchandise — Natural Linen Tote Bag',
+          src: 'assets/images/design/diwan-tote-clean.jpg',
+          thumb: 'assets/images/design/diwan-tote-clean-thumb.jpg',
+          alt: 'Diwan Merchandise — Minimalist Natural Linen Tote Bag',
           width: 1920,
           height: 1385
         },
         {
-          src: 'assets/images/design/diwan-coaster.jpg',
-          thumb: 'assets/images/design/diwan-coaster-thumb.jpg',
-          alt: 'Diwan Cultural Coaster & Stationery',
+          src: 'assets/images/design/diwan-brand-ecosystem.jpg',
+          thumb: 'assets/images/design/diwan-brand-ecosystem-thumb.jpg',
+          alt: 'Diwan Brand Ecosystem — Master Brand Guidelines & Cultural Artifacts',
+          width: 1920,
+          height: 2715
+        },
+        {
+          src: 'assets/images/design/diwan-kufic-mark.jpg',
+          thumb: 'assets/images/design/diwan-kufic-mark-thumb.jpg',
+          alt: 'Diwan Emblem — Square Kufic Geometry & Grid Construction',
+          width: 1092,
+          height: 1280
+        },
+        {
+          src: 'assets/images/design/diwan-tote-pattern.jpg',
+          thumb: 'assets/images/design/diwan-tote-pattern-thumb.jpg',
+          alt: 'Diwan Merchandise — Patterned Linen Tote Bag',
+          width: 1920,
+          height: 1385
+        },
+        {
+          src: 'assets/images/design/diwan-coasters-cyan.jpg',
+          thumb: 'assets/images/design/diwan-coasters-cyan-thumb.jpg',
+          alt: 'Diwan Cultural Artifacts — 3D Floating Coasters & Packaging',
           width: 1920,
           height: 1344
         },
@@ -1280,7 +1301,7 @@ window.CONTENT = {
       year: '2023',
       featured: true,
       role: { en: 'Book Cover & Editorial Designer', ar: 'مصمم أغلفة وتيبوغرافي' },
-      deliverables: ['Cover Grid Architecture', 'Typographic Hierarchy Specs', 'Physical Bookmark Design'],
+      deliverables: ['3D Hardcover Architecture & Mockups', 'Production Wrap Spreads (Front, Spine, Back)', 'Typographic Hierarchy & Grid System', 'Die-Cut Literary Bookmarks'],
       description: {
         en: 'Editorial book cover design systems, typography hierarchy rules, and bookmark layouts for literary publications.',
         ar: 'معمار وتصميم أغلفة الكتب، قواعد التراتبية التيبوغرافية، وتصاميم فواصل القراءة للإصدارات الأدبية.'
@@ -1301,39 +1322,101 @@ window.CONTENT = {
       },
       images: [
         {
-          src: 'assets/images/design/diwan-book-1.jpg',
-          thumb: 'assets/images/design/diwan-book-1-thumb.jpg',
-          alt: 'Diwan Book Architecture — Cover Series 01',
+          src: 'assets/images/design/diwan-book-mohamed-ali-3d.jpg',
+          thumb: 'assets/images/design/diwan-book-mohamed-ali-3d-thumb.jpg',
+          alt: 'Diwan Book Architecture — Mohamed Ali Monograph 3D Hardcover',
           width: 1920,
           height: 1440
         },
         {
-          src: 'assets/images/design/diwan-book-2.jpg',
-          thumb: 'assets/images/design/diwan-book-2-thumb.jpg',
-          alt: 'Diwan Editorial Spread & Spine 02',
+          src: 'assets/images/design/diwan-book-mohamed-ali-spread.jpg',
+          thumb: 'assets/images/design/diwan-book-mohamed-ali-spread-thumb.jpg',
+          alt: 'Diwan Book Architecture — Mohamed Ali Full Wrap Jacket Spread',
+          width: 1280,
+          height: 901
+        },
+        {
+          src: 'assets/images/design/diwan-book-sculpture-3d.jpg',
+          thumb: 'assets/images/design/diwan-book-sculpture-3d-thumb.jpg',
+          alt: 'Diwan Book Architecture — Classical Sculpture Edition 3D Hardcover',
           width: 1920,
           height: 1440
         },
         {
-          src: 'assets/images/design/diwan-book-3.jpg',
-          thumb: 'assets/images/design/diwan-book-3-thumb.jpg',
-          alt: 'Diwan Hardcover Architecture 03',
+          src: 'assets/images/design/diwan-book-sculpture-spread.jpg',
+          thumb: 'assets/images/design/diwan-book-sculpture-spread-thumb.jpg',
+          alt: 'Diwan Book Architecture — Classical Sculpture Full Wrap Jacket Spread',
+          width: 1280,
+          height: 901
+        },
+        {
+          src: 'assets/images/design/diwan-book-coptic-3d.jpg',
+          thumb: 'assets/images/design/diwan-book-coptic-3d-thumb.jpg',
+          alt: 'Diwan Book Architecture — Coptic Heritage Monograph 3D Hardcover',
           width: 1920,
           height: 1440
         },
         {
-          src: 'assets/images/design/diwan-book-4.jpg',
-          thumb: 'assets/images/design/diwan-book-4-thumb.jpg',
-          alt: 'Diwan Cover Layout Variations 04',
-          width: 1920,
-          height: 1440
+          src: 'assets/images/design/diwan-book-coptic-spread.jpg',
+          thumb: 'assets/images/design/diwan-book-coptic-spread-thumb.jpg',
+          alt: 'Diwan Book Architecture — Coptic Heritage Full Wrap Jacket Spread',
+          width: 1280,
+          height: 901
         },
         {
-          src: 'assets/images/design/diwan-bookmark.jpg',
-          thumb: 'assets/images/design/diwan-bookmark-thumb.jpg',
-          alt: 'Diwan Custom Cardboard Bookmark Mockup',
+          src: 'assets/images/design/diwan-bookmark-diecut.jpg',
+          thumb: 'assets/images/design/diwan-bookmark-diecut-thumb.jpg',
+          alt: 'Diwan Literary Artifact — Die-Cut Cardboard Bookmark',
           width: 1920,
           height: 1280
+        }
+      ]
+    },
+
+    {
+      id: 'hona-al-qahira',
+      name: { en: 'Hona Al Qahira — Novel Cover Architecture', ar: 'رواية هنا القاهرة — معمار الغلاف والتصميم التحريري' },
+      discipline: 'design',
+      subdiscipline: 'editorial',
+      subdisciplineName: { en: 'Book & Editorial', ar: 'أغلفة ومطبوعات' },
+      agency: 'Dar Al Hadaf Publishing',
+      client: 'Dar Al Hadaf / Author Hossam Hamdy',
+      year: '2023',
+      featured: true,
+      role: { en: 'Book Cover Designer & Typographer', ar: 'تصميم الغلاف والتيبوغرافي' },
+      deliverables: ['Full Wrap Cover Spread (Front, Spine, Back)', 'Cairo Urban Photomontage Collage', 'High-Contrast Typographic Hierarchy'],
+      description: {
+        en: 'Full wrap cover design and architectural typography for the published novel "Hona Al Qahira — Qahran Wa Laysa Makan" by author Hossam Hamdy, published by Dar Al Hadaf.',
+        ar: 'تصميم الغلاف الكامل (الواجهة، الكعب، والغلاف الخلفي) والمعمار التيبوغرافي لرواية "هنا القاهرة — قهراً وليس مكاناً" للكاتب حسام حمدي، الصادرة عن دار الهدف للنشر والتوزيع.'
+      },
+      thinking: {
+        challenge: {
+          en: 'Translating the psychological weight and urban intensity of the novel title ("Oppression, not merely a place") into a striking, unmissable cover presence in bookstores.',
+          ar: 'تجسيد الثقل النفسي والزخم البصري للمدينة كما يعبر عنها عنوان الرواية ("قهراً وليس مكاناً") في غلاف لافت ومعبر يحقق حضوراً استثنائياً على أرفف المكتبات ومعارض الكتب.'
+        },
+        decisions: {
+          en: 'Employed an arresting high-voltage canary yellow background contrasted against stark monochrome architectural photomontage of Cairo (the Tower, Islamic minarets, and street vendors), crowned with heavy brutalist Arabic typography.',
+          ar: 'توظيف خلفية صفراء ساطعة تخلق تبايناً حاداً مع كولاج فوتوغرافي مونوكرومي لمعالم القاهرة (البرج، المآذن التاريخية، وبائع الخبز المتجول)، وتتويج التكوين بخط عربي عريض حاد البنية يعكس صدمة وجرأة العنوان.'
+        },
+        outcome: {
+          en: 'A published literary cover spread and promotional key art capturing the novel’s visceral urban narrative through bold color blocking and photomontage.',
+          ar: 'غلاف روائي منشور ومادة ترويجية تجسد السردية الحضرية للرواية من خلال كتل لونية صريحة وتوليف بصري تيبوغرافي معبّر.'
+        }
+      },
+      images: [
+        {
+          src: 'assets/images/design/hona-al-qahira-cover-spread.jpg',
+          thumb: 'assets/images/design/hona-al-qahira-cover-spread-thumb.jpg',
+          alt: 'Hona Al Qahira — Full Wrap Novel Cover Spread (Dar Al Hadaf)',
+          width: 1920,
+          height: 1344
+        },
+        {
+          src: 'assets/images/design/hona-al-qahira-poster-front.jpg',
+          thumb: 'assets/images/design/hona-al-qahira-poster-front-thumb.jpg',
+          alt: 'Hona Al Qahira — Front Cover Architecture & Key Art Poster',
+          width: 1920,
+          height: 2716
         }
       ]
     },
@@ -1352,10 +1435,10 @@ window.CONTENT = {
       year: '2023 - 2024',
       featured: true,
       role: { en: 'Poster & Key Art Designer', ar: 'مصمم بوسترات ومواد إعلانية' },
-      deliverables: ['Large-Format Exhibition Posters', 'Typographic Layout Compositions', 'Promotional Print Layouts'],
+      deliverables: ['Large-Format Exhibition Posters', 'Typographic Monogram & Identity Studies', 'Promotional Print Layouts'],
       description: {
-        en: 'Promotional posters and key art designs created for literary gatherings, cultural forums, and typographic exhibitions.',
-        ar: 'تصميم البوسترات الترويجية والمواد المطبوعة الخاصة بالملتقيات الثقافية، المعارض الفنية، وتجارب التيبوغرافي المعاصر.'
+        en: 'Promotional posters, typographic identity studies, and key art designs created for literary gatherings, cultural forums, and design exhibitions.',
+        ar: 'تصميم البوسترات الترويجية، دراسات الهوية التيبوغرافية، والمواد المطبوعة الخاصة بالملتقيات الثقافية والمعارض الفنية.'
       },
       thinking: {
         challenge: {
@@ -1392,6 +1475,13 @@ window.CONTENT = {
           alt: 'Typographic Key Art Composition 03',
           width: 1357,
           height: 1920
+        },
+        {
+          src: 'assets/images/design/ward-typographic-monogram.jpg',
+          thumb: 'assets/images/design/ward-typographic-monogram-thumb.jpg',
+          alt: 'Youssef Ward — Typographic Monogram & Geometric Identity Study',
+          width: 1400,
+          height: 1000
         }
       ]
     }
