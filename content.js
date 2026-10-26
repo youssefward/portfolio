@@ -41,6 +41,7 @@ window.CONTENT = {
       },
       categories: [
         { id: 'all', name: { en: 'All Film Work', ar: 'جميع أعمال السينما' } },
+        { id: 'commercial', name: { en: 'Commercials', ar: 'إعلانات تجارية' } },
         { id: 'drama', name: { en: 'Drama & TV Series', ar: 'الدراما والمسلسلات' } },
         { id: 'broadcast', name: { en: 'Television Shows', ar: 'الإنتاج والبرامج' } },
         { id: 'visual-studies', name: { en: 'Graduation Film', ar: 'فيلم التخرج' } }
@@ -378,6 +379,87 @@ window.CONTENT = {
     },
 
     /* ════════════════════════════════════════════════════════════
+       1. FILMMAKING: COMMERCIALS & FOOD FILM
+       ════════════════════════════════════════════════════════════ */
+    {
+      id: 'clove-commercial',
+      name: { en: 'Clove Restaurant — Cinematic Culinary Commercial', ar: 'مطعم Clove — إعلان سينمائي ترويجي' },
+      discipline: 'filmmaking',
+      subdiscipline: 'commercial',
+      subdisciplineName: { en: 'Commercial Film & Food', ar: 'إعلانات وتصوير طعام سينمائي' },
+      agency: 'Clove Restaurant & Lounge',
+      client: 'Clove Restaurant & Lounge',
+      year: '2021',
+      featured: true,
+      role: { en: 'Cinematography & Commercial Direction', ar: 'مدير تصوير وإخراج إعلاني' },
+      deliverables: ['Culinary Commercial Film (1080p)', 'High-Speed Searing & Flame Tracking', 'Slow-Motion Plating Choreography'],
+      video: 'assets/videos/clove-commercial.mp4',
+      videoLabel: { en: 'Watch Cinematic Commercial (1080p HD)', ar: 'مشاهدة الإعلان السينمائي (1080p HD)' },
+      description: {
+        en: 'A fast-paced, high-contrast culinary commercial crafted for Clove restaurant, capturing the rhythmic sizzle of dry-aged steaks on open flame, slow-motion pasta tossing, and meticulous chef plating.',
+        ar: 'إعلان سينمائي ترويجي سريع وعالي التباين لمطعم Clove، يرصد إيقاع طهي شرائح اللحم الفاخرة على اللهب المفتوح، تقليب الباستا بالحركة البطيئة، وفنون تقديم الأطباق الراقية بلمسات الشيف.'
+      },
+      thinking: {
+        challenge: {
+          en: 'Balancing volatile kitchen action — open flame grills, intense sizzle steam, and rapid pan tossing — with precise cinematic framing and appetizing lighting in a live kitchen environment.',
+          ar: 'الموازنة بين ديناميكية حركة المطبخ السريعة — ألسنة اللهب على الشواية، بخار الطهي المتصاعد، وتقليب المقالي — مع الحفاظ على دقة الكادر السينمائي والتحكم في إضاءة تُبرز جاذبية الأطعمة.'
+        },
+        decisions: {
+          en: 'Shot at 24fps high-shutter and selective slow-motion angles using focused directional lighting to emphasize glowing embers, sauce reflections, and the crisp texture of seared meats against deep shadows.',
+          ar: 'التصوير بزوايا إضاءة جانبية مركزة لإبراز وهج الفحم ولهب الشواء، لمعان الصلصات، وتفاصيل تسوية اللحم الدقيقة في مواجهة خلفية مطبخ داكنة تعزز الإحساس بالفخامة والعمق.'
+        },
+        outcome: {
+          en: 'A complete 49-second promotional commercial highlighting the craftsmanship and culinary excellence of Clove restaurant for digital and social campaigns.',
+          ar: 'إعلان ترويجي متكامل مدته 49 ثانية يبرز حرفية الطهي وتفرد تجربة الطعام في مطعم Clove للاستخدام في الحملات الرقمية ومنصات التواصل الاجتماعي.'
+        }
+      },
+      images: [
+        {
+          src: 'assets/images/filmmaking/clove-commercial-poster.jpg',
+          thumb: 'assets/images/filmmaking/clove-commercial-poster-thumb.jpg',
+          alt: 'Clove Commercial — Master Chef Plating & Final Gourmet Dish Presentation',
+          width: 1920,
+          height: 1080
+        },
+        {
+          src: 'assets/images/filmmaking/clove-film-2.jpg',
+          thumb: 'assets/images/filmmaking/clove-film-2-thumb.jpg',
+          alt: 'Clove Commercial — Live Open Flame Grill Sear & Rising Smoke',
+          width: 1920,
+          height: 1080
+        },
+        {
+          src: 'assets/images/filmmaking/clove-film-3.jpg',
+          thumb: 'assets/images/filmmaking/clove-film-3-thumb.jpg',
+          alt: 'Clove Commercial — Artisanal Spaghetti Sizzle in Stainless Steel Pan',
+          width: 1920,
+          height: 1080
+        },
+        {
+          src: 'assets/images/filmmaking/clove-film-4.jpg',
+          thumb: 'assets/images/filmmaking/clove-film-4-thumb.jpg',
+          alt: 'Clove Commercial — Delicate Plating with Yellow Cherry Tomatoes & Glaze',
+          width: 1920,
+          height: 1080
+        },
+        {
+          src: 'assets/images/filmmaking/clove-film-1.jpg',
+          thumb: 'assets/images/filmmaking/clove-film-1-thumb.jpg',
+          alt: 'Clove Commercial — Seasoning Prime Cut Ribeye on Prep Station',
+          width: 1920,
+          height: 1080
+        },
+        {
+          src: 'assets/images/filmmaking/clove-film-6.jpg',
+          thumb: 'assets/images/filmmaking/clove-film-6-thumb.jpg',
+          alt: 'Clove Commercial — In Love of Food Closing Title Card',
+          width: 1920,
+          height: 1080
+        }
+      ]
+    },
+
+    /* ════════════════════════════════════════════════════════════
        1. FILMMAKING: CINEMATIC STUDIES
        ════════════════════════════════════════════════════════════ */
     {
@@ -394,6 +476,7 @@ window.CONTENT = {
       deliverables: ['Continuous Motion Tracking', 'Kinetic Shutter Blur Study', 'Light Choreography Documentation'],
       video: 'https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci',
       vimeoId: '1239369594',
+      videoLabel: { en: 'Watch Full Graduation Film (Vimeo HD)', ar: 'مشاهدة فيلم التخرج كاملًا (Vimeo HD)' },
       description: {
         en: 'Graduation project from the Faculty of Applied Arts: an authored cinematic visual study exploring rotational movement, garment rhythm, and warm directional light during traditional Sufi Mawlawya ceremonies.',
         ar: 'مشروع التخرج من كلية الفنون التطبيقية: دراسة بصرية سينمائية ترصد الحركة الدورانية، وتناغم الضوء مع ثنايا الرداء في طقوس المولوية التراثية، بالتركيز على مسارات الحركة والظل.'
@@ -452,6 +535,8 @@ window.CONTENT = {
       featured: true,
       role: { en: 'Food & Beverage Photographer', ar: 'تصوير أطعمة ومشروبات' },
       deliverables: ['Gourmet Plating Stills', 'Chef Technique Captures', 'Directional Food Lighting'],
+      video: 'assets/videos/clove-commercial.mp4',
+      videoLabel: { en: 'Watch Accompanying Commercial Film (1080p HD)', ar: 'مشاهدة الفيلم الإعلاني المصاحب (1080p HD)' },
       description: {
         en: 'High-contrast commercial food photography for Clove restaurant, capturing gourmet plating, fresh ingredients, and culinary craftsmanship under directional studio lighting.',
         ar: 'تصوير أطعمة احترافي عالي التباين لمطعم Clove، يوثق فنون تقديم الأطباق الراقية، المكونات الطازجة، وتكنيك الشيف تحت إضاءة استوديو موجهة.'

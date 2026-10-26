@@ -484,6 +484,12 @@
           <div class="project-card-media">
             <img class="project-card-img" src="${esc(img.thumb || img.src)}" alt="${esc(t(p.name))}" loading="lazy" width="${img.width}" height="${img.height}">
             <div class="project-card-overlay" aria-hidden="true"></div>
+            ${p.video ? `
+              <div class="project-card-video-pill" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>${isAr ? 'فيديو' : 'FILM'}</span>
+              </div>
+            ` : ''}
             <div class="project-card-hover-info" aria-hidden="true">
               <p class="project-card-hover-title">${esc(t(p.name))}</p>
               <p class="project-card-hover-meta">${esc(p.agency || '')} &nbsp;·&nbsp; ${esc(p.year || '')}</p>
@@ -595,6 +601,12 @@
           <div class="project-card-media">
             ${img ? `<img class="project-card-img" src="${esc(img.thumb || img.src)}" alt="${esc(t(p.name))}" loading="lazy" width="${img.width}" height="${img.height}">` : '<div style="width:100%;height:100%;background:var(--surface-alt);"></div>'}
             <div class="project-card-overlay" aria-hidden="true"></div>
+            ${p.video ? `
+              <div class="project-card-video-pill" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>${isAr ? 'فيديو' : 'FILM'}</span>
+              </div>
+            ` : ''}
             <div class="project-card-hover-info" aria-hidden="true">
               <p class="project-card-hover-title">${esc(t(p.name))}</p>
               <p class="project-card-hover-meta">${esc(p.agency || '')}${p.year ? ' · ' + esc(p.year) : ''}</p>
@@ -741,7 +753,7 @@
               <div class="case-study-video-cta reveal reveal-delay-4" style="margin: 24px 0 8px;">
                 <button class="btn btn-secondary hero-film-btn case-study-play-btn" data-video="${esc(project.video)}">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                  <span>${isAr ? 'مشاهدة فيلم التخرج كاملًا (Vimeo HD)' : 'Watch Full Graduation Film (Vimeo HD)'}</span>
+                  <span>${project.videoLabel ? (isAr ? project.videoLabel.ar : project.videoLabel.en) : (isAr ? 'مشاهدة الفيديو' : 'Watch Video')}</span>
                 </button>
               </div>
             ` : ''}
@@ -1109,23 +1121,47 @@
     });
   }
 
-  /* ── VIDEO MODAL (MAWLAWYA GRADUATION FILM) ─────────────── */
+  /* ── VIDEO MODAL (VIMEO EMBED & NATIVE HTML5 CINEMA PLAYER) ── */
   let lastVideoTrigger = null;
 
   function openVideoModal(videoUrl) {
     const modal = $('#video-modal');
     const iframe = $('#video-modal-iframe');
-    if (!modal || !iframe) return;
+    const player = $('#video-modal-player');
+    if (!modal) return;
     lastVideoTrigger = document.activeElement;
 
-    let src = videoUrl;
-    if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
-      const match = src.match(/vimeo\.com\/(\d+)/);
-      if (match) {
-        src = `https://player.vimeo.com/video/${match[1]}?autoplay=1&color=bc171b&title=0&byline=0&portrait=0`;
+    const isDirectVideo = videoUrl.endsWith('.mp4') || videoUrl.endsWith('.webm') || videoUrl.includes('assets/videos/');
+
+    if (isDirectVideo) {
+      if (iframe) {
+        iframe.src = '';
+        iframe.style.display = 'none';
+      }
+      if (player) {
+        player.src = videoUrl;
+        player.style.display = 'block';
+        player.play().catch(() => {});
+      }
+    } else {
+      if (player) {
+        try { player.pause(); } catch (e) {}
+        player.src = '';
+        player.style.display = 'none';
+      }
+      if (iframe) {
+        let src = videoUrl;
+        if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
+          const match = src.match(/vimeo\.com\/(\d+)/);
+          if (match) {
+            src = `https://player.vimeo.com/video/${match[1]}?autoplay=1&color=bc171b&title=0&byline=0&portrait=0`;
+          }
+        }
+        iframe.src = src;
+        iframe.style.display = 'block';
       }
     }
-    iframe.src = src;
+
     modal.showModal();
     document.body.style.overflow = 'hidden';
     modal.focus();
@@ -1134,9 +1170,18 @@
   function closeVideoModal() {
     const modal = $('#video-modal');
     const iframe = $('#video-modal-iframe');
+    const player = $('#video-modal-player');
     if (!modal) return;
     try { modal.close(); } catch (e) {}
-    if (iframe) iframe.src = '';
+    if (iframe) {
+      iframe.src = '';
+      iframe.style.display = 'none';
+    }
+    if (player) {
+      try { player.pause(); } catch (e) {}
+      player.src = '';
+      player.style.display = 'none';
+    }
     document.body.style.overflow = '';
     if (lastVideoTrigger && typeof lastVideoTrigger.focus === 'function') {
       lastVideoTrigger.focus();
