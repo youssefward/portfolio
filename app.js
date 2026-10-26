@@ -1,5 +1,5 @@
 /* ============================================================
-   YOUSEF WARD PORTFOLIO — APPLICATION ENGINE
+   YOUSSEF WARD PORTFOLIO — APPLICATION ENGINE
    Pure Vanilla JS · No Frameworks · No Build Tools
    A+B Hybrid: Kinetic Editorial + Cinematic Art Direction
    ============================================================ */
@@ -32,7 +32,8 @@
   /* ── CURSOR ─────────────────────────────────────────────── */
   function initCursor() {
     const cursor = $('#cursor');
-    if (!cursor || window.matchMedia('(pointer: coarse)').matches) {
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!cursor || window.matchMedia('(pointer: coarse)').matches || prefersReduced) {
       if (cursor) cursor.style.display = 'none';
       return;
     }
@@ -67,10 +68,24 @@
   }
 
   /* ── THEME (DARK / LIGHT) ────────────────────────────────── */
+  function getSavedTheme() {
+    try {
+      return localStorage.getItem('yw-theme') || 'light';
+    } catch (e) {
+      return 'light';
+    }
+  }
+
+  function setSavedTheme(theme) {
+    try {
+      localStorage.setItem('yw-theme', theme);
+    } catch (e) {}
+  }
+
   function setTheme(theme) {
     State.theme = theme;
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('yw-theme', theme);
+    setSavedTheme(theme);
     $$('.nav-theme-btn').forEach(btn => {
       btn.innerHTML = theme === 'dark' ? sunIcon() : moonIcon();
     });
@@ -158,7 +173,7 @@
       <div class="nav-backdrop"></div>
       <nav class="nav" role="navigation" aria-label="${isAr ? 'القائمة الرئيسية' : 'Main navigation'}">
         <button class="nav-logo" data-section="home">
-          YOUSEF<span>.</span>WARD
+          YOUSSEF<span>.</span>WARD
         </button>
 
         <div class="nav-links" id="nav-links" role="list">
@@ -217,6 +232,21 @@
     if (menuBtn) { menuBtn.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
   }
 
+  // Close mobile menu on Escape key or click outside
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+
+  document.addEventListener('click', (e) => {
+    const navLinks = $('#nav-links');
+    const menuBtn = $('#menu-btn');
+    if (navLinks && navLinks.classList.contains('open')) {
+      if (!navLinks.contains(e.target) && !menuBtn?.contains(e.target)) {
+        closeMobileMenu();
+      }
+    }
+  });
+
   function updateNavActive() {
     const currentActive = State.route.type === 'section' ? State.route.id : getParentDiscipline(State.route.id);
     $$('.nav-link').forEach(btn => {
@@ -246,6 +276,13 @@
   }
 
   function observeReveals(container = document) {
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      $$('.reveal, .clip-reveal', container).forEach(node => {
+        node.classList.add('in-view');
+      });
+      return;
+    }
     if (!revealObserver) return;
     $$('.reveal, .clip-reveal', container).forEach(node => {
       revealObserver.observe(node);
@@ -285,7 +322,7 @@
         <img
           class="hero-cover"
           src="${esc(content.portrait)}"
-          alt="${isAr ? 'يوسف ورد — مصمم ومدير فني' : 'Yousef Ward — Multidisciplinary Designer & Art Director'}"
+          alt="${isAr ? 'يوسف ورد — مصمم ومدير فني' : 'Youssef Ward — Multidisciplinary Designer & Art Director'}"
           loading="eager"
           fetchpriority="high"
         >
@@ -299,7 +336,7 @@
             ${isAr ? '— مبدع بصري ومصمم متعدد التخصصات' : '— MULTIDISCIPLINARY DESIGNER & ART DIRECTOR'}
           </p>
           <h1 class="hero-name">
-            <span>${isAr ? 'يوسف' : 'YOUSEF'}</span>
+            <span>${isAr ? 'يوسف' : 'YOUSSEF'}</span>
             <span>${isAr ? 'ورد' : 'WARD'}</span>
           </h1>
           <p class="hero-role">
@@ -311,6 +348,10 @@
           <div class="hero-cta">
             <button class="btn btn-primary" data-nav="filmmaking">
               ${isAr ? 'استكشف الأعمال' : 'Explore Selected Work'}
+            </button>
+            <button class="btn btn-secondary hero-film-btn" id="hero-film-btn" data-video="https://player.vimeo.com/video/1239369594?autoplay=1&color=bc171b&title=0&byline=0&portrait=0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>${isAr ? 'شاهد فيلم التخرج (المولوية)' : 'Watch Graduation Film — Mawlawya'}</span>
             </button>
             <button class="btn btn-ghost" data-nav="about">
               ${isAr ? 'السيرة الذاتية' : 'Biography & CV'}
@@ -657,6 +698,15 @@
                 ${deliverables.map(tag => `<span class="case-study-tag">${esc(tag)}</span>`).join('')}
               </div>
             ` : ''}
+
+            ${project.video ? `
+              <div class="case-study-video-cta reveal reveal-delay-4" style="margin: 24px 0 8px;">
+                <button class="btn btn-secondary hero-film-btn case-study-play-btn" data-video="${esc(project.video)}">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span>${isAr ? 'مشاهدة فيلم التخرج كاملًا (Vimeo HD)' : 'Watch Full Graduation Film (Vimeo HD)'}</span>
+                </button>
+              </div>
+            ` : ''}
           </header>
 
           <!-- THE THINKING BEHIND THE WORK -->
@@ -756,13 +806,13 @@
               <img
                 class="about-portrait"
                 src="${esc(content.portrait)}"
-                alt="${isAr ? 'يوسف ورد' : 'Yousef Ward'}"
+                alt="${isAr ? 'يوسف ورد' : 'Youssef Ward'}"
                 loading="lazy"
               >
             </div>
             <div class="about-content">
               <h1 class="section-title reveal" style="margin-bottom:8px;">
-                ${isAr ? 'يوسف ورد' : 'Yousef Ward'}
+                ${isAr ? 'يوسف ورد' : 'Youssef Ward'}
               </h1>
               <p class="eyebrow reveal" style="color:var(--red);margin-bottom:20px;">
                 ${isAr ? 'مصمم متعدد التخصصات · مدير فني' : 'Multidisciplinary Designer & Art Director'}
@@ -864,7 +914,7 @@
     const year = new Date().getFullYear();
     footer.innerHTML = `
       <div class="footer-inner">
-        <p class="footer-copy">© ${year} Yousef Ward. ${isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</p>
+        <p class="footer-copy">© ${year} Youssef Ward. ${isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</p>
         <p class="footer-mark">YW — ${isAr ? 'عقل بصري واحد · تعبيرات متعددة' : 'ONE VISUAL MIND · MULTIPLE EXPRESSIONS'}</p>
       </div>
     `;
@@ -991,10 +1041,64 @@
     });
   }
 
+  /* ── VIDEO MODAL (MAWLAWYA GRADUATION FILM) ─────────────── */
+  function openVideoModal(videoUrl) {
+    const modal = $('#video-modal');
+    const iframe = $('#video-modal-iframe');
+    if (!modal || !iframe) return;
+
+    let src = videoUrl;
+    if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
+      const match = src.match(/vimeo\.com\/(\d+)/);
+      if (match) {
+        src = `https://player.vimeo.com/video/${match[1]}?autoplay=1&color=bc171b&title=0&byline=0&portrait=0`;
+      }
+    }
+    iframe.src = src;
+    modal.showModal();
+    document.body.style.overflow = 'hidden';
+    modal.focus();
+  }
+
+  function closeVideoModal() {
+    const modal = $('#video-modal');
+    const iframe = $('#video-modal-iframe');
+    if (!modal) return;
+    try { modal.close(); } catch (e) {}
+    if (iframe) iframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  function initVideoModal() {
+    const modal = $('#video-modal');
+    if (!modal) return;
+
+    $('#video-modal-close')?.addEventListener('click', closeVideoModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeVideoModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.hasAttribute('open')) {
+        closeVideoModal();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-video], .hero-film-btn, .case-study-play-btn');
+      if (btn) {
+        e.preventDefault();
+        const url = btn.dataset.video || 'https://player.vimeo.com/video/1239369594?autoplay=1&color=bc171b&title=0&byline=0&portrait=0';
+        openVideoModal(url);
+      }
+    });
+  }
+
   /* ── INITIALIZATION ─────────────────────────────────────── */
   function init() {
     // Theme
-    const savedTheme = localStorage.getItem('yw-theme') || 'light';
+    const savedTheme = getSavedTheme();
     setTheme(savedTheme);
 
     // Initial Route from Hash
@@ -1005,6 +1109,7 @@
     initScroll();
     initReveal();
     initLightbox();
+    initVideoModal();
 
     // Render Nav
     renderNav();

@@ -1,13 +1,13 @@
 /**
- * YOUSEF WARD — PORTFOLIO CONTENT ENGINE
- * Multidisciplinary Designer & Art Director
- * Hybrid Direction A + Direction B (Brief v1.1)
+ * YOUSSEF WARD — PORTFOLIO CONTENT ENGINE
+ * Multidisciplinary Designer & Art Director — With a Cinematic Eye
+ * Structured by 3 Core Disciplines: Filmmaking & Cinema, Still Photography, Graphic Design & Key Art
  */
 
 window.CONTENT = {
   meta: {
-    name: { en: 'Yousef Ward', ar: 'يوسف ورد' },
-    title: { en: 'Multidisciplinary Designer & Art Director', ar: 'مصمم متعدد التخصصات ومدير فني' },
+    name: { en: 'Youssef Ward', ar: 'يوسف ورد' },
+    title: { en: 'Multidisciplinary Designer & Art Director — With a Cinematic Eye', ar: 'مصمم متعدد التخصصات ومدير فني — بعين سينمائية' },
     concept: { en: 'One Visual Mind. Multiple Expressions.', ar: 'عقل بصري واحد. تعبيرات متعددة.' },
     location: { en: 'Cairo, Egypt', ar: 'القاهرة، مصر' },
     availability: { en: 'Open to Opportunities & Strategic Collaborations', ar: 'متاح للتعاون الإبداعي والمشاريع الاستراتيجية' }
@@ -15,18 +15,18 @@ window.CONTENT = {
 
   mark: 'assets/brand-mark.svg',
   portrait: 'assets/images/portrait/youssef-ward.jpg',
-  email: 'contact@youssefward.com',
-  phone: '+20 100 000 0000',
+  email: 'youssef.ward88@gmail.com',
+  phone: '+20 1155729978',
   cv: 'assets/youssef-ward-cv.pdf',
   portfolio: 'assets/youssef-ward-portfolio.pdf',
   linkedin: 'https://www.linkedin.com/in/yousef-ward-/',
   instagram: 'https://www.instagram.com/youssefward_/',
   behance: 'https://www.behance.net/youssef_Ward',
-  vimeo: 'https://vimeo.com/user193168038?fl=pp&fe=sh',
+  vimeo: 'https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci',
 
   bio: {
-    en: 'I am a multidisciplinary visual creator and art director with formal academic grounding in cinematography, photography, and graphic design from the Faculty of Applied Arts. Guided by the core conviction: Every Frame Is a Choice. Across cinematic film sets, high-profile broadcast television, editorial fashion campaigns, and comprehensive brand identity systems, my work prioritizes intentional light, architectural structure, spatial tension, and emotional truth.',
-    ar: 'مصمم بصري متعدد التخصصات ومدير فني يجمع بين التأصيل الأكاديمي للتصوير السينمائي، الفوتوغرافيا، والتصميم الجرافيكي من كلية الفنون التطبيقية. ينطلق عملي من قناعة راسخة: "كل كادر خيار". عبر مواقع تصوير كبرى الأعمال الدرامية، الإنتاج التلفزيوني، حملات الأزياء التحريرية، ومنظومات الهوية البصرية المتكاملة، أركز على تشكيل الضوء الواعي، البناء المعماري المتماسك، والتوتر المكاني الذي يخدم الحقيقة الشعورية للفكرة.'
+    en: 'I am a multidisciplinary designer and art director with an academic foundation in graphic design from the Faculty of Applied Arts, working with a distinct cinematic perspective. Guided by the principle that every visual decision is an intentional choice, my work spans brand identity systems, editorial typography, creative direction, and visual storytelling. Drawing from hands-on experience across film sets, studio lighting, and photography, I approach design with an acute awareness of composition, light, spatial structure, and visual atmosphere.',
+    ar: 'مصمم متعدد التخصصات ومدير فني حاصل على دراسة وتأهيل أكاديمي في التصميم الجرافيكي من كلية الفنون التطبيقية، أعمل برؤية بصرية ذات حس سينمائي. ينطلق عملي من مبدأ أن كل قرار بصري هو خيار واعٍ ومقصود، ويمتد عبر تصميم منظومات الهوية البصرية، التيبوغرافي، الإخراج الفني، والسرد البصري. واستناداً إلى خبرة عملية في مواقع تصوير الأعمال الدرامية وإدارة الضوء والفوتوغرافيا، أتعامل مع التصميم بفهم عميق للتكوين، وتوزيع الضوء، والبناء المعماري للكادر، والأجواء البصرية.'
   },
 
   disciplines: [
@@ -36,8 +36,8 @@ window.CONTENT = {
       title: { en: 'Filmmaking & Cinema', ar: 'صناعة الأفلام والسينما' },
       subtitle: { en: 'Camera Department · Drama Sets · Visual Studies', ar: 'قسم الكاميرا · كواليس الدراما · تجارب سينمائية' },
       description: {
-        en: 'Camera department craftsmanship across prime television dramas and cinematic visual studies. Grounded in intentional camera movement, low-key lighting, and tactical blocking.',
-        ar: 'خبرة ميدانية موثقة في قسم الكاميرا لكبرى المسلسلات والإنتاجات الدرامية والتلفزيونية، مع دراسة حركة الكاميرا، توزيع الإضاءة المنخفضة، والتكوين البصري المتقن.'
+        en: 'Camera department experience and on-set visual documentation across television drama productions and independent cinematic studies, focused on camera movement, low-key lighting, and scene composition.',
+        ar: 'مشاركة ميدانية في قسم الكاميرا وتوثيق بصري لكواليس كبرى الأعمال الدرامية والتلفزيونية وتجارب بصرية مستقلة، مع التركيز على حركة الكاميرا، توزيع الإضاءة المنخفضة، وبناء الكادر.'
       },
       categories: [
         { id: 'all', name: { en: 'All Film Work', ar: 'جميع أعمال السينما' } },
@@ -52,8 +52,8 @@ window.CONTENT = {
       title: { en: 'Still Photography', ar: 'التصوير الفوتوغرافي' },
       subtitle: { en: 'Fashion · Studio Portraits · Street', ar: 'أزياء وفاشن · استوديو وبورتريه · شوارع وتوثيق' },
       description: {
-        en: 'Editorial fashion campaigns, sculpted high-contrast studio portraiture, and quiet atmospheric street observations across Cairo.',
-        ar: 'حملات تصوير الأزياء التحريرية، بورتريهات الاستوديو المنحوتة بالضوء والظلال، والتصوير التوثيقي الهادئ لشوارع ومعمار القاهرة.'
+        en: 'Studio and editorial fashion photography, directional light studies in portraiture, and quiet atmospheric street observations across Cairo.',
+        ar: 'تصوير الأزياء التحريري والاستوديو، دراسات الضوء الموجه في البورتريه، والتصوير التوثيقي الهادئ لشوارع ومعمار القاهرة.'
       },
       categories: [
         { id: 'all', name: { en: 'All Photography', ar: 'جميع أعمال التصوير' } },
@@ -68,8 +68,8 @@ window.CONTENT = {
       title: { en: 'Graphic Design & Key Art', ar: 'التصميم الجرافيكي والبوستر' },
       subtitle: { en: 'Brand Identity · Book Architecture · Key Art', ar: 'هويات مؤسسية · معمار الكتب · بوسترات' },
       description: {
-        en: 'Rigorous visual identity systems, book cover typography, cultural packaging, and promotional key art grounded in Applied Arts methodology.',
-        ar: 'بناء الهويات البصرية الشاملة، هندسة وتيبوغرافي أغلفة الكتب، والتصاميم المطبوعة والمقتنيات الثقافية بمرجعية أكاديمية رصينة.'
+        en: 'Visual identity systems, book cover typography, cultural packaging items, and promotional key art grounded in an Applied Arts design methodology.',
+        ar: 'بناء الهويات البصرية، هندسة وتيبوغرافي أغلفة الكتب، المقتنيات الثقافية، والبوسترات الترويجية بمرجعية أكاديمية من الفنون التطبيقية.'
       },
       categories: [
         { id: 'all', name: { en: 'All Design', ar: 'جميع أعمال التصميم' } },
@@ -94,24 +94,24 @@ window.CONTENT = {
       client: 'Synergy Productions / UMS',
       year: '2020 - 2021',
       featured: true,
-      role: { en: 'Camera Department & Production Stills', ar: 'قسم الكاميرا والتوثيق الفوتوغرافي للإنتاج' },
-      deliverables: ['Live-Action Camera Support', 'Low-Key Tactical Set Stills', 'Lighting Continuity Documentation'],
+      role: { en: 'Camera Department / On-Set Stills (Role to be confirmed)', ar: 'قسم الكاميرا / توثيق موقع التصوير (قيد التأكيد النهائي للمسمى)' },
+      deliverables: ['On-Set Production Stills', 'Lighting Documentation', 'Live-Action Scene Tracking'],
       description: {
-        en: 'Camera department craftsmanship and on-set production stills for the landmark historical drama series El Ekhteyar. High-action sequence coverage, tactical framing, and atmospheric low-key set lighting.',
-        ar: 'عمل ميداني وتوثيق فوتوغرافي وسينمائي لكواليس وإطارات الملحمة الدرامية "الاختيار". التركيز على اللقطات التكتيكية وتوزيع الإضاءة العسكرية المنخفضة وحركة الكاميرا في المشاهد الحية.'
+        en: 'On-set camera department participation and production stills for the historical drama series El Ekhteyar, documenting action sequences, low-key lighting setups, and field composition.',
+        ar: 'مشاركة ميدانية في قسم الكاميرا وتوثيق فوتوغرافي لكواليس وإطارات الملحمة الدرامية "الاختيار"، مع التركيز على اللقطات التكتيكية وتوزيع الإضاءة المنخفضة في مواقع التصوير.'
       },
       thinking: {
         challenge: {
-          en: 'Capturing dynamic, physically demanding military combat sequences without interfering with principal cinematography, while maintaining visual continuity under harsh dust, night-vision setups, and rapid set changes.',
-          ar: 'التقاط إطارات متوازنة ومعبرة وسط مشاهد قتالية حية وتكتيكية بالغة الصعوبة والسرعة، مع الالتزام التام بخطوط حركة الكاميرا الرئيسية وتغيرات الإضاءة الليلية وغبار المعارك دون تعطيل مجرى التصوير.'
+          en: 'Documenting high-intensity combat setups under dust, low-light night setups, and rapid scene transitions while respecting principal camera lines and on-set protocol.',
+          ar: 'التقاط إطارات متوازنة وسط مشاهد حية وتكتيكية متطلبة وسريعة، مع مراعاة خطوط حركة الكاميرا الرئيسية وتغيرات الإضاءة الليلية وغبار المعارك دون التأثير على سير التصوير.'
         },
         decisions: {
-          en: 'Selected high-shutter kinetic framing and prioritized low-angle perspective to emphasize psychological gravity and tactical urgency. Controlled ambient edge highlights to sculpt soldiers against dust-filled atmospheres.',
-          ar: 'اعتماد زوايا تصوير منخفضة تعزز هيبة الإطار والشعور بالتوتر الميداني، مع موازنة الإضاءة الخلفية الحادة (Rim Light) لفصل الأجسام بدقة وسط بيئة مشبعة بالغبار والدخان.'
+          en: 'Used low-angle framing to convey visual gravity, balancing directional highlights against background dust to maintain clean silhouette separation.',
+          ar: 'اعتماد زوايا تصوير منخفضة لتعزيز هيبة الكادر، مع موازنة الإضاءات الجانبية والخلفية لفصل الأجسام بوضوح وسط بيئة مشبعة بالأتربة والدخان.'
         },
         outcome: {
-          en: 'An authoritative collection of production stills and camera coverage that captured both the grand scale of large tactical operations and the intimate vulnerability of individual soldiers.',
-          ar: 'توثيق سينمائي وبصري متكامل استطاع الموازنة بين ضخامة العمليات التكتيكية الميدانية وبين عمق الانفعال الإنساني الصادق في أعين الأبطال.'
+          en: 'A focused visual archive documenting tactical blocking, atmospheric lighting setups, and character focus across demanding production locations.',
+          ar: 'سلسلة صور وتوثيق بصري تركز على حركة وتوزيع الإضاءة المنخفضة، تكوين الكادرات الميدانية، والتقاط اللحظات التعبيرية للشخصيات في بيئات التصوير المتطلبة.'
         }
       },
       images: [
@@ -149,24 +149,24 @@ window.CONTENT = {
       client: 'Synergy Drama',
       year: '2021',
       featured: true,
-      role: { en: 'Camera Assistant & Dramatic Frame Stills', ar: 'مساعد كاميرا وتوثيق الإطارات الدرامية' },
-      deliverables: ['Chiaroscuro Studio Stills', 'Close-Up Tension Framing', 'Optics & Lens Calibration'],
+      role: { en: 'Camera Assistant / Set Stills (Role to be confirmed)', ar: 'مساعد كاميرا / توثيق موقع التصوير (قيد التأكيد النهائي للمسمى)' },
+      deliverables: ['Dramatic Scene Stills', 'Close-Up Framing', 'Low-Key Lighting Documentation'],
       description: {
-        en: 'On-set camera department support and dramatic stills capturing intense character confrontation and chiaroscuro studio lighting for the television series Cairo Kabul.',
-        ar: 'مشاركة في قسم الكاميرا وتوثيق الإطارات الدرامية لمسلسل "القاهرة كابول". ضبط تباين الظل والنور (Chiaroscuro) والتوتر المكاني المعبر عن الصراع الفكري والنفسي للشخصيات.'
+        en: 'On-set camera department support and dramatic stills capturing intimate character confrontation and directional shadow falloff for the television series Cairo Kabul.',
+        ar: 'مشاركة في قسم الكاميرا وتوثيق الإطارات الدرامية لمسلسل "القاهرة كابول"، مع التركيز على تباين الظل والنور وزوايا اللقطات المقربة في المشاهد الحوارية.'
       },
       thinking: {
         challenge: {
-          en: 'The script demanded psychological claustrophobia inside intimate interrogation and dialogue spaces, requiring extreme precision in focal falloff and deep, uncompromised shadows.',
-          ar: 'تطلب النص خلق حالة من الاحتباس النفسي داخل غرف حوار مغلقة ومواجهات فكرية محتدمة، ما استوجب دقة متناهية في عزل الخلفيات واستخدام مناطق الظل العميقة للتعبير عن الغموض.'
+          en: 'Maintaining visual tension within enclosed dialogue rooms and confrontation spaces, requiring careful framing and controlled shadow depth.',
+          ar: 'خلق حالة من التوتر البصري داخل غرف حوار مغلقة ومواجهات محتدمة، ما تطلب دقة في تأطير الكادر والتحكم في عمق الظلال خلف الشخصيات.'
         },
         decisions: {
-          en: 'Applied classic chiaroscuro key-to-fill ratios (4:1) with single directional tungsten light sources. Kept camera movement minimal and deliberate to force viewer focus on microscopic facial micro-expressions.',
-          ar: 'توظيف نسب إضاءة كلاسيكية حادة تعتمد على مصدر ضوء رئيسي واحد (Single Key Light) مع إهمال إضاءة الملء لخلق ظلال حاسمة، والاعتماد على ثبات الكادر لإجبار المشاهد على قراءة انفعالات الوجوه.'
+          en: 'Focused on strong directional key lighting and deliberate static framing to direct viewer attention toward subtle facial expressions and eye lines.',
+          ar: 'التركيز على مصدر ضوء موجه بزوايا حادة مع تقليل إضاءة الملء لتعميق الظلال، والاعتماد على ثبات الكادر لإبراز التعبيرات الدقيقة للوجوه.'
         },
         outcome: {
-          en: 'Evocative, moody stills that translated internal ideological warfare into arresting visual compositions praised for atmospheric restraint.',
-          ar: 'إطارات سينمائية ذات طابع معتم ووقور، ترجمت الصراع العقائدي والنفسي للشخصيات إلى لغة ضوئية صامتة شديدة التأثير.'
+          en: 'High-contrast dramatic stills documenting dialogue scenes, directional light falloff, and intimate character framing.',
+          ar: 'إطارات فوتوغرافية تركز على تباين الظل والنور، وتوزيع الإضاءة الموجهة، وتوثيق تفاصيل التعبير في المشاهد الحوارية المقربة.'
         }
       },
       images: [
@@ -207,24 +207,24 @@ window.CONTENT = {
       client: 'ON E Broadcast Channel',
       year: '2021 - 2022',
       featured: true,
-      role: { en: 'Stage Lighting & Live Broadcast Visual Stills', ar: 'إضاءة مسرح الاستوديو وتوثيق لقطات النجوم' },
-      deliverables: ['Multi-Cam Stage Coverage', 'Celebrity Key Lighting', 'Broadcast Atmosphere Stills'],
+      role: { en: 'Studio Stills & Stage Production Support (Role to be confirmed)', ar: 'تصوير فوتوغرافي للاستوديو ومعاونة إنتاج (قيد التأكيد النهائي للمسمى)' },
+      deliverables: ['Stage Performance Coverage', 'Celebrity Key Stills', 'Studio Lighting Documentation'],
       description: {
-        en: 'Studio lighting and celebrity portrait capture on the live set of Sahranen broadcast show featuring prominent Arab cinema icons.',
-        ar: 'تصوير احترافي وإضاءة استوديو متقدمة لنجوم الفن والسينما في بلاطو برنامج "سهرانين" الترفيهي على قناة ON E.'
+        en: 'Studio visual documentation and celebrity portrait capture on the set of the Sahranen broadcast show featuring prominent figures from Arab cinema and music.',
+        ar: 'توثيق بصري وإضاءة استوديو لنجوم الفن والغناء في بلاطو برنامج "سهرانين" الترفيهي على قناة ON E.'
       },
       thinking: {
         challenge: {
-          en: 'Balancing bright multi-camera broadcast lighting with glamorous, filmic portraiture during live musical performances and intimate celebrity interviews.',
-          ar: 'الموازنة الدقيقة بين الإضاءة العامة الساطعة المطلوبة للبث التلفزيوني متعدد الكاميرات، وبين إضفاء روح سينمائية جذابة وفخمة على كادرات البورتريه أثناء الفقرات الغنائية والحوارية.'
+          en: 'Balancing bright multi-camera broadcast lighting with portrait-focused framing during live musical performances and seated interviews.',
+          ar: 'الموازنة بين الإضاءة العامة الساطعة المطلوبة للبث التلفزيوني متعدد الكاميرات، وبين التقاط كادرات بورتريه متزنة أثناء الفقرات الغنائية والحوارية.'
         },
         decisions: {
-          en: 'Positioned dynamic rim hair-lights and soft beauty dishes calibrated specifically for skin tones under high-output studio stage LED arrays.',
-          ar: 'توزيع إضاءات جانبية وخلفية دقيقة لفصل الضيوف عن عمق المسرح، وضبط وحدات التنعيم للوصول إلى أنقى تدرجات للبشرة تحت مصابيح الاستوديو الحديثة.'
+          en: 'Framed subjects using rim lighting and soft directional fill to separate performers cleanly from the luminous stage backdrop.',
+          ar: 'استخدام إضاءات جانبية وخلفية لفصل الضيوف عن عمق المسرح، وضبط التكوين لإبراز حضور الفنانين وسط أضواء البلاطو.'
         },
         outcome: {
-          en: 'Polished, television stills that captured spontaneous celebrity emotion with broadcast elegance and cinematic vibrancy.',
-          ar: 'سلسلة صور احترافية وثقت اللحظات العفوية والروح الطربية للبرنامج بمظهر بصري جذاب يتطابق مع أعلى معايير الشاشات العربية.'
+          en: 'Studio production stills documenting celebrity guests, stage lighting, and musical performances on set.',
+          ar: 'توثيق فوتوغرافي لضيوف البرنامج، حركة الإضاءة المسرحية، والعروض الغنائية الحية داخل الاستوديو.'
         }
       },
       images: [
@@ -257,32 +257,34 @@ window.CONTENT = {
        ════════════════════════════════════════════════════════════ */
     {
       id: 'mawlawya',
-      name: { en: 'Mawlawya — Sufi Whirling Cinematic Study', ar: 'المولوية — دراسة سينمائية للإيقاع والدوران الصوفي' },
+      name: { en: 'Mawlawya — Graduation Film & Visual Study', ar: 'المولوية — فيلم مشروع التخرج والدراسة البصرية' },
       discipline: 'filmmaking',
       subdiscipline: 'visual-studies',
-      subdisciplineName: { en: 'Cinematic Studies', ar: 'تجارب بصرية' },
-      agency: 'Independent Visual Exploration',
-      client: 'Cultural Heritage Study',
+      subdisciplineName: { en: 'Graduation Project', ar: 'مشروع التخرج' },
+      agency: 'Faculty of Applied Arts',
+      client: 'Graduation Project',
       year: '2024',
       featured: true,
-      role: { en: 'Cinematographer & Visual Concept Director', ar: 'مدير تصوير ومخرج الفكرة البصرية' },
-      deliverables: ['Continuous Motion Tracking', 'Shutter Angle Kinetic Blur', 'Light Choreography Documentation'],
+      role: { en: 'Director of Photography & Visual Concept (Graduation Project)', ar: 'تصوير سينمائي وفكرة بصرية (مشروع التخرج)' },
+      deliverables: ['Continuous Motion Tracking', 'Kinetic Shutter Blur Study', 'Light Choreography Documentation'],
+      video: 'https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci',
+      vimeoId: '1239369594',
       description: {
-        en: 'Cinematic visual study of spiritual movement, rhythm, and light choreography during the traditional Sufi Mawlawya whirling ceremony.',
-        ar: 'دراسة بصرية سينمائية للحركة الروحية وتناغم الضوء مع الدوران الصوفي في طقوس المولوية التراثية، بالتركيز على مسارات الحركة والظل.'
+        en: 'Graduation project from the Faculty of Applied Arts: an authored cinematic visual study exploring rotational movement, garment rhythm, and warm directional light during traditional Sufi Mawlawya ceremonies.',
+        ar: 'مشروع التخرج من كلية الفنون التطبيقية: دراسة بصرية سينمائية ترصد الحركة الدورانية، وتناغم الضوء مع ثنايا الرداء في طقوس المولوية التراثية، بالتركيز على مسارات الحركة والظل.'
       },
       thinking: {
         challenge: {
-          en: 'Translating the transcendence of continuous rotational movement into two-dimensional cinema without reducing the sacred ritual to decorative spectacle.',
-          ar: 'ترجمة تجربة الدوران الروحي المتواصل والسمو الصوفي إلى كادر سينمائي ثنائي الأبعاد، دون تسطيح الطقس الروحي أو تحويله لمجرد استعراض حركي.'
+          en: 'Translating continuous circular motion into two-dimensional cinema while maintaining visual clarity and respect for the ritual context.',
+          ar: 'ترجمة حركة الدوران الصوفي المستمرة إلى كادر سينمائي ثنائي الأبعاد، مع الحفاظ على وضوح التكوين ووقار الطقس الروحي.'
         },
         decisions: {
-          en: 'Calibrated shutter angles to produce intentional kinetic motion blur while keeping the dervish face in sharp spiritual stillness. Used warm atmospheric amber pools surrounded by deep obsidian darkness.',
-          ar: 'ضبط زاوية الغالق (Shutter Angle) لتوليد تموجات حركية ناعمة في ثنايا الرداء أثناء الدوران، مع الحفاظ على هدوء وثبات الملامح، واستخدام بقع إضاءة كهرمانية دافئة وسط محيط حالك السواد.'
+          en: 'Employed intentional motion blur across rotating garments while holding the subject face in stable framing, using warm amber lighting pools set against dark surroundings.',
+          ar: 'توظيف انسيابية حركية ناعمة في ثنايا الرداء أثناء الدوران مع الحفاظ على ثبات ملامح الوجه، واستخدام إضاءة كهرمانية دافئة وسط خلفية داكنة.'
         },
         outcome: {
-          en: 'A critically recognized cinematic study capturing the intersection of Sufi philosophy, light physics, and spiritual ecstasy.',
-          ar: 'دراسة سينمائية وتوثيقية ذات هوية بصرية متميزة، نالت استحسان الأوساط الفنية لقدرتها على التقاط جوهر التجربة الروحية بالضوء المجرد.'
+          en: 'A visual study documenting the kinetic rhythm, costume motion, and warm directional lighting of the whirling ceremony.',
+          ar: 'دراسة بصرية توثق إيقاع الحركة الدورانية، وحركة الأقمشة، وتوزيع الإضاءة الدافئة أثناء طقوس الدوران الصوفي.'
         }
       },
       images: [
@@ -315,74 +317,74 @@ window.CONTENT = {
        ════════════════════════════════════════════════════════════ */
     {
       id: 'clove',
-      name: { en: 'Clove Lookbook I — Tactile Silhouette', ar: 'سلسلة Clove الأولى — الملمس والظل' },
+      name: { en: 'Clove Restaurant — Culinary & Fine Dining', ar: 'مطعم Clove — تصوير الأطعمة وفنون الطهي' },
       discipline: 'photography',
       subdiscipline: 'fashion',
-      subdisciplineName: { en: 'Fashion & Editorial', ar: 'أزياء وفاشن' },
-      agency: 'Clove Fashion Campaign',
-      client: 'Clove Apparel',
+      subdisciplineName: { en: 'Commercial & Culinary', ar: 'تصوير تجاري وأطعمة' },
+      agency: 'Clove Restaurant',
+      client: 'Clove Restaurant & Lounge',
       year: '2023',
       featured: true,
-      role: { en: 'Lead Fashion Photographer & Lighting Director', ar: 'مصور الأزياء الرئيسي ومدير الإضاءة' },
-      deliverables: ['Campaign Key Visuals', 'Texture & Fabric Close-ups', 'Editorial Color Grading'],
+      role: { en: 'Food & Beverage Photographer', ar: 'تصوير أطعمة ومشروبات' },
+      deliverables: ['Gourmet Plating Stills', 'Chef Technique Captures', 'Directional Food Lighting'],
       description: {
-        en: 'Editorial fashion campaign exploring tactile fabric textures, controlled natural highlights, and sculptural model gestures.',
-        ar: 'حملة تصوير فاشن تحريرية تركز على ملامس الأقمشة الطبيعية، انعكاسات الضوء المحسوبة، والتكوين الحركي المتوازن للموديل.'
+        en: 'High-contrast commercial food photography for Clove restaurant, capturing gourmet plating, fresh ingredients, and culinary craftsmanship under directional studio lighting.',
+        ar: 'تصوير أطعمة احترافي عالي التباين لمطعم Clove، يوثق فنون تقديم الأطباق الراقية، المكونات الطازجة، وتكنيك الشيف تحت إضاءة استوديو موجهة.'
       },
       thinking: {
         challenge: {
-          en: 'Highlighting subtle textile textures and organic cloth weaves while keeping the visual identity contemporary, minimal, and stripped of commercial clutter.',
-          ar: 'إبراز الملمس الدقيق للأنسجة والقصات المعاصرة دون الوقوع في النمطية التجارية المبتذلة، مع بناء هوية بصرية هادئة تعتمد على البساطة الصريحة.'
+          en: 'Capturing the rich textures, glazes, and steam of gourmet dishes under studio lights while maintaining appetizing color fidelity and sharp focus.',
+          ar: 'إبراز الملامس الشهية، لمعان الصلصات، وتناسق ألوان المكونات الطازجة تحت إضاءة الاستوديو مع الحفاظ على حرارة وجودة الطبق التقديمي.'
         },
         decisions: {
-          en: 'Utilized directional soft daylight simulation combined with large negative fill flags on the camera-left side to carve sculptural depth into every garment fold.',
-          ar: 'محاكاة الضوء الطبيعي الموجه بزاوية جانبية مع استخدام ألواح امتصاص الضوء (Negative Fill) لتعميق الظلال في ثنايا الملابس وإبراز نقاء الخامات.'
+          en: 'Used directional low-key key lighting with subtle bounce reflectors to accentuate sauce glazes, sear marks, and the organic textures of plated ingredients.',
+          ar: 'توظيف إضاءة جانبية موجهة مع عواكس ناعمة لتعميق الظلال وإبراز تفاصيل الشواء، لمعان الصلصات، وتدرجات الألوان الطبيعية للأطباق.'
         },
         outcome: {
-          en: 'A complete campaign lookbook that drove brand engagement and set a sophisticated editorial standard for the fashion line.',
-          ar: 'كتالوج أزياء متكامل اعتمدته العلامة التجارية في حملاتها التسويقية وساهم في ترسيخ انطباع الجودة والأناقة الرفيعة.'
+          en: 'A polished culinary photography series documenting gourmet steaks, pastas, and chef table preparations for Clove restaurant menu and promotional campaigns.',
+          ar: 'سلسلة فوتوغرافية راقية توثق أطباق اللحوم والباستا ولمسات الشيف التقديمية، مخصصة لقائمة طعام وحملات مطعم Clove الترويجية.'
         }
       },
       images: [
         {
           src: 'assets/images/clove/clove-1.jpg',
           thumb: 'assets/images/clove/clove-1-thumb.jpg',
-          alt: 'Clove Campaign — Look 01',
+          alt: 'Clove Culinary — Steak Plating & Microgreens',
           width: 1920,
           height: 1280
         },
         {
           src: 'assets/images/clove/clove-2.jpg',
           thumb: 'assets/images/clove/clove-2-thumb.jpg',
-          alt: 'Clove Campaign — Look 02',
+          alt: 'Clove Beverage — Layered Citrus Cocktail',
           width: 1466,
           height: 1920
         },
         {
           src: 'assets/images/clove/clove-3.jpg',
           thumb: 'assets/images/clove/clove-3-thumb.jpg',
-          alt: 'Clove Campaign — Look 03',
+          alt: 'Clove Culinary — Chicken Penne Pasta',
           width: 1280,
           height: 1920
         },
         {
           src: 'assets/images/clove/clove-4.jpg',
           thumb: 'assets/images/clove/clove-4-thumb.jpg',
-          alt: 'Clove Campaign — Look 04',
+          alt: 'Clove Culinary — Pasta Flatlay & Sauces',
           width: 1280,
           height: 1920
         },
         {
           src: 'assets/images/clove/clove-5.jpg',
           thumb: 'assets/images/clove/clove-5-thumb.jpg',
-          alt: 'Clove Campaign — Look 05',
+          alt: 'Clove Beverage — Mint Garnish Cocktail',
           width: 1381,
           height: 1920
         },
         {
           src: 'assets/images/clove/clove-6.jpg',
           thumb: 'assets/images/clove/clove-6-thumb.jpg',
-          alt: 'Clove Campaign — Look 06',
+          alt: 'Clove Culinary — Grilled Steak Table Spread',
           width: 1920,
           height: 1280
         }
@@ -391,43 +393,43 @@ window.CONTENT = {
 
     {
       id: 'clove-editorial-ii',
-      name: { en: 'Clove Lookbook II — The Autumn Silhouette', ar: 'سلسلة Clove الثانية — تشكيلة الخريف المعاصرة' },
+      name: { en: 'Clove Lounge — Craft Beverages & Atmosphere', ar: 'مطعم Clove — تصوير المشروبات المبتكرة وأجواء المكان' },
       discipline: 'photography',
       subdiscipline: 'fashion',
-      subdisciplineName: { en: 'Fashion & Editorial', ar: 'أزياء وفاشن' },
-      agency: 'Clove Fashion Campaign',
-      client: 'Clove Brand Studio',
+      subdisciplineName: { en: 'Commercial & Culinary', ar: 'تصوير تجاري وأطعمة' },
+      agency: 'Clove Restaurant',
+      client: 'Clove Restaurant & Lounge',
       year: '2024',
       featured: true,
-      role: { en: 'Campaign Photographer & Art Direction', ar: 'مصور الحملة والتوجيه الفني' },
-      deliverables: ['Full Collection Editorial', '8-Look Campaign Spread', 'Monochrome & Earth-Tone Grading'],
+      role: { en: 'Beverage Photographer & Art Direction', ar: 'تصوير مشروبات وتوجيه فني' },
+      deliverables: ['Signature Cocktail Stills', 'Glassware Condensation Textures', 'Bar Atmosphere Lighting'],
       description: {
-        en: 'The second major editorial chapter for Clove, capturing autumn cuts, structured outerwear, and confident poses against minimalist studio backdrops.',
-        ar: 'الفصل التحريري الثاني لسلسلة أزياء كلوف؛ توثيق تفاصيل أزياء الخريف، القصات الهندسية، والحضور الشخصي المتزن أمام خلفيات استوديو نقية.'
+        en: 'Commercial beverage photography and art direction capturing Clove lounge’s signature layered cocktails, ice clarity, and ambient mood.',
+        ar: 'تصوير تجاري للمشروبات وإخراج فني يوثق الكوكتيلات الابتكارية، نقاء الثلج وتكثف القطرات على الزجاج، وأجواء المكان المميزة في Clove.'
       },
       thinking: {
         challenge: {
-          en: 'Creating distinct visual progression from the first series while maintaining brand coherence across eight different look stylings in a single production day.',
-          ar: 'خلق تطور بصري ملحوظ ومميز عن السلسلة الأولى مع الحفاظ على وحدة الهوية العامة للماركة، وتصوير 8 إطلالات مختلفة في يوم عمل مكثف.'
+          en: 'Highlighting liquid clarity, layered color gradients, and glass condensation droplets without reflections washing out the drink tones.',
+          ar: 'إبراز طبقات السوائل الملونة وتدرجاتها، قطرات التكثف الباردة، وشفافية الزجاج دون انعكاسات عشوائية تشوش على لون المشروب.'
         },
         decisions: {
-          en: 'Adopted an architectural approach to model posture, using vertical line guides in frame and precision bounce fill to ensure true-to-life garment color rendition.',
-          ar: 'توجيه حركة الموديل بخطوط معمارية قائمة، واستخدام إضاءات انعكاسية دقيقة للمحافظة على ألوان الأقمشة الحقيقية دون أي تشبع لوني زائف.'
+          en: 'Backlit the glassware with narrow rim lights to illuminate beverage gradients from within, using fresh citrus wheels and mint garnishes as textural contrast.',
+          ar: 'إضاءة الكؤوس من الخلف بحواف ضوئية دقيقة لإبراز ألوان المشروب من الداخل، مع توظيف شرائح الليمون وأوراق النعناع الطازجة كعناصر تباين ملمسية.'
         },
         outcome: {
-          en: 'An 8-part editorial series that demonstrated technical camera control and strong storytelling cohesion across multiple wardrobe looks.',
-          ar: 'سلسلة تحريرية من 8 إطلالات عكست سيطرة تامة على أدوات الاستوديو، وأظهرت تناغم التوجيه الفني مع طبيعة التشكيلة المعروضة.'
+          en: 'A visual beverage series showcasing signature craft mocktails, ice textures, and atmospheric bar lighting for Clove lounge.',
+          ar: 'سلسلة بصرية متكاملة تبرز تشكيلة المشروبات والعصائر الابتكارية، ملامس الثلج، والأجواء الضوئية المميزة لمطعم وبار Clove.'
         }
       },
       images: [
-        { src: 'assets/images/clove2/clove2-1.jpg', thumb: 'assets/images/clove2/clove2-1-thumb.jpg', alt: 'Clove Lookbook II — 01', width: 1466, height: 1920 },
-        { src: 'assets/images/clove2/clove2-2.jpg', thumb: 'assets/images/clove2/clove2-2-thumb.jpg', alt: 'Clove Lookbook II — 02', width: 1170, height: 1920 },
-        { src: 'assets/images/clove2/clove2-3.jpg', thumb: 'assets/images/clove2/clove2-3-thumb.jpg', alt: 'Clove Lookbook II — 03', width: 1144, height: 1920 },
-        { src: 'assets/images/clove2/clove2-4.jpg', thumb: 'assets/images/clove2/clove2-4-thumb.jpg', alt: 'Clove Lookbook II — 04', width: 1381, height: 1920 },
-        { src: 'assets/images/clove2/clove2-5.jpg', thumb: 'assets/images/clove2/clove2-5-thumb.jpg', alt: 'Clove Lookbook II — 05', width: 1381, height: 1920 },
-        { src: 'assets/images/clove2/clove2-6.jpg', thumb: 'assets/images/clove2/clove2-6-thumb.jpg', alt: 'Clove Lookbook II — 06', width: 1381, height: 1920 },
-        { src: 'assets/images/clove2/clove2-7.jpg', thumb: 'assets/images/clove2/clove2-7-thumb.jpg', alt: 'Clove Lookbook II — 07', width: 1392, height: 1920 },
-        { src: 'assets/images/clove2/clove2-8.jpg', thumb: 'assets/images/clove2/clove2-8-thumb.jpg', alt: 'Clove Lookbook II — 08', width: 1920, height: 1298 }
+        { src: 'assets/images/clove2/clove2-1.jpg', thumb: 'assets/images/clove2/clove2-1-thumb.jpg', alt: 'Clove Signature Cocktail 01', width: 1466, height: 1920 },
+        { src: 'assets/images/clove2/clove2-2.jpg', thumb: 'assets/images/clove2/clove2-2-thumb.jpg', alt: 'Clove Signature Cocktail 02', width: 1170, height: 1920 },
+        { src: 'assets/images/clove2/clove2-3.jpg', thumb: 'assets/images/clove2/clove2-3-thumb.jpg', alt: 'Clove Signature Cocktail 03', width: 1144, height: 1920 },
+        { src: 'assets/images/clove2/clove2-4.jpg', thumb: 'assets/images/clove2/clove2-4-thumb.jpg', alt: 'Clove Signature Cocktail 04', width: 1381, height: 1920 },
+        { src: 'assets/images/clove2/clove2-5.jpg', thumb: 'assets/images/clove2/clove2-5-thumb.jpg', alt: 'Clove Signature Cocktail 05', width: 1381, height: 1920 },
+        { src: 'assets/images/clove2/clove2-6.jpg', thumb: 'assets/images/clove2/clove2-6-thumb.jpg', alt: 'Clove Signature Cocktail 06', width: 1381, height: 1920 },
+        { src: 'assets/images/clove2/clove2-7.jpg', thumb: 'assets/images/clove2/clove2-7-thumb.jpg', alt: 'Clove Signature Cocktail 07', width: 1392, height: 1920 },
+        { src: 'assets/images/clove2/clove2-8.jpg', thumb: 'assets/images/clove2/clove2-8-thumb.jpg', alt: 'Clove Signature Cocktail 08', width: 1920, height: 1298 }
       ]
     },
 
@@ -441,24 +443,24 @@ window.CONTENT = {
       client: 'Mohanad Kojak',
       year: '2022',
       featured: true,
-      role: { en: 'Editorial Photographer', ar: 'مصور تحريري' },
-      deliverables: ['Haute Couture Visuals', 'Sculptural Silhouette Framing', 'High-Contrast Illumination'],
+      role: { en: 'Fashion Photographer', ar: 'مصور أزياء تحريري' },
+      deliverables: ['Couture Editorial Stills', 'High-Contrast Silhouette Framing', 'Garment Detail Documentation'],
       description: {
-        en: 'High-concept fashion photography for celebrated Egyptian designer Mohanad Kojak. Bold chiaroscuro illumination, sculptural silhouette framing, and rich fabric detail.',
-        ar: 'تصوير أزياء تحريري متقدم لمجموعات المصمم مهند كوجاك. إضاءة نحتية جريئة عالية التباين، وزوايا غير تقليدية تبرز تفاصيل الخياطة الراقية.'
+        en: 'Fashion photography for Egyptian designer Mohanad Kojak, featuring directional illumination, sculptural silhouette framing, and tailored garment details.',
+        ar: 'تصوير أزياء لمجموعات المصمم مهند كوجاك، بإضاءة موجهة عالية التباين، وزوايا تبرز تفاصيل الخياطة الراقية والأقمشة المنسوجة.'
       },
       thinking: {
         challenge: {
-          en: 'Honoring the avant-garde, theatrical aesthetic of Kojak designs without losing the structural tailoring and delicate embroidery details of the clothing.',
-          ar: 'التعبير عن الطابع المسرحي والطليعي الجريء لتصاميم كوجاك دون التضحية بالتفاصيل البنائية الدقيقة للتطريز وجودة الحياكة.'
+          en: 'Documenting the theatrical and expressive aesthetic of Kojak designs while preserving structural tailoring and embroidery textures.',
+          ar: 'التعبير عن الطابع التعبيري البارز لتصاميم كوجاك دون التضحية بالتفاصيل البنائية الدقيقة للتطريز وجودة الحياكة.'
         },
         decisions: {
-          en: 'Used narrow-beam snoots and gridded softboxes to direct focused beams on garment focal points while letting adjacent areas fall into deep atmospheric shadow.',
-          ar: 'استخدام إضاءات موجهة ومحددة بشبكات تضييق الضوء (Grids) لتركيز النور على أجزاء ثوب معينة وترك بقية الكادر في عتمة درامية مكثفة.'
+          en: 'Focused directional light beams onto specific garment textures while letting background areas drop into shadow to emphasize sculptural cuts.',
+          ar: 'تركيز مسارات الضوء الموجه على تفاصيل وخامات الأقمشة مع إبقاء الخلفية في عتمة محسوبة لإبراز المنحنيات الهندسية للثوب.'
         },
         outcome: {
-          en: 'Striking editorial imagery that reinforced Kojak’s standing as one of the region’s premier avant-garde fashion houses.',
-          ar: 'صور أزياء استثنائية رسخت الحضور البصري للدار وأثبتت قدرة الكاميرا على تحويل الثوب إلى منحوتة فنية حية.'
+          en: 'High-contrast editorial stills highlighting the sculptural silhouettes, embroidery details, and tailored textures of Kojak couture.',
+          ar: 'لقطات تحريرية عالية التباين تبرز التفاصيل الهندسية للأزياء، دقة التطريز، وملامس الخياطة الراقية لتصاميم مهند كوجاك.'
         }
       },
       images: [
@@ -495,28 +497,28 @@ window.CONTENT = {
       discipline: 'photography',
       subdiscipline: 'portrait',
       subdisciplineName: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' },
-      agency: 'Studio Lighting Research',
+      agency: 'Personal Studio Study',
       client: 'Independent Studio Series',
       year: '2023',
       featured: true,
-      role: { en: 'Portrait Photographer & Light Carver', ar: 'فوتوغرافر ومصمم إضاءة' },
-      deliverables: ['35mm Full-Frame Studies', 'Chiaroscuro Facial Carving', 'High Dynamic Range Monochromes'],
+      role: { en: 'Portrait Photographer (Personal Study)', ar: 'مصور بورتريه (دراسة شخصية)' },
+      deliverables: ['Monochrome Portrait Stills', 'Directional Key Studies', 'Facial Geometry Framing'],
       description: {
-        en: 'Direct key lighting and shadow depth study on 35mm full frame sensor, highlighting human gaze and emotional vulnerability.',
-        ar: 'دراسة نحت الضوء والظلال العميقة على مستشعر 35mm كامل الإطار لإبراز النظرة والملامح والتعبير الإنساني الصادق.'
+        en: 'A personal studio portrait series exploring directional key lighting, deep shadow falloff, and subtle facial expression.',
+        ar: 'دراسة بورتريه استوديو شخصية تركز على زوايا سقوط الضوء والظلال لإبراز الملامح والتعبير الإنساني.'
       },
       thinking: {
         challenge: {
-          en: 'Eliminating all background distraction to produce raw, honest portraits that communicate character and psychological presence purely through light angle.',
-          ar: 'تجريد الكادر من أي عناصر مشتتة وخلق بورتريه إنساني صريح يعتمد كلياً على زاوية سقوط الضوء وعمق النظرة لإيصال الحضور الداخلي للموضوع.'
+          en: 'Creating compelling human portraits with minimal background elements, relying entirely on lighting angles to define facial planes.',
+          ar: 'خلق بورتريه إنساني صريح بأقل عناصر ممكنة في الخلفية، والاعتماد الكلي على زاوية الضوء لتحديد ملامح الوجه.'
         },
         decisions: {
-          en: 'Employed high-contrast Rembrandt lighting with steep vertical angles to accentuate facial bone structure and catchlights in the subject’s eyes.',
-          ar: 'تطبيق إضاءة رامبرانت بزوايا سقوط رأسية مدروسة تبرز ملامح الوجه وتمنح العينين لمعاناً حياً يشد انتباه الرائي فوراً.'
+          en: 'Explored directional single-source lighting and shadow angles to accentuate facial planes and portrait expression.',
+          ar: 'دراسة زوايا سقوط الضوء الأحادي والظلال لإبراز ملامح الوجه والتعبير الإنساني في البورتريه.'
         },
         outcome: {
-          en: 'Timeless studio portraiture proving that light alone can tell a story as compelling as any complex set design.',
-          ar: 'بورتريهات استوديو كلاسيكية ومؤثرة تثبت أن إدارة الضوء بمفردها قادرة على بناء رواية بصرية لا تقل عمقاً عن أضخم الديكورات.'
+          en: 'A personal studio portrait series focused on directional key lighting, facial planes, and monochrome contrast.',
+          ar: 'سلسلة بورتريهات استوديو شخصية تركز على زاوية سقوط الضوء الموجه، تشريح الوجه، وتدرجات التباين الأحادي.'
         }
       },
       images: [
@@ -543,28 +545,28 @@ window.CONTENT = {
       discipline: 'photography',
       subdiscipline: 'portrait',
       subdisciplineName: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' },
-      agency: 'Alpha Sensor Study',
+      agency: 'Behind the Scenes Study',
       client: 'Studio Session Stills',
       year: '2024',
       featured: false,
-      role: { en: 'Lighting Technician & Frame Designer', ar: 'تنسيق إضاءة وتوثيق تجريبي' },
-      deliverables: ['Wide Dynamic Range Captures', 'Natural Reflective Fill', 'Production Workflow Documentation'],
+      role: { en: 'Photographer (BTS & Studio Stills)', ar: 'فوتوغرافر (كواليس وتوثيق استوديو)' },
+      deliverables: ['Studio Setup Documentation', 'Natural Reflected Fill Stills', 'Informal Pose Captures'],
       description: {
-        en: 'High-resolution sensor studies exploring rapid lighting adjustments, organic gestures, and raw studio atmosphere.',
-        ar: 'دراسات بصرية عالية الدقة ترصد سرعة استجابة الضوء والتكوين الحر داخل بيئة الاستوديو وعفوية الحركة أمام الكاميرا.'
+        en: 'Studio visual studies documenting lighting adjustments, unscripted model gestures, and the behind-the-scenes working process.',
+        ar: 'دراسات بصرية داخل الاستوديو ترصد تعديلات الإضاءة، عفوية الحركة بين الأخذات، وحركة العمل خلف الكواليس.'
       },
       thinking: {
         challenge: {
-          en: 'Capturing unscripted, transitional moments between formal takes where natural posture and authentic expression emerge spontaneously.',
-          ar: 'اصطياد اللحظات الانتقالية العفوية بين الأخذات الرسمية، حيث يتجلى التعبير الطبيعي والانسيابي الخالي من التكلف.'
+          en: 'Documenting natural posture and informal expression between formal takes without interrupting the studio workflow.',
+          ar: 'اصطياد اللحظات الانتقالية العفوية بين الأخذات الرسمية، حيث يتجلى التعبير الطبيعي دون مقاطعة سير العمل في الاستوديو.'
         },
         decisions: {
-          en: 'Maintained continuous ambient modeling lights to allow fluid model interaction without the intimidating flash of high-voltage strobes.',
-          ar: 'الاعتماد على مصادر إضاءة مستمرة ناعمة تسمح بحرية حركية كاملة دون الإرباك الذي تسببه ومضات الفلاشات القوية.'
+          en: 'Worked with ambient continuous lighting to permit fluid movement and spontaneous interaction in the studio space.',
+          ar: 'الاعتماد على مصادر إضاءة مستمرة ناعمة تسمح بحرية حركية كاملة والتقاط اللحظات التلقائية.'
         },
         outcome: {
-          en: 'An authentic behind-the-scenes visual archive celebrating the rhythm, patience, and chemistry of professional studio photography.',
-          ar: 'سلسلة لقطات حية وكواليس توثق كيمياء العمل وسحر اللحظات التلقائية وراء العدسة في جلسات التصوير الاحترافية.'
+          en: 'A behind-the-scenes visual record documenting studio setup adjustments, lighting tests, and informal shooting moments.',
+          ar: 'توثيق بصري لكواليس الاستوديو يوضح ضبط تجهيزات الإضاءة، التجارب الضوئية، وحركة العمل خلف الكواليس.'
         }
       },
       images: [
@@ -585,27 +587,27 @@ window.CONTENT = {
       subdiscipline: 'documentary',
       subdisciplineName: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' },
       agency: 'Personal Documentary Series',
-      client: 'Urban Heritage Archive',
+      client: 'Independent Documentary Archive',
       year: '2023 - 2024',
       featured: true,
-      role: { en: 'Street Photographer & Urban Observer', ar: 'فوتوغرافر توثيقي ومراقب للمدينة' },
-      deliverables: ['Atmospheric Cityscape Studies', 'Twilight Architectural Geometry', 'Social Solitude Observation'],
+      role: { en: 'Documentary Photographer (Personal Series)', ar: 'مصور وثائقي (سلسلة شخصية)' },
+      deliverables: ['Cityscape Architectural Stills', 'Dawn & Twilight Studies', 'Urban Geometry Framing'],
       description: {
-        en: 'Quiet observations of Cairo’s evolving urban geography, lingering twilight shadows, and architectural stillness amid metropolitan density.',
-        ar: 'لقطات توثيقية هادئة لعمران وضواحي القاهرة، مراقبة درجات الغسق والظلال وسكون الكادر وسط زخم المدينة الصاخب.'
+        en: 'Personal documentary observations of Cairo’s evolving urban geography, dawn light transitions, and architectural forms amid metropolitan density.',
+        ar: 'لقطات توثيقية شخصية لعمران وضواحي القاهرة، ومراقبة درجات ضوء الغسق والظلال وسكون الكادر وسط زخم المدينة.'
       },
       thinking: {
         challenge: {
-          en: 'Revealing the tranquil, contemplative soul of one of the world’s most kinetic metropolises without clichés or exotic tourist perspectives.',
-          ar: 'إبراز الجانب التأملي والساكن لمدينة القاهرة الصاخبة دون السقوط في الصور النمطية أو الكادرات السياحية المبتذلة.'
+          en: 'Observing the quieter moments and geometric lines of Cairo without relying on visual clichés or standard tourist angles.',
+          ar: 'إبراز الجانب الساكن والخطوط الهندسية لمدينة القاهرة دون اللجوء إلى الصور النمطية أو الزوايا المألوفة.'
         },
         decisions: {
-          en: 'Shot exclusively during blue hour and early dawn, framing geometric architectural intersections that dwarf human silhouettes to emphasize scale and quietude.',
-          ar: 'اختيار أوقات الفجر والغسق الأزرق (Blue Hour)، وتأطير الخطوط الهندسية المعمارية الصارمة بحيث تبدو الشخصيات ككتل هادئة تبرز هيبة المكان وعراقته.'
+          en: 'Documented during blue hour and dawn, framing prominent structural intersections where architectural scale contrasts with small human silhouettes.',
+          ar: 'التصوير خلال ساعات الفجر والغسق، وتأطير الخطوط الهندسية المعمارية بحيث تظهر الشخصيات كعناصر تؤكد مقياس وهيبة المكان.'
         },
         outcome: {
-          en: 'A poetic visual anthology of Cairo that portrays the historic metropolis through deep structural stillness and contemporary cinematic framing.',
-          ar: 'مجموعة فوتوغرافية شاعرية قدمت قراءة مغايرة للعمران القاهري، ممتلئة بالسكينة والجمال الهندسي الموزون.'
+          en: 'A personal documentary series observing Cairo’s architectural forms, street geometry, and twilight light transitions.',
+          ar: 'سلسلة توثيقية شخصية ترصد التكوينات المعمارية وهندسة شوارع القاهرة خلال تدرجات ضوء الغسق والفجر.'
         }
       },
       images: [
@@ -660,24 +662,24 @@ window.CONTENT = {
       client: 'Diwan Cultural Enterprise',
       year: '2023',
       featured: true,
-      role: { en: 'Brand Identity Designer & Art Director', ar: 'مصمم الهوية البصرية ومدير فني' },
-      deliverables: ['Comprehensive Identity System', 'Cultural Tote Bag & Merchandise', 'Tactile Packaging & Coasters'],
+      role: { en: 'Brand Identity Designer & Art Director', ar: 'مصمم هوية بصرية وتوجيه فني' },
+      deliverables: ['Visual Identity Guidelines', 'Linen Tote Bag & Packaging', 'Stationery & Coaster Items'],
       description: {
-        en: 'Comprehensive brand identity system, stationery, and cultural merchandise for Diwan Publishing House, celebrating literary heritage with contemporary minimalism.',
+        en: 'Brand identity system, stationery, and cultural merchandise for Diwan Publishing House, combining literary heritage with contemporary layout principles.',
         ar: 'تصميم الهوية البصرية الشاملة، المنظومة الطباعية والمقتنيات الثقافية (الحقيبة القماشية، الكوستر، وبطاقات الهوية) لدار ديوان للنشر.'
       },
       thinking: {
         challenge: {
-          en: 'Constructing a brand identity that honors Diwan’s prestigious cultural heritage as a literary icon while positioning it as a fresh, relevant lifestyle brand for a younger generation of readers.',
-          ar: 'صياغة هوية بصرية تحتفي بالمكانة الثقافية الرفيعة لدار ديوان كصرح أدبي عريق، وفي الوقت نفسه تمنحها روحاً معاصرة وجاذبة للأجيال الشابة من القراء.'
+          en: 'Creating a unified brand system that respects Diwan’s literary heritage while functioning effectively across modern lifestyle goods and stationery.',
+          ar: 'صياغة هوية بصرية تحتفي بالمكانة الأدبية لدار ديوان، وفي الوقت نفسه تصلح للتطبيق العملي على المنتجات والمقتنيات الثقافية المعاصرة.'
         },
         decisions: {
-          en: 'Engineered an uncluttered typographic grid system and extended the visual identity onto high-utility cultural items (tote bags, natural coasters, bookmarks) using eco-conscious, tactile materials.',
-          ar: 'بناء شبكة تيبوغرافية دقيقة تعتمد التوازن بين الخط العربي الحديث واللاتيني، ونقل الهوية من الورق إلى منتجات ومقتنيات ثقافية ذات استخدام يومي مصنوعة من خامات طبيعية راقية.'
+          en: 'Designed a clean typographic grid balancing Arabic and Latin letterforms, applying the identity across tactile, natural materials including linen and uncoated paper.',
+          ar: 'بناء شبكة تيبوغرافية متوازنة بين الحرفين العربي واللاتيني، وتطبيق عناصر الهوية على خامات طبيعية ملموسة مثل الكتان والورق غير المصقول.'
         },
         outcome: {
-          en: 'A unified cultural ecosystem that seamlessly bridges book publishing, lifestyle goods, and brand prestige.',
-          ar: 'منظومة هوية متكاملة وحدت المظهر البصري لدار ديوان وعززت ارتباط القراء بالهوية عبر منتجات ومطبوعات ذات قيمة ملموسة.'
+          en: 'A cohesive brand identity system applied across cultural merchandise, packaging items, coasters, and linen tote bags for Diwan.',
+          ar: 'منظومة هوية بصرية متكاملة مطبقة عبر المنتجات الثقافية، أدوات التغليف، الكوسترات، والحقائب القماشية لدار ديوان.'
         }
       },
       images: [
@@ -711,28 +713,28 @@ window.CONTENT = {
       discipline: 'design',
       subdiscipline: 'identity',
       subdisciplineName: { en: 'Brand Identity', ar: 'هويات بصرية' },
-      agency: 'Mawlawya Heritage Project',
-      client: 'Sufi Arts Association',
+      agency: 'Faculty of Applied Arts',
+      client: 'Graduation Project',
       year: '2024',
       featured: false,
-      role: { en: 'Identity System Architect', ar: 'معماري منظومة الهوية' },
-      deliverables: ['Calligraphic Brand Mark', 'Geometric Layout Grid', 'Cultural Exhibition Applications'],
+      role: { en: 'Brand Identity Designer & Art Director (Graduation Project)', ar: 'تصميم الهوية البصرية والتوجيه الفني (مشروع التخرج)' },
+      deliverables: ['Circular Brand Mark', 'Geometric Grid Layout', 'Exhibition Application Guidelines'],
       description: {
-        en: 'Visual identity system inspired by the geometric circularity and transcendental spirit of Sufi Mawlawya traditions.',
-        ar: 'تصميم منظومة هوية بصرية مستوحاة من حركة الدوران الدائرية والروحانية الفلسفية لطريقة المولوية التراثية.'
+        en: 'Graduation project identity system derived from the geometry and meditative rotational movement of traditional Sufi Mawlawya whirling ceremonies.',
+        ar: 'منظومة هوية بصرية لمشروع التخرج مستوحاة من الهندسة الدائرية وحركة الدوران التأملية لطقوس الطريقة المولوية التراثية.'
       },
       thinking: {
         challenge: {
-          en: 'Modernizing centuries-old Islamic calligraphy motifs into a modern brand mark that scales effortlessly from exhibition banners to tiny digital icons.',
-          ar: 'تطوير رموز الحروف والزخارف الصوفية المتوارثة إلى علامة تجارية حديثة تحتفظ بوقارها التراثي وتصلح للاستخدام على الشاشات الرقمية والمطبوعات العملاقة.'
+          en: 'Translating classical calligraphic and geometric motifs into a functional brand mark that remains legible across both digital screens and large-scale exhibition displays.',
+          ar: 'تطوير الرموز الحرفية والهندسية المتوارثة إلى علامة تجارية حديثة تحتفظ بوقارها وتظل واضحة المعالم على الشاشات الرقمية والمطبوعات الكبيرة.'
         },
         decisions: {
-          en: 'Extracted the pure centrifugal motion curve of the whirling dervish skirt to govern the kerning, curvature, and typographic balance of the identity emblem.',
-          ar: 'استلهام المنحنى المركزي لدوران رداء الدرويش ليكون هو المحدد الهندسي لحركة الخطوط والتوازن التيبوغرافي في الشعار.'
+          en: 'Derived the emblem circular curve from the centrifugal motion of the whirling skirt, establishing geometric proportion and balanced typographic spacing.',
+          ar: 'استلهام المنحنى الدائري للشعار من حركة دوران رداء الدرويش ليكون هو المحدد الهندسي لحركة الخطوط وتوازن المسافات التيبوغرافية.'
         },
         outcome: {
-          en: 'An iconic cultural mark celebrating Egyptian and regional heritage through pure geometric elegance.',
-          ar: 'هوية بصرية معاصرة جمعت بين الأصالة الروحية والرقي التصميمي، نالت تقديراً واسعاً في الفعاليات التراثية.'
+          en: 'A circular typographic brand mark and identity layout system derived from Sufi whirling motion geometry.',
+          ar: 'شعار تيبوغرافي دائري وشبكة تصميمية للهوية مستلهمة من حركة الدوران الهندسي للطريقة المولوية.'
         }
       },
       images: [
@@ -766,24 +768,24 @@ window.CONTENT = {
       client: 'Diwan Editions',
       year: '2023',
       featured: true,
-      role: { en: 'Editorial Book Designer & Typographer', ar: 'مصمم أغلفة الكتب وهندسة الخطوط' },
-      deliverables: ['Cover Hierarchy Grid', 'Arabic/Latin Typographic Pairing', 'Physical Bookmark & Dust Jacket'],
+      role: { en: 'Book Cover & Editorial Designer', ar: 'مصمم أغلفة وتيبوغرافي' },
+      deliverables: ['Cover Grid Architecture', 'Typographic Hierarchy Specs', 'Physical Bookmark Design'],
       description: {
-        en: 'Architectural book cover design systems, typography hierarchy, and bookmark mockups for literary publications.',
-        ar: 'معمار أغلفة الكتب، هندسة الخطوط العربية واللاتينية، وفواصل القراءة لمطبوعات دار ديوان الأدبية.'
+        en: 'Editorial book cover design systems, typography hierarchy rules, and bookmark layouts for literary publications.',
+        ar: 'معمار وتصميم أغلفة الكتب، قواعد التراتبية التيبوغرافية، وتصاميم فواصل القراءة للإصدارات الأدبية.'
       },
       thinking: {
         challenge: {
-          en: 'Creating a flexible design grid that unifies an entire catalog of diverse literary genres (novels, philosophy, poetry) under one recognizable publishing imprint.',
-          ar: 'ابتكار شبكة تصميمية مرنة تستوعب عناوين أدبية وفلسفية متباينة وتوحدها تحت شخصية بصرية واحدة تعرف فوراً على أرفف المكتبات.'
+          en: 'Establishing a flexible cover grid that can adapt to different literary titles and genres while maintaining a recognizable visual family for the publishing house.',
+          ar: 'ابتكار شبكة تصميمية مرنة لأغلفة الكتب تستوعب عناوين وأجناساً أدبية متعددة مع الحفاظ على هوية بصرية مألوفة لإصدارات الدار.'
         },
         decisions: {
-          en: 'Established a strict 3-tier typographic hierarchy prioritizing author name, title, and publisher mark with generous negative space to let the paper stock breathe.',
-          ar: 'تحديد تراتبية بصرية صارمة من ثلاثة مستويات (اسم الكاتب، العنوان، شعار الدار) مع ترك مساحات فراغ رحبة تمنح الغلاف فخامة وهدوءاً لافتاً.'
+          en: 'Built a three-tier typographic layout prioritizing author name, title, and publisher mark, using deliberate white space to give prominence to typography.',
+          ar: 'بناء تراتبية بصرية من ثلاثة مستويات تراعي أولوية اسم المؤلف والعنوان وشعار الدار، مع استخدام الفراغ المدروس لإبراز التيبوغرافي.'
         },
         outcome: {
-          en: 'A distinctive editorial design system that elevated book presentation, winning admiration from both authors and bibliophiles.',
-          ar: 'منظومة أغلفة ذات بصمة بصرية لا تخطئها العين، جعلت إصدارات الدار تحفاً فنية يقتنيها القراء ويعتز بها المؤلفون.'
+          en: 'A structured editorial cover design system establishing a clear visual hierarchy for book titles, author credits, and bookmark designs.',
+          ar: 'منظومة تصميمية لأغلفة الكتب تحدد تراتبية بصرية واضحة لعناوين الإصدارات، أسماء المؤلفين، وتصاميم فواصل القراءة.'
         }
       },
       images: [
@@ -838,24 +840,24 @@ window.CONTENT = {
       client: 'Literary Forums & Visual Arts',
       year: '2023 - 2024',
       featured: true,
-      role: { en: 'Key Art Designer & Visual Concept Lead', ar: 'مصمم البوسترات والمفهوم البصري' },
-      deliverables: ['Large-Format Exhibition Posters', 'Editorial Typography Compositions', 'Promotional Social Assets'],
+      role: { en: 'Poster & Key Art Designer', ar: 'مصمم بوسترات ومواد إعلانية' },
+      deliverables: ['Large-Format Exhibition Posters', 'Typographic Layout Compositions', 'Promotional Print Layouts'],
       description: {
-        en: 'Promotional posters and key art prints celebrating literary gatherings, visual heritage, and contemporary typographic dialogue.',
-        ar: 'تصميم البوسترات الترويجية والمواد المطبوعة الخاصة بالملتقيات الثقافية والمعارض الفنية، مع معالجات بصرية غير تقليدية.'
+        en: 'Promotional posters and key art designs created for literary gatherings, cultural forums, and typographic exhibitions.',
+        ar: 'تصميم البوسترات الترويجية والمواد المطبوعة الخاصة بالملتقيات الثقافية، المعارض الفنية، وتجارب التيبوغرافي المعاصر.'
       },
       thinking: {
         challenge: {
-          en: 'Grabbing attention from a distance on city streets while communicating dense literary and cultural program schedules without visual clutter.',
-          ar: 'جذب الانتباه من مسافات بعيدة في الشارع والمعارض، مع عرض معلومات الفعاليات الثقافية بوضوح تام دون إرباك الرائي بالتفاصيل.'
+          en: 'Designing exhibition posters that catch attention at a distance while organizing event program details legibly.',
+          ar: 'تصميم بوسترات معارض تلفت الانتباه من مسافة بعيدة مع تنظيم تفاصيل وبرامج الفعاليات بصورة واضحة ومقروءة.'
         },
         decisions: {
-          en: 'Anchored the compositions with high-contrast architectural imagery and bold scale typographic numbers, balancing brutalist structure with elegant Arabic letterforms.',
-          ar: 'الاعتماد على عناصر بصرية معمارية عالية التباين كخلفية حاسمة، وموازنتها بكتل نصية عربية ذات طابع هندسي حديث يفرض حضوره بقوة.'
+          en: 'Anchored layouts with high-contrast architectural imagery and structural typographic numbers, paired with clean contemporary Arabic letterforms.',
+          ar: 'الاعتماد على عناصر بصرية معمارية عالية التباين وأرقام تيبوغرافية بارزة، وموازنتها بخطوط عربية حديثة واضحة وموزونة.'
         },
         outcome: {
-          en: 'A memorable series of cultural posters that functioned both as effective event promotion and as collectable graphic art prints.',
-          ar: 'سلسلة بوسترات مميزة نجحت في الترويج للملتقيات وتحولت في ذاتها إلى أعمال فنية اقتناها عشاق التصميم والتيبوغرافي.'
+          en: 'A set of exhibition posters and promotional graphic layouts balancing bold typography, architectural imagery, and event information.',
+          ar: 'مجموعة بوسترات معارض ومواد ترويجية توازن بين التيبوغرافي البارز، الصور المعمارية، وتفاصيل الفعاليات الثقافية.'
         }
       },
       images: [

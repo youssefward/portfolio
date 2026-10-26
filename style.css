@@ -1,5 +1,5 @@
 /* ============================================================
-   YOUSEF WARD PORTFOLIO — A+B HYBRID VISUAL SYSTEM
+   YOUSSEF WARD PORTFOLIO — A+B HYBRID VISUAL SYSTEM
    Direction A: Kinetic Editorial Structure
    Direction B: Cinematic Art Direction
    ============================================================ */
@@ -1271,6 +1271,105 @@ html[dir="rtl"] .about-portrait-wrap::after { right: auto; left: 16px; border-wi
   transition: opacity var(--dur-mid) var(--ease-cinematic);
 }
 
+.video-modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: 100vw;
+  max-height: 100dvh;
+  background: rgba(10, 10, 9, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9500;
+  border: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity var(--dur-mid) var(--ease-cinematic);
+}
+
+.video-modal[open] {
+  opacity: 1;
+}
+
+.video-modal::backdrop {
+  background: rgba(10, 10, 9, 0.96);
+}
+
+.video-modal-wrapper {
+  position: relative;
+  width: min(92vw, 1100px);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(245, 244, 238, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.video-modal-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  color: rgba(245, 244, 238, 0.6);
+  background: rgba(22, 22, 20, 0.85);
+  border: 1px solid rgba(245, 244, 238, 0.15);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--dur-fast);
+  z-index: 2;
+}
+
+html[dir="rtl"] .video-modal-close {
+  right: auto;
+  left: 28px;
+}
+
+.video-modal-close:hover {
+  color: var(--cream);
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.hero-film-btn {
+  background: rgba(188, 23, 27, 0.15) !important;
+  border: 1px solid var(--red) !important;
+  color: var(--cream) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--dur-fast) ease !important;
+}
+
+.hero-film-btn:hover {
+  background: var(--red) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(188, 23, 27, 0.35);
+}
+
+.hero-film-btn svg {
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 #lightbox[open] { opacity: 1; }
 
 #lightbox::backdrop {
@@ -1443,8 +1542,17 @@ html[dir="rtl"] .lightbox-next { right: auto; left: 16px; }
 /* ── 24. REDUCED MOTION ──────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .clip-reveal-inner {
+    transform: none !important;
   }
   .hero-cover { transform: none !important; }
 }
