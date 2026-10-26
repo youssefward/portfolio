@@ -236,6 +236,68 @@ window.CONTENT = {
       ]
     },
 
+    {
+      id: 'hawadet',
+      name: { en: 'Hawadet El Champ-Elysees — Period Drama Stills', ar: 'مسلسل حواديت الشانزليزيه — دراما تاريخية وتوثيق موقع التصوير' },
+      discipline: 'filmmaking',
+      subdiscipline: 'drama',
+      subdisciplineName: { en: 'Drama & TV Series', ar: 'الدراما والمسلسلات' },
+      agency: 'Synergy Productions',
+      client: 'Synergy Productions / UMS',
+      year: '2019 - 2020',
+      featured: false,
+      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
+      deliverables: ['Period Drama Production Stills', '1950s Atmosphere Recreation', 'On-Set Camera Documentation'],
+      description: {
+        en: 'Camera department participation and production stills capturing the 1950s period aesthetic, vintage vehicle blocking, and classic studio lighting for the historical drama series Hawadet El Champ-Elysees.',
+        ar: 'مشاركة في قسم الكاميرا وتوثيق فوتوغرافي لأجواء حقبة الخمسينيات الكلاسيكية، وتوزيع الإضاءة الدافئة، وتكوينات مواقع التصوير لمسلسل "حواديت الشانزليزيه".'
+      },
+      thinking: {
+        challenge: {
+          en: 'Documenting intricate period costumes, vintage automobiles, and expansive historical sets while adhering to tight filming schedules and camera blocking.',
+          ar: 'توثيق تفاصيل الأزياء التاريخية والديكورات الكلاسيكية والسيارات القديمة وسط جداول تصوير مكثفة وحركة كاميرا مستمرة دون إعاقة مسارات التصوير الرئيسية.'
+        },
+        decisions: {
+          en: 'Used vintage-toned warm key lighting references and wide-angle compositional depth to preserve the nostalgic texture of 1950s Cairo.',
+          ar: 'التركيز على إبراز درجات الإضاءة الدافئة وتأطير المشاهد بزوايا تبرز عمق الديكور الكلاسيكي والملامح البصرية للقاهرة في منتصف القرن العشرين.'
+        },
+        outcome: {
+          en: 'A curated photographic collection capturing classic character wardrobe, atmospheric set design, and vintage drama production.',
+          ar: 'سلسلة لقطات فوتوغرافية توثق طابع العمل التاريخي، تفاصيل الديكور والإضاءة الكلاسيكية، ولحظات الأداء الدرامي في موقع التصوير.'
+        }
+      },
+      images: [
+        {
+          src: 'assets/images/productions/hawadet-1.jpg',
+          thumb: 'assets/images/productions/hawadet-1-thumb.jpg',
+          alt: 'Hawadet El Champ-Elysees — 1950s Street & Vintage Cars 01',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/hawadet-2.jpg',
+          thumb: 'assets/images/productions/hawadet-2-thumb.jpg',
+          alt: 'Hawadet El Champ-Elysees — Classic Palace Interior Lighting 02',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/hawadet-3.jpg',
+          thumb: 'assets/images/productions/hawadet-3-thumb.jpg',
+          alt: 'Hawadet El Champ-Elysees — Period Drama Cast Still 03',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/hawadet-4.jpg',
+          thumb: 'assets/images/productions/hawadet-4-thumb.jpg',
+          alt: 'Hawadet El Champ-Elysees — Low-Key Evening Atmosphere 04',
+          width: 1920,
+          height: 1280
+        }
+      ]
+    },
+
     /* ════════════════════════════════════════════════════════════
        1. FILMMAKING: TELEVISION BROADCAST
        ════════════════════════════════════════════════════════════ */
@@ -708,6 +770,68 @@ window.CONTENT = {
           alt: 'Cairo Transitions — Dusk Horizon 04',
           width: 1400,
           height: 1000
+        }
+      ]
+    },
+
+    {
+      id: 'dahab',
+      name: { en: 'Dahab Coastline — Sinai Light & Topography', ar: 'شواطئ دهب — ضوء وطبيعة جنوب سيناء' },
+      discipline: 'photography',
+      subdiscipline: 'documentary',
+      subdisciplineName: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' },
+      agency: 'Independent Visual Archive',
+      client: 'South Sinai Environmental Archive',
+      year: '2021',
+      featured: false,
+      role: { en: 'Documentary & Landscape Photographer', ar: 'مصور وثائقي وطبيعة' },
+      deliverables: ['Coastal Environmental Frames', 'Natural Golden Hour Studies', 'Topographical Documentation'],
+      description: {
+        en: 'A documentary photography study capturing the rugged coastal geology, changing natural sunlight, and serene horizon line of Dahab along the Gulf of Aqaba.',
+        ar: 'دراسة فوتوغرافية وثائقية ترصد التضاريس الجبلية والساحلية، وتغير مسارات الضوء الطبيعي، وانعكاسات مياه خليج العقبة في مدينة دهب.'
+      },
+      thinking: {
+        challenge: {
+          en: 'Handling harsh desert midday sun and high-contrast reflective water surfaces without losing fine textural detail in rock formations.',
+          ar: 'التعامل مع شدة الضوء المباشر وانعكاسات سطح البحر الحادة، مع الحفاظ على تفاصيل الملامس الدقيقة للتكوينات الصخرية وتدرجات الألوان الطبيعية.'
+        },
+        decisions: {
+          en: 'Shot primarily during early morning and late golden hours, utilizing directional sidelight to carve mountain contours against calm waters.',
+          ar: 'التركيز على فترات الضوء المائل صباحاً وقبل الغروب لاستغلال الظلال الجانبية في إبراز تضاريس الجبال المطلة على الشاطئ.'
+        },
+        outcome: {
+          en: 'A balanced documentary landscape series emphasizing natural silence, coastal geometry, and raw desert atmosphere.',
+          ar: 'سلسلة مشاهد وثائقية تحتفي بسكون الطبيعة، وهندسة الخطوط الساحلية، والصفاء البصري لجنوب سيناء.'
+        }
+      },
+      images: [
+        {
+          src: 'assets/images/photography/dahab-1.jpg',
+          thumb: 'assets/images/photography/dahab-1-thumb.jpg',
+          alt: 'Dahab Coastline — Sinai Horizon 01',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/dahab-2.jpg',
+          thumb: 'assets/images/photography/dahab-2-thumb.jpg',
+          alt: 'Dahab Coastline — Sun Reflections & Shoreline 02',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/dahab-3.jpg',
+          thumb: 'assets/images/photography/dahab-3-thumb.jpg',
+          alt: 'Dahab Coastline — Mountain Contours 03',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/dahab-4.jpg',
+          thumb: 'assets/images/photography/dahab-4-thumb.jpg',
+          alt: 'Dahab Coastline — Serene Water & Coast 04',
+          width: 1920,
+          height: 1280
         }
       ]
     },
