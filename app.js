@@ -390,10 +390,10 @@
               <span>${isAr ? 'ورد' : 'WARD'}</span>
             </h1>
             <p class="hero-role">
-              <span>${isAr ? 'سينما وإضاءة · تصوير فوتوغرافي · إدارة فنية وتصميم' : 'Cinematography & Light · Still Photography · Art Direction & Design'}</span>
+              <span>${esc(t(content.heroRole) || (isAr ? 'مدير تصوير سينمائي · إدارة فنية وتصميم' : 'Cinematographer · Art Direction & Design'))}</span>
             </p>
             <p class="hero-tagline">
-              <span>${isAr ? 'عقل بصري واحد. تعبيرات متعددة.' : 'One Visual Mind. Multiple Expressions.'}</span>
+              <span>${esc(t(content.heroTagline) || (isAr ? 'السينما وإدارة الصورة أولًا، مدعومة بالإخراج الفني والتصميم الجرافيكي.' : 'Cinematography first, with art direction & design as complementary disciplines.'))}</span>
             </p>
             <div class="hero-cta">
               <button class="btn btn-primary" data-nav="filmmaking">

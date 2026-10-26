@@ -15,6 +15,14 @@ window.CONTENT = {
 
   mark: 'assets/brand-mark.svg',
   portrait: 'assets/images/portrait/youssef-ward.jpg',
+  heroRole: {
+    en: 'Cinematographer · Art Direction & Design',
+    ar: 'مدير تصوير سينمائي · إدارة فنية وتصميم'
+  },
+  heroTagline: {
+    en: 'Cinematography first, with art direction & design as complementary disciplines.',
+    ar: 'السينما وإدارة الصورة أولًا، مدعومة بالإخراج الفني والتصميم الجرافيكي.'
+  },
   heroImage: 'assets/images/productions/ekhteyar-1.jpg',
   heroImageAlt: {
     en: 'Cinematography Still — El Ekhteyar Production, Directional Backlight & Silhouettes',
