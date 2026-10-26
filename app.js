@@ -101,7 +101,9 @@
     $$('.nav-lang-btn').forEach(btn => { btn.textContent = lang === 'ar' ? 'EN' : 'عربي'; });
     updateModalLabels(lang);
     renderNav();
-    renderCurrentRoute();
+    transitionRoute(() => {
+      renderCurrentRoute();
+    });
   }
 
   /* ── THEME (DARK / LIGHT) ────────────────────────────────── */
@@ -155,6 +157,30 @@
     return { type: 'section', id: 'home' };
   }
 
+  /* ── ROUTE TRANSITION HELPER ─────────────────────────────── */
+  function transitionRoute(callback) {
+    const main = $('#main');
+    if (!main) {
+      callback();
+      return;
+    }
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      callback();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+    main.classList.add('route-transitioning');
+    setTimeout(() => {
+      callback();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      requestAnimationFrame(() => {
+        void main.offsetHeight; // force reflow
+        main.classList.remove('route-transitioning');
+      });
+    }, 130);
+  }
+
   function navigateTo(target, pushHash = true) {
     if (typeof target === 'string') {
       if (target.startsWith('project/')) {
@@ -174,8 +200,9 @@
     }
 
     updateNavActive();
-    renderCurrentRoute();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    transitionRoute(() => {
+      renderCurrentRoute();
+    });
   }
 
   function handleHashChange() {
@@ -183,8 +210,9 @@
     if (parsed.type !== State.route.type || parsed.id !== State.route.id) {
       State.route = parsed;
       updateNavActive();
-      renderCurrentRoute();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      transitionRoute(() => {
+        renderCurrentRoute();
+      });
     }
   }
 
@@ -508,7 +536,7 @@
       if (!img) return '';
       const tags = (p.deliverables || []).slice(0, 3);
       return `
-        <div class="project-card reveal reveal-delay-${i + 1}" data-project="${esc(p.id)}" role="button" tabindex="0">
+        <div class="project-card reveal reveal-delay-${i + 1}" data-project="${esc(p.id)}" role="button" tabindex="0" aria-label="${esc(t(p.name))} — ${esc(t(p.subdisciplineName || p.subdiscipline || ''))}">
           <div class="project-card-media">
             <img class="project-card-img" src="${esc(img.thumb || img.src)}" alt="${esc(t(p.name))}" loading="lazy" width="${img.width}" height="${img.height}">
             <div class="project-card-overlay" aria-hidden="true"></div>
@@ -625,7 +653,7 @@
       const titleColor = dark ? 'color:var(--cream)' : '';
       const tags = (p.deliverables || []).slice(0, 3);
       return `
-        <div class="project-card reveal reveal-delay-${(i % 3) + 1}" data-project="${esc(p.id)}" role="button" tabindex="0">
+        <div class="project-card reveal reveal-delay-${(i % 3) + 1}" data-project="${esc(p.id)}" role="button" tabindex="0" aria-label="${esc(t(p.name))} — ${esc(t(p.subdisciplineName || p.subdiscipline || ''))}">
           <div class="project-card-media">
             ${img ? `<img class="project-card-img" src="${esc(img.thumb || img.src)}" alt="${esc(t(p.name))}" loading="lazy" width="${img.width}" height="${img.height}">` : '<div style="width:100%;height:100%;background:var(--surface-alt);"></div>'}
             <div class="project-card-overlay" aria-hidden="true"></div>
@@ -738,7 +766,6 @@
           ${heroImg ? `
             <div class="case-study-hero reveal">
               <img src="${esc(heroImg.src)}" alt="${esc(t(project.name))}" loading="eager" width="${heroImg.width}" height="${heroImg.height}">
-              <div class="hero-brackets" aria-hidden="true"></div>
             </div>
           ` : ''}
 
@@ -787,32 +814,32 @@
             ` : ''}
           </header>
 
-          <!-- THE THINKING BEHIND THE WORK -->
+          <!-- VISUAL TREATMENT & LIGHTING ARCHITECTURE -->
           ${(thinking.challenge || thinking.decisions || thinking.outcome) ? `
-            <section class="thinking-section" aria-label="${isAr ? 'فلسفة الكادر والقرار البصري' : 'The Thinking Behind the Work'}">
+            <section class="thinking-section" aria-label="${isAr ? 'الرؤية البصرية وتوزيع الإضاءة' : 'Visual Treatment & Lighting Architecture'}">
               <div class="eyebrow reveal">
                 <span class="eyebrow-line"></span>
-                ${isAr ? 'فلسفة الكادر والقرار البصري' : 'THE THINKING BEHIND THE WORK'}
+                ${isAr ? 'الرؤية البصرية وتوزيع الإضاءة' : 'VISUAL TREATMENT & LIGHTING ARCHITECTURE'}
               </div>
               <div class="thinking-grid">
                 ${thinking.challenge ? `
                   <div class="thinking-card reveal reveal-delay-1">
                     <p class="thinking-card-number">01 —</p>
-                    <h3 class="thinking-card-title">${isAr ? 'التحدي الإبداعي' : 'The Creative Challenge'}</h3>
+                    <h3 class="thinking-card-title">${isAr ? 'الرؤية الإبداعية والأجواء' : 'Creative & Atmospheric Intent'}</h3>
                     <p class="thinking-card-body">${esc(t(thinking.challenge))}</p>
                   </div>
                 ` : ''}
                 ${thinking.decisions ? `
                   <div class="thinking-card reveal reveal-delay-2">
                     <p class="thinking-card-number">02 —</p>
-                    <h3 class="thinking-card-title">${isAr ? 'القرارات البصرية والتنفيذية' : 'Key Visual Decisions'}</h3>
+                    <h3 class="thinking-card-title">${isAr ? 'هندسة الإضاءة والكاميرا' : 'Lighting & Visual Architecture'}</h3>
                     <p class="thinking-card-body">${esc(t(thinking.decisions))}</p>
                   </div>
                 ` : ''}
                 ${thinking.outcome ? `
                   <div class="thinking-card reveal reveal-delay-3">
                     <p class="thinking-card-number">03 —</p>
-                    <h3 class="thinking-card-title">${isAr ? 'النتيجة والأثر' : 'Outcome & Impact'}</h3>
+                    <h3 class="thinking-card-title">${isAr ? 'النتيجة والأثر البصري' : 'Visual Outcome & Delivery'}</h3>
                     <p class="thinking-card-body">${esc(t(thinking.outcome))}</p>
                   </div>
                 ` : ''}
@@ -833,9 +860,10 @@
                        data-lightbox-src="${esc(img.src)}"
                        data-lightbox-caption="${esc(img.alt || t(project.name))}"
                        data-lightbox-group="project-${esc(project.id)}"
-                       role="button" tabindex="0">
+                       role="button" tabindex="0"
+                       aria-label="${isAr ? 'عرض الكادر بالحجم الكامل' : 'Expand full frame'}">
                     <img src="${esc(img.src)}" alt="${esc(img.alt || t(project.name))}" loading="lazy">
-                    <div class="item-hover-hint" aria-hidden="true">${isAr ? 'عرض بالحجم الكامل ✦' : 'Expand Frame ✦'}</div>
+                    <div class="item-hover-hint" aria-hidden="true">${isAr ? 'عرض الكادر بالحجم الكامل ✦' : 'Expand Full Frame ✦'}</div>
                   </div>
                 `).join('')}
               </div>
@@ -1050,6 +1078,26 @@
   /* ── LIGHTBOX (EXPANDED STILLS) ─────────────────────────── */
   let lastLightboxTrigger = null;
 
+  function trapDialogFocus(dialog, e) {
+    if (e.key !== 'Tab') return;
+    const focusable = dialog.querySelectorAll('button:not([disabled]), [tabindex="0"], a[href], video, iframe');
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === first || document.activeElement === dialog) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }
+
   function openLightbox(items, startIndex = 0) {
     const lb = $('#lightbox');
     if (!lb || !items || !items.length) return;
@@ -1059,7 +1107,7 @@
     updateLightboxSlide();
     lb.showModal();
     document.body.style.overflow = 'hidden';
-    lb.focus();
+    lb.querySelector('.lightbox-close')?.focus();
   }
 
   function closeLightbox() {
@@ -1114,6 +1162,10 @@
 
     lb.addEventListener('click', (e) => {
       if (e.target === lb) closeLightbox();
+    });
+
+    lb.addEventListener('keydown', (e) => {
+      trapDialogFocus(lb, e);
     });
 
     document.addEventListener('keydown', (e) => {
@@ -1198,7 +1250,7 @@
 
     modal.showModal();
     document.body.style.overflow = 'hidden';
-    modal.focus();
+    modal.querySelector('#video-modal-close')?.focus();
   }
 
   function closeVideoModal() {
@@ -1235,6 +1287,10 @@
 
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeVideoModal();
+    });
+
+    modal.addEventListener('keydown', (e) => {
+      trapDialogFocus(modal, e);
     });
 
     document.addEventListener('keydown', (e) => {

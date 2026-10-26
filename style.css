@@ -176,6 +176,17 @@ body.cursor-hover #cursor {
 }
 .skip-link:focus { top: 8px; }
 
+/* ── MAIN CONTENT & ROUTE TRANSITIONS ────────────────────── */
+#main {
+  min-height: 80vh;
+  transition: opacity 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity;
+}
+
+#main.route-transitioning {
+  opacity: 0;
+}
+
 /* ── 3. NAVIGATION ───────────────────────────────────────── */
 #header {
   position: fixed;
@@ -1248,6 +1259,18 @@ html[dir="rtl"] .project-card-video-pill {
     aspect-ratio: 16/10 !important;
     min-height: clamp(280px, 36vh, 420px);
   }
+  .discipline-section--filmmaking .project-card-media {
+    aspect-ratio: 16 / 9 !important;
+    min-height: auto !important;
+  }
+  .discipline-section--photography .project-card-media {
+    aspect-ratio: 4 / 3 !important;
+    min-height: auto !important;
+  }
+  .discipline-section--design .project-card-media {
+    aspect-ratio: 16 / 10 !important;
+    min-height: auto !important;
+  }
 }
 
 /* ── 11. FILMMAKING (DARK CINEMATIC) SECTION ─────────────── */
@@ -1269,14 +1292,48 @@ html[dir="rtl"] .project-card-video-pill {
 .discipline-section--filmmaking .project-card-desc { color: var(--muted); }
 .discipline-section--filmmaking .discipline-header { border-color: var(--line); }
 
+/* Cinematic widescreen framing for filmmaking */
+.discipline-section--filmmaking .project-card-media {
+  aspect-ratio: 16 / 9;
+  min-height: auto;
+}
+
+.discipline-section--filmmaking .project-card:nth-child(1) .project-card-media,
+.discipline-section--filmmaking .project-card:nth-child(4) .project-card-media {
+  aspect-ratio: 2.39 / 1;
+  min-height: auto;
+}
+
 /* ── 12. PHOTOGRAPHY (EDITORIAL B&W) SECTION ─────────────── */
 .discipline-section--photography {
   background: var(--bg);
 }
 
+.discipline-section--photography .project-card-media {
+  aspect-ratio: 4 / 3;
+  min-height: auto;
+}
+
+.discipline-section--photography .project-card:nth-child(1) .project-card-media,
+.discipline-section--photography .project-card:nth-child(4) .project-card-media {
+  aspect-ratio: 16 / 10;
+  min-height: auto;
+}
+
 /* ── 13. DESIGN (STRUCTURED GRID) SECTION ────────────────── */
 .discipline-section--design {
   background: var(--surface-alt);
+}
+
+.discipline-section--design .project-card-media {
+  aspect-ratio: 16 / 10;
+  min-height: auto;
+}
+
+.discipline-section--design .project-card:nth-child(1) .project-card-media,
+.discipline-section--design .project-card:nth-child(4) .project-card-media {
+  aspect-ratio: 16 / 9;
+  min-height: auto;
 }
 
 /* ── 14. ABOUT SECTION ───────────────────────────────────── */
@@ -1883,13 +1940,20 @@ html[dir="rtl"] .case-study-back-arrow {
 .case-study-hero {
   position: relative;
   width: 100%;
-  aspect-ratio: 21/9;
-  min-height: clamp(440px, 60vh, 750px);
+  aspect-ratio: 2.39 / 1;
+  min-height: clamp(260px, 48vh, 660px);
   max-height: 85vh;
   overflow: hidden;
   background: var(--obsidian);
   margin-bottom: clamp(40px, 6vw, 72px);
   border: 1px solid var(--line);
+}
+
+@media (max-width: 768px) {
+  .case-study-hero {
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+  }
 }
 
 .case-study-hero img {
@@ -2021,14 +2085,16 @@ html[dir="rtl"] .case-study-back-arrow {
 .thinking-card {
   background: var(--surface-alt);
   padding: clamp(28px, 4vw, 44px) clamp(20px, 3vw, 32px);
+  border: 1px solid var(--line);
   border-top: 2px solid var(--red);
   position: relative;
-  transition: transform var(--dur-mid) var(--ease-out), box-shadow var(--dur-mid);
+  transition: transform var(--dur-mid) var(--ease-out), box-shadow var(--dur-mid), border-color var(--dur-mid);
 }
 
 .thinking-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border-color: rgba(188, 23, 27, 0.4);
 }
 
 .thinking-card-number {
@@ -2104,16 +2170,19 @@ html[dir="rtl"] .case-study-back-arrow {
 .case-study-gallery-item .item-hover-hint {
   position: absolute;
   inset: 0;
-  background: rgba(22,22,20,0.4);
+  background: rgba(8, 8, 8, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity var(--dur-fast);
-  color: #fff;
+  transition: opacity var(--dur-fast) var(--ease-cinematic);
+  color: var(--cream);
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
