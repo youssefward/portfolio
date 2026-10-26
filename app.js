@@ -9,7 +9,7 @@
 
   /* ── STATE ──────────────────────────────────────────────── */
   const State = {
-    lang: 'ar',
+    lang: 'en',
     theme: 'light',
     route: { type: 'section', id: 'home' }, // { type: 'section'|'project', id: string }
     lightbox: { items: [], index: 0 },
@@ -57,8 +57,23 @@
   }
 
   /* ── LANGUAGE SWITCHER ───────────────────────────────────── */
+  function getSavedLang() {
+    try {
+      return localStorage.getItem('yw-lang') || 'en';
+    } catch (e) {
+      return 'en';
+    }
+  }
+
+  function setSavedLang(lang) {
+    try {
+      localStorage.setItem('yw-lang', lang);
+    } catch (e) {}
+  }
+
   function setLang(lang) {
     State.lang = lang;
+    setSavedLang(lang);
     const html = document.documentElement;
     html.lang = lang;
     html.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -1097,6 +1112,13 @@
 
   /* ── INITIALIZATION ─────────────────────────────────────── */
   function init() {
+    // Language (Default English)
+    const savedLang = getSavedLang();
+    State.lang = savedLang;
+    const html = document.documentElement;
+    html.lang = savedLang;
+    html.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+
     // Theme
     const savedTheme = getSavedTheme();
     setTheme(savedTheme);
