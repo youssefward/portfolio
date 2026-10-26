@@ -8,22 +8,28 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Color Tokens */
-  --obsidian:   #161614;
-  --cream:      #F5F4EE;
-  --paper:      #EDECE6;
-  --ink:        #20211F;
-  --red:        #BC171B;
-  --muted:      #868680;
-  --faint:      #585952;
-  --line:       rgba(32, 33, 31, 0.10);
-  --line-light: rgba(245, 244, 238, 0.12);
+  /* Established Cinematic Palette Tokens */
+  --deep-black: #080808;
+  --night-blue: #101A2B;
+  --graphite:   #343A45;
+  --warm-ivory: #E8E4DC;
 
-  /* Surface */
-  --bg:         var(--cream);
-  --fg:         var(--ink);
-  --surface:    #ffffff;
-  --surface-alt: var(--paper);
+  /* Color Tokens (Cinematic Dark Default) */
+  --obsidian:   var(--deep-black);
+  --cream:      var(--warm-ivory);
+  --paper:      var(--night-blue);
+  --ink:        var(--warm-ivory);
+  --red:        #BC171B;
+  --muted:      #8E96A4;
+  --faint:      #5A6475;
+  --line:       rgba(52, 58, 69, 0.60);
+  --line-light: rgba(232, 228, 220, 0.12);
+
+  /* Surface (Cinematic Dark First) */
+  --bg:         var(--deep-black);
+  --fg:         var(--warm-ivory);
+  --surface:    #0D1422;
+  --surface-alt:#131E33;
 
   /* Typography */
   --font:       'Alexandria', system-ui, sans-serif;
@@ -53,13 +59,33 @@
   --dur-cinematic: 1100ms;
 }
 
-/* Dark mode theme */
+/* Explicit Dark mode theme (matches default cinematic dark) */
 [data-theme="dark"] {
-  --bg:         var(--obsidian);
-  --fg:         var(--cream);
-  --surface:    #1e1e1b;
-  --surface-alt:#222220;
-  --line:       var(--line-light);
+  --bg:         var(--deep-black);
+  --fg:         var(--warm-ivory);
+  --surface:    #0D1422;
+  --surface-alt:#131E33;
+  --line:       rgba(52, 58, 69, 0.60);
+  --line-light: rgba(232, 228, 220, 0.12);
+  --muted:      #8E96A4;
+  --faint:      #5A6475;
+}
+
+/* Preserved Light mode theme (when user explicitly selects light) */
+[data-theme="light"] {
+  --obsidian:   #161614;
+  --cream:      #F5F4EE;
+  --paper:      #EDECE6;
+  --ink:        #1A1D20;
+  --muted:      #6B7280;
+  --faint:      #4B5563;
+  --line:       rgba(52, 58, 69, 0.18);
+  --line-light: rgba(52, 58, 69, 0.10);
+
+  --bg:         #F5F4EE;
+  --fg:         #1A1D20;
+  --surface:    #FFFFFF;
+  --surface-alt:#EDECE6;
 }
 
 html {
@@ -92,7 +118,7 @@ dialog { border: none; padding: 0; background: transparent; }
   position: fixed;
   top: 0; left: 0;
   width: 40px; height: 40px;
-  border: 1px solid rgba(32,33,31,0.3);
+  border: 1px solid rgba(232,228,220,0.35);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -101,12 +127,17 @@ dialog { border: none; padding: 0; background: transparent; }
               border-color var(--dur-fast),
               width var(--dur-fast) var(--ease-out),
               height var(--dur-fast) var(--ease-out);
-  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
 }
 
 [data-theme="dark"] #cursor {
-  border-color: rgba(245,244,238,0.3);
+  border-color: rgba(232,228,220,0.35);
   mix-blend-mode: screen;
+}
+
+[data-theme="light"] #cursor {
+  border-color: rgba(32,33,31,0.3);
+  mix-blend-mode: multiply;
 }
 
 .cursor-dot {
@@ -671,7 +702,8 @@ html[dir="rtl"] .eyebrow { flex-direction: row-reverse; }
   transition: transform var(--dur-slow) var(--ease-out);
 }
 
-[data-theme="dark"] .discipline-tile::before { background: #1e1e1b; }
+[data-theme="dark"] .discipline-tile::before { background: #131E33; }
+[data-theme="light"] .discipline-tile::before { background: #EDECE6; }
 
 .discipline-tile:hover::before { transform: translateY(0); }
 
@@ -1040,22 +1072,22 @@ html[dir="rtl"] .project-card-video-pill {
 
 /* ── 11. FILMMAKING (DARK CINEMATIC) SECTION ─────────────── */
 .discipline-section--filmmaking {
-  background: var(--obsidian);
-  color: var(--cream);
+  background: var(--bg);
+  color: var(--fg);
   padding: var(--section-gap) 0;
 }
 
 .discipline-section--filmmaking .discipline-number { color: rgba(188,23,27,0.8); }
-.discipline-section--filmmaking .discipline-title { color: var(--cream); }
-.discipline-section--filmmaking .discipline-desc { color: rgba(245,244,238,0.5); }
-.discipline-section--filmmaking .filter-btn { border-color: rgba(245,244,238,0.15); color: rgba(245,244,238,0.4); }
-.discipline-section--filmmaking .filter-btn:hover { border-color: rgba(245,244,238,0.5); color: var(--cream); }
-.discipline-section--filmmaking .filter-btn.active { background: var(--cream); color: var(--obsidian); border-color: var(--cream); }
-.discipline-section--filmmaking .project-card { background: #1e1e1b; }
-.discipline-section--filmmaking .project-card-title { color: var(--cream); }
-.discipline-section--filmmaking .project-card-eyebrow { color: rgba(245,244,238,0.35); }
-.discipline-section--filmmaking .project-card-desc { color: rgba(245,244,238,0.45); }
-.discipline-section--filmmaking .discipline-header { border-color: rgba(245,244,238,0.1); }
+.discipline-section--filmmaking .discipline-title { color: var(--fg); }
+.discipline-section--filmmaking .discipline-desc { color: var(--muted); }
+.discipline-section--filmmaking .filter-btn { border-color: var(--line); color: var(--muted); }
+.discipline-section--filmmaking .filter-btn:hover { border-color: var(--fg); color: var(--fg); }
+.discipline-section--filmmaking .filter-btn.active { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.discipline-section--filmmaking .project-card { background: var(--surface-alt); }
+.discipline-section--filmmaking .project-card-title { color: var(--fg); }
+.discipline-section--filmmaking .project-card-eyebrow { color: var(--muted); }
+.discipline-section--filmmaking .project-card-desc { color: var(--muted); }
+.discipline-section--filmmaking .discipline-header { border-color: var(--line); }
 
 /* ── 12. PHOTOGRAPHY (EDITORIAL B&W) SECTION ─────────────── */
 .discipline-section--photography {

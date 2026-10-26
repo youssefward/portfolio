@@ -10,7 +10,7 @@
   /* ── STATE ──────────────────────────────────────────────── */
   const State = {
     lang: 'en',
-    theme: 'light',
+    theme: 'dark',
     route: { type: 'section', id: 'home' }, // { type: 'section'|'project', id: string }
     lightbox: { items: [], index: 0 },
     scrollY: 0,
@@ -107,9 +107,11 @@
   /* ── THEME (DARK / LIGHT) ────────────────────────────────── */
   function getSavedTheme() {
     try {
-      return localStorage.getItem('yw-theme') || 'light';
+      const saved = localStorage.getItem('yw-theme');
+      if (saved === 'light' || saved === 'dark') return saved;
+      return 'dark';
     } catch (e) {
-      return 'light';
+      return 'dark';
     }
   }
 
@@ -366,7 +368,7 @@
         <img
           class="hero-cover"
           src="${esc(content.portrait)}"
-          alt="${isAr ? 'يوسف ورد — مصمم ومدير فني' : 'Youssef Ward — Multidisciplinary Designer & Art Director'}"
+          alt="${isAr ? 'يوسف ورد — مدير تصوير ومخرج بصري' : 'Youssef Ward — Cinematographer & Visual Director'}"
           loading="eager"
           fetchpriority="high"
         >
@@ -377,14 +379,14 @@
 
         <div class="hero-content">
           <p class="hero-index" aria-hidden="true">
-            ${isAr ? '— مبدع بصري ومصمم متعدد التخصصات' : '— MULTIDISCIPLINARY DESIGNER & ART DIRECTOR'}
+            ${isAr ? '— مدير تصوير ومخرج بصري' : '— CINEMATOGRAPHER & VISUAL DIRECTOR'}
           </p>
           <h1 class="hero-name">
             <span>${isAr ? 'يوسف' : 'YOUSSEF'}</span>
             <span>${isAr ? 'ورد' : 'WARD'}</span>
           </h1>
           <p class="hero-role">
-            <span>${isAr ? 'مدير فني · سينما وتصوير · هويات بصرية' : 'Art Direction · Film & Stills · Brand Systems'}</span>
+            <span>${isAr ? 'سينما وإضاءة · تصوير فوتوغرافي · إدارة فنية وتصميم' : 'Cinematography & Light · Still Photography · Art Direction & Design'}</span>
           </p>
           <p class="hero-tagline">
             <span>${isAr ? 'عقل بصري واحد. تعبيرات متعددة.' : 'One Visual Mind. Multiple Expressions.'}</span>
@@ -871,7 +873,7 @@
                 ${isAr ? 'يوسف ورد' : 'Youssef Ward'}
               </h1>
               <p class="eyebrow reveal" style="color:var(--red);margin-bottom:20px;">
-                ${isAr ? 'مصمم متعدد التخصصات · مدير فني' : 'Multidisciplinary Designer & Art Director'}
+                ${isAr ? 'مدير تصوير · مخرج بصري · إدارة فنية' : 'Cinematographer & Visual Director · Art Direction'}
               </p>
               <p class="about-bio reveal reveal-delay-1">${esc(t(content.bio))}</p>
 
@@ -886,7 +888,7 @@
                 </div>
                 <div class="about-meta-item">
                   <p class="about-meta-item-label">${isAr ? 'التخصصات' : 'Focus'}</p>
-                  <p class="about-meta-item-value">${isAr ? 'سينما · تصوير · هويات' : 'Cinema · Stills · Brand Systems'}</p>
+                  <p class="about-meta-item-value">${isAr ? 'سينما وإضاءة · تصوير فوتوغرافي · هويات وتصميم' : 'Cinematography & Light · Stills · Brand Systems'}</p>
                 </div>
                 <div class="about-meta-item">
                   <p class="about-meta-item-label">${isAr ? 'الحالة الحالية' : 'Current Status'}</p>
