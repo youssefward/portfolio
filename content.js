@@ -43,7 +43,7 @@ window.CONTENT = {
         { id: 'all', name: { en: 'All Film Work', ar: 'جميع أعمال السينما' } },
         { id: 'drama', name: { en: 'Drama & TV Series', ar: 'الدراما والمسلسلات' } },
         { id: 'broadcast', name: { en: 'Television Shows', ar: 'الإنتاج والبرامج' } },
-        { id: 'visual-studies', name: { en: 'Cinematic Studies', ar: 'تجارب بصرية' } }
+        { id: 'visual-studies', name: { en: 'Graduation Film', ar: 'فيلم التخرج' } }
       ]
     },
     {
@@ -94,7 +94,7 @@ window.CONTENT = {
       client: 'Synergy Productions / UMS',
       year: '2020 - 2021',
       featured: true,
-      role: { en: 'Camera Department & Production Stills', ar: 'قسم الكاميرا وتوثيق موقع التصوير' },
+      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
       deliverables: ['On-Set Production Stills', 'Lighting Documentation', 'Live-Action Scene Tracking'],
       description: {
         en: 'On-set camera department participation and production stills for the historical drama series El Ekhteyar, documenting action sequences, low-key lighting setups, and field composition.',
@@ -149,7 +149,7 @@ window.CONTENT = {
       client: 'Synergy Drama',
       year: '2021',
       featured: true,
-      role: { en: 'Camera Department & Scene Documentation', ar: 'قسم الكاميرا والتوثيق البصري' },
+      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
       deliverables: ['Dramatic Scene Stills', 'Close-Up Framing', 'Low-Key Lighting Documentation'],
       description: {
         en: 'On-set camera department support and dramatic stills capturing intimate character confrontation and directional shadow falloff for the television series Cairo Kabul.',
@@ -207,7 +207,7 @@ window.CONTENT = {
       client: 'ON E Broadcast Channel',
       year: '2021 - 2022',
       featured: true,
-      role: { en: 'Studio Stills & Stage Production Documentation', ar: 'التوثيق البصري للاستوديو وكواليس الإنتاج' },
+      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
       deliverables: ['Stage Performance Coverage', 'Celebrity Key Stills', 'Studio Lighting Documentation'],
       description: {
         en: 'Studio visual documentation and celebrity portrait capture on the set of the Sahranen broadcast show featuring prominent figures from Arab cinema and music.',
@@ -257,15 +257,15 @@ window.CONTENT = {
        ════════════════════════════════════════════════════════════ */
     {
       id: 'mawlawya',
-      name: { en: 'Mawlawya — Graduation Film & Visual Study', ar: 'المولوية — فيلم مشروع التخرج والدراسة البصرية' },
+      name: { en: 'Mawlawya — Graduation Film & Visual Study', ar: 'المولوية — فيلم التخرج والدراسة البصرية' },
       discipline: 'filmmaking',
       subdiscipline: 'visual-studies',
-      subdisciplineName: { en: 'Graduation Project', ar: 'مشروع التخرج' },
+      subdisciplineName: { en: 'Graduation Film', ar: 'فيلم التخرج' },
       agency: 'Faculty of Applied Arts',
-      client: 'Graduation Project',
+      client: 'Graduation Film',
       year: '2024',
       featured: true,
-      role: { en: 'Director of Photography & Visual Concept (Graduation Project)', ar: 'تصوير سينمائي وفكرة بصرية (مشروع التخرج)' },
+      role: { en: 'Director of Photography & Visual Concept (Graduation Film)', ar: 'مدير التصوير والرؤية البصرية (فيلم التخرج)' },
       deliverables: ['Continuous Motion Tracking', 'Kinetic Shutter Blur Study', 'Light Choreography Documentation'],
       video: 'https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci',
       vimeoId: '1239369594',
