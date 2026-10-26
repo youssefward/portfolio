@@ -1002,68 +1002,6 @@ window.CONTENT = {
     },
 
     {
-      id: 'dahab',
-      name: { en: 'Dahab Coastline — Sinai Light & Topography', ar: 'شواطئ دهب — ضوء وطبيعة جنوب سيناء' },
-      discipline: 'photography',
-      subdiscipline: 'documentary',
-      subdisciplineName: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' },
-      agency: 'Independent Visual Archive',
-      client: 'South Sinai Environmental Archive',
-      year: '2021',
-      featured: false,
-      role: { en: 'Documentary & Landscape Photographer', ar: 'مصور وثائقي وطبيعة' },
-      deliverables: ['Coastal Environmental Frames', 'Natural Golden Hour Studies', 'Topographical Documentation'],
-      description: {
-        en: 'A documentary photography study capturing the rugged coastal geology, changing natural sunlight, and serene horizon line of Dahab along the Gulf of Aqaba.',
-        ar: 'دراسة فوتوغرافية وثائقية ترصد التضاريس الجبلية والساحلية، وتغير مسارات الضوء الطبيعي، وانعكاسات مياه خليج العقبة في مدينة دهب.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Handling harsh desert midday sun and high-contrast reflective water surfaces without losing fine textural detail in rock formations.',
-          ar: 'التعامل مع شدة الضوء المباشر وانعكاسات سطح البحر الحادة، مع الحفاظ على تفاصيل الملامس الدقيقة للتكوينات الصخرية وتدرجات الألوان الطبيعية.'
-        },
-        decisions: {
-          en: 'Shot primarily during early morning and late golden hours, utilizing directional sidelight to carve mountain contours against calm waters.',
-          ar: 'التركيز على فترات الضوء المائل صباحاً وقبل الغروب لاستغلال الظلال الجانبية في إبراز تضاريس الجبال المطلة على الشاطئ.'
-        },
-        outcome: {
-          en: 'A balanced documentary landscape series emphasizing natural silence, coastal geometry, and raw desert atmosphere.',
-          ar: 'سلسلة مشاهد وثائقية تحتفي بسكون الطبيعة، وهندسة الخطوط الساحلية، والصفاء البصري لجنوب سيناء.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/photography/dahab-1.jpg',
-          thumb: 'assets/images/photography/dahab-1-thumb.jpg',
-          alt: 'Dahab Coastline — Sinai Horizon 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/dahab-2.jpg',
-          thumb: 'assets/images/photography/dahab-2-thumb.jpg',
-          alt: 'Dahab Coastline — Sun Reflections & Shoreline 02',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/dahab-3.jpg',
-          thumb: 'assets/images/photography/dahab-3-thumb.jpg',
-          alt: 'Dahab Coastline — Mountain Contours 03',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/dahab-4.jpg',
-          thumb: 'assets/images/photography/dahab-4-thumb.jpg',
-          alt: 'Dahab Coastline — Serene Water & Coast 04',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    {
       id: 'cinema-stills',
       name: { en: 'Cinema Photography — Production Stills & Camera Work', ar: 'فوتوغرافيا السينما — توثيق موقع التصوير والدراما' },
       discipline: 'photography',
