@@ -19,6 +19,11 @@
   /* ── HELPERS ────────────────────────────────────────────── */
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+  const toElement = (target) => {
+    if (!target) return null;
+    if (target instanceof Element) return target;
+    return target.parentElement instanceof Element ? target.parentElement : null;
+  };
   const t = (obj) => {
     if (!obj) return '';
     if (typeof obj === 'string') return obj;
@@ -27,7 +32,7 @@
   const esc = (s) => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
   /* ── CONTENT ALIAS ──────────────────────────────────────── */
-  const C = () => window.CONTENT;
+  const C = () => window.CONTENT || {};
 
   /* ── CURSOR ─────────────────────────────────────────────── */
   function initCursor() {
@@ -40,8 +45,8 @@
     let mx = 0, my = 0, cx = 0, cy = 0;
     document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; });
     document.addEventListener('mouseenter', (e) => {
-      const el = e.target;
-      if (el.closest('a, button, [role="button"], .project-card, .discipline-tile, .gallery-item, .case-study-gallery-item, .case-study-nav-btn')) {
+      const el = toElement(e.target);
+      if (el && el.closest('a, button, [role="button"], .project-card, .discipline-tile, .gallery-item, .case-study-gallery-item, .case-study-nav-btn')) {
         document.body.classList.add('cursor-hover');
       } else {
         document.body.classList.remove('cursor-hover');
@@ -279,7 +284,8 @@
     const navLinks = $('#nav-links');
     const menuBtn = $('#menu-btn');
     if (navLinks && navLinks.classList.contains('open')) {
-      if (!navLinks.contains(e.target) && !menuBtn?.contains(e.target)) {
+      const el = toElement(e.target);
+      if (el && !navLinks.contains(el) && !menuBtn?.contains(el)) {
         closeMobileMenu();
       }
     }
@@ -973,15 +979,17 @@
   /* ── EVENT ATTACHERS & DELEGATION ────────────────────────── */
   function initDelegatedEvents() {
     document.addEventListener('click', (e) => {
-      if (e.target.closest('[data-lightbox-src]') || e.target.closest('#hero-film-btn') || e.target.closest('.video-modal-close') || e.target.closest('.lightbox-close') || e.target.closest('.lightbox-prev') || e.target.closest('.lightbox-next')) {
+      const el = toElement(e.target);
+      if (!el) return;
+      if (el.closest('[data-lightbox-src]') || el.closest('#hero-film-btn') || el.closest('.video-modal-close') || el.closest('.lightbox-close') || el.closest('.lightbox-prev') || el.closest('.lightbox-next')) {
         return;
       }
-      const card = e.target.closest('.project-card[data-project]');
+      const card = el.closest('.project-card[data-project]');
       if (card) {
         navigateTo(`project/${card.dataset.project}`);
         return;
       }
-      const navEl = e.target.closest('[data-nav]');
+      const navEl = el.closest('[data-nav]');
       if (navEl) {
         e.preventDefault();
         navigateTo(navEl.dataset.nav);
@@ -991,13 +999,15 @@
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
-        const card = e.target.closest('.project-card[data-project]');
+        const el = toElement(e.target);
+        if (!el) return;
+        const card = el.closest('.project-card[data-project]');
         if (card && document.activeElement === card) {
           e.preventDefault();
           navigateTo(`project/${card.dataset.project}`);
           return;
         }
-        const navEl = e.target.closest('[data-nav]');
+        const navEl = el.closest('[data-nav]');
         if (navEl && document.activeElement === navEl) {
           e.preventDefault();
           navigateTo(navEl.dataset.nav);
@@ -1097,7 +1107,8 @@
 
     // Delegated click for lightbox triggers
     document.addEventListener('click', (e) => {
-      const item = e.target.closest('[data-lightbox-src]');
+      const el = toElement(e.target);
+      const item = el ? el.closest('[data-lightbox-src]') : null;
       if (!item) return;
 
       const group = item.dataset.lightboxGroup;
@@ -1112,7 +1123,8 @@
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
-        const item = e.target.closest('[data-lightbox-src]');
+        const el = toElement(e.target);
+        const item = el ? el.closest('[data-lightbox-src]') : null;
         if (item && document.activeElement === item) {
           e.preventDefault();
           item.click();
@@ -1210,7 +1222,8 @@
     });
 
     document.addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-video], .hero-film-btn, .case-study-play-btn');
+      const el = toElement(e.target);
+      const btn = el ? el.closest('[data-video], .hero-film-btn, .case-study-play-btn') : null;
       if (btn) {
         e.preventDefault();
         const url = btn.dataset.video || 'https://player.vimeo.com/video/1239369594?autoplay=1&color=bc171b&title=0&byline=0&portrait=0';
@@ -1221,6 +1234,20 @@
 
   /* ── INITIALIZATION ─────────────────────────────────────── */
   function init() {
+    if (!window.CONTENT) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+        return;
+      }
+      console.warn('Youssef Ward Portfolio: window.CONTENT not yet available, deferring init.');
+      window.addEventListener('load', () => {
+        if (window.CONTENT && !document.querySelector('#header .nav')) {
+          init();
+        }
+      }, { once: true });
+      return;
+    }
+
     // Language (Default English)
     const savedLang = getSavedLang();
     State.lang = savedLang;
