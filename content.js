@@ -135,6 +135,27 @@ window.CONTENT = {
           alt: 'El Ekhteyar — Night Operation Frame 03',
           width: 1920,
           height: 1133
+        },
+        {
+          src: 'assets/images/productions/ekhteyar-4.jpg',
+          thumb: 'assets/images/productions/ekhteyar-4-thumb.jpg',
+          alt: 'El Ekhteyar — Desert Field Operation Still 04',
+          width: 1920,
+          height: 1277
+        },
+        {
+          src: 'assets/images/productions/ekhteyar-5.jpg',
+          thumb: 'assets/images/productions/ekhteyar-5-thumb.jpg',
+          alt: 'El Ekhteyar — Tactical Setup & Vehicle Line 05',
+          width: 1920,
+          height: 1277
+        },
+        {
+          src: 'assets/images/productions/ekhteyar-6.jpg',
+          thumb: 'assets/images/productions/ekhteyar-6-thumb.jpg',
+          alt: 'El Ekhteyar — Night Operation Scene Tracking 06',
+          width: 1920,
+          height: 1277
         }
       ]
     },
@@ -188,6 +209,27 @@ window.CONTENT = {
           src: 'assets/images/productions/cairo-kabul-3.jpg',
           thumb: 'assets/images/productions/cairo-kabul-3-thumb.jpg',
           alt: 'Cairo Kabul — Atmosphere Still 03',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/cairo-kabul-4.jpg',
+          thumb: 'assets/images/productions/cairo-kabul-4-thumb.jpg',
+          alt: 'Cairo Kabul — Tense Dialogue Framing 04',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/cairo-kabul-5.jpg',
+          thumb: 'assets/images/productions/cairo-kabul-5-thumb.jpg',
+          alt: 'Cairo Kabul — Low-Key Shadow Depth 05',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/cairo-kabul-6.jpg',
+          thumb: 'assets/images/productions/cairo-kabul-6-thumb.jpg',
+          alt: 'Cairo Kabul — Character Focus Close-Up 06',
           width: 1920,
           height: 1280
         }
@@ -246,6 +288,27 @@ window.CONTENT = {
           src: 'assets/images/productions/sahranen-3.jpg',
           thumb: 'assets/images/productions/sahranen-3-thumb.jpg',
           alt: 'Sahranen — Host & Guest Dynamic 03',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/sahranen-4.jpg',
+          thumb: 'assets/images/productions/sahranen-4-thumb.jpg',
+          alt: 'Sahranen — Mohamed Ramadan Live On Stage 04',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/sahranen-5.jpg',
+          thumb: 'assets/images/productions/sahranen-5-thumb.jpg',
+          alt: 'Sahranen — Sherif Mounir Dialogue & Stage Light 05',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/productions/sahranen-6.jpg',
+          thumb: 'assets/images/productions/sahranen-6-thumb.jpg',
+          alt: 'Sahranen — Wael Jassar Musical Performance 06',
           width: 1920,
           height: 1280
         }
