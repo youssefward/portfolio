@@ -15,6 +15,28 @@ window.CONTENT = {
 
   mark: 'assets/brand-mark.svg',
   portrait: 'assets/images/portrait/youssef-ward.jpg',
+  heroImage: 'assets/images/productions/ekhteyar-1.jpg',
+  heroImageAlt: {
+    en: 'Cinematography Still — El Ekhteyar Production, Directional Backlight & Silhouettes',
+    ar: 'لقطة سينمائية — مسلسل الاختيار، إضاءة خلفية وظلال درامية'
+  },
+  heroCraftImage: 'assets/images/productions/ekhteyar-3.jpg',
+  heroCraftAlt: {
+    en: 'On Set — Camera Crane & Rigging at Twilight, El Ekhteyar',
+    ar: 'في موقع التصوير — رافعة الكاميرا والإضاءة وقت الغسق، مسلسل الاختيار'
+  },
+  heroCraftBadge: {
+    en: 'ON SET · CAMERA CRAFT',
+    ar: 'موقع التصوير · حرفة الكاميرا'
+  },
+  heroCraftTitle: {
+    en: 'El Ekhteyar · Crane & Twilight Rigging',
+    ar: 'مسلسل الاختيار · كواليس ورافعة الكاميرا'
+  },
+  heroFrameBadge: {
+    en: 'CINEMATOGRAPHY STILL · EL EKHTEYAR',
+    ar: 'لقطة سينمائية · مسلسل الاختيار'
+  },
   email: 'youssef.ward88@gmail.com',
   phone: '+20 1155729978',
   cv: 'assets/youssef-ward-cv.pdf',

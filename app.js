@@ -365,44 +365,64 @@
     main.innerHTML = `
       <!-- HERO SECTION -->
       <section class="hero" id="hero" aria-label="${isAr ? 'المقدمة' : 'Introduction'}">
-        <img
-          class="hero-cover"
-          src="${esc(content.portrait)}"
-          alt="${isAr ? 'يوسف ورد — مدير تصوير ومخرج بصري' : 'Youssef Ward — Cinematographer & Visual Director'}"
-          loading="eager"
-          fetchpriority="high"
-        >
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-letterbox hero-letterbox-top" aria-hidden="true"></div>
-        <div class="hero-letterbox hero-letterbox-bottom" aria-hidden="true"></div>
-        <div class="hero-brackets" aria-hidden="true"></div>
-
-        <div class="hero-content">
-          <p class="hero-index" aria-hidden="true">
-            ${isAr ? '— مدير تصوير ومخرج بصري' : '— CINEMATOGRAPHER & VISUAL DIRECTOR'}
-          </p>
-          <h1 class="hero-name">
-            <span>${isAr ? 'يوسف' : 'YOUSSEF'}</span>
-            <span>${isAr ? 'ورد' : 'WARD'}</span>
-          </h1>
-          <p class="hero-role">
-            <span>${isAr ? 'سينما وإضاءة · تصوير فوتوغرافي · إدارة فنية وتصميم' : 'Cinematography & Light · Still Photography · Art Direction & Design'}</span>
-          </p>
-          <p class="hero-tagline">
-            <span>${isAr ? 'عقل بصري واحد. تعبيرات متعددة.' : 'One Visual Mind. Multiple Expressions.'}</span>
-          </p>
-          <div class="hero-cta">
-            <button class="btn btn-primary" data-nav="filmmaking">
-              ${isAr ? 'استكشف الأعمال' : 'Explore Selected Work'}
-            </button>
-            <button class="btn btn-secondary hero-film-btn" id="hero-film-btn" data-video="https://player.vimeo.com/video/1239369594?autoplay=1&color=bc171b&title=0&byline=0&portrait=0">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span>${isAr ? 'شاهد فيلم التخرج (المولوية)' : 'Watch Graduation Film — Mawlawya'}</span>
-            </button>
-            <button class="btn btn-ghost" data-nav="about">
-              ${isAr ? 'السيرة الذاتية' : 'Biography & CV'}
-            </button>
+        <div class="hero-media-wrapper">
+          <img
+            class="hero-cover"
+            src="${esc(content.heroImage || 'assets/images/productions/ekhteyar-1.jpg')}"
+            alt="${esc(t(content.heroImageAlt) || (isAr ? 'لقطة سينمائية — الاختيار' : 'Cinematography Still — El Ekhteyar'))}"
+            loading="eager"
+            fetchpriority="high"
+          >
+          <div class="hero-overlay" aria-hidden="true"></div>
+          <div class="hero-frame-badge" aria-hidden="true">
+            <span class="hero-badge-dot"></span>
+            <span>${esc(t(content.heroFrameBadge) || (isAr ? 'كادر سينمائي · الاختيار' : 'CINEMATOGRAPHY STILL · EL EKHTEYAR'))}</span>
           </div>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="hero-index" aria-hidden="true">
+              ${isAr ? '— مدير تصوير ومخرج بصري' : '— CINEMATOGRAPHER & VISUAL DIRECTOR'}
+            </p>
+            <h1 class="hero-name">
+              <span>${isAr ? 'يوسف' : 'YOUSSEF'}</span>
+              <span>${isAr ? 'ورد' : 'WARD'}</span>
+            </h1>
+            <p class="hero-role">
+              <span>${isAr ? 'سينما وإضاءة · تصوير فوتوغرافي · إدارة فنية وتصميم' : 'Cinematography & Light · Still Photography · Art Direction & Design'}</span>
+            </p>
+            <p class="hero-tagline">
+              <span>${isAr ? 'عقل بصري واحد. تعبيرات متعددة.' : 'One Visual Mind. Multiple Expressions.'}</span>
+            </p>
+            <div class="hero-cta">
+              <button class="btn btn-primary" data-nav="filmmaking">
+                ${isAr ? 'استكشف الأعمال' : 'Explore Selected Work'}
+              </button>
+              <button class="btn btn-secondary hero-film-btn" id="hero-film-btn" data-video="https://player.vimeo.com/video/1239369594?autoplay=1&color=bc171b&title=0&byline=0&portrait=0">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>${isAr ? 'شاهد فيلم التخرج (المولوية)' : 'Watch Graduation Film — Mawlawya'}</span>
+              </button>
+              <button class="btn btn-ghost" data-nav="about">
+                ${isAr ? 'السيرة الذاتية' : 'Biography & CV'}
+              </button>
+            </div>
+          </div>
+
+          <aside class="hero-craft-card" aria-label="${isAr ? 'توثيق حرفة الكاميرا' : 'Camera Craft Documentation'}">
+            <div class="hero-craft-media">
+              <img
+                src="${esc(content.heroCraftImage || 'assets/images/productions/ekhteyar-3.jpg')}"
+                alt="${esc(t(content.heroCraftAlt) || (isAr ? 'رافعة الكاميرا وقت الغسق' : 'Camera Crane & Rigging at Twilight'))}"
+                loading="eager"
+              >
+              <div class="hero-craft-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="hero-craft-info">
+              <span class="hero-craft-tag">${esc(t(content.heroCraftBadge) || (isAr ? 'موقع التصوير · حرفة الكاميرا' : 'ON SET · CAMERA CRAFT'))}</span>
+              <span class="hero-craft-desc">${esc(t(content.heroCraftTitle) || (isAr ? 'مسلسل الاختيار · كواليس ورافعة الكاميرا' : 'El Ekhteyar · Crane & Twilight Rigging'))}</span>
+            </div>
+          </aside>
         </div>
 
         <div class="hero-scroll" aria-hidden="true">
