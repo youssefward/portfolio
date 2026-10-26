@@ -7,7 +7,7 @@
 window.CONTENT = {
   meta: {
     name: { en: 'Youssef Ward', ar: 'يوسف ورد' },
-    title: { en: 'Cinematographer & Visual Director — Art Direction & Design', ar: 'مدير تصوير ومخرج بصري — إدارة فنية وتصميم' },
+    title: { en: 'Cinematographer & Graphic Designer', ar: 'مصور سينمائي وجرافيك ديزاينر' },
     concept: { en: 'One Visual Mind. Multiple Expressions.', ar: 'عقل بصري واحد. تعبيرات متعددة.' },
     location: { en: 'Cairo, Egypt', ar: 'القاهرة، مصر' },
     availability: { en: 'Open to Opportunities & Strategic Collaborations', ar: 'متاح للتعاون الإبداعي والمشاريع الاستراتيجية' }
@@ -16,12 +16,12 @@ window.CONTENT = {
   mark: 'assets/brand-mark.svg',
   portrait: 'assets/images/portrait/youssef-ward.jpg',
   heroRole: {
-    en: 'Cinematographer · Art Direction & Design',
-    ar: 'مدير تصوير سينمائي · إدارة فنية وتصميم'
+    en: 'Cinematographer & Graphic Designer',
+    ar: 'مصور سينمائي وجرافيك ديزاينر'
   },
   heroTagline: {
-    en: 'Cinematography first, with art direction & design as complementary disciplines.',
-    ar: 'السينما وإدارة الصورة أولًا، مدعومة بالإخراج الفني والتصميم الجرافيكي.'
+    en: 'One visual mind bridging cinematic camera craft and graphic design systems.',
+    ar: 'عقل بصري واحد يجمع بين الكادر السينمائي ومنظومات التصميم الجرافيكي.'
   },
   heroImage: 'assets/images/productions/ekhteyar-1.jpg',
   heroImageAlt: {
@@ -55,8 +55,8 @@ window.CONTENT = {
   vimeo: 'https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci',
 
   bio: {
-    en: 'I am a cinematographer and visual director with an academic foundation from the Faculty of Applied Arts, bridging camera work, lighting, and art direction with graphic design disciplines. Guided by the principle that every visual decision is an intentional choice, my work spans on-set camera department participation, dramatic lighting, still photography, brand systems, and editorial typography. Drawing from hands-on experience across television drama sets and visual studies, I approach image-making with an acute awareness of composition, spatial structure, and cinematic atmosphere.',
-    ar: 'مدير تصوير ومخرج بصري ذو خلفية أكاديمية من كلية الفنون التطبيقية، يجمع بين إدارة الكاميرا والضوء والإخراج الفني وبين منظومات التصميم الجرافيكي. ينطلق عملي من مبدأ أن كل قرار بصري هو خيار واعٍ ومقصود، ويمتد عبر العمل الميداني في قسم الكاميرا، وتوزيع الإضاءة الدرامية، والتصوير الفوتوغرافي، وبناء الهويات البصرية وهندسة التيبوغرافي. واستناداً إلى خبرة عملية في مواقع تصوير الأعمال الدرامية والتلفزيونية والتجارب المستقلة، أتعامل مع بناء الصورة بفهم عميق للتكوين والضوء والأجواء السينمائية.'
+    en: 'I am a cinematographer and graphic designer with an academic foundation from the Faculty of Applied Arts, bridging camera work, lighting, and visual storytelling with graphic design disciplines. Guided by the principle that every visual decision is an intentional choice, my work spans on-set camera department participation, dramatic lighting, still photography, brand systems, and editorial typography. Drawing from hands-on experience across television drama sets and visual studies, I approach image-making with an acute awareness of composition, spatial structure, and cinematic atmosphere.',
+    ar: 'مصور سينمائي وجرافيك ديزاينر ذو خلفية أكاديمية من كلية الفنون التطبيقية، يجمع بين إدارة الكاميرا والضوء وبين منظومات التصميم الجرافيكي. ينطلق عملي من مبدأ أن كل قرار بصري هو خيار واعٍ ومقصود، ويمتد عبر العمل الميداني في قسم الكاميرا، وتوزيع الإضاءة الدرامية، والتصوير الفوتوغرافي، وبناء الهويات البصرية وهندسة التيبوغرافي. واستناداً إلى خبرة عملية في مواقع تصوير الأعمال الدرامية والتلفزيونية والتجارب المستقلة، أتعامل مع بناء الصورة بفهم عميق للتكوين والضوء والأجواء السينمائية.'
   },
 
   disciplines: [

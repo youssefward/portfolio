@@ -383,17 +383,17 @@
         <div class="hero-inner">
           <div class="hero-content">
             <p class="hero-index" aria-hidden="true">
-              ${isAr ? '— مدير تصوير ومخرج بصري' : '— CINEMATOGRAPHER & VISUAL DIRECTOR'}
+              ${isAr ? '— مصور سينمائي وجرافيك ديزاينر' : '— CINEMATOGRAPHER & GRAPHIC DESIGNER'}
             </p>
             <h1 class="hero-name">
               <span>${isAr ? 'يوسف' : 'YOUSSEF'}</span>
               <span>${isAr ? 'ورد' : 'WARD'}</span>
             </h1>
             <p class="hero-role">
-              <span>${esc(t(content.heroRole) || (isAr ? 'مدير تصوير سينمائي · إدارة فنية وتصميم' : 'Cinematographer · Art Direction & Design'))}</span>
+              <span>${esc(t(content.heroRole) || (isAr ? 'مصور سينمائي وجرافيك ديزاينر' : 'Cinematographer & Graphic Designer'))}</span>
             </p>
             <p class="hero-tagline">
-              <span>${esc(t(content.heroTagline) || (isAr ? 'السينما وإدارة الصورة أولًا، مدعومة بالإخراج الفني والتصميم الجرافيكي.' : 'Cinematography first, with art direction & design as complementary disciplines.'))}</span>
+              <span>${esc(t(content.heroTagline) || (isAr ? 'عقل بصري واحد يجمع بين الكادر السينمائي ومنظومات التصميم الجرافيكي.' : 'One visual mind bridging cinematic camera craft and graphic design systems.'))}</span>
             </p>
             <div class="hero-cta">
               <button class="btn btn-primary" data-nav="filmmaking">
@@ -893,7 +893,7 @@
                 ${isAr ? 'يوسف ورد' : 'Youssef Ward'}
               </h1>
               <p class="eyebrow reveal" style="color:var(--red);margin-bottom:20px;">
-                ${isAr ? 'مدير تصوير · مخرج بصري · إدارة فنية' : 'Cinematographer & Visual Director · Art Direction'}
+                ${isAr ? 'مصور سينمائي وجرافيك ديزاينر' : 'Cinematographer & Graphic Designer'}
               </p>
               <p class="about-bio reveal reveal-delay-1">${esc(t(content.bio))}</p>
 
