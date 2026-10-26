@@ -472,44 +472,79 @@ window.CONTENT = {
       },
       images: [
         {
-          src: 'assets/images/clove/clove-1.jpg',
-          thumb: 'assets/images/clove/clove-1-thumb.jpg',
-          alt: 'Clove Culinary — Steak Plating & Microgreens',
+          src: 'assets/images/photography/clove-master-1.jpg',
+          thumb: 'assets/images/photography/clove-master-1-thumb.jpg',
+          alt: 'Clove Culinary — Gourmet Plated Presentation 01',
           width: 1920,
           height: 1280
         },
         {
-          src: 'assets/images/clove/clove-2.jpg',
-          thumb: 'assets/images/clove/clove-2-thumb.jpg',
-          alt: 'Clove Beverage — Layered Citrus Cocktail',
-          width: 1466,
-          height: 1920
+          src: 'assets/images/photography/clove-master-2.jpg',
+          thumb: 'assets/images/photography/clove-master-2-thumb.jpg',
+          alt: 'Clove Culinary — Fresh Fine Dining Artistry 02',
+          width: 1920,
+          height: 1280
         },
         {
-          src: 'assets/images/clove/clove-3.jpg',
-          thumb: 'assets/images/clove/clove-3-thumb.jpg',
-          alt: 'Clove Culinary — Chicken Penne Pasta',
+          src: 'assets/images/photography/clove-master-3.jpg',
+          thumb: 'assets/images/photography/clove-master-3-thumb.jpg',
+          alt: 'Clove Beverage — Layered Artisanal Cocktail 03',
           width: 1280,
           height: 1920
         },
         {
-          src: 'assets/images/clove/clove-4.jpg',
-          thumb: 'assets/images/clove/clove-4-thumb.jpg',
-          alt: 'Clove Culinary — Pasta Flatlay & Sauces',
+          src: 'assets/images/photography/clove-master-4.jpg',
+          thumb: 'assets/images/photography/clove-master-4-thumb.jpg',
+          alt: 'Clove Mixology — Signature Glassware & Ice 04',
           width: 1280,
           height: 1920
         },
         {
-          src: 'assets/images/clove/clove-5.jpg',
-          thumb: 'assets/images/clove/clove-5-thumb.jpg',
-          alt: 'Clove Beverage — Mint Garnish Cocktail',
-          width: 1381,
+          src: 'assets/images/photography/clove-master-5.jpg',
+          thumb: 'assets/images/photography/clove-master-5-thumb.jpg',
+          alt: 'Clove Culinary — Chef Table Plating 05',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/clove-master-6.jpg',
+          thumb: 'assets/images/photography/clove-master-6-thumb.jpg',
+          alt: 'Clove Beverage — Craft Citrus Mix 06',
+          width: 1280,
           height: 1920
         },
         {
-          src: 'assets/images/clove/clove-6.jpg',
-          thumb: 'assets/images/clove/clove-6-thumb.jpg',
-          alt: 'Clove Culinary — Grilled Steak Table Spread',
+          src: 'assets/images/photography/clove-ambience-1.jpg',
+          thumb: 'assets/images/photography/clove-ambience-1-thumb.jpg',
+          alt: 'Clove Architecture — Dining Room & Warm Ambient Lights 07',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/clove-ambience-2.jpg',
+          thumb: 'assets/images/photography/clove-ambience-2-thumb.jpg',
+          alt: 'Clove Hospitality — Intimate Seating Atmosphere 08',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/clove-ambience-3.jpg',
+          thumb: 'assets/images/photography/clove-ambience-3-thumb.jpg',
+          alt: 'Clove Interior — Dining Perspective & Table Setting 09',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/clove-ambience-4.jpg',
+          thumb: 'assets/images/photography/clove-ambience-4-thumb.jpg',
+          alt: 'Clove Lounge — Architectural Banquette Design 10',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/clove-ambience-5.jpg',
+          thumb: 'assets/images/photography/clove-ambience-5-thumb.jpg',
+          alt: 'Clove Interior — Bar & Lounge Environment 11',
           width: 1920,
           height: 1280
         }
@@ -665,40 +700,147 @@ window.CONTENT = {
     },
 
     {
-      id: 'sony-raw-session',
-      name: { en: 'Studio Alpha & Behind The Lens — Lighting Stills', ar: 'جلسات استوديو ألفا وكواليس الضوء' },
+      id: 'awalm-editorial',
+      name: { en: 'Awalm — Editorial Fashion & Movement Stills', ar: 'مشروع عوالم — فوتوغرافيا أزياء وبورتريه معاصر' },
       discipline: 'photography',
       subdiscipline: 'portrait',
       subdisciplineName: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' },
-      agency: 'Behind the Scenes Study',
-      client: 'Studio Session Stills',
-      year: '2024',
-      featured: false,
-      role: { en: 'Photographer (BTS & Studio Stills)', ar: 'فوتوغرافر (كواليس وتوثيق استوديو)' },
-      deliverables: ['Studio Setup Documentation', 'Natural Reflected Fill Stills', 'Informal Pose Captures'],
+      agency: 'Independent Visual Project',
+      client: 'Contemporary Editorial Series',
+      year: '2021 - 2022',
+      featured: true,
+      role: { en: 'Fashion & Portrait Photographer', ar: 'مصور أزياء وبورتريه' },
+      deliverables: ['Editorial Fashion Stills', 'Dynamic Movement Framing', 'Soft-Key Shadow Modeling'],
       description: {
-        en: 'Studio visual studies documenting lighting adjustments, unscripted model gestures, and the behind-the-scenes working process.',
-        ar: 'دراسات بصرية داخل الاستوديو ترصد تعديلات الإضاءة، عفوية الحركة بين الأخذات، وحركة العمل خلف الكواليس.'
+        en: 'An editorial fashion and contemporary portrait series exploring fluid fabric movement, soft shadow gradients, and sharp prime-lens character definition.',
+        ar: 'سلسلة فوتوغرافيا أزياء وبورتريه معاصرة ترصد انسيابية حركة الأقمشة والظلال الناعمة، بالاعتماد على عدسة ثابتة 50mm وإضاءة موجهة.'
       },
       thinking: {
         challenge: {
-          en: 'Documenting natural posture and informal expression between formal takes without interrupting the studio workflow.',
-          ar: 'اصطياد اللحظات الانتقالية العفوية بين الأخذات الرسمية، حيث يتجلى التعبير الطبيعي دون مقاطعة سير العمل في الاستوديو.'
+          en: 'Capturing spontaneous garment flow and expressive body language while maintaining razor-sharp eye focus and controlled rim highlights.',
+          ar: 'توثيق حركة الأقمشة التلقائية ولغة الجسد التعبيرية، مع الحفاظ على حدة التركيز البصري وتدرج الظلال على خلفية الكادر.'
         },
         decisions: {
-          en: 'Worked with ambient continuous lighting to permit fluid movement and spontaneous interaction in the studio space.',
-          ar: 'الاعتماد على مصادر إضاءة مستمرة ناعمة تسمح بحرية حركية كاملة والتقاط اللحظات التلقائية.'
+          en: 'Employed a fast 50mm prime lens at open apertures, balancing shallow depth of field with directional side lighting to sculpt sculptural contours.',
+          ar: 'استخدام عدسة 50mm بفتحة واسعة مع إضاءة جانبية ناعمة لتجسيد الملامح وإبراز حركة الثنيات والانحناءات بتدرج لوني سينمائي.'
         },
         outcome: {
-          en: 'A behind-the-scenes visual record documenting studio setup adjustments, lighting tests, and informal shooting moments.',
-          ar: 'توثيق بصري لكواليس الاستوديو يوضح ضبط تجهيزات الإضاءة، التجارب الضوئية، وحركة العمل خلف الكواليس.'
+          en: 'An editorial visual archive documenting fabric movement, contemporary styling, and intimate portrait expressions.',
+          ar: 'سلسلة لقطات تحريرية تحتفي بحركة الثياب، التعبير الإنساني، والتكوين البصري المعاصر المستلهم من طابع الاستوديو السينمائي.'
         }
       },
       images: [
-        { src: 'assets/images/clove2/dsc-1.jpg', thumb: 'assets/images/clove2/dsc-1-thumb.jpg', alt: 'Studio Raw Session 01', width: 1920, height: 1277 },
-        { src: 'assets/images/clove2/dsc-2.jpg', thumb: 'assets/images/clove2/dsc-2-thumb.jpg', alt: 'Studio Raw Session 02', width: 1920, height: 1277 },
-        { src: 'assets/images/clove2/dsc-3.jpg', thumb: 'assets/images/clove2/dsc-3-thumb.jpg', alt: 'Studio Raw Session 03', width: 1920, height: 1277 },
-        { src: 'assets/images/clove2/dsc-4.jpg', thumb: 'assets/images/clove2/dsc-4-thumb.jpg', alt: 'Studio Raw Session 04', width: 1920, height: 1277 }
+        {
+          src: 'assets/images/photography/awalm-1.jpg',
+          thumb: 'assets/images/photography/awalm-1-thumb.jpg',
+          alt: 'Awalm Series — Contemporary Movement & Silhouette 01',
+          width: 1277,
+          height: 1920
+        },
+        {
+          src: 'assets/images/photography/awalm-2.jpg',
+          thumb: 'assets/images/photography/awalm-2-thumb.jpg',
+          alt: 'Awalm Series — Editorial Portrait & Fabric Flow 02',
+          width: 1277,
+          height: 1920
+        },
+        {
+          src: 'assets/images/photography/awalm-3.jpg',
+          thumb: 'assets/images/photography/awalm-3-thumb.jpg',
+          alt: 'Awalm Series — Dynamic Studio Gesture 03',
+          width: 1343,
+          height: 1920
+        },
+        {
+          src: 'assets/images/photography/awalm-4.jpg',
+          thumb: 'assets/images/photography/awalm-4-thumb.jpg',
+          alt: 'Awalm Series — Horizontal Composition & Shadow Planes 04',
+          width: 1920,
+          height: 1205
+        },
+        {
+          src: 'assets/images/photography/awalm-5.jpg',
+          thumb: 'assets/images/photography/awalm-5-thumb.jpg',
+          alt: 'Awalm Series — Expressive Portrait Study 05',
+          width: 1277,
+          height: 1920
+        },
+        {
+          src: 'assets/images/photography/awalm-6.jpg',
+          thumb: 'assets/images/photography/awalm-6-thumb.jpg',
+          alt: 'Awalm Series — Cinematic Atmosphere Frame 06',
+          width: 1920,
+          height: 1277
+        },
+        {
+          src: 'assets/images/photography/awalm-7.jpg',
+          thumb: 'assets/images/photography/awalm-7-thumb.jpg',
+          alt: 'Awalm Series — Studio Editorial Balance 07',
+          width: 1920,
+          height: 1277
+        }
+      ]
+    },
+
+    {
+      id: 'conceptual-art',
+      name: { en: 'Conceptual Series — High-Impact Visual Studies', ar: 'سلسلة بصرية مفاهيمية — دراسات وتكوينات بصرية' },
+      discipline: 'photography',
+      subdiscipline: 'portrait',
+      subdisciplineName: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' },
+      agency: 'Authored Fine Art Project',
+      client: 'Visual Arts Exhibition Series',
+      year: '2024',
+      featured: false,
+      role: { en: 'Visual Concept & Art Direction', ar: 'رؤية بصرية وإخراج فني' },
+      deliverables: ['Large-Format Exhibition Prints', 'Conceptual Color Blocking', 'Typographic & Visual Juxtaposition'],
+      description: {
+        en: 'A bold conceptual photography series featuring stark graphical contrast, vibrant color pools, and layered visual storytelling designed for large-scale exhibition displays.',
+        ar: 'سلسلة فوتوغرافية ومفاهيمية تعتمد على التباين الجرافيكي الحاد، وتوزيع الألوان الصريحة، وبناء المشهد البصري المخصص للمعارض الفنية والمطبوعات الكبرى.'
+      },
+      thinking: {
+        challenge: {
+          en: 'Harmonizing intense color saturation with dark negative space while ensuring high typographic readability in fine-art exhibition prints.',
+          ar: 'تحقيق التوازن بين تشبع الألوان وقوة المساحات السلبية الداكنة، لضمان وضوح المعنى والتأثير البصري في المعارض المطبوعة.'
+        },
+        decisions: {
+          en: 'Constructed rigid vertical proportions with centered framing to emphasize iconic visual gravity and dramatic focal weight.',
+          ar: 'بناء تكوينات رأسية هندسية مع تركيز نقطة الجذب في منتصف الكادر لإضفاء هيبة بصرية وتأثير مباشر على المتلقي.'
+        },
+        outcome: {
+          en: 'An expressive exhibition print series combining contemporary photography aesthetics with graphic art direction.',
+          ar: 'مجموعة لوحات بصرية تجمع بين نقاء الفوتوغرافيا المعاصرة وقوة التوجيه الفني والطباعي.'
+        }
+      },
+      images: [
+        {
+          src: 'assets/images/photography/conceptual-1.jpg',
+          thumb: 'assets/images/photography/conceptual-1-thumb.jpg',
+          alt: 'Conceptual Series — Exhibition Piece 01',
+          width: 1387,
+          height: 1920
+        },
+        {
+          src: 'assets/images/photography/conceptual-2.jpg',
+          thumb: 'assets/images/photography/conceptual-2-thumb.jpg',
+          alt: 'Conceptual Series — Exhibition Piece 02',
+          width: 1387,
+          height: 1920
+        },
+        {
+          src: 'assets/images/photography/conceptual-3.jpg',
+          thumb: 'assets/images/photography/conceptual-3-thumb.jpg',
+          alt: 'Conceptual Series — Exhibition Piece 03',
+          width: 1387,
+          height: 1920
+        },
+        {
+          src: 'assets/images/photography/conceptual-4.jpg',
+          thumb: 'assets/images/photography/conceptual-4-thumb.jpg',
+          alt: 'Conceptual Series — Exhibition Piece 04',
+          width: 1387,
+          height: 1920
+        }
       ]
     },
 
@@ -830,6 +972,103 @@ window.CONTENT = {
           src: 'assets/images/photography/dahab-4.jpg',
           thumb: 'assets/images/photography/dahab-4-thumb.jpg',
           alt: 'Dahab Coastline — Serene Water & Coast 04',
+          width: 1920,
+          height: 1280
+        }
+      ]
+    },
+
+    {
+      id: 'cinema-stills',
+      name: { en: 'Cinema Photography — Production Stills & Camera Work', ar: 'فوتوغرافيا السينما — توثيق موقع التصوير والدراما' },
+      discipline: 'photography',
+      subdiscipline: 'documentary',
+      subdisciplineName: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' },
+      agency: 'Film & Drama Production Archives',
+      client: 'Cinema & Television Sets Archive',
+      year: '2020 - 2022',
+      featured: true,
+      role: { en: 'Cinema & Production Stills Photographer', ar: 'مصور فوتوغرافيا سينما وتوثيق مواقع' },
+      deliverables: ['Live Action Set Documentation', 'Behind-the-Scenes Lighting Tracking', 'Tactical & Period Scene Captures'],
+      description: {
+        en: 'A comprehensive cinema photography archive capturing real-time production moments, camera department setups, and intense dramatic scenes across major television productions.',
+        ar: 'أرشيف فوتوغرافيا سينمائي متكامل يرصد لحظات العمل الحية في مواقع التصوير، وحركة قسم الكاميرا، وتكوينات المشاهد الدرامية والتكتيكية للأعمال التلفزيونية الكبرى.'
+      },
+      thinking: {
+        challenge: {
+          en: 'Operating within high-pressure film sets, coordinating with primary camera crews, and capturing decisive moments without disrupting sound recording or lighting rigs.',
+          ar: 'التقاط الإطارات الحاسمة وسط بيئة تصوير مشدودة وسريعة، والتنسيق الدقيق مع طاقم الكاميرا الرئيسي وتجنب أي تشويش على أجهزة الصوت والإضاءة.'
+        },
+        decisions: {
+          en: 'Framed candid behind-the-scenes interactions and live scene blocking from unobtrusive vantage points, matching camera exposures to principal cinematography look.',
+          ar: 'التمركز في زوايا تصوير ذكية لتوثيق حركة العمل والكواليس دون إعاقة الكاميرات، وضبط التعريض بما يتطابق مع هوية الإضاءة السينمائية للمشهد.'
+        },
+        outcome: {
+          en: 'An authentic visual portfolio documenting professional cinema photography, director coordination, and on-set atmospheric lighting.',
+          ar: 'سجل بصري احترافي يوثق خبرة العمل كمصور فوتوغرافي في موقع التصوير السينمائي، مع التركيز على هيبة الكادر وجماليات الضوء الميداني.'
+        }
+      },
+      images: [
+        {
+          src: 'assets/images/photography/cinema-still-1.jpg',
+          thumb: 'assets/images/photography/cinema-still-1-thumb.jpg',
+          alt: 'Cinema Stills — Action Sequence Field Capture 01',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/cinema-still-2.jpg',
+          thumb: 'assets/images/photography/cinema-still-2-thumb.jpg',
+          alt: 'Cinema Stills — Set Preparation & Vehicle Line 02',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/cinema-still-3.jpg',
+          thumb: 'assets/images/photography/cinema-still-3-thumb.jpg',
+          alt: 'Cinema Stills — Tactical Reconnaissance Setup 03',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/cinema-still-4.jpg',
+          thumb: 'assets/images/photography/cinema-still-4-thumb.jpg',
+          alt: 'Cinema Stills — On-Set Camera Tracking 04',
+          width: 1920,
+          height: 1225
+        },
+        {
+          src: 'assets/images/photography/cinema-still-5.jpg',
+          thumb: 'assets/images/photography/cinema-still-5-thumb.jpg',
+          alt: 'Cinema Stills — Night Operation Lighting Rig 05',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/cinema-still-6.jpg',
+          thumb: 'assets/images/photography/cinema-still-6-thumb.jpg',
+          alt: 'Cinema Stills — Field Actor Coordination 06',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/cinema-still-7.jpg',
+          thumb: 'assets/images/photography/cinema-still-7-thumb.jpg',
+          alt: 'Cinema Stills — Dynamic Explosion & Dust Setup 07',
+          width: 1920,
+          height: 1273
+        },
+        {
+          src: 'assets/images/photography/cinema-still-8.jpg',
+          thumb: 'assets/images/photography/cinema-still-8-thumb.jpg',
+          alt: 'Cinema Stills — 1950s Historical Set & Classic Street 08',
+          width: 1920,
+          height: 1280
+        },
+        {
+          src: 'assets/images/photography/cinema-still-9.jpg',
+          thumb: 'assets/images/photography/cinema-still-9-thumb.jpg',
+          alt: 'Cinema Stills — Vintage Period Interior & Cast 09',
           width: 1920,
           height: 1280
         }
