@@ -50,14 +50,14 @@ window.CONTENT = {
       id: 'photography',
       number: '02',
       title: { en: 'Still Photography', ar: 'التصوير الفوتوغرافي' },
-      subtitle: { en: 'Fashion · Studio Portraits · Street', ar: 'أزياء وفاشن · استوديو وبورتريه · شوارع وتوثيق' },
+      subtitle: { en: 'Commercial · Fashion · Portraits · Street', ar: 'تجاري وأطعمة · أزياء · بورتريه · شوارع' },
       description: {
-        en: 'Studio and editorial fashion photography, directional light studies in portraiture, and quiet atmospheric street observations across Cairo.',
-        ar: 'تصوير الأزياء التحريري والاستوديو، دراسات الضوء الموجه في البورتريه، والتصوير التوثيقي الهادئ لشوارع ومعمار القاهرة.'
+        en: 'Commercial food and beverage photography, editorial fashion, directional light studies in portraiture, and quiet atmospheric street observations across Cairo.',
+        ar: 'تصوير تجاري للأطعمة والمشروبات، تصوير الأزياء التحريري، دراسات الضوء الموجه في البورتريه، والتصوير التوثيقي لشوارع ومعمار القاهرة.'
       },
       categories: [
         { id: 'all', name: { en: 'All Photography', ar: 'جميع أعمال التصوير' } },
-        { id: 'fashion', name: { en: 'Fashion & Editorial', ar: 'أزياء وفاشن' } },
+        { id: 'fashion', name: { en: 'Commercial & Fashion', ar: 'تجاري وأزياء' } },
         { id: 'portrait', name: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' } },
         { id: 'documentary', name: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' } }
       ]
@@ -94,7 +94,7 @@ window.CONTENT = {
       client: 'Synergy Productions / UMS',
       year: '2020 - 2021',
       featured: true,
-      role: { en: 'Camera Department / On-Set Stills (Role to be confirmed)', ar: 'قسم الكاميرا / توثيق موقع التصوير (قيد التأكيد النهائي للمسمى)' },
+      role: { en: 'Camera Department & Production Stills', ar: 'قسم الكاميرا وتوثيق موقع التصوير' },
       deliverables: ['On-Set Production Stills', 'Lighting Documentation', 'Live-Action Scene Tracking'],
       description: {
         en: 'On-set camera department participation and production stills for the historical drama series El Ekhteyar, documenting action sequences, low-key lighting setups, and field composition.',
@@ -149,7 +149,7 @@ window.CONTENT = {
       client: 'Synergy Drama',
       year: '2021',
       featured: true,
-      role: { en: 'Camera Assistant / Set Stills (Role to be confirmed)', ar: 'مساعد كاميرا / توثيق موقع التصوير (قيد التأكيد النهائي للمسمى)' },
+      role: { en: 'Camera Department & Scene Documentation', ar: 'قسم الكاميرا والتوثيق البصري' },
       deliverables: ['Dramatic Scene Stills', 'Close-Up Framing', 'Low-Key Lighting Documentation'],
       description: {
         en: 'On-set camera department support and dramatic stills capturing intimate character confrontation and directional shadow falloff for the television series Cairo Kabul.',
@@ -207,7 +207,7 @@ window.CONTENT = {
       client: 'ON E Broadcast Channel',
       year: '2021 - 2022',
       featured: true,
-      role: { en: 'Studio Stills & Stage Production Support (Role to be confirmed)', ar: 'تصوير فوتوغرافي للاستوديو ومعاونة إنتاج (قيد التأكيد النهائي للمسمى)' },
+      role: { en: 'Studio Stills & Stage Production Documentation', ar: 'التوثيق البصري للاستوديو وكواليس الإنتاج' },
       deliverables: ['Stage Performance Coverage', 'Celebrity Key Stills', 'Studio Lighting Documentation'],
       description: {
         en: 'Studio visual documentation and celebrity portrait capture on the set of the Sahranen broadcast show featuring prominent figures from Arab cinema and music.',

@@ -71,6 +71,22 @@
     } catch (e) {}
   }
 
+  function updateModalLabels(lang) {
+    const isAr = lang === 'ar';
+    const lb = $('#lightbox');
+    if (lb) {
+      lb.setAttribute('aria-label', isAr ? 'عرض الصورة' : 'Image viewer');
+      lb.querySelector('.lightbox-close')?.setAttribute('aria-label', isAr ? 'إغلاق' : 'Close');
+      lb.querySelector('.lightbox-prev')?.setAttribute('aria-label', isAr ? 'السابق' : 'Previous');
+      lb.querySelector('.lightbox-next')?.setAttribute('aria-label', isAr ? 'التالي' : 'Next');
+    }
+    const vm = $('#video-modal');
+    if (vm) {
+      vm.setAttribute('aria-label', isAr ? 'عرض الفيديو' : 'Video player');
+      vm.querySelector('.video-modal-close')?.setAttribute('aria-label', isAr ? 'إغلاق' : 'Close');
+    }
+  }
+
   function setLang(lang) {
     State.lang = lang;
     setSavedLang(lang);
@@ -78,6 +94,7 @@
     html.lang = lang;
     html.dir = lang === 'ar' ? 'rtl' : 'ltr';
     $$('.nav-lang-btn').forEach(btn => { btn.textContent = lang === 'ar' ? 'EN' : 'عربي'; });
+    updateModalLabels(lang);
     renderNav();
     renderCurrentRoute();
   }
@@ -230,7 +247,8 @@
       menuBtn.addEventListener('click', () => {
         const open = navLinks.classList.toggle('open');
         menuBtn.classList.toggle('open', open);
-        menuBtn.setAttribute('aria-expanded', open);
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        menuBtn.setAttribute('aria-label', open ? (isAr ? 'إغلاق القائمة' : 'Close menu') : (isAr ? 'فتح القائمة' : 'Open menu'));
       });
     }
   }
@@ -243,8 +261,13 @@
   function closeMobileMenu() {
     const navLinks = $('#nav-links');
     const menuBtn = $('#menu-btn');
+    const isAr = State.lang === 'ar';
     if (navLinks) navLinks.classList.remove('open');
-    if (menuBtn) { menuBtn.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    if (menuBtn) {
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', isAr ? 'فتح القائمة' : 'Open menu');
+    }
   }
 
   // Close mobile menu on Escape key or click outside
@@ -599,20 +622,20 @@
     // If photography, render Clove 2 lookbook strip
     if (disciplineId === 'photography') {
       const clove2Images = [
-        { src: 'assets/images/clove2/clove2-1.jpg', thumb: 'assets/images/clove2/clove2-1-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 01' : 'Clove Look 01' },
-        { src: 'assets/images/clove2/clove2-2.jpg', thumb: 'assets/images/clove2/clove2-2-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 02' : 'Clove Look 02' },
-        { src: 'assets/images/clove2/clove2-3.jpg', thumb: 'assets/images/clove2/clove2-3-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 03' : 'Clove Look 03' },
-        { src: 'assets/images/clove2/clove2-4.jpg', thumb: 'assets/images/clove2/clove2-4-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 04' : 'Clove Look 04' },
-        { src: 'assets/images/clove2/clove2-5.jpg', thumb: 'assets/images/clove2/clove2-5-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 05' : 'Clove Look 05' },
-        { src: 'assets/images/clove2/clove2-6.jpg', thumb: 'assets/images/clove2/clove2-6-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 06' : 'Clove Look 06' },
-        { src: 'assets/images/clove2/clove2-7.jpg', thumb: 'assets/images/clove2/clove2-7-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 07' : 'Clove Look 07' },
-        { src: 'assets/images/clove2/clove2-8.jpg', thumb: 'assets/images/clove2/clove2-8-thumb.jpg', caption: isAr ? 'كلوف — الإطلالة 08' : 'Clove Look 08' },
+        { src: 'assets/images/clove2/clove2-1.jpg', thumb: 'assets/images/clove2/clove2-1-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 01' : 'Clove Signature Cocktail 01' },
+        { src: 'assets/images/clove2/clove2-2.jpg', thumb: 'assets/images/clove2/clove2-2-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 02' : 'Clove Signature Cocktail 02' },
+        { src: 'assets/images/clove2/clove2-3.jpg', thumb: 'assets/images/clove2/clove2-3-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 03' : 'Clove Signature Cocktail 03' },
+        { src: 'assets/images/clove2/clove2-4.jpg', thumb: 'assets/images/clove2/clove2-4-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 04' : 'Clove Signature Cocktail 04' },
+        { src: 'assets/images/clove2/clove2-5.jpg', thumb: 'assets/images/clove2/clove2-5-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 05' : 'Clove Signature Cocktail 05' },
+        { src: 'assets/images/clove2/clove2-6.jpg', thumb: 'assets/images/clove2/clove2-6-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 06' : 'Clove Signature Cocktail 06' },
+        { src: 'assets/images/clove2/clove2-7.jpg', thumb: 'assets/images/clove2/clove2-7-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 07' : 'Clove Signature Cocktail 07' },
+        { src: 'assets/images/clove2/clove2-8.jpg', thumb: 'assets/images/clove2/clove2-8-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 08' : 'Clove Signature Cocktail 08' },
       ];
 
       return `
         <section class="section" style="border-top:1px solid var(--line);">
           <div class="container">
-            <div class="eyebrow reveal"><span class="eyebrow-line"></span>${isAr ? 'معرض الإطلالات — Clove II' : 'EDITORIAL STRIP — CLOVE II'}</div>
+            <div class="eyebrow reveal"><span class="eyebrow-line"></span>${isAr ? 'شريط فوتوغرافي وتجاري — Clove II' : 'CULINARY & BEVERAGE STRIP — CLOVE II'}</div>
             <div class="gallery-strip" style="margin-top:clamp(24px,4vw,44px);">
               ${clove2Images.map((item, i) => `
                 <div class="gallery-item${i < 7 ? ' portrait' : ' wide'} reveal reveal-delay-${(i % 4) + 1}"
@@ -935,40 +958,58 @@
     `;
   }
 
-  /* ── EVENT ATTACHERS ─────────────────────────────────────── */
-  function attachNavClicks(container = document) {
-    $$('[data-nav]', container).forEach(el => {
-      el.addEventListener('click', (e) => {
+  /* ── EVENT ATTACHERS & DELEGATION ────────────────────────── */
+  function initDelegatedEvents() {
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('[data-lightbox-src]') || e.target.closest('#hero-film-btn') || e.target.closest('.video-modal-close') || e.target.closest('.lightbox-close') || e.target.closest('.lightbox-prev') || e.target.closest('.lightbox-next')) {
+        return;
+      }
+      const card = e.target.closest('.project-card[data-project]');
+      if (card) {
+        navigateTo(`project/${card.dataset.project}`);
+        return;
+      }
+      const navEl = e.target.closest('[data-nav]');
+      if (navEl) {
         e.preventDefault();
-        navigateTo(el.dataset.nav);
-      });
-      el.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          navigateTo(el.dataset.nav);
-        }
-      });
+        navigateTo(navEl.dataset.nav);
+        return;
+      }
     });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const card = e.target.closest('.project-card[data-project]');
+        if (card && document.activeElement === card) {
+          e.preventDefault();
+          navigateTo(`project/${card.dataset.project}`);
+          return;
+        }
+        const navEl = e.target.closest('[data-nav]');
+        if (navEl && document.activeElement === navEl) {
+          e.preventDefault();
+          navigateTo(navEl.dataset.nav);
+          return;
+        }
+      }
+    });
+  }
+
+  function attachNavClicks(container = document) {
+    // Handled globally by initDelegatedEvents to prevent duplicate listeners
   }
 
   function attachProjectCardEvents(container = document) {
-    $$('.project-card[data-project]', container).forEach(card => {
-      card.addEventListener('click', () => {
-        navigateTo(`project/${card.dataset.project}`);
-      });
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          navigateTo(`project/${card.dataset.project}`);
-        }
-      });
-    });
+    // Handled globally by initDelegatedEvents to prevent duplicate listeners
   }
 
   /* ── LIGHTBOX (EXPANDED STILLS) ─────────────────────────── */
+  let lastLightboxTrigger = null;
+
   function openLightbox(items, startIndex = 0) {
     const lb = $('#lightbox');
     if (!lb || !items || !items.length) return;
+    lastLightboxTrigger = document.activeElement;
     State.lightbox.items = items;
     State.lightbox.index = startIndex;
     updateLightboxSlide();
@@ -980,8 +1021,12 @@
   function closeLightbox() {
     const lb = $('#lightbox');
     if (!lb) return;
-    lb.close();
+    try { lb.close(); } catch (e) {}
     document.body.style.overflow = '';
+    if (lastLightboxTrigger && typeof lastLightboxTrigger.focus === 'function') {
+      lastLightboxTrigger.focus();
+      lastLightboxTrigger = null;
+    }
   }
 
   function updateLightboxSlide() {
@@ -1002,6 +1047,14 @@
   function initLightbox() {
     const lb = $('#lightbox');
     if (!lb) return;
+
+    lb.addEventListener('close', () => {
+      document.body.style.overflow = '';
+      if (lastLightboxTrigger && typeof lastLightboxTrigger.focus === 'function') {
+        lastLightboxTrigger.focus();
+        lastLightboxTrigger = null;
+      }
+    });
 
     lb.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
     lb.querySelector('.lightbox-prev')?.addEventListener('click', () => {
@@ -1057,10 +1110,13 @@
   }
 
   /* ── VIDEO MODAL (MAWLAWYA GRADUATION FILM) ─────────────── */
+  let lastVideoTrigger = null;
+
   function openVideoModal(videoUrl) {
     const modal = $('#video-modal');
     const iframe = $('#video-modal-iframe');
     if (!modal || !iframe) return;
+    lastVideoTrigger = document.activeElement;
 
     let src = videoUrl;
     if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
@@ -1082,11 +1138,19 @@
     try { modal.close(); } catch (e) {}
     if (iframe) iframe.src = '';
     document.body.style.overflow = '';
+    if (lastVideoTrigger && typeof lastVideoTrigger.focus === 'function') {
+      lastVideoTrigger.focus();
+      lastVideoTrigger = null;
+    }
   }
 
   function initVideoModal() {
     const modal = $('#video-modal');
     if (!modal) return;
+
+    modal.addEventListener('close', () => {
+      closeVideoModal();
+    });
 
     $('#video-modal-close')?.addEventListener('click', closeVideoModal);
 
@@ -1118,6 +1182,7 @@
     const html = document.documentElement;
     html.lang = savedLang;
     html.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+    updateModalLabels(savedLang);
 
     // Theme
     const savedTheme = getSavedTheme();
@@ -1132,6 +1197,7 @@
     initReveal();
     initLightbox();
     initVideoModal();
+    initDelegatedEvents();
 
     // Render Nav
     renderNav();

@@ -123,6 +123,12 @@ body.cursor-hover #cursor {
   border-color: var(--red);
 }
 
+@media (pointer: coarse), (hover: none) {
+  #cursor {
+    display: none !important;
+  }
+}
+
 /* ── 2. SKIP LINK ────────────────────────────────────────── */
 .skip-link {
   position: fixed;
@@ -487,7 +493,6 @@ html[dir="rtl"] .hero-tagline { max-width: 680px; }
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
-}
 }
 
 .hero-cta > * {
@@ -1555,6 +1560,7 @@ html[dir="rtl"] .lightbox-next { right: auto; left: 16px; }
     transform: none !important;
   }
   .hero-cover { transform: none !important; }
+  #cursor { display: none !important; }
 }
 
 /* ── 25. PRINT ───────────────────────────────────────────── */
@@ -1813,12 +1819,12 @@ html[dir="rtl"] .case-study-back-arrow {
 }
 
 /* Grand, widescreen dynamic spans for case study stills */
-.case-study-gallery-item:nth-child(1)   { grid-column: span 12; aspect-ratio: 21/9; min-height: 480px; }
-.case-study-gallery-item:nth-child(2)   { grid-column: span 6;  aspect-ratio: 16/10; min-height: 380px; }
-.case-study-gallery-item:nth-child(3)   { grid-column: span 6;  aspect-ratio: 16/10; min-height: 380px; }
-.case-study-gallery-item:nth-child(4)   { grid-column: span 6;  aspect-ratio: 16/10; min-height: 380px; }
-.case-study-gallery-item:nth-child(5)   { grid-column: span 6;  aspect-ratio: 16/10; min-height: 380px; }
-.case-study-gallery-item:nth-child(n+6) { grid-column: span 6;  aspect-ratio: 16/10; min-height: 380px; }
+.case-study-gallery-item:nth-child(1)   { grid-column: span 12; aspect-ratio: 21/9; }
+.case-study-gallery-item:nth-child(2)   { grid-column: span 6;  aspect-ratio: 16/10; }
+.case-study-gallery-item:nth-child(3)   { grid-column: span 6;  aspect-ratio: 16/10; }
+.case-study-gallery-item:nth-child(4)   { grid-column: span 6;  aspect-ratio: 16/10; }
+.case-study-gallery-item:nth-child(5)   { grid-column: span 6;  aspect-ratio: 16/10; }
+.case-study-gallery-item:nth-child(n+6) { grid-column: span 6;  aspect-ratio: 16/10; }
 
 .case-study-gallery-item .item-hover-hint {
   position: absolute;
@@ -1844,6 +1850,7 @@ html[dir="rtl"] .case-study-back-arrow {
   .case-study-gallery-item:nth-child(n) {
     grid-column: span 12 !important;
     aspect-ratio: 16/9 !important;
+    min-height: auto !important;
   }
 }
 
@@ -1856,6 +1863,12 @@ html[dir="rtl"] .case-study-back-arrow {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   margin-top: clamp(48px, 8vw, 96px);
+}
+
+@media (max-width: 640px) {
+  .case-study-nav {
+    grid-template-columns: 1fr;
+  }
 }
 
 .case-study-nav-btn {
