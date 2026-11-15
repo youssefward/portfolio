@@ -998,8 +998,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 02",
                                                                       "ar":  "Mawlawya Film Poster — كادر 02"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/secound.jpg",
@@ -1008,8 +1008,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 04",
                                                                       "ar":  "Mawlawya Film Poster — كادر 04"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/third.jpg",
@@ -1018,8 +1018,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 05",
                                                                       "ar":  "Mawlawya Film Poster — كادر 05"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fourth.jpg",
@@ -1028,8 +1028,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 03",
                                                                       "ar":  "Mawlawya Film Poster — كادر 03"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fifth.jpg",
@@ -1038,8 +1038,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 01",
                                                                       "ar":  "Mawlawya Film Poster — كادر 01"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  17362
+                                                          "width":  906,
+                                                          "height":  2560
                                                       }
                                                   ]
                                    },
@@ -2215,8 +2215,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 02",
                                                                       "ar":  "Mawlawya Film Poster — كادر 02"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/secound.jpg",
@@ -2225,8 +2225,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 04",
                                                                       "ar":  "Mawlawya Film Poster — كادر 04"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/third.jpg",
@@ -2235,8 +2235,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 05",
                                                                       "ar":  "Mawlawya Film Poster — كادر 05"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fourth.jpg",
@@ -2245,8 +2245,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 03",
                                                                       "ar":  "Mawlawya Film Poster — كادر 03"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  8504
+                                                          "width":  1849,
+                                                          "height":  2560
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fifth.jpg",
@@ -2255,8 +2255,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 01",
                                                                       "ar":  "Mawlawya Film Poster — كادر 01"
                                                                   },
-                                                          "width":  6142,
-                                                          "height":  17362
+                                                          "width":  906,
+                                                          "height":  2560
                                                       }
                                                   ]
                                    },
