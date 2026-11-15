@@ -397,6 +397,12 @@
   /* ---------------- Interactive Hero Slider ---------------- */
   var heroAutoplayTimer = null;
   var heroResumeTimeout = null;
+  var startHero = function () {};
+
+  function stopHero() {
+    if (heroAutoplayTimer) { clearInterval(heroAutoplayTimer); heroAutoplayTimer = null; }
+    if (heroResumeTimeout) { clearTimeout(heroResumeTimeout); heroResumeTimeout = null; }
+  }
 
   function initHeroSlider() {
     stopHero();
@@ -432,10 +438,9 @@
       updateActiveState(idx);
       var targetSlide = slides[idx];
       if (targetSlide) {
-        targetSlide.scrollIntoView({
-          behavior: smooth ? 'smooth' : 'auto',
-          inline: 'start',
-          block: 'nearest'
+        slider.scrollTo({
+          left: targetSlide.offsetLeft,
+          behavior: smooth ? 'smooth' : 'auto'
         });
       }
     }
@@ -541,31 +546,24 @@
       }
     });
 
+    startHero = function () {
+      stopHero();
+      if (slides.length <= 1) return;
+      heroAutoplayTimer = setInterval(function () {
+        var f = document.getElementById('hero-frame');
+        if (f) {
+          var rect = f.getBoundingClientRect();
+          // Pause transitions whenever hero has scrolled out of view
+          if (rect.bottom <= 60 || rect.top >= window.innerHeight) {
+            return;
+          }
+        }
+        var nextIdx = (heroIndex + 1) % totalCount;
+        scrollToIndex(nextIdx, true);
+      }, 5500);
+    };
+
     startHero();
-  }
-
-  function startHero() {
-    stopHero();
-    var slider = document.getElementById('hero-slider');
-    if (!slider) return;
-    var slides = slider.querySelectorAll('.hero-slide');
-    if (slides.length <= 1) return;
-
-    heroAutoplayTimer = setInterval(function () {
-      var nextIdx = (heroIndex + 1) % slides.length;
-      var targetSlide = slides[nextIdx];
-      if (targetSlide) {
-        targetSlide.scrollIntoView({
-          behavior: 'smooth',
-          inline: 'start',
-          block: 'nearest'
-        });
-      }
-    }, 5500);
-  }
-
-  function stopHero() {
-    if (heroAutoplayTimer) { clearInterval(heroAutoplayTimer); heroAutoplayTimer = null; }
   }
 
   /* ---------------- Render Home ---------------- */
