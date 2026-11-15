@@ -150,7 +150,8 @@
     play: '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>',
     close: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>',
     grid: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>',
-    filmstrip: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>'
+    filmstrip: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>',
+    download: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>'
   };
 
   var corners =
@@ -393,24 +394,178 @@
     }
   }
 
-  /* ---------------- Hero Rotation ---------------- */
+  /* ---------------- Interactive Hero Slider ---------------- */
+  var heroAutoplayTimer = null;
+  var heroResumeTimeout = null;
+
+  function initHeroSlider() {
+    stopHero();
+    var frame = document.getElementById('hero-frame');
+    var slider = document.getElementById('hero-slider');
+    if (!frame || !slider) return;
+
+    var slides = slider.querySelectorAll('.hero-slide');
+    var dots = frame.querySelectorAll('.hero-dot');
+    var prevBtn = document.getElementById('hero-prev');
+    var nextBtn = document.getElementById('hero-next');
+    var curCount = frame.querySelector('.hero-cur');
+    var totalCount = slides.length;
+    if (!totalCount) return;
+
+    function updateActiveState(idx) {
+      heroIndex = (idx + totalCount) % totalCount;
+      slides.forEach(function (s, i) {
+        s.classList.toggle('is-active', i === heroIndex);
+      });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('is-active', i === heroIndex);
+      });
+      if (curCount) {
+        var n = heroIndex + 1;
+        curCount.textContent = n < 10 ? '0' + n : String(n);
+      }
+    }
+
+    function scrollToIndex(idx, smooth) {
+      if (idx < 0) idx = totalCount - 1;
+      if (idx >= totalCount) idx = 0;
+      updateActiveState(idx);
+      var targetSlide = slides[idx];
+      if (targetSlide) {
+        targetSlide.scrollIntoView({
+          behavior: smooth ? 'smooth' : 'auto',
+          inline: 'start',
+          block: 'nearest'
+        });
+      }
+    }
+
+    // Scroll listener detects touch swipe, mouse drag, and native snap
+    var scrollRaf = null;
+    slider.addEventListener('scroll', function () {
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = requestAnimationFrame(function () {
+        var sliderRect = slider.getBoundingClientRect();
+        var center = sliderRect.left + sliderRect.width / 2;
+        var closestIdx = heroIndex;
+        var minDiff = Infinity;
+        slides.forEach(function (s, i) {
+          var r = s.getBoundingClientRect();
+          var sCenter = r.left + r.width / 2;
+          var diff = Math.abs(sCenter - center);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestIdx = i;
+          }
+        });
+        if (closestIdx !== heroIndex) {
+          updateActiveState(closestIdx);
+        }
+      });
+    }, { passive: true });
+
+    // Interaction pause: keeps auto-play from interrupting user interaction
+    function pauseForUser() {
+      stopHero();
+      if (heroResumeTimeout) clearTimeout(heroResumeTimeout);
+      heroResumeTimeout = setTimeout(function () {
+        startHero();
+      }, 7000);
+    }
+
+    slider.addEventListener('touchstart', pauseForUser, { passive: true });
+    slider.addEventListener('wheel', pauseForUser, { passive: true });
+
+    // Desktop mouse drag support
+    var isDown = false, startX = 0, scrollLeftStart = 0;
+    slider.addEventListener('mousedown', function (e) {
+      isDown = true;
+      slider.classList.add('is-dragging');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeftStart = slider.scrollLeft;
+      pauseForUser();
+    });
+    window.addEventListener('mouseup', function () {
+      if (isDown) {
+        isDown = false;
+        slider.classList.remove('is-dragging');
+      }
+    });
+    slider.addEventListener('mousemove', function (e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - slider.offsetLeft;
+      var walk = (x - startX) * 1.35;
+      slider.scrollLeft = scrollLeftStart - walk;
+    });
+
+    // Arrow navigation
+    if (prevBtn) {
+      prevBtn.onclick = function (e) {
+        e.preventDefault();
+        pauseForUser();
+        playTick('tick');
+        var isRtl = document.documentElement.dir === 'rtl' || document.documentElement.lang === 'ar';
+        scrollToIndex(isRtl ? heroIndex + 1 : heroIndex - 1, true);
+      };
+    }
+    if (nextBtn) {
+      nextBtn.onclick = function (e) {
+        e.preventDefault();
+        pauseForUser();
+        playTick('tick');
+        var isRtl = document.documentElement.dir === 'rtl' || document.documentElement.lang === 'ar';
+        scrollToIndex(isRtl ? heroIndex - 1 : heroIndex + 1, true);
+      };
+    }
+
+    // Dot indicators
+    dots.forEach(function (dot) {
+      dot.onclick = function (e) {
+        e.preventDefault();
+        pauseForUser();
+        playTick('tick');
+        var target = parseInt(dot.getAttribute('data-goto'), 10);
+        if (!isNaN(target)) scrollToIndex(target, true);
+      };
+    });
+
+    // Keyboard Left/Right support
+    frame.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') {
+        pauseForUser();
+        scrollToIndex(heroIndex - 1, true);
+      } else if (e.key === 'ArrowRight') {
+        pauseForUser();
+        scrollToIndex(heroIndex + 1, true);
+      }
+    });
+
+    startHero();
+  }
+
   function startHero() {
     stopHero();
-    var stills = document.querySelectorAll('.hero-frame .still');
-    var dots = document.querySelectorAll('.hero-dot');
-    if (!stills.length) return;
+    var slider = document.getElementById('hero-slider');
+    if (!slider) return;
+    var slides = slider.querySelectorAll('.hero-slide');
+    if (slides.length <= 1) return;
 
-    heroTimer = setInterval(function () {
-      stills[heroIndex].classList.remove('is-active');
-      if (dots[heroIndex]) dots[heroIndex].classList.remove('is-active');
-      heroIndex = (heroIndex + 1) % stills.length;
-      stills[heroIndex].classList.add('is-active');
-      if (dots[heroIndex]) dots[heroIndex].classList.add('is-active');
-    }, 4500);
+    heroAutoplayTimer = setInterval(function () {
+      var nextIdx = (heroIndex + 1) % slides.length;
+      var targetSlide = slides[nextIdx];
+      if (targetSlide) {
+        targetSlide.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'start',
+          block: 'nearest'
+        });
+      }
+    }, 5500);
   }
 
   function stopHero() {
-    if (heroTimer) { clearInterval(heroTimer); heroTimer = null; }
+    if (heroAutoplayTimer) { clearInterval(heroAutoplayTimer); heroAutoplayTimer = null; }
   }
 
   /* ---------------- Render Home ---------------- */
@@ -426,20 +581,33 @@
             '<span>' + esc(L(C.meta.concept)) + '</span>' +
             '<span style="font-family:var(--f-mono)">CAIRO / EGYPT · 30.0444° N, 31.2357° E</span>' +
           '</div>' +
-          '<div class="hero-frame" id="hero-frame">' +
-            HERO_FRAMES.map(function (src, i) {
-              return '<img class="still' + (i === 0 ? ' is-active' : '') + '" src="' + esc(src) + '" alt="Hero frame ' + (i + 1) + '" loading="eager">';
-            }).join('') +
+          '<div class="hero-frame" id="hero-frame" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Featured frames">' +
+            '<div class="hero-slider" id="hero-slider">' +
+              HERO_FRAMES.map(function (src, i) {
+                return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" data-slide-index="' + i + '">' +
+                  '<img class="still" src="' + esc(src) + '" alt="Hero frame ' + (i + 1) + '" loading="' + (i < 2 ? 'eager' : 'lazy') + '">' +
+                '</div>';
+              }).join('') +
+            '</div>' +
             '<div class="hero-scrim"></div>' +
+            '<button class="hero-arrow hero-arrow--prev" id="hero-prev" type="button" aria-label="Previous slide">' +
+              '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>' +
+            '</button>' +
+            '<button class="hero-arrow hero-arrow--next" id="hero-next" type="button" aria-label="Next slide">' +
+              '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>' +
+            '</button>' +
             '<div class="hero-meta">' +
               '<div>' +
                 '<h1 class="hero-name">' + esc(L(C.meta.name)) + '</h1>' +
-                '<p style="margin:6px 0 0 0;font-size:var(--t-sm);color:var(--paper-2)">' + esc(L(C.meta.title)) + '</p>' +
+                '<p class="hero-title-text">' + esc(L(C.meta.title)) + '</p>' +
               '</div>' +
               '<div class="hero-controls">' +
+                '<div class="hero-counter" id="hero-counter" aria-live="polite">' +
+                  '<span class="hero-cur">01</span><span class="hero-sep">/</span><span class="hero-total">' + (HERO_FRAMES.length < 10 ? '0' + HERO_FRAMES.length : HERO_FRAMES.length) + '</span>' +
+                '</div>' +
                 '<div class="hero-dots">' +
                   HERO_FRAMES.map(function (_, i) {
-                    return '<span class="hero-dot' + (i === 0 ? ' is-active' : '') + '"></span>';
+                    return '<button class="hero-dot' + (i === 0 ? ' is-active' : '') + '" type="button" data-goto="' + i + '" aria-label="Slide ' + (i + 1) + '"></button>';
                   }).join('') +
                 '</div>' +
               '</div>' +
@@ -560,7 +728,7 @@
 
     renderFilters();
     renderGrid();
-    startHero();
+    initHeroSlider();
 
     // Hero CTA click handlers
     var ctaWork = document.getElementById('hero-cta-work');
@@ -840,6 +1008,7 @@
             '<div>' +
               '<p class="lead">' + esc(L(p.description)) + '</p>' +
               (vid ? '<div class="btn-row"><button class="btn btn-solid" type="button" id="proj-play-video">' + ICON.play + ' ' + esc(p.videoLabel ? L(p.videoLabel) : tx.watch) + '</button></div>' : '') +
+              (p.pdf ? '<div class="btn-row" style="margin-top:16px"><a class="btn btn-solid" href="' + esc(p.pdf) + '" target="_blank" download>' + ICON.download + ' ' + (lang === 'ar' ? 'Ø§Ø³ØªØ¹Ø±Ø§Ø¶ ÙˆØªØ­Ù…ÙŠÙ„ ÙƒØªØ§Ù„ÙˆØ¬ Ø§Ù„Ù‡ÙˆÙŠØ© Ø§Ù„ÙƒØ§Ù…Ù„ (PDF)' : 'Download Full Brand Book (PDF)') + '</a></div>' : '') +
               (p.thinking ? '<div class="approach">' + ['challenge', 'decisions', 'outcome'].map(function (k) {
                 return p.thinking[k] ? '<div class="approach-item"><h3>' + esc(tx.approach[k]) + '</h3><p>' + esc(L(p.thinking[k])) + '</p></div>' : '';
               }).join('') + '</div>' : '') +

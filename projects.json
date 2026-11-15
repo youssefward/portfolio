@@ -533,207 +533,187 @@
                                      }
                      },
         "images":  [
-                       {
-                           "src":  "upload/7awdet/IMG_0652.JPG",
-                           "thumb":  "upload/7awdet/IMG_0652.JPG",
-                           "alt":  {
-                                        "en":  "Hawadet El Champs-Elysees - Frame 01",
-                                        "ar":  "Hawadet El Champs-Elysees - Frame 01"
-                                   },
-                           "width":  4755,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_0396.JPG",
-                           "thumb":  "upload/7awdet/IMG_0396.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 02",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 02"
-                                   },
-                           "width":  3157,
-                           "height":  4735
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_0550.JPG",
-                           "thumb":  "upload/7awdet/IMG_0550.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 03",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 03"
-                                   },
-                           "width":  4320,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_0596.JPG",
-                           "thumb":  "upload/7awdet/IMG_0596.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 04",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 04"
-                                   },
-                           "width":  4320,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_0394.JPG",
-                           "thumb":  "upload/7awdet/IMG_0394.JPG",
-                           "alt":  {
-                                                                       "en":  "Hawadet El Champs-Elysees - Frame 05",
-                                                                       "ar":  "Hawadet El Champs-Elysees - Frame 05"
-                                   },
-                           "width":  3157,
-                           "height":  4735
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_0655.JPG",
-                           "thumb":  "upload/7awdet/IMG_0655.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 06",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 06"
-                                   },
-                           "width":  4147,
-                           "height":  2765
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1073.JPG",
-                           "thumb":  "upload/7awdet/IMG_1073.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 07",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 07"
-                                   },
-                           "width":  3167,
-                           "height":  4751
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1112.JPG",
-                           "thumb":  "upload/7awdet/IMG_1112.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 08",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 08"
-                                   },
-                           "width":  5184,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1115.JPG",
-                           "thumb":  "upload/7awdet/IMG_1115.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 09",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 09"
-                                   },
-                           "width":  5184,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1319.JPG",
-                           "thumb":  "upload/7awdet/IMG_1319.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 10",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 10"
-                                   },
-                           "width":  4245,
-                           "height":  3396
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1391.JPG",
-                           "thumb":  "upload/7awdet/IMG_1391.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 11",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 11"
-                                   },
-                           "width":  2160,
-                           "height":  1728
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1400.JPG",
-                           "thumb":  "upload/7awdet/IMG_1400.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 12",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 12"
-                                   },
-                           "width":  1728,
-                           "height":  2160
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1402.JPG",
-                           "thumb":  "upload/7awdet/IMG_1402.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 13",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 13"
-                                   },
-                           "width":  1728,
-                           "height":  2160
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1403.JPG",
-                           "thumb":  "upload/7awdet/IMG_1403.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 14",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 14"
-                                   },
-                           "width":  1728,
-                           "height":  2160
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1404.JPG",
-                           "thumb":  "upload/7awdet/IMG_1404.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 15",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 15"
-                                   },
-                           "width":  1728,
-                           "height":  2160
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_1405.JPG",
-                           "thumb":  "upload/7awdet/IMG_1405.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 16",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 16"
-                                   },
-                           "width":  1728,
-                           "height":  2160
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_7264.JPG",
-                           "thumb":  "upload/7awdet/IMG_7264.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 17",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 17"
-                                   },
-                           "width":  4320,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_7286.JPG",
-                           "thumb":  "upload/7awdet/IMG_7286.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 18",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 18"
-                                   },
-                           "width":  4320,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_7307.JPG",
-                           "thumb":  "upload/7awdet/IMG_7307.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 19",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 19"
-                                   },
-                           "width":  3456,
-                           "height":  5184
-                       },
-                       {
-                           "src":  "upload/7awdet/IMG_7308.JPG",
-                           "thumb":  "upload/7awdet/IMG_7308.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees - Frame 20",
-                                       "ar":  "Hawadet El Champs-Elysees - Frame 20"
-                                   },
-                           "width":  3456,
-                           "height":  5184
-                       }
-                   ]
+            {
+                "src":  "upload/7awdet/IMG_0652.JPG",
+                "thumb":  "upload/7awdet/IMG_0652.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_0652",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_0652"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_0396.JPG",
+                "thumb":  "upload/7awdet/IMG_0396.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_0396",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_0396"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_0550.JPG",
+                "thumb":  "upload/7awdet/IMG_0550.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_0550",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_0550"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_0596.JPG",
+                "thumb":  "upload/7awdet/IMG_0596.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_0596",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_0596"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_0394.JPG",
+                "thumb":  "upload/7awdet/IMG_0394.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_0394",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_0394"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_0655.JPG",
+                "thumb":  "upload/7awdet/IMG_0655.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_0655",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_0655"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1073.JPG",
+                "thumb":  "upload/7awdet/IMG_1073.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1073",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1073"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1112.JPG",
+                "thumb":  "upload/7awdet/IMG_1112.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1112",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1112"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1115.JPG",
+                "thumb":  "upload/7awdet/IMG_1115.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1115",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1115"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1319.JPG",
+                "thumb":  "upload/7awdet/IMG_1319.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1319",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1319"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1391.JPG",
+                "thumb":  "upload/7awdet/IMG_1391.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1391",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1391"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1400.JPG",
+                "thumb":  "upload/7awdet/IMG_1400.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1400",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1400"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1403.JPG",
+                "thumb":  "upload/7awdet/IMG_1403.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1403",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1403"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_1405.JPG",
+                "thumb":  "upload/7awdet/IMG_1405.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_1405",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_1405"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_7264.JPG",
+                "thumb":  "upload/7awdet/IMG_7264.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_7264",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_7264"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_7286.JPG",
+                "thumb":  "upload/7awdet/IMG_7286.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_7286",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_7286"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_7307.JPG",
+                "thumb":  "upload/7awdet/IMG_7307.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_7307",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_7307"
+                        },
+                "width":  1728,
+                "height":  2160
+            },
+            {
+                "src":  "upload/7awdet/IMG_7308.JPG",
+                "thumb":  "upload/7awdet/IMG_7308.JPG",
+                "alt":  {
+                            "en":  "Hawadet El Champs-Elysees - IMG_7308",
+                            "ar":  "Hawadet El Champs-Elysees - IMG_7308"
+                        },
+                "width":  1728,
+                "height":  2160
+            }
+        ]
     },
     {
         "id":  "mawlawya-film",
@@ -1867,11 +1847,14 @@
                  },
         "client":  "Mawlawya Cultural Initiative",
         "agency":  "Faculty of Applied Arts",
+        "pdf":  "upload/design/mawlwya branding/catalog finalll compressed.pdf",
         "deliverables":  [
-                             "Brand Identity System",
-                             "Comprehensive 100+ Page Brand Book (PDF)",
-                             "Stationery Suite",
-                             "Packaging \u0026 Collateral"
+                             "Brand Identity Architecture",
+                             "Master 28-Page Brand Book & Guidelines (PDF)",
+                             "Custom Arabic Calligraphy & Logomark Design",
+                             "Corporate Stationery & Envelope DL Suite",
+                             "Tri-Fold Editorial Brochure & Invitations",
+                             "Coasters & 3D Realistic Mockup Ecosystem"
                          ],
         "video":  null,
         "videoLabel":  null,
@@ -1895,64 +1878,284 @@
                      },
         "images":  [
                        {
-                           "src":  "upload/design/c6bff87f83058d9336592c7391cbc72c.jpg",
-                           "thumb":  "upload/design/c6bff87f83058d9336592c7391cbc72c.jpg",
+                           "src":  "upload/design/mawlwya branding/page-01.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-01.jpg",
                            "alt":  {
-                                       "en":  "Mawlawya Brand Identity and Guidelines",
-                                       "ar":  "Mawlawya Brand Identity"
+                                       "en":  "Mawlawyah Brand Identity — Cover & Portfolio",
+                                       "ar":  "هوية المولوية — الغلاف الرئيسي والكتالوج"
                                    },
-                           "width":  564,
-                           "height":  423
+                           "width":  1417,
+                           "height":  998
                        },
                        {
-                           "src":  "upload/design/mawlwya posters/first.jpg",
-                           "thumb":  "upload/design/mawlwya posters/first.jpg",
+                           "src":  "upload/design/mawlwya branding/page-02.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-02.jpg",
                            "alt":  {
-                                       "en":  "Mawlawya Film Poster — Frame 02",
-                                       "ar":  "Mawlawya Film Poster — كادر 02"
+                                       "en":  "About Mawlawiyah — Philosophy & Historical Context",
+                                       "ar":  "ما هي المولوية — الفلسفة والسياق التاريخي"
                                    },
-                           "width":  6142,
-                           "height":  8504
+                           "width":  1417,
+                           "height":  998
                        },
                        {
-                           "src":  "upload/design/mawlwya posters/secound.jpg",
-                           "thumb":  "upload/design/mawlwya posters/secound.jpg",
+                           "src":  "upload/design/mawlwya branding/page-03.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-03.jpg",
                            "alt":  {
-                                       "en":  "Mawlawya Film Poster — Frame 04",
-                                       "ar":  "Mawlawya Film Poster — كادر 04"
+                                       "en":  "Logo Design — Section Lead",
+                                       "ar":  "تصميم الشعار — ترويسة القسم"
                                    },
-                           "width":  6142,
-                           "height":  8504
+                           "width":  1417,
+                           "height":  998
                        },
                        {
-                           "src":  "upload/design/mawlwya posters/third.jpg",
-                           "thumb":  "upload/design/mawlwya posters/third.jpg",
+                           "src":  "upload/design/mawlwya branding/page-04.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-04.jpg",
                            "alt":  {
-                                       "en":  "Mawlawya Film Poster — Frame 05",
-                                       "ar":  "Mawlawya Film Poster — كادر 05"
+                                       "en":  "Mawlawiyah Primary Logo Calligraphy",
+                                       "ar":  "الشعار الخطي الأصيل — مولوية"
                                    },
-                           "width":  6142,
-                           "height":  8504
+                           "width":  1417,
+                           "height":  998
                        },
                        {
-                           "src":  "upload/design/mawlwya posters/fourth.jpg",
-                           "thumb":  "upload/design/mawlwya posters/fourth.jpg",
+                           "src":  "upload/design/mawlwya branding/page-05.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-05.jpg",
                            "alt":  {
-                                       "en":  "Mawlawya Film Poster — Frame 03",
-                                       "ar":  "Mawlawya Film Poster — كادر 03"
+                                       "en":  "Logo Sizing — Section Lead",
+                                       "ar":  "حجم الشعار — ترويسة القسم"
                                    },
-                           "width":  6142,
-                           "height":  8504
+                           "width":  1417,
+                           "height":  998
                        },
                        {
-                           "src":  "upload/design/mawlwya posters/fifth.jpg",
-                           "thumb":  "upload/design/mawlwya posters/fifth.jpg",
+                           "src":  "upload/design/mawlwya branding/page-06.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-06.jpg",
                            "alt":  {
-                                       "en":  "Mawlawya Film Poster — Frame 01",
-                                       "ar":  "Mawlawya Film Poster — كادر 01"
+                                       "en":  "Logo Scale Progression & Proportions",
+                                       "ar":  "تدرج مقاسات الشعار والنسب الهندسية"
                                    },
-                           "width":  6142,
-                           "height":  17362
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-07.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-07.jpg",
+                           "alt":  {
+                                       "en":  "Print & Minimum Application Sizing Guidelines",
+                                       "ar":  "إرشادات مقاسات الطباعة والحدود الدنيا"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-08.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-08.jpg",
+                           "alt":  {
+                                       "en":  "Rejected Experiments — Creative Iterations",
+                                       "ar":  "التجارب الخطية المرفوضة — مسار التطوير"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-09.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-09.jpg",
+                           "alt":  {
+                                       "en":  "Typographic & Calligraphic Iterations",
+                                       "ar":  "نماذج من الاستكشافات الخطية البديلة"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-10.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-10.jpg",
+                           "alt":  {
+                                       "en":  "Color Study — Section Lead",
+                                       "ar":  "دراسة اللون — ترويسة القسم"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-11.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-11.jpg",
+                           "alt":  {
+                                       "en":  "Color Palette & High-Contrast Application (3C3C3B)",
+                                       "ar":  "باليت الألوان ودرجات التباين العالي"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-12.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-12.jpg",
+                           "alt":  {
+                                       "en":  "Slogan — Section Lead",
+                                       "ar":  "الشعار اللفظي — ترويسة القسم"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-13.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-13.jpg",
+                           "alt":  {
+                                       "en":  "Slogan Calligraphy — All in an orbit swimming",
+                                       "ar":  "التكوين الخطي — كل في فلك يسبحون"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-14.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-14.jpg",
+                           "alt":  {
+                                       "en":  "Publications & Stationery — Section Lead",
+                                       "ar":  "المطبوعات والمراسلات — ترويسة القسم"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-15.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-15.jpg",
+                           "alt":  {
+                                       "en":  "Business Card Design — Front & Back Layout",
+                                       "ar":  "تصميم كارت العمل — الوجه والظهر"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-16.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-16.jpg",
+                           "alt":  {
+                                       "en":  "Envelope DL Technical Specifications & Die-Cut",
+                                       "ar":  "المظروف الرسمي والمقاسات الهندسية"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-17.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-17.jpg",
+                           "alt":  {
+                                       "en":  "Tri-Fold Editorial Brochure Layout",
+                                       "ar":  "تصميم المطوية التعريفية الثلاثية (البروشور)"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-18.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-18.jpg",
+                           "alt":  {
+                                       "en":  "Presentation Folder Design",
+                                       "ar":  "تصميم حافظة الأوراق الرسمية (الفولدر)"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-19.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-19.jpg",
+                           "alt":  {
+                                       "en":  "Posters — Section Lead",
+                                       "ar":  "الملصقات والأفيشات — ترويسة القسم"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-20.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-20.jpg",
+                           "alt":  {
+                                       "en":  "5 Theatrical Posters Array",
+                                       "ar":  "تشكيلة البوسترات السينمائية الخمسة"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-21.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-21.jpg",
+                           "alt":  {
+                                       "en":  "Mockup Suite — Section Lead",
+                                       "ar":  "نماذج المحاكاة الواقعية (Mockups)"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-22.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-22.jpg",
+                           "alt":  {
+                                       "en":  "Envelope Mockup — Front & Back Details",
+                                       "ar":  "موك أب المظروف الرسمي"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-23.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-23.jpg",
+                           "alt":  {
+                                       "en":  "3D Brochure Mockup — Open Perspective",
+                                       "ar":  "موك أب البروشور المجسم ثلاثي الأبعاد"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-24.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-24.jpg",
+                           "alt":  {
+                                       "en":  "Event Invitation Card Mockup",
+                                       "ar":  "موك أب بطاقة الدعوة الرسمية"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-25.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-25.jpg",
+                           "alt":  {
+                                       "en":  "Floating Business Cards Mockup",
+                                       "ar":  "موك أب كروت العمل الطافية"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-26.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-26.jpg",
+                           "alt":  {
+                                       "en":  "Ceramic & Wooden Coasters Mockup",
+                                       "ar":  "موك أب قواعد الأكواب المتنوعة"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-27.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-27.jpg",
+                           "alt":  {
+                                       "en":  "Thank You — Catalog Closing",
+                                       "ar":  "صفحة الشكر واختتام الكتالوج"
+                                   },
+                           "width":  1417,
+                           "height":  998
+                       },
+                       {
+                           "src":  "upload/design/mawlwya branding/page-28.jpg",
+                           "thumb":  "upload/design/mawlwya branding/page-28.jpg",
+                           "alt":  {
+                                       "en":  "Mawlawiyah Brand Signature",
+                                       "ar":  "شعار وختام الهوية المؤسسية"
+                                   },
+                           "width":  1417,
+                           "height":  998
                        }
                    ]
     },
