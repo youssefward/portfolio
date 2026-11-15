@@ -9,7 +9,7 @@
                               },
         "featured":  true,
         "name":  {
-                     "en":  "El Ekhteyar — On-Set Cinematography & Camera Craft",
+                     "en":  "El Ekhteyar — On-Set Cinematography \u0026 Camera Craft",
                      "ar":  "مسلسل الاختيار — كادر الكاميرا وإضاءة مواقع الدراما"
                  },
         "subtitle":  {
@@ -18,7 +18,7 @@
                      },
         "year":  "2020 - 2021",
         "role":  {
-                     "en":  "Camera Department · Focus Puller & Operator",
+                     "en":  "Camera Department · Focus Puller \u0026 Operator",
                      "ar":  "قسم الكاميرا · مشغل كاميرا وضابط فوكس"
                  },
         "client":  "Synergy Production · ON TV",
@@ -201,7 +201,7 @@
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Cairo Kabul — Set Lighting & Visual Drama",
+                     "en":  "Cairo Kabul — Set Lighting \u0026 Visual Drama",
                      "ar":  "مسلسل القاهرة كابول — هندسة الضوء الدرامي وتكوين الكادر"
                  },
         "subtitle":  {
@@ -210,7 +210,7 @@
                      },
         "year":  "2021",
         "role":  {
-                     "en":  "Camera Department & Lighting Setup",
+                     "en":  "Camera Department \u0026 Lighting Setup",
                      "ar":  "قسم الكاميرا وهندسة الإضاءة"
                  },
         "client":  "Synergy Art Production",
@@ -242,244 +242,244 @@
                      },
         "images":  [
                        {
-                           "src":  "upload/cairo - kapol/IMG_5109.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5109.JPG",
+                           "src":  "upload/Cairo kapul/DSC07201.JPG",
+                           "thumb":  "upload/Cairo kapul/DSC07201.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 01",
-                                       "ar":  "Cairo Kabul — كادر 01"
+                                       "en":  "Cairo Kabul - Frame 01",
+                                       "ar":  "Cairo Kabul - Frame 01"
+                                   },
+                           "width":  3851,
+                           "height":  3081
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/DSC07202.JPG",
+                           "thumb":  "upload/Cairo kapul/DSC07202.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 02",
+                                       "ar":  "Cairo Kabul - Frame 02"
+                                   },
+                           "width":  4298,
+                           "height":  3438
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_6360.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6360.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 03",
+                                       "ar":  "Cairo Kabul - Frame 03"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5110.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5110.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6363.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6363.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 02",
-                                       "ar":  "Cairo Kabul — كادر 02"
+                                       "en":  "Cairo Kabul - Frame 04",
+                                       "ar":  "Cairo Kabul - Frame 04"
+                                   },
+                           "width":  3768,
+                           "height":  2512
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_6368.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6368.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 05",
+                                       "ar":  "Cairo Kabul - Frame 05"
+                                   },
+                           "width":  2962,
+                           "height":  3702
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_6378.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6378.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 06",
+                                       "ar":  "Cairo Kabul - Frame 06"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5112.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5112.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6729.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6729.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 03",
-                                       "ar":  "Cairo Kabul — كادر 03"
+                                       "en":  "Cairo Kabul - Frame 07",
+                                       "ar":  "Cairo Kabul - Frame 07"
+                                   },
+                           "width":  3154,
+                           "height":  3942
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_6733.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6733.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 08",
+                                       "ar":  "Cairo Kabul - Frame 08"
+                                   },
+                           "width":  3239,
+                           "height":  2159
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_6746.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6746.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 09",
+                                       "ar":  "Cairo Kabul - Frame 09"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5116.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5116.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6749.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6749.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 04",
-                                       "ar":  "Cairo Kabul — كادر 04"
+                                       "en":  "Cairo Kabul - Frame 10",
+                                       "ar":  "Cairo Kabul - Frame 10"
                                    },
-                           "width":  3722,
-                           "height":  2978
+                           "width":  3409,
+                           "height":  2273
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5118.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5118.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6775.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6775.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 05",
-                                       "ar":  "Cairo Kabul — كادر 05"
-                                   },
-                           "width":  5184,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_5124.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5124.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 06",
-                                       "ar":  "Cairo Kabul — كادر 06"
+                                       "en":  "Cairo Kabul - Frame 11",
+                                       "ar":  "Cairo Kabul - Frame 11"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5129.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5129.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6784.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6784.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 07",
-                                       "ar":  "Cairo Kabul — كادر 07"
+                                       "en":  "Cairo Kabul - Frame 12",
+                                       "ar":  "Cairo Kabul - Frame 12"
+                                   },
+                           "width":  3942,
+                           "height":  3154
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_6816.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6816.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 13",
+                                       "ar":  "Cairo Kabul - Frame 13"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5132.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5132.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6873.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6873.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 08",
-                                       "ar":  "Cairo Kabul — كادر 08"
+                                       "en":  "Cairo Kabul - Frame 14",
+                                       "ar":  "Cairo Kabul - Frame 14"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5133.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5133.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6915.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6915.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 09",
-                                       "ar":  "Cairo Kabul — كادر 09"
+                                       "en":  "Cairo Kabul - Frame 15",
+                                       "ar":  "Cairo Kabul - Frame 15"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_5137.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_5137.JPG",
+                           "src":  "upload/Cairo kapul/IMG_6918.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_6918.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 10",
-                                       "ar":  "Cairo Kabul — كادر 10"
+                                       "en":  "Cairo Kabul - Frame 16",
+                                       "ar":  "Cairo Kabul - Frame 16"
+                                   },
+                           "width":  4755,
+                           "height":  3170
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_7065.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7065.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 17",
+                                       "ar":  "Cairo Kabul - Frame 17"
+                                   },
+                           "width":  4785,
+                           "height":  3190
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_7078.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7078.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 18",
+                                       "ar":  "Cairo Kabul - Frame 18"
+                                   },
+                           "width":  4202,
+                           "height":  3362
+                       },
+                       {
+                           "src":  "upload/Cairo kapul/IMG_7108.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7108.JPG",
+                           "alt":  {
+                                       "en":  "Cairo Kabul - Frame 19",
+                                       "ar":  "Cairo Kabul - Frame 19"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_6334.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6334.JPG",
+                           "src":  "upload/Cairo kapul/IMG_7118.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7118.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 11",
-                                       "ar":  "Cairo Kabul — كادر 11"
-                                   },
-                           "width":  5184,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6362.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6362.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 12",
-                                       "ar":  "Cairo Kabul — كادر 12"
-                                   },
-                           "width":  4057,
-                           "height":  2705
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6364.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6364.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 13",
-                                       "ar":  "Cairo Kabul — كادر 13"
+                                       "en":  "Cairo Kabul - Frame 20",
+                                       "ar":  "Cairo Kabul - Frame 20"
                                    },
                            "width":  3456,
                            "height":  5184
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_6365.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6365.JPG",
+                           "src":  "upload/Cairo kapul/IMG_7126.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7126.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 14",
-                                       "ar":  "Cairo Kabul — كادر 14"
+                                       "en":  "Cairo Kabul - Frame 21",
+                                       "ar":  "Cairo Kabul - Frame 21"
                                    },
-                           "width":  2967,
-                           "height":  4451
+                           "width":  4067,
+                           "height":  2711
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_6366.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6366.JPG",
+                           "src":  "upload/Cairo kapul/IMG_7127.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7127.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 15",
-                                       "ar":  "Cairo Kabul — كادر 15"
+                                       "en":  "Cairo Kabul - Frame 22",
+                                       "ar":  "Cairo Kabul - Frame 22"
                                    },
-                           "width":  3456,
-                           "height":  5184
+                           "width":  4566,
+                           "height":  3044
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_6367.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6367.JPG",
+                           "src":  "upload/Cairo kapul/IMG_7149.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7149.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 16",
-                                       "ar":  "Cairo Kabul — كادر 16"
-                                   },
-                           "width":  3456,
-                           "height":  5184
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6369.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6369.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 17",
-                                       "ar":  "Cairo Kabul — كادر 17"
-                                   },
-                           "width":  2914,
-                           "height":  3642
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6371.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6371.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 18",
-                                       "ar":  "Cairo Kabul — كادر 18"
-                                   },
-                           "width":  4041,
-                           "height":  3233
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6372.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6372.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 19",
-                                       "ar":  "Cairo Kabul — كادر 19"
-                                   },
-                           "width":  4311,
-                           "height":  3449
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6373.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6373.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 20",
-                                       "ar":  "Cairo Kabul — كادر 20"
-                                   },
-                           "width":  3642,
-                           "height":  2914
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6377.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6377.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 21",
-                                       "ar":  "Cairo Kabul — كادر 21"
+                                       "en":  "Cairo Kabul - Frame 23",
+                                       "ar":  "Cairo Kabul - Frame 23"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/cairo - kapol/IMG_6382.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6382.JPG",
+                           "src":  "upload/Cairo kapul/IMG_7184.JPG",
+                           "thumb":  "upload/Cairo kapul/IMG_7184.JPG",
                            "alt":  {
-                                       "en":  "Cairo Kabul — Frame 22",
-                                       "ar":  "Cairo Kabul — كادر 22"
+                                       "en":  "Cairo Kabul - Frame 24",
+                                       "ar":  "Cairo Kabul - Frame 24"
                                    },
-                           "width":  5184,
-                           "height":  3456
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6718.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6718.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 23",
-                                       "ar":  "Cairo Kabul — كادر 23"
-                                   },
-                           "width":  4765,
-                           "height":  3331
-                       },
-                       {
-                           "src":  "upload/cairo - kapol/IMG_6719.JPG",
-                           "thumb":  "upload/cairo - kapol/IMG_6719.JPG",
-                           "alt":  {
-                                       "en":  "Cairo Kabul — Frame 24",
-                                       "ar":  "Cairo Kabul — كادر 24"
-                                   },
-                           "width":  4546,
-                           "height":  3031
+                           "width":  3456,
+                           "height":  5184
                        }
                    ]
     },
@@ -493,7 +493,7 @@
                               },
         "featured":  false,
         "name":  {
-                     "en":  "Hawadet El Champs-Elysées — Period Drama Lighting & Texture",
+                     "en":  "Hawadet El Champs-Elysées — Period Drama Lighting \u0026 Texture",
                      "ar":  "مسلسل حواديت الشانزليزيه — إضاءة الحقبة الذهبية وأجواء الخمسينات"
                  },
         "subtitle":  {
@@ -502,7 +502,7 @@
                      },
         "year":  "2019 - 2020",
         "role":  {
-                     "en":  "Camera Department & Period Lighting",
+                     "en":  "Camera Department \u0026 Period Lighting",
                      "ar":  "قسم الكاميرا والإضاءة الكلاسيكية"
                  },
         "client":  "Synergy Art Production",
@@ -510,7 +510,7 @@
         "deliverables":  [
                              "Period Lighting Design",
                              "Camera Movement",
-                             "Wardrobe & Set Stills"
+                             "Wardrobe \u0026 Set Stills"
                          ],
         "video":  null,
         "videoLabel":  null,
@@ -534,204 +534,204 @@
                      },
         "images":  [
                        {
-                           "src":  "upload/7wadet/IMG_0396.JPG",
-                           "thumb":  "upload/7wadet/IMG_0396.JPG",
+                           "src":  "upload/7awdet/IMG_0394.JPG",
+                           "thumb":  "upload/7awdet/IMG_0394.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 01",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 01"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 01",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 01"
                                    },
                            "width":  3157,
                            "height":  4735
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1081.JPG",
-                           "thumb":  "upload/7wadet/IMG_1081.JPG",
+                           "src":  "upload/7awdet/IMG_0396.JPG",
+                           "thumb":  "upload/7awdet/IMG_0396.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 02",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 02"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 02",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 02"
                                    },
-                           "width":  3456,
-                           "height":  5184
+                           "width":  3157,
+                           "height":  4735
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1116.JPG",
-                           "thumb":  "upload/7wadet/IMG_1116.JPG",
+                           "src":  "upload/7awdet/IMG_0550.JPG",
+                           "thumb":  "upload/7awdet/IMG_0550.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 03",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 03"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 03",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 03"
+                                   },
+                           "width":  4320,
+                           "height":  3456
+                       },
+                       {
+                           "src":  "upload/7awdet/IMG_0596.JPG",
+                           "thumb":  "upload/7awdet/IMG_0596.JPG",
+                           "alt":  {
+                                       "en":  "Hawadet El Champs-Elysees - Frame 04",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 04"
+                                   },
+                           "width":  4320,
+                           "height":  3456
+                       },
+                       {
+                           "src":  "upload/7awdet/IMG_0652.JPG",
+                           "thumb":  "upload/7awdet/IMG_0652.JPG",
+                           "alt":  {
+                                       "en":  "Hawadet El Champs-Elysees - Frame 05",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 05"
+                                   },
+                           "width":  4755,
+                           "height":  3456
+                       },
+                       {
+                           "src":  "upload/7awdet/IMG_0655.JPG",
+                           "thumb":  "upload/7awdet/IMG_0655.JPG",
+                           "alt":  {
+                                       "en":  "Hawadet El Champs-Elysees - Frame 06",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 06"
+                                   },
+                           "width":  4147,
+                           "height":  2765
+                       },
+                       {
+                           "src":  "upload/7awdet/IMG_1073.JPG",
+                           "thumb":  "upload/7awdet/IMG_1073.JPG",
+                           "alt":  {
+                                       "en":  "Hawadet El Champs-Elysees - Frame 07",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 07"
+                                   },
+                           "width":  3167,
+                           "height":  4751
+                       },
+                       {
+                           "src":  "upload/7awdet/IMG_1112.JPG",
+                           "thumb":  "upload/7awdet/IMG_1112.JPG",
+                           "alt":  {
+                                       "en":  "Hawadet El Champs-Elysees - Frame 08",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 08"
                                    },
                            "width":  5184,
                            "height":  3456
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1318.JPG",
-                           "thumb":  "upload/7wadet/IMG_1318.JPG",
+                           "src":  "upload/7awdet/IMG_1115.JPG",
+                           "thumb":  "upload/7awdet/IMG_1115.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 04",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 04"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 09",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 09"
+                                   },
+                           "width":  5184,
+                           "height":  3456
+                       },
+                       {
+                           "src":  "upload/7awdet/IMG_1319.JPG",
+                           "thumb":  "upload/7awdet/IMG_1319.JPG",
+                           "alt":  {
+                                       "en":  "Hawadet El Champs-Elysees - Frame 10",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 10"
                                    },
                            "width":  4245,
                            "height":  3396
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1390.JPG",
-                           "thumb":  "upload/7wadet/IMG_1390.JPG",
+                           "src":  "upload/7awdet/IMG_1391.JPG",
+                           "thumb":  "upload/7awdet/IMG_1391.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 05",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 05"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 11",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 11"
                                    },
                            "width":  2160,
                            "height":  1728
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1391.JPG",
-                           "thumb":  "upload/7wadet/IMG_1391.JPG",
+                           "src":  "upload/7awdet/IMG_1400.JPG",
+                           "thumb":  "upload/7awdet/IMG_1400.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 06",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 06"
-                                   },
-                           "width":  2160,
-                           "height":  1728
-                       },
-                       {
-                           "src":  "upload/7wadet/IMG_1400.JPG",
-                           "thumb":  "upload/7wadet/IMG_1400.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 07",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 07"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 12",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 12"
                                    },
                            "width":  1728,
                            "height":  2160
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1401.JPG",
-                           "thumb":  "upload/7wadet/IMG_1401.JPG",
+                           "src":  "upload/7awdet/IMG_1402.JPG",
+                           "thumb":  "upload/7awdet/IMG_1402.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 08",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 08"
-                                   },
-                           "width":  1683,
-                           "height":  2104
-                       },
-                       {
-                           "src":  "upload/7wadet/IMG_1403.JPG",
-                           "thumb":  "upload/7wadet/IMG_1403.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 09",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 09"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 13",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 13"
                                    },
                            "width":  1728,
                            "height":  2160
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1404.JPG",
-                           "thumb":  "upload/7wadet/IMG_1404.JPG",
+                           "src":  "upload/7awdet/IMG_1403.JPG",
+                           "thumb":  "upload/7awdet/IMG_1403.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 10",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 10"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 14",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 14"
                                    },
                            "width":  1728,
                            "height":  2160
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1417.JPG",
-                           "thumb":  "upload/7wadet/IMG_1417.JPG",
+                           "src":  "upload/7awdet/IMG_1404.JPG",
+                           "thumb":  "upload/7awdet/IMG_1404.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 11",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 11"
-                                   },
-                           "width":  1578,
-                           "height":  1973
-                       },
-                       {
-                           "src":  "upload/7wadet/IMG_1418.JPG",
-                           "thumb":  "upload/7wadet/IMG_1418.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 12",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 12"
-                                   },
-                           "width":  1578,
-                           "height":  1973
-                       },
-                       {
-                           "src":  "upload/7wadet/IMG_1428.JPG",
-                           "thumb":  "upload/7wadet/IMG_1428.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 13",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 13"
-                                   },
-                           "width":  1574,
-                           "height":  1967
-                       },
-                       {
-                           "src":  "upload/7wadet/IMG_1429.JPG",
-                           "thumb":  "upload/7wadet/IMG_1429.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 14",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 14"
-                                   },
-                           "width":  1376,
-                           "height":  1720
-                       },
-                       {
-                           "src":  "upload/7wadet/IMG_1430.JPG",
-                           "thumb":  "upload/7wadet/IMG_1430.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 15",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 15"
-                                   },
-                           "width":  1376,
-                           "height":  1720
-                       },
-                       {
-                           "src":  "upload/7wadet/IMG_1431.JPG",
-                           "thumb":  "upload/7wadet/IMG_1431.JPG",
-                           "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 16",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 16"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 15",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 15"
                                    },
                            "width":  1728,
                            "height":  2160
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1432.JPG",
-                           "thumb":  "upload/7wadet/IMG_1432.JPG",
+                           "src":  "upload/7awdet/IMG_1405.JPG",
+                           "thumb":  "upload/7awdet/IMG_1405.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 17",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 17"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 16",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 16"
                                    },
                            "width":  1728,
                            "height":  2160
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1433.JPG",
-                           "thumb":  "upload/7wadet/IMG_1433.JPG",
+                           "src":  "upload/7awdet/IMG_7264.JPG",
+                           "thumb":  "upload/7awdet/IMG_7264.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 18",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 18"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 17",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 17"
                                    },
-                           "width":  1728,
-                           "height":  2160
+                           "width":  4320,
+                           "height":  3456
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1444.JPG",
-                           "thumb":  "upload/7wadet/IMG_1444.JPG",
+                           "src":  "upload/7awdet/IMG_7286.JPG",
+                           "thumb":  "upload/7awdet/IMG_7286.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 19",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 19"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 18",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 18"
                                    },
-                           "width":  1399,
-                           "height":  1749
+                           "width":  4320,
+                           "height":  3456
                        },
                        {
-                           "src":  "upload/7wadet/IMG_1447.JPG",
-                           "thumb":  "upload/7wadet/IMG_1447.JPG",
+                           "src":  "upload/7awdet/IMG_7307.JPG",
+                           "thumb":  "upload/7awdet/IMG_7307.JPG",
                            "alt":  {
-                                       "en":  "Hawadet El Champs-Elysees — Frame 20",
-                                       "ar":  "Hawadet El Champs-Elysees — كادر 20"
+                                       "en":  "Hawadet El Champs-Elysees - Frame 19",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 19"
                                    },
-                           "width":  1967,
-                           "height":  1574
+                           "width":  3456,
+                           "height":  5184
+                       },
+                       {
+                           "src":  "upload/7awdet/IMG_7308.JPG",
+                           "thumb":  "upload/7awdet/IMG_7308.JPG",
+                           "alt":  {
+                                       "en":  "Hawadet El Champs-Elysees - Frame 20",
+                                       "ar":  "Hawadet El Champs-Elysees - Frame 20"
+                                   },
+                           "width":  3456,
+                           "height":  5184
                        }
                    ]
     },
@@ -740,12 +740,12 @@
         "discipline":  "filmmaking",
         "subdiscipline":  "experimental",
         "subdisciplineName":  {
-                                  "en":  "Visual Studies & Film",
+                                  "en":  "Visual Studies \u0026 Film",
                                   "ar":  "تجارب سينمائية"
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Mawlawya — Graduation Film & Visual Study",
+                     "en":  "Mawlawya — Graduation Film \u0026 Visual Study",
                      "ar":  "فيلم مولوية — دراسة بصرية وتجربة سينمائية صوفية"
                  },
         "subtitle":  {
@@ -754,7 +754,7 @@
                      },
         "year":  "2022",
         "role":  {
-                     "en":  "Cinematographer & Director of Photography",
+                     "en":  "Cinematographer \u0026 Director of Photography",
                      "ar":  "مدير التصوير ومخرج الرؤية البصرية"
                  },
         "client":  "Faculty of Applied Arts Graduation Thesis",
@@ -765,7 +765,7 @@
                              "Lighting Design",
                              "Color Grading"
                          ],
-        "video":  "https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci",
+        "video":  "https://vimeo.com/1239369594?share=copy\u0026fl=sv\u0026fe=ci",
         "videoLabel":  {
                            "en":  "Watch Graduation Film (Vimeo)",
                            "ar":  "مشاهدة الفيلم كاملاً (فيميو)"
@@ -851,7 +851,7 @@
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Clove Restaurant — Commercial Film & Atmosphere",
+                     "en":  "Clove Restaurant — Commercial Film \u0026 Atmosphere",
                      "ar":  "كلوف ريستورانت — إعلان تجاري وأجواء الضيافة"
                  },
         "subtitle":  {
@@ -860,10 +860,10 @@
                      },
         "year":  "2023",
         "role":  {
-                     "en":  "Cinematographer & Video Editor",
+                     "en":  "Cinematographer \u0026 Video Editor",
                      "ar":  "مصور سينمائي ومونتير"
                  },
-        "client":  "Clove Restaurant & Lounge",
+        "client":  "Clove Restaurant \u0026 Lounge",
         "agency":  "Clove Hospitality Group",
         "deliverables":  [
                              "Commercial Film (4K)",
@@ -962,12 +962,12 @@
         "discipline":  "photography",
         "subdiscipline":  "celebrity",
         "subdisciplineName":  {
-                                  "en":  "Celebrity & Entertainment",
+                                  "en":  "Celebrity \u0026 Entertainment",
                                   "ar":  "مشاهير وترفيه"
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Sahranen — Celebrity Portraits & Entertainment Stills",
+                     "en":  "Sahranen — Celebrity Portraits \u0026 Entertainment Stills",
                      "ar":  "برنامج سهرانين — بورتريهات المشاهير وتصوير الكواليس"
                  },
         "subtitle":  {
@@ -976,7 +976,7 @@
                      },
         "year":  "2021 - 2023",
         "role":  {
-                     "en":  "Still Photographer & Production Stills",
+                     "en":  "Still Photographer \u0026 Production Stills",
                      "ar":  "المصور الفوتوغرافي الرئيسي لكواليس البرنامج"
                  },
         "client":  "ON TV · Amir Karara Show",
@@ -1254,12 +1254,12 @@
         "discipline":  "photography",
         "subdiscipline":  "editorial",
         "subdisciplineName":  {
-                                  "en":  "Editorial & Fashion",
+                                  "en":  "Editorial \u0026 Fashion",
                                   "ar":  "أزياء وبورتريه"
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Kojak Studio — Light Sculpting & Editorial Fashion",
+                     "en":  "Kojak Studio — Light Sculpting \u0026 Editorial Fashion",
                      "ar":  "كوجاك ستوديو — نحت الضوء والبورتريه الدرامي"
                  },
         "subtitle":  {
@@ -1268,7 +1268,7 @@
                      },
         "year":  "2022",
         "role":  {
-                     "en":  "Studio Photographer & Lighting Designer",
+                     "en":  "Studio Photographer \u0026 Lighting Designer",
                      "ar":  "مصور استوديو ومصمم إضاءة"
                  },
         "client":  "Kojak Studio (Mohanad Kojak)",
@@ -1276,7 +1276,7 @@
         "deliverables":  [
                              "Editorial Studio Photography",
                              "Creative Lighting Craft",
-                             "Lookbook & Press Visuals"
+                             "Lookbook \u0026 Press Visuals"
                          ],
         "video":  null,
         "videoLabel":  null,
@@ -1556,29 +1556,29 @@
         "discipline":  "photography",
         "subdiscipline":  "commercial-photo",
         "subdisciplineName":  {
-                                  "en":  "Food & Culinary",
+                                  "en":  "Food \u0026 Culinary",
                                   "ar":  "أطعمة ومشروبات"
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Food & Beverage — Culinary Light Craft & Texture",
+                     "en":  "Food \u0026 Beverage — Culinary Light Craft \u0026 Texture",
                      "ar":  "تصوير الأطعمة والمشروبات — صياغة الضوء وشهية المشهد"
                  },
         "subtitle":  {
-                         "en":  "Gastronomic Still Life · Liquid & Texture Glaze · Macro Precision",
+                         "en":  "Gastronomic Still Life · Liquid \u0026 Texture Glaze · Macro Precision",
                          "ar":  "أطباق طهي راقية · إبراز لمعان السوائل · دقة الماكرو"
                      },
         "year":  "2023",
         "role":  {
-                     "en":  "Commercial Still Photographer & Food Stylist",
+                     "en":  "Commercial Still Photographer \u0026 Food Stylist",
                      "ar":  "مصور تجاري ومصمم لقطات الأطعمة"
                  },
-        "client":  "Clove Restaurant & Artisanal Kitchens",
+        "client":  "Clove Restaurant \u0026 Artisanal Kitchens",
         "agency":  "Clove Hospitality Group",
         "deliverables":  [
                              "Commercial Menu Photography",
-                             "Beverage & Cocktail Stills",
-                             "Social & Digital Display Imagery"
+                             "Beverage \u0026 Cocktail Stills",
+                             "Social \u0026 Digital Display Imagery"
                          ],
         "video":  null,
         "videoLabel":  null,
@@ -1853,7 +1853,7 @@
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Mawlawya — Cultural Brand Architecture & Identity",
+                     "en":  "Mawlawya — Cultural Brand Architecture \u0026 Identity",
                      "ar":  "مولوية — الهوية المؤسسية والنسق البصري الثقافي"
                  },
         "subtitle":  {
@@ -1862,7 +1862,7 @@
                      },
         "year":  "2022",
         "role":  {
-                     "en":  "Lead Brand Designer & Visual Identity Architect",
+                     "en":  "Lead Brand Designer \u0026 Visual Identity Architect",
                      "ar":  "المصمم الرئيسي للهوية المعمارية والبصرية"
                  },
         "client":  "Mawlawya Cultural Initiative",
@@ -1871,7 +1871,7 @@
                              "Brand Identity System",
                              "Comprehensive 100+ Page Brand Book (PDF)",
                              "Stationery Suite",
-                             "Packaging & Collateral"
+                             "Packaging \u0026 Collateral"
                          ],
         "video":  null,
         "videoLabel":  null,
@@ -1961,12 +1961,12 @@
         "discipline":  "design",
         "subdiscipline":  "keyart",
         "subdisciplineName":  {
-                                  "en":  "Key Art & Posters",
+                                  "en":  "Key Art \u0026 Posters",
                                   "ar":  "أفيشات وملصقات"
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Mawlawya — Cinematic Film Posters & Key Art",
+                     "en":  "Mawlawya — Cinematic Film Posters \u0026 Key Art",
                      "ar":  "أفيشات فيلم مولوية — فنون الأفيش والهرمية البصرية"
                  },
         "subtitle":  {
@@ -1975,10 +1975,10 @@
                      },
         "year":  "2022",
         "role":  {
-                     "en":  "Key Art & Poster Designer",
+                     "en":  "Key Art \u0026 Poster Designer",
                      "ar":  "مصمم الأفيش السينمائي والهوية الإعلانية"
                  },
-        "client":  "Independent Film Release & Festival Circuit",
+        "client":  "Independent Film Release \u0026 Festival Circuit",
         "agency":  "Mawlawya Productions",
         "deliverables":  [
                              "5 Theatrical Master Posters",
@@ -2068,7 +2068,7 @@
                               },
         "featured":  true,
         "name":  {
-                     "en":  "Diwan Bookstores — Brand Applications & Literary Collateral",
+                     "en":  "Diwan Bookstores — Brand Applications \u0026 Literary Collateral",
                      "ar":  "مكتبات ديوان — تطبيقات الهوية والمنتجات الثقافية"
                  },
         "subtitle":  {
@@ -2077,11 +2077,11 @@
                      },
         "year":  "2021 - 2022",
         "role":  {
-                     "en":  "Brand Collateral & Product Designer",
+                     "en":  "Brand Collateral \u0026 Product Designer",
                      "ar":  "مصمم المنتجات وتطبيقات الهوية الثقافية"
                  },
         "client":  "Diwan Bookstores Egypt",
-        "agency":  "Diwan Publishing & Retail",
+        "agency":  "Diwan Publishing \u0026 Retail",
         "deliverables":  [
                              "Literary Bookmarks Suite",
                              "Canvas Tote Bags",
@@ -2251,7 +2251,7 @@
                               },
         "featured":  false,
         "name":  {
-                     "en":  "Book Covers & Literary Jacket Architecture",
+                     "en":  "Book Covers \u0026 Literary Jacket Architecture",
                      "ar":  "أغلفة الكتب — هندسة الغلاف والتصميم التحريري"
                  },
         "subtitle":  {
@@ -2260,7 +2260,7 @@
                      },
         "year":  "2021",
         "role":  {
-                     "en":  "Editorial & Book Cover Designer",
+                     "en":  "Editorial \u0026 Book Cover Designer",
                      "ar":  "مصمم أغلفة كتب وتصميم تحريري"
                  },
         "client":  "Literary Publishers · Novel Releases (e.g. Hona Al Qahira)",
@@ -2323,7 +2323,7 @@
                               },
         "featured":  false,
         "name":  {
-                     "en":  "Typography Studies & Arabic Lettering Systems",
+                     "en":  "Typography Studies \u0026 Arabic Lettering Systems",
                      "ar":  "دراسات الخط والتايبوجرافي — استكشاف الحرف العربي واللاتيني"
                  },
         "subtitle":  {
@@ -2332,10 +2332,10 @@
                      },
         "year":  "2022 - 2023",
         "role":  {
-                     "en":  "Typographer & Lettering Artist",
+                     "en":  "Typographer \u0026 Lettering Artist",
                      "ar":  "مصمم تايبوجرافي وفنون الخط"
                  },
-        "client":  "Visual Research & Brand Explorations",
+        "client":  "Visual Research \u0026 Brand Explorations",
         "agency":  "Design Studio Lab",
         "deliverables":  [
                              "Custom Letterform Sets",

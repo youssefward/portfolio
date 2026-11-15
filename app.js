@@ -9,6 +9,9 @@
 
   var C = window.CONTENT;
   if (!C) return;
+  if (!Array.isArray(C.projects) && C.projects && Array.isArray(C.projects.value)) {
+    C.projects = C.projects.value;
+  }
 
   /* ---------------- Config (Driven strictly by upload/ via content.js) ---------------- */
   var HERO_FRAMES = C.projects
@@ -241,6 +244,10 @@
   function initPreloader() {
     var pre = document.getElementById('preloader');
     if (!pre) return;
+    if (window.location.search.indexOf('nopreload') !== -1 || window.location.hash.indexOf('nopreload') !== -1) {
+      pre.style.display = 'none';
+      return;
+    }
     var tcEl = document.getElementById('preloader-tc');
     var skipBtn = document.getElementById('skip-preloader');
     var frame = 0;
@@ -942,11 +949,17 @@
   window.addEventListener('hashchange', route);
 
   /* ---------------- Init ---------------- */
-  document.addEventListener('DOMContentLoaded', function () {
+  function init() {
     renderShell();
     initPreloader();
     initCursor();
     route();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 
 })();
