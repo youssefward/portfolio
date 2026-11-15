@@ -4,128 +4,127 @@
  */
 
 window.CONTENT = {
-  "meta": {
-    "name": {
-      "en": "Youssef Ward",
-      "ar": "يوسف ورد"
-    },
-    "title": {
-      "en": "Multidisciplinary Designer & Art Director",
-      "ar": "مصمم متعدد التخصصات ومخرج فني"
-    },
-    "subtitle": {
-      "en": "With a Cinematic Eye.",
-      "ar": "بعين سينمائية."
-    },
-    "identity": {
-      "en": "Multidisciplinary Designer & Art Director — With a Cinematic Eye.",
-      "ar": "مصمم متعدد التخصصات ومخرج فني — بعين سينمائية."
-    },
-    "concept": {
-      "en": "One Visual Mind. Multiple Expressions.",
-      "ar": "عقل بصري واحد. تعبيرات متعددة."
-    },
-    "location": {
-      "en": "Cairo, Egypt",
-      "ar": "القاهرة، مصر"
-    },
-    "availability": {
-      "en": "Open to Collaborative & Strategic Design Projects",
-      "ar": "متاح للتعاون الإبداعي والمشاريع السينمائية والتصميمية"
-    }
-  },
-  "mark": "assets/brand-mark.svg",
-  "portrait": "upload/portrait.jpg",
-  "cover": "upload/cover.jpg",
-  "heroFrames": [
-    "upload/7awdet/IMG_0652.JPG",
-    "upload/choice/_K4A6005.JPG",
-    "upload/Cairo kapul/DSC07201.JPG",
-    "upload/sahranen/_MG_3623.JPG",
-    "upload/kojak/IMG_7396.JPG",
-    "upload/food/2H4A2822.JPG"
-  ],
-  "heroRole": {
-    "en": "Multidisciplinary Designer & Art Director",
-    "ar": "مصمم متعدد التخصصات ومخرج فني"
-  },
-  "heroTagline": {
-    "en": "With a Cinematic Eye.",
-    "ar": "بعين سينمائية."
-  },
-  "homeIntro": {
-    "title": {
-      "en": "Multidisciplinary Designer & Art Director",
-      "ar": "مصمم متعدد التخصصات ومخرج فني"
-    },
-    "subtitle": {
-      "en": "With a Cinematic Eye.",
-      "ar": "بعين سينمائية."
-    },
-    "body": {
-      "en": [
-        "I work across design, photography, and visual storytelling, exploring the space where creative vision meets visual communication.",
-        "Rooted in Applied Arts and shaped by cinematic experience, my approach is driven by composition, atmosphere, and a constant curiosity about how images communicate ideas."
-      ],
-      "ar": [
-        "أعمل عبر التصميم والتصوير والسرد البصري، مستكشفًا المساحة التي تلتقي فيها الرؤية الإبداعية بالتواصل البصري.",
-        "انطلاقًا من خلفيتي في الفنون التطبيقية، وتجاربي في السينما، أعتمد على التكوين، وصناعة الأجواء، والتفكير البصري في تحويل الأفكار إلى تجارب تحمل معنى وشخصية."
-      ]
-    },
-    "signature": {
-      "en": "One Visual Mind. Multiple Expressions.",
-      "ar": "عقل بصري واحد. تعبيرات متعددة."
-    },
-    "ctaWork": {
-      "en": "Explore Selected Work",
-      "ar": "اكتشف الأعمال المختارة"
-    },
-    "ctaAbout": {
-      "en": "About Me",
-      "ar": "من أنا"
-    }
-  },
-  "about": {
-    "title": {
-      "en": "About Youssef Ward",
-      "ar": "عن يوسف ورد"
-    },
-    "body": {
-      "en": [
-        "Youssef Ward is a multidisciplinary designer, photographer, and visual artist with a background in Applied Arts and a cinematic approach to visual storytelling.",
-        "His creative practice moves between cinematography, photography, graphic design, and art direction, bringing different visual disciplines together through a unified perspective.",
-        "With six years of experience in cinema and television productions, he has developed a strong understanding of visual composition, lighting, atmosphere, and the language of the image. This cinematic foundation continues to shape the way he approaches design, transforming ideas into thoughtful visual experiences.",
-        "Rather than limiting himself to a single medium, Youssef explores the intersection of image-making and design, combining artistic sensitivity with visual thinking to create work that is intentional, expressive, and distinctive."
-      ],
-      "ar": [
-        "يوسف ورد مصمم متعدد التخصصات، ومصور وفنان بصري، خريج كلية الفنون التطبيقية، يتبنى رؤية إبداعية تنطلق من السينما وتمتد إلى مختلف مجالات الصورة والتصميم.",
-        "تتنوع ممارساته البصرية بين التصوير السينمائي، والتصوير الفوتوغرافي، والتصميم الجرافيكي، والتوجيه الفني (Art Direction)، حيث يجمع بين هذه التخصصات من خلال منظور بصري واحد.",
-        "على مدار ست سنوات من العمل في الإنتاجات السينمائية والتليفزيونية، طوّر فهمًا عميقًا للتكوين البصري، والإضاءة، وصناعة الأجواء، ولغة الصورة. وهي خبرة أصبحت جزءًا أساسيًا من طريقته في التفكير والتعامل مع التصميم والصورة.",
-        "لا يحصر يوسف نفسه في وسيط إبداعي واحد، بل يستكشف المساحات المشتركة بين الصورة والتصميم، ساعيًا إلى تحويل الأفكار إلى تجارب بصرية تحمل معنى، وهوية، وشخصية مستقلة."
-      ]
-    },
-    "closing": {
-      "en": "One Visual Mind. Multiple Expressions.",
-      "ar": "عقل بصري واحد. تعبيرات متعددة."
-    }
-  },
-  "shortBio": {
-    "en": "Youssef Ward is a multidisciplinary designer, photographer, and visual artist based in Cairo, Egypt. With a background in Applied Arts and six years of experience in cinema and television productions, he brings a cinematic perspective to design, image-making, and art direction.",
-    "ar": "يوسف ورد مصمم متعدد التخصصات ومصور وفنان بصري، يقيم في القاهرة، مصر. بخلفية أكاديمية في الفنون التطبيقية، وست سنوات من الخبرة في الإنتاجات السينمائية والتليفزيونية، يجمع في أعماله بين الرؤية السينمائية والتصميم وصناعة الصورة والتوجيه الفني."
-  },
-  "email": "youssef.ward88@gmail.com",
-  "phone": "+20 1155729978",
-  "cv": "assets/youssef-ward-cv.pdf",
-  "portfolio": "assets/youssef-ward-portfolio.pdf",
-  "linkedin": "https://www.linkedin.com/in/yousef-ward-/",
-  "instagram": "https://www.instagram.com/youssefward_/",
-  "behance": "https://www.behance.net/youssef_Ward",
-  "vimeo": "https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci",
-  "bio": {
-    "en": "Youssef Ward is a multidisciplinary designer, photographer, and visual artist with a background in Applied Arts and a cinematic approach to visual storytelling. His creative practice moves between cinematography, photography, graphic design, and art direction, bringing different visual disciplines together through a unified perspective.",
-    "ar": "يوسف ورد مصمم متعدد التخصصات، ومصور وفنان بصري، خريج كلية الفنون التطبيقية، يتبنى رؤية إبداعية تنطلق من السينما وتمتد إلى مختلف مجالات الصورة والتصميم. تتنوع ممارساته البصرية بين التصوير السينمائي، والتصوير الفوتوغرافي، والتصميم الجرافيكي، والتوجيه الفني (Art Direction)، حيث يجمع بين هذه التخصصات من خلال منظور بصري واحد."
-  }
-,
+    "meta":  {
+                 "name":  {
+                              "en":  "Youssef Ward",
+                              "ar":  "يوسف ورد"
+                          },
+                 "title":  {
+                               "en":  "Multidisciplinary Designer \u0026 Art Director",
+                               "ar":  "مصمم متعدد التخصصات ومخرج فني"
+                           },
+                 "subtitle":  {
+                                  "en":  "With a Cinematic Eye.",
+                                  "ar":  "بعين سينمائية."
+                              },
+                 "identity":  {
+                                  "en":  "Multidisciplinary Designer \u0026 Art Director — With a Cinematic Eye.",
+                                  "ar":  "مصمم متعدد التخصصات ومخرج فني — بعين سينمائية."
+                              },
+                 "concept":  {
+                                 "en":  "One Visual Mind. Multiple Expressions.",
+                                 "ar":  "عقل بصري واحد. تعبيرات متعددة."
+                             },
+                 "location":  {
+                                  "en":  "Cairo, Egypt",
+                                  "ar":  "القاهرة، مصر"
+                              },
+                 "availability":  {
+                                      "en":  "Open to Collaborative \u0026 Strategic Design Projects",
+                                      "ar":  "متاح للتعاون الإبداعي والمشاريع السينمائية والتصميمية"
+                                  }
+             },
+    "mark":  "assets/brand-mark.svg",
+    "portrait":  "upload/portrait.jpg",
+    "cover":  "upload/cover.jpg",
+    "heroFrames":  [
+                       "upload/7awdet/IMG_0652.JPG",
+                       "upload/choice/_K4A6005.JPG",
+                       "upload/Cairo kapul/DSC07201.JPG",
+                       "upload/sahranen/_MG_3623.JPG",
+                       "upload/kojak/IMG_7396.JPG",
+                       "upload/food/2H4A2822.JPG"
+                   ],
+    "heroRole":  {
+                     "en":  "Multidisciplinary Designer \u0026 Art Director",
+                     "ar":  "مصمم متعدد التخصصات ومخرج فني"
+                 },
+    "heroTagline":  {
+                        "en":  "With a Cinematic Eye.",
+                        "ar":  "بعين سينمائية."
+                    },
+    "homeIntro":  {
+                      "title":  {
+                                    "en":  "Multidisciplinary Designer \u0026 Art Director",
+                                    "ar":  "مصمم متعدد التخصصات ومخرج فني"
+                                },
+                      "subtitle":  {
+                                       "en":  "With a Cinematic Eye.",
+                                       "ar":  "بعين سينمائية."
+                                   },
+                      "body":  {
+                                   "en":  [
+                                              "I work across design, photography, and visual storytelling, exploring the space where creative vision meets visual communication.",
+                                              "Rooted in Applied Arts and shaped by cinematic experience, my approach is driven by composition, atmosphere, and a constant curiosity about how images communicate ideas."
+                                          ],
+                                   "ar":  [
+                                              "أعمل عبر التصميم والتصوير والسرد البصري، مستكشفًا المساحة التي تلتقي فيها الرؤية الإبداعية بالتواصل البصري.",
+                                              "انطلاقًا من خلفيتي في الفنون التطبيقية، وتجاربي في السينما، أعتمد على التكوين، وصناعة الأجواء، والتفكير البصري في تحويل الأفكار إلى تجارب تحمل معنى وشخصية."
+                                          ]
+                               },
+                      "signature":  {
+                                        "en":  "One Visual Mind. Multiple Expressions.",
+                                        "ar":  "عقل بصري واحد. تعبيرات متعددة."
+                                    },
+                      "ctaWork":  {
+                                      "en":  "Explore Selected Work",
+                                      "ar":  "اكتشف الأعمال المختارة"
+                                  },
+                      "ctaAbout":  {
+                                       "en":  "About Me",
+                                       "ar":  "من أنا"
+                                   }
+                  },
+    "about":  {
+                  "title":  {
+                                "en":  "About Youssef Ward",
+                                "ar":  "عن يوسف ورد"
+                            },
+                  "body":  {
+                               "en":  [
+                                          "Youssef Ward is a multidisciplinary designer, photographer, and visual artist with a background in Applied Arts and a cinematic approach to visual storytelling.",
+                                          "His creative practice moves between cinematography, photography, graphic design, and art direction, bringing different visual disciplines together through a unified perspective.",
+                                          "With six years of experience in cinema and television productions, he has developed a strong understanding of visual composition, lighting, atmosphere, and the language of the image. This cinematic foundation continues to shape the way he approaches design, transforming ideas into thoughtful visual experiences.",
+                                          "Rather than limiting himself to a single medium, Youssef explores the intersection of image-making and design, combining artistic sensitivity with visual thinking to create work that is intentional, expressive, and distinctive."
+                                      ],
+                               "ar":  [
+                                          "يوسف ورد مصمم متعدد التخصصات، ومصور وفنان بصري، خريج كلية الفنون التطبيقية، يتبنى رؤية إبداعية تنطلق من السينما وتمتد إلى مختلف مجالات الصورة والتصميم.",
+                                          "تتنوع ممارساته البصرية بين التصوير السينمائي، والتصوير الفوتوغرافي، والتصميم الجرافيكي، والتوجيه الفني (Art Direction)، حيث يجمع بين هذه التخصصات من خلال منظور بصري واحد.",
+                                          "على مدار ست سنوات من العمل في الإنتاجات السينمائية والتليفزيونية، طوّر فهمًا عميقًا للتكوين البصري، والإضاءة، وصناعة الأجواء، ولغة الصورة. وهي خبرة أصبحت جزءًا أساسيًا من طريقته في التفكير والتعامل مع التصميم والصورة.",
+                                          "لا يحصر يوسف نفسه في وسيط إبداعي واحد، بل يستكشف المساحات المشتركة بين الصورة والتصميم، ساعيًا إلى تحويل الأفكار إلى تجارب بصرية تحمل معنى، وهوية، وشخصية مستقلة."
+                                      ]
+                           },
+                  "closing":  {
+                                  "en":  "One Visual Mind. Multiple Expressions.",
+                                  "ar":  "عقل بصري واحد. تعبيرات متعددة."
+                              }
+              },
+    "shortBio":  {
+                     "en":  "Youssef Ward is a multidisciplinary designer, photographer, and visual artist based in Cairo, Egypt. With a background in Applied Arts and six years of experience in cinema and television productions, he brings a cinematic perspective to design, image-making, and art direction.",
+                     "ar":  "يوسف ورد مصمم متعدد التخصصات ومصور وفنان بصري، يقيم في القاهرة، مصر. بخلفية أكاديمية في الفنون التطبيقية، وست سنوات من الخبرة في الإنتاجات السينمائية والتليفزيونية، يجمع في أعماله بين الرؤية السينمائية والتصميم وصناعة الصورة والتوجيه الفني."
+                 },
+    "email":  "youssef.ward88@gmail.com",
+    "phone":  "+20 1155729978",
+    "cv":  "assets/youssef-ward-cv.pdf",
+    "portfolio":  "assets/youssef-ward-portfolio.pdf",
+    "linkedin":  "https://www.linkedin.com/in/yousef-ward-/",
+    "instagram":  "https://www.instagram.com/youssefward_/",
+    "behance":  "https://www.behance.net/youssef_Ward",
+    "vimeo":  "https://vimeo.com/1239369594?share=copy\u0026fl=sv\u0026fe=ci",
+    "bio":  {
+                "en":  "Youssef Ward is a multidisciplinary designer, photographer, and visual artist with a background in Applied Arts and a cinematic approach to visual storytelling. His creative practice moves between cinematography, photography, graphic design, and art direction, bringing different visual disciplines together through a unified perspective.",
+                "ar":  "يوسف ورد مصمم متعدد التخصصات، ومصور وفنان بصري، خريج كلية الفنون التطبيقية، يتبنى رؤية إبداعية تنطلق من السينما وتمتد إلى مختلف مجالات الصورة والتصميم. تتنوع ممارساته البصرية بين التصوير السينمائي، والتصوير الفوتوغرافي، والتصميم الجرافيكي، والتوجيه الفني (Art Direction)، حيث يجمع بين هذه التخصصات من خلال منظور بصري واحد."
+            },
     "disciplines":  [
                         {
                             "id":  "filmmaking",
@@ -335,8 +334,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 01",
                                                                       "ar":  "El Ekhteyar — كادر 01"
                                                                   },
-                                                          "width":  5759,
-                                                          "height":  3839
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/_K4A6086.JPG",
@@ -345,8 +344,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 02",
                                                                       "ar":  "El Ekhteyar — كادر 02"
                                                                   },
-                                                          "width":  5212,
-                                                          "height":  3475
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/5K4A5867.JPG",
@@ -355,8 +354,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 03",
                                                                       "ar":  "El Ekhteyar — كادر 03"
                                                                   },
-                                                          "width":  5760,
-                                                          "height":  3840
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/5K4A5892.JPG",
@@ -365,8 +364,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 04",
                                                                       "ar":  "El Ekhteyar — كادر 04"
                                                                   },
-                                                          "width":  5760,
-                                                          "height":  3840
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/5K4A5910.JPG",
@@ -375,8 +374,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 05",
                                                                       "ar":  "El Ekhteyar — كادر 05"
                                                                   },
-                                                          "width":  4464,
-                                                          "height":  2976
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/5K4A5942.JPG",
@@ -385,8 +384,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 06",
                                                                       "ar":  "El Ekhteyar — كادر 06"
                                                                   },
-                                                          "width":  5760,
-                                                          "height":  3840
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3574.JPG",
@@ -395,8 +394,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 07",
                                                                       "ar":  "El Ekhteyar — كادر 07"
                                                                   },
-                                                          "width":  3876,
-                                                          "height":  2472
+                                                          "width":  2400,
+                                                          "height":  1531
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3576.JPG",
@@ -405,8 +404,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 08",
                                                                       "ar":  "El Ekhteyar — كادر 08"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3594.JPG",
@@ -415,8 +414,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 09",
                                                                       "ar":  "El Ekhteyar — كادر 09"
                                                                   },
-                                                          "width":  3456,
-                                                          "height":  4320
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3602.JPG",
@@ -425,8 +424,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 10",
                                                                       "ar":  "El Ekhteyar — كادر 10"
                                                                   },
-                                                          "width":  3456,
-                                                          "height":  5184
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3672.JPG",
@@ -435,8 +434,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 11",
                                                                       "ar":  "El Ekhteyar — كادر 11"
                                                                   },
-                                                          "width":  4245,
-                                                          "height":  3396
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3893.JPG",
@@ -445,8 +444,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 12",
                                                                       "ar":  "El Ekhteyar — كادر 12"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3937.JPG",
@@ -455,8 +454,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 13",
                                                                       "ar":  "El Ekhteyar — كادر 13"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/choice/IMG_3943.JPG",
@@ -465,8 +464,8 @@ window.CONTENT = {
                                                                       "en":  "El Ekhteyar — Frame 14",
                                                                       "ar":  "El Ekhteyar — كادر 14"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       }
                                                   ]
                                    },
@@ -527,8 +526,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 01",
                                                                       "ar":  "Cairo Kabul - Frame 01"
                                                                   },
-                                                          "width":  3851,
-                                                          "height":  3081
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/DSC07202.JPG",
@@ -537,8 +536,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 02",
                                                                       "ar":  "Cairo Kabul - Frame 02"
                                                                   },
-                                                          "width":  4298,
-                                                          "height":  3438
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6360.JPG",
@@ -547,8 +546,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 03",
                                                                       "ar":  "Cairo Kabul - Frame 03"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6363.JPG",
@@ -557,8 +556,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 04",
                                                                       "ar":  "Cairo Kabul - Frame 04"
                                                                   },
-                                                          "width":  3768,
-                                                          "height":  2512
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6368.JPG",
@@ -567,8 +566,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 05",
                                                                       "ar":  "Cairo Kabul - Frame 05"
                                                                   },
-                                                          "width":  2962,
-                                                          "height":  3702
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6378.JPG",
@@ -577,8 +576,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 06",
                                                                       "ar":  "Cairo Kabul - Frame 06"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6729.JPG",
@@ -587,8 +586,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 07",
                                                                       "ar":  "Cairo Kabul - Frame 07"
                                                                   },
-                                                          "width":  3154,
-                                                          "height":  3942
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6733.JPG",
@@ -597,8 +596,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 08",
                                                                       "ar":  "Cairo Kabul - Frame 08"
                                                                   },
-                                                          "width":  3239,
-                                                          "height":  2159
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6746.JPG",
@@ -607,8 +606,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 09",
                                                                       "ar":  "Cairo Kabul - Frame 09"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6749.JPG",
@@ -617,8 +616,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 10",
                                                                       "ar":  "Cairo Kabul - Frame 10"
                                                                   },
-                                                          "width":  3409,
-                                                          "height":  2273
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6775.JPG",
@@ -627,8 +626,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 11",
                                                                       "ar":  "Cairo Kabul - Frame 11"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6784.JPG",
@@ -637,8 +636,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 12",
                                                                       "ar":  "Cairo Kabul - Frame 12"
                                                                   },
-                                                          "width":  3942,
-                                                          "height":  3154
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6816.JPG",
@@ -647,8 +646,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 13",
                                                                       "ar":  "Cairo Kabul - Frame 13"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6873.JPG",
@@ -657,8 +656,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 14",
                                                                       "ar":  "Cairo Kabul - Frame 14"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6915.JPG",
@@ -667,8 +666,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 15",
                                                                       "ar":  "Cairo Kabul - Frame 15"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_6918.JPG",
@@ -677,8 +676,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 16",
                                                                       "ar":  "Cairo Kabul - Frame 16"
                                                                   },
-                                                          "width":  4755,
-                                                          "height":  3170
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7065.JPG",
@@ -687,8 +686,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 17",
                                                                       "ar":  "Cairo Kabul - Frame 17"
                                                                   },
-                                                          "width":  4785,
-                                                          "height":  3190
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7078.JPG",
@@ -697,8 +696,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 18",
                                                                       "ar":  "Cairo Kabul - Frame 18"
                                                                   },
-                                                          "width":  4202,
-                                                          "height":  3362
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7108.JPG",
@@ -707,8 +706,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 19",
                                                                       "ar":  "Cairo Kabul - Frame 19"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7118.JPG",
@@ -717,8 +716,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 20",
                                                                       "ar":  "Cairo Kabul - Frame 20"
                                                                   },
-                                                          "width":  3456,
-                                                          "height":  5184
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7126.JPG",
@@ -727,8 +726,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 21",
                                                                       "ar":  "Cairo Kabul - Frame 21"
                                                                   },
-                                                          "width":  4067,
-                                                          "height":  2711
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7127.JPG",
@@ -737,8 +736,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 22",
                                                                       "ar":  "Cairo Kabul - Frame 22"
                                                                   },
-                                                          "width":  4566,
-                                                          "height":  3044
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7149.JPG",
@@ -747,8 +746,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 23",
                                                                       "ar":  "Cairo Kabul - Frame 23"
                                                                   },
-                                                          "width":  5184,
-                                                          "height":  3456
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/Cairo kapul/IMG_7184.JPG",
@@ -757,8 +756,8 @@ window.CONTENT = {
                                                                       "en":  "Cairo Kabul - Frame 24",
                                                                       "ar":  "Cairo Kabul - Frame 24"
                                                                   },
-                                                          "width":  3456,
-                                                          "height":  5184
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       }
                                                   ]
                                    },
@@ -812,187 +811,187 @@ window.CONTENT = {
                                                                     }
                                                     },
                                        "images":  [
-                                       {
-                                           "src":  "upload/7awdet/IMG_0652.JPG",
-                                           "thumb":  "upload/7awdet/IMG_0652.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_0652",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_0652"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_0396.JPG",
-                                           "thumb":  "upload/7awdet/IMG_0396.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_0396",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_0396"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_0550.JPG",
-                                           "thumb":  "upload/7awdet/IMG_0550.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_0550",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_0550"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_0596.JPG",
-                                           "thumb":  "upload/7awdet/IMG_0596.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_0596",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_0596"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_0394.JPG",
-                                           "thumb":  "upload/7awdet/IMG_0394.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_0394",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_0394"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_0655.JPG",
-                                           "thumb":  "upload/7awdet/IMG_0655.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_0655",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_0655"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1073.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1073.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1073",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1073"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1112.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1112.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1112",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1112"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1115.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1115.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1115",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1115"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1319.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1319.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1319",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1319"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1391.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1391.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1391",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1391"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1400.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1400.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1400",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1400"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1403.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1403.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1403",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1403"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_1405.JPG",
-                                           "thumb":  "upload/7awdet/IMG_1405.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_1405",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_1405"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_7264.JPG",
-                                           "thumb":  "upload/7awdet/IMG_7264.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_7264",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_7264"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_7286.JPG",
-                                           "thumb":  "upload/7awdet/IMG_7286.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_7286",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_7286"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_7307.JPG",
-                                           "thumb":  "upload/7awdet/IMG_7307.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_7307",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_7307"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       },
-                                       {
-                                           "src":  "upload/7awdet/IMG_7308.JPG",
-                                           "thumb":  "upload/7awdet/IMG_7308.JPG",
-                                           "alt":  {
-                                                       "en":  "Hawadet El Champs-Elysees - IMG_7308",
-                                                       "ar":  "Hawadet El Champs-Elysees - IMG_7308"
-                                                   },
-                                           "width":  1728,
-                                           "height":  2160
-                                       }
-                                   ]
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_0652.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0652.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_0652",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_0652"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1744
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_0396.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0396.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_0396",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_0396"
+                                                                  },
+                                                          "width":  1600,
+                                                          "height":  2400
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_0550.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0550.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_0550",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_0550"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1920
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_0596.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0596.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_0596",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_0596"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1920
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_0394.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0394.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_0394",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_0394"
+                                                                  },
+                                                          "width":  1600,
+                                                          "height":  2400
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_0655.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0655.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_0655",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_0655"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1600
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1073.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1073.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1073",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1073"
+                                                                  },
+                                                          "width":  1600,
+                                                          "height":  2400
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1112.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1112.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1112",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1112"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1600
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1115.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1115.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1115",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1115"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1600
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1319.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1319.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1319",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1319"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1920
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1391.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1391.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1391",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1391"
+                                                                  },
+                                                          "width":  2160,
+                                                          "height":  1728
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1400.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1400.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1400",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1400"
+                                                                  },
+                                                          "width":  1728,
+                                                          "height":  2160
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1403.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1403.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1403",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1403"
+                                                                  },
+                                                          "width":  1728,
+                                                          "height":  2160
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_1405.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_1405.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_1405",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_1405"
+                                                                  },
+                                                          "width":  1728,
+                                                          "height":  2160
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_7264.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_7264.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_7264",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_7264"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1920
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_7286.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_7286.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_7286",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_7286"
+                                                                  },
+                                                          "width":  2400,
+                                                          "height":  1920
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_7307.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_7307.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_7307",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_7307"
+                                                                  },
+                                                          "width":  1600,
+                                                          "height":  2400
+                                                      },
+                                                      {
+                                                          "src":  "upload/7awdet/IMG_7308.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_7308.JPG",
+                                                          "alt":  {
+                                                                      "en":  "Hawadet El Champs-Elysees - IMG_7308",
+                                                                      "ar":  "Hawadet El Champs-Elysees - IMG_7308"
+                                                                  },
+                                                          "width":  1600,
+                                                          "height":  2400
+                                                      }
+                                                  ]
                                    },
                                    {
                                        "id":  "mawlawya-film",
@@ -1055,8 +1054,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 02",
                                                                       "ar":  "Mawlawya Film Poster — كادر 02"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/secound.jpg",
@@ -1065,8 +1064,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 04",
                                                                       "ar":  "Mawlawya Film Poster — كادر 04"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/third.jpg",
@@ -1075,8 +1074,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 05",
                                                                       "ar":  "Mawlawya Film Poster — كادر 05"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fourth.jpg",
@@ -1085,8 +1084,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 03",
                                                                       "ar":  "Mawlawya Film Poster — كادر 03"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fifth.jpg",
@@ -1095,8 +1094,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 01",
                                                                       "ar":  "Mawlawya Film Poster — كادر 01"
                                                                   },
-                                                          "width":  906,
-                                                          "height":  2560
+                                                          "width":  849,
+                                                          "height":  2400
                                                       }
                                                   ]
                                    },
@@ -1161,8 +1160,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 01",
                                                                       "ar":  "Food and Beverage — كادر 01"
                                                                   },
-                                                          "width":  2571,
-                                                          "height":  3122
+                                                          "width":  1976,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2835.JPG",
@@ -1171,8 +1170,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 02",
                                                                       "ar":  "Food and Beverage — كادر 02"
                                                                   },
-                                                          "width":  4962,
-                                                          "height":  3970
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2859.JPG",
@@ -1181,8 +1180,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 03",
                                                                       "ar":  "Food and Beverage — كادر 03"
                                                                   },
-                                                          "width":  4451,
-                                                          "height":  3561
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2865.JPG",
@@ -1191,8 +1190,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 04",
                                                                       "ar":  "Food and Beverage — كادر 04"
                                                                   },
-                                                          "width":  4480,
-                                                          "height":  6429
+                                                          "width":  1672,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2874.JPG",
@@ -1201,8 +1200,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 05",
                                                                       "ar":  "Food and Beverage — كادر 05"
                                                                   },
-                                                          "width":  4186,
-                                                          "height":  5233
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2879.JPG",
@@ -1211,8 +1210,149 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 06",
                                                                       "ar":  "Food and Beverage — كادر 06"
                                                                   },
-                                                          "width":  4909,
-                                                          "height":  3927
+                                                          "width":  2400,
+                                                          "height":  1920
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "id":  "jazeera-paints",
+                                       "discipline":  "filmmaking",
+                                       "subdiscipline":  "commercial",
+                                       "subdisciplineName":  {
+                                                                 "en":  "Commercial Film",
+                                                                 "ar":  "إعلان تجاري"
+                                                             },
+                                       "featured":  true,
+                                       "name":  {
+                                                    "en":  "Jazeera Paints — High-Speed Commercial Campaign",
+                                                    "ar":  "إعلان دهانات الجزيرة — حملة إعلانية تجارية فائقة السرعة"
+                                                },
+                                       "subtitle":  {
+                                                        "en":  "Television Commercial · Focus Puller / 1st AC · High-Speed Splash \u0026 Industrial Craft",
+                                                        "ar":  "إعلان تليفزيوني تجاري · ضبط بؤرة الكاميرا (Focus Puller) · تصوير فائق السرعة للحركة والبيئة الصناعية"
+                                                    },
+                                       "year":  "2023",
+                                       "role":  {
+                                                    "en":  "Focus Puller / 1st AC",
+                                                    "ar":  "ضبط بؤرة الكاميرا (Focus Puller)"
+                                                },
+                                       "client":  "Jazeera Paints / دهانات الجزيرة",
+                                       "agency":  "Jazeera Paints Productions",
+                                       "deliverables":  [
+                                                            "High-Speed Paint Splash \u0026 Macro Focus Pulls",
+                                                            "Factory \u0026 Industrial Machine Tracking Shots",
+                                                            "Architectural Wall Finish \u0026 Paint Dynamic Sequences",
+                                                            "Wireless Follow Focus (Cine RT \u0026 Remote Optics)"
+                                                        ],
+                                       "description":  {
+                                                           "en":  "Television commercial campaign for Jazeera Paints capturing the energy, industrial craftsmanship, and vibrant fluid physics of architectural coatings. Youssef Ward served as Focus Puller (1st AC), executing surgical wireless focus pulls across high-speed macro paint splash sequences, high-aperture shallow depth of field, and tracking shots inside active production and warehousing facilities.",
+                                                           "ar":  "حملة إعلانية تليفزيونية لشركة دهانات الجزيرة تبرز جودة التصنيع والتشطيبات المعمارية وديناميكية السوائل الفائقة. تولى يوسف ورد دور ضبط بؤرة الكاميرا (Focus Puller / 1st AC)، ونفذ متابعة بؤرية دقيقة للغاية (Wireless Follow Focus) للقطات الماكرو فائقة السرعة لانفجار قطرات الدهان، وتتبع الكاميرا داخل المصانع والمستودعات مع الحفاظ على وضوح فائق للعلامة التجارية في أصعب ظروف الحركة وعمق الميدان الضيق."
+                                                       },
+                                       "thinking":  {
+                                                        "challenge":  {
+                                                                          "en":  "Executing tack-sharp focus on unpredictable high-speed liquid splashes and wide-aperture cinema tracking shots in a massive industrial warehouse.",
+                                                                          "ar":  "ضبط الفوكس اللحظي على تناثر السوائل فائق السرعة غير المتوقع، وحركات الكاميرا المتتبعة بين ممرات المستودعات العملاقة مع اتساع فتحة العدسة."
+                                                                      },
+                                                        "decisions":  {
+                                                                          "en":  "Wireless Cine RT ultrasonic rangefinder paired with high-torque wireless follow-focus motors, calibrated cinema prime lenses, and pre-marked spatial markers.",
+                                                                          "ar":  "استخدام نظام متابعة بؤرية لاسلكي متطور مع قياسات ليزرية دقيقة ومعايرة مسبقة للمسافات على عدسات سينمائية رئيسية لضمان حدة تامة في كل لقطة."
+                                                                      },
+                                                        "outcome":  {
+                                                                        "en":  "Flawless focus tracking across all high-speed splash hero shots and industrial tracking frames, elevating the visual prestige of the brand.",
+                                                                        "ar":  "تتبع بؤري مثالي لكافة لقطات الماكرو الحركية ولقطات المستودعات، مما منح الإعلان لمسة سينمائية فائقة الدقة عززت من القيمة البصرية لعلامة دهانات الجزيرة."
+                                                                    }
+                                                    },
+                                       "images":  [
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5017.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5017.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — High-Speed Paint Splash (Focus Puller Frame)",
+                                                                      "ar":  "إعلان دهانات الجزيرة — انفجار قطرات الدهان فائق السرعة"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  654
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5016.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5016.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Industrial Warehouse Tracking Shot",
+                                                                      "ar":  "إعلان دهانات الجزيرة — تتبع الكاميرا في مستودع المنتجات"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  667
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5011.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5011.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Painter Eye Focus and Brand Cap",
+                                                                      "ar":  "إعلان دهانات الجزيرة — تركيز بؤري فائق على عين الرسام وقبعة العلامة التجارية"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  664
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5014.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5014.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Factory Production \u0026 Dissolver Machinery",
+                                                                      "ar":  "إعلان دهانات الجزيرة — مرحلة الخلط والتصنيع في ماكينات المصنع"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  659
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5012.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5012.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Laboratory \u0026 Color Testing",
+                                                                      "ar":  "إعلان دهانات الجزيرة — مختبر الجودة واختبارات الألوان"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  657
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5013.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5013.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Precision Quality Inspection",
+                                                                      "ar":  "إعلان دهانات الجزيرة — فحص الجودة والمواصفات"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  667
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5015.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5015.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Industrial Paint Mixing Station",
+                                                                      "ar":  "إعلان دهانات الجزيرة — خط الإنتاج الصناعي"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  657
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5018.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5018.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Interior Coating \u0026 Wall Application",
+                                                                      "ar":  "إعلان دهانات الجزيرة — دهان الجدران والتشطيب المعماري"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  659
+                                                      },
+                                                      {
+                                                          "src":  "upload/jazeera paints/IMG_5019.PNG",
+                                                          "thumb":  "upload/jazeera paints/IMG_5019.PNG",
+                                                          "alt":  {
+                                                                      "en":  "Jazeera Paints — Packaging \u0026 Product Presentation",
+                                                                      "ar":  "إعلان دهانات الجزيرة — عبوات دهانات الجزيرة نوفل"
+                                                                  },
+                                                          "width":  1290,
+                                                          "height":  667
                                                       }
                                                   ]
                                    },
@@ -1273,8 +1413,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 01",
                                                                       "ar":  "Sahranen — كادر 01"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_3927.JPG",
@@ -1283,8 +1423,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 02",
                                                                       "ar":  "Sahranen — كادر 02"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4143.JPG",
@@ -1293,8 +1433,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 03",
                                                                       "ar":  "Sahranen — كادر 03"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4153.JPG",
@@ -1303,8 +1443,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 04",
                                                                       "ar":  "Sahranen — كادر 04"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4200.JPG",
@@ -1313,8 +1453,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 05",
                                                                       "ar":  "Sahranen — كادر 05"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4204.JPG",
@@ -1323,8 +1463,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 06",
                                                                       "ar":  "Sahranen — كادر 06"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4207.JPG",
@@ -1333,8 +1473,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 07",
                                                                       "ar":  "Sahranen — كادر 07"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4433.JPG",
@@ -1343,8 +1483,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 08",
                                                                       "ar":  "Sahranen — كادر 08"
                                                                   },
-                                                          "width":  4560,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4581.JPG",
@@ -1353,8 +1493,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 09",
                                                                       "ar":  "Sahranen — كادر 09"
                                                                   },
-                                                          "width":  4560,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4735.JPG",
@@ -1363,8 +1503,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 10",
                                                                       "ar":  "Sahranen — كادر 10"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4805.JPG",
@@ -1373,8 +1513,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 11",
                                                                       "ar":  "Sahranen — كادر 11"
                                                                   },
-                                                          "width":  4560,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4816.JPG",
@@ -1383,8 +1523,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 12",
                                                                       "ar":  "Sahranen — كادر 12"
                                                                   },
-                                                          "width":  4560,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4872.JPG",
@@ -1393,8 +1533,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 13",
                                                                       "ar":  "Sahranen — كادر 13"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4951.JPG",
@@ -1403,8 +1543,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 14",
                                                                       "ar":  "Sahranen — كادر 14"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_4961.JPG",
@@ -1413,8 +1553,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 15",
                                                                       "ar":  "Sahranen — كادر 15"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_5100.JPG",
@@ -1423,8 +1563,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 16",
                                                                       "ar":  "Sahranen — كادر 16"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_5130.JPG",
@@ -1433,8 +1573,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 17",
                                                                       "ar":  "Sahranen — كادر 17"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_5192.JPG",
@@ -1443,8 +1583,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 18",
                                                                       "ar":  "Sahranen — كادر 18"
                                                                   },
-                                                          "width":  4363,
-                                                          "height":  3490
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_5193.JPG",
@@ -1453,8 +1593,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 19",
                                                                       "ar":  "Sahranen — كادر 19"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_5206.JPG",
@@ -1463,8 +1603,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 20",
                                                                       "ar":  "Sahranen — كادر 20"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/_MG_5210.JPG",
@@ -1473,8 +1613,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 21",
                                                                       "ar":  "Sahranen — كادر 21"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/IMG_0074.JPG",
@@ -1483,8 +1623,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 22",
                                                                       "ar":  "Sahranen — كادر 22"
                                                                   },
-                                                          "width":  3456,
-                                                          "height":  5184
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/IMG_0119.JPG",
@@ -1493,8 +1633,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 23",
                                                                       "ar":  "Sahranen — كادر 23"
                                                                   },
-                                                          "width":  3456,
-                                                          "height":  5184
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/sahranen/IMG_0293.JPG",
@@ -1503,8 +1643,8 @@ window.CONTENT = {
                                                                       "en":  "Sahranen — Frame 24",
                                                                       "ar":  "Sahranen — كادر 24"
                                                                   },
-                                                          "width":  3397,
-                                                          "height":  4246
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       }
                                                   ]
                                    },
@@ -1565,8 +1705,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 01",
                                                                       "ar":  "Kojak Studio — كادر 01"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7439.JPG",
@@ -1575,8 +1715,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 02",
                                                                       "ar":  "Kojak Studio — كادر 02"
                                                                   },
-                                                          "width":  3491,
-                                                          "height":  4343
+                                                          "width":  1929,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7494.JPG",
@@ -1585,8 +1725,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 03",
                                                                       "ar":  "Kojak Studio — كادر 03"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  4538
+                                                          "width":  1929,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7554.JPG",
@@ -1595,8 +1735,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 04",
                                                                       "ar":  "Kojak Studio — كادر 04"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7575.JPG",
@@ -1605,8 +1745,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 05",
                                                                       "ar":  "Kojak Studio — كادر 05"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5040
+                                                          "width":  1737,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7591.JPG",
@@ -1615,8 +1755,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 06",
                                                                       "ar":  "Kojak Studio — كادر 06"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7593.JPG",
@@ -1625,8 +1765,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 07",
                                                                       "ar":  "Kojak Studio — كادر 07"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7600.JPG",
@@ -1635,8 +1775,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 08",
                                                                       "ar":  "Kojak Studio — كادر 08"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7606.JPG",
@@ -1645,8 +1785,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 09",
                                                                       "ar":  "Kojak Studio — كادر 09"
                                                                   },
-                                                          "width":  3361,
-                                                          "height":  5041
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7631.JPG",
@@ -1655,8 +1795,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 10",
                                                                       "ar":  "Kojak Studio — كادر 10"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7650.JPG",
@@ -1665,8 +1805,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 11",
                                                                       "ar":  "Kojak Studio — كادر 11"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7656.JPG",
@@ -1675,8 +1815,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 12",
                                                                       "ar":  "Kojak Studio — كادر 12"
                                                                   },
-                                                          "width":  2774,
-                                                          "height":  3468
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7658.JPG",
@@ -1685,8 +1825,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 13",
                                                                       "ar":  "Kojak Studio — كادر 13"
                                                                   },
-                                                          "width":  2711,
-                                                          "height":  4066
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7659.JPG",
@@ -1695,8 +1835,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 14",
                                                                       "ar":  "Kojak Studio — كادر 14"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  4560
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7663.JPG",
@@ -1705,8 +1845,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 15",
                                                                       "ar":  "Kojak Studio — كادر 15"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  4560
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7717-2.JPG",
@@ -1715,8 +1855,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 16",
                                                                       "ar":  "Kojak Studio — كادر 16"
                                                                   },
-                                                          "width":  3364,
-                                                          "height":  4205
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7719.JPG",
@@ -1725,8 +1865,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 17",
                                                                       "ar":  "Kojak Studio — كادر 17"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7721.JPG",
@@ -1735,8 +1875,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 18",
                                                                       "ar":  "Kojak Studio — كادر 18"
                                                                   },
-                                                          "width":  3174,
-                                                          "height":  4761
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7726-2.JPG",
@@ -1745,8 +1885,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 19",
                                                                       "ar":  "Kojak Studio — كادر 19"
                                                                   },
-                                                          "width":  3482,
-                                                          "height":  4353
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7729..2.JPG",
@@ -1755,8 +1895,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 20",
                                                                       "ar":  "Kojak Studio — كادر 20"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7729.JPG",
@@ -1765,8 +1905,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 21",
                                                                       "ar":  "Kojak Studio — كادر 21"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7746.JPG",
@@ -1775,8 +1915,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 22",
                                                                       "ar":  "Kojak Studio — كادر 22"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7747.JPG",
@@ -1785,8 +1925,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 23",
                                                                       "ar":  "Kojak Studio — كادر 23"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7761.JPG",
@@ -1795,8 +1935,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 24",
                                                                       "ar":  "Kojak Studio — كادر 24"
                                                                   },
-                                                          "width":  3648,
-                                                          "height":  5472
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/kojak/IMG_7765.JPG",
@@ -1805,8 +1945,8 @@ window.CONTENT = {
                                                                       "en":  "Kojak Studio — Frame 25",
                                                                       "ar":  "Kojak Studio — كادر 25"
                                                                   },
-                                                          "width":  5472,
-                                                          "height":  3648
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       }
                                                   ]
                                    },
@@ -1867,8 +2007,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 01",
                                                                       "ar":  "Food and Beverage — كادر 01"
                                                                   },
-                                                          "width":  2571,
-                                                          "height":  3122
+                                                          "width":  1976,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2835.JPG",
@@ -1877,8 +2017,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 02",
                                                                       "ar":  "Food and Beverage — كادر 02"
                                                                   },
-                                                          "width":  4962,
-                                                          "height":  3970
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2859.JPG",
@@ -1887,8 +2027,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 03",
                                                                       "ar":  "Food and Beverage — كادر 03"
                                                                   },
-                                                          "width":  4451,
-                                                          "height":  3561
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2865.JPG",
@@ -1897,8 +2037,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 04",
                                                                       "ar":  "Food and Beverage — كادر 04"
                                                                   },
-                                                          "width":  4480,
-                                                          "height":  6429
+                                                          "width":  1672,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2874.JPG",
@@ -1907,8 +2047,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 05",
                                                                       "ar":  "Food and Beverage — كادر 05"
                                                                   },
-                                                          "width":  4186,
-                                                          "height":  5233
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2879.JPG",
@@ -1917,8 +2057,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 06",
                                                                       "ar":  "Food and Beverage — كادر 06"
                                                                   },
-                                                          "width":  4909,
-                                                          "height":  3927
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2899.JPG",
@@ -1927,8 +2067,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 07",
                                                                       "ar":  "Food and Beverage — كادر 07"
                                                                   },
-                                                          "width":  4190,
-                                                          "height":  6284
+                                                          "width":  1600,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A2911.JPG",
@@ -1937,8 +2077,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 08",
                                                                       "ar":  "Food and Beverage — كادر 08"
                                                                   },
-                                                          "width":  3454,
-                                                          "height":  4318
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3041.JPG",
@@ -1947,8 +2087,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 09",
                                                                       "ar":  "Food and Beverage — كادر 09"
                                                                   },
-                                                          "width":  2693,
-                                                          "height":  3366
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3049.JPG",
@@ -1957,8 +2097,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 10",
                                                                       "ar":  "Food and Beverage — كادر 10"
                                                                   },
-                                                          "width":  3462,
-                                                          "height":  4328
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3247.JPG",
@@ -1967,8 +2107,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 11",
                                                                       "ar":  "Food and Beverage — كادر 11"
                                                                   },
-                                                          "width":  9478,
-                                                          "height":  7582
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3259.JPG",
@@ -1977,8 +2117,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 12",
                                                                       "ar":  "Food and Beverage — كادر 12"
                                                                   },
-                                                          "width":  9478,
-                                                          "height":  7582
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3294.JPG",
@@ -1987,8 +2127,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 13",
                                                                       "ar":  "Food and Beverage — كادر 13"
                                                                   },
-                                                          "width":  3276,
-                                                          "height":  3794
+                                                          "width":  2072,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3305.JPG",
@@ -1997,8 +2137,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 14",
                                                                       "ar":  "Food and Beverage — كادر 14"
                                                                   },
-                                                          "width":  3528,
-                                                          "height":  3503
+                                                          "width":  2400,
+                                                          "height":  2383
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3318.JPG",
@@ -2007,8 +2147,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 15",
                                                                       "ar":  "Food and Beverage — كادر 15"
                                                                   },
-                                                          "width":  4402,
-                                                          "height":  4014
+                                                          "width":  2400,
+                                                          "height":  2188
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3322.JPG",
@@ -2017,8 +2157,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 16",
                                                                       "ar":  "Food and Beverage — كادر 16"
                                                                   },
-                                                          "width":  3955,
-                                                          "height":  4972
+                                                          "width":  1909,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3328.JPG",
@@ -2027,8 +2167,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 17",
                                                                       "ar":  "Food and Beverage — كادر 17"
                                                                   },
-                                                          "width":  3738,
-                                                          "height":  5401
+                                                          "width":  1661,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3340.JPG",
@@ -2037,8 +2177,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 18",
                                                                       "ar":  "Food and Beverage — كادر 18"
                                                                   },
-                                                          "width":  11751,
-                                                          "height":  8862
+                                                          "width":  2400,
+                                                          "height":  1810
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3386.JPG",
@@ -2047,8 +2187,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 19",
                                                                       "ar":  "Food and Beverage — كادر 19"
                                                                   },
-                                                          "width":  4480,
-                                                          "height":  3584
+                                                          "width":  2400,
+                                                          "height":  1920
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3389.JPG",
@@ -2057,8 +2197,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 20",
                                                                       "ar":  "Food and Beverage — كادر 20"
                                                                   },
-                                                          "width":  4480,
-                                                          "height":  5600
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3392.JPG",
@@ -2067,8 +2207,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 21",
                                                                       "ar":  "Food and Beverage — كادر 21"
                                                                   },
-                                                          "width":  4451,
-                                                          "height":  5564
+                                                          "width":  1920,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3418.JPG",
@@ -2077,8 +2217,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 22",
                                                                       "ar":  "Food and Beverage — كادر 22"
                                                                   },
-                                                          "width":  6720,
-                                                          "height":  4480
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3427.JPG",
@@ -2087,8 +2227,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 23",
                                                                       "ar":  "Food and Beverage — كادر 23"
                                                                   },
-                                                          "width":  6720,
-                                                          "height":  4480
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/food/2H4A3443.JPG",
@@ -2097,8 +2237,8 @@ window.CONTENT = {
                                                                       "en":  "Food and Beverage — Frame 24",
                                                                       "ar":  "Food and Beverage — كادر 24"
                                                                   },
-                                                          "width":  6720,
-                                                          "height":  4480
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       }
                                                   ]
                                    },
@@ -2129,11 +2269,11 @@ window.CONTENT = {
                                        "pdf":  "upload/design/mawlwya branding/catalog finalll compressed.pdf",
                                        "deliverables":  [
                                                             "Brand Identity Architecture",
-                                                            "Comprehensive 28-Page Brand Book & Guidelines (PDF)",
-                                                            "Custom Arabic Calligraphy & Logomark Design",
-                                                            "Corporate Stationery & Envelope DL Suite",
-                                                            "Tri-Fold Editorial Brochure & Invitations",
-                                                            "Coasters & 3D Realistic Mockup Ecosystem"
+                                                            "Master 28-Page Brand Book \u0026 Guidelines (PDF)",
+                                                            "Custom Arabic Calligraphy \u0026 Logomark Design",
+                                                            "Corporate Stationery \u0026 Envelope DL Suite",
+                                                            "Tri-Fold Editorial Brochure \u0026 Invitations",
+                                                            "Coasters \u0026 3D Realistic Mockup Ecosystem"
                                                         ],
                                        "video":  null,
                                        "videoLabel":  null,
@@ -2160,7 +2300,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-01.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-01.jpg",
                                                           "alt":  {
-                                                                      "en":  "Mawlawyah Brand Identity — Cover & Portfolio",
+                                                                      "en":  "Mawlawyah Brand Identity — Cover \u0026 Portfolio",
                                                                       "ar":  "هوية المولوية — الغلاف الرئيسي والكتالوج"
                                                                   },
                                                           "width":  1417,
@@ -2170,7 +2310,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-02.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-02.jpg",
                                                           "alt":  {
-                                                                      "en":  "About Mawlawiyah — Philosophy & Historical Context",
+                                                                      "en":  "About Mawlawiyah — Philosophy \u0026 Historical Context",
                                                                       "ar":  "ما هي المولوية — الفلسفة والسياق التاريخي"
                                                                   },
                                                           "width":  1417,
@@ -2210,7 +2350,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-06.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-06.jpg",
                                                           "alt":  {
-                                                                      "en":  "Logo Scale Progression & Proportions",
+                                                                      "en":  "Logo Scale Progression \u0026 Proportions",
                                                                       "ar":  "تدرج مقاسات الشعار والنسب الهندسية"
                                                                   },
                                                           "width":  1417,
@@ -2220,7 +2360,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-07.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-07.jpg",
                                                           "alt":  {
-                                                                      "en":  "Print & Minimum Application Sizing Guidelines",
+                                                                      "en":  "Print \u0026 Minimum Application Sizing Guidelines",
                                                                       "ar":  "إرشادات مقاسات الطباعة والحدود الدنيا"
                                                                   },
                                                           "width":  1417,
@@ -2240,7 +2380,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-09.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-09.jpg",
                                                           "alt":  {
-                                                                      "en":  "Typographic & Calligraphic Iterations",
+                                                                      "en":  "Typographic \u0026 Calligraphic Iterations",
                                                                       "ar":  "نماذج من الاستكشافات الخطية البديلة"
                                                                   },
                                                           "width":  1417,
@@ -2260,7 +2400,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-11.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-11.jpg",
                                                           "alt":  {
-                                                                      "en":  "Color Palette & High-Contrast Application (3C3C3B)",
+                                                                      "en":  "Color Palette \u0026 High-Contrast Application (3C3C3B)",
                                                                       "ar":  "باليت الألوان ودرجات التباين العالي"
                                                                   },
                                                           "width":  1417,
@@ -2290,7 +2430,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-14.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-14.jpg",
                                                           "alt":  {
-                                                                      "en":  "Publications & Stationery — Section Lead",
+                                                                      "en":  "Publications \u0026 Stationery — Section Lead",
                                                                       "ar":  "المطبوعات والمراسلات — ترويسة القسم"
                                                                   },
                                                           "width":  1417,
@@ -2300,7 +2440,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-15.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-15.jpg",
                                                           "alt":  {
-                                                                      "en":  "Business Card Design — Front & Back Layout",
+                                                                      "en":  "Business Card Design — Front \u0026 Back Layout",
                                                                       "ar":  "تصميم كارت العمل — الوجه والظهر"
                                                                   },
                                                           "width":  1417,
@@ -2310,7 +2450,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-16.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-16.jpg",
                                                           "alt":  {
-                                                                      "en":  "Envelope DL Technical Specifications & Die-Cut",
+                                                                      "en":  "Envelope DL Technical Specifications \u0026 Die-Cut",
                                                                       "ar":  "المظروف الرسمي والمقاسات الهندسية"
                                                                   },
                                                           "width":  1417,
@@ -2370,7 +2510,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-22.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-22.jpg",
                                                           "alt":  {
-                                                                      "en":  "Envelope Mockup — Front & Back Details",
+                                                                      "en":  "Envelope Mockup — Front \u0026 Back Details",
                                                                       "ar":  "موك أب المظروف الرسمي"
                                                                   },
                                                           "width":  1417,
@@ -2410,7 +2550,7 @@ window.CONTENT = {
                                                           "src":  "upload/design/mawlwya branding/page-26.jpg",
                                                           "thumb":  "upload/design/mawlwya branding/page-26.jpg",
                                                           "alt":  {
-                                                                      "en":  "Ceramic & Wooden Coasters Mockup",
+                                                                      "en":  "Ceramic \u0026 Wooden Coasters Mockup",
                                                                       "ar":  "موك أب قواعد الأكواب المتنوعة"
                                                                   },
                                                           "width":  1417,
@@ -2436,7 +2576,7 @@ window.CONTENT = {
                                                           "width":  1417,
                                                           "height":  998
                                                       }
-                                                   ]
+                                                  ]
                                    },
                                    {
                                        "id":  "mawlawya-posters",
@@ -2495,8 +2635,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 02",
                                                                       "ar":  "Mawlawya Film Poster — كادر 02"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/secound.jpg",
@@ -2505,8 +2645,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 04",
                                                                       "ar":  "Mawlawya Film Poster — كادر 04"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/third.jpg",
@@ -2515,8 +2655,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 05",
                                                                       "ar":  "Mawlawya Film Poster — كادر 05"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fourth.jpg",
@@ -2525,8 +2665,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 03",
                                                                       "ar":  "Mawlawya Film Poster — كادر 03"
                                                                   },
-                                                          "width":  1849,
-                                                          "height":  2560
+                                                          "width":  1733,
+                                                          "height":  2400
                                                       },
                                                       {
                                                           "src":  "upload/design/mawlwya posters/fifth.jpg",
@@ -2535,8 +2675,8 @@ window.CONTENT = {
                                                                       "en":  "Mawlawya Film Poster — Frame 01",
                                                                       "ar":  "Mawlawya Film Poster — كادر 01"
                                                                   },
-                                                          "width":  906,
-                                                          "height":  2560
+                                                          "width":  849,
+                                                          "height":  2400
                                                       }
                                                   ]
                                    },
@@ -2598,8 +2738,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 01",
                                                                       "ar":  "Diwan Bookstores — كادر 01"
                                                                   },
-                                                          "width":  3500,
-                                                          "height":  2524
+                                                          "width":  2400,
+                                                          "height":  1731
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/12.jpg",
@@ -2638,8 +2778,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 05",
                                                                       "ar":  "Diwan Bookstores — كادر 05"
                                                                   },
-                                                          "width":  4000,
-                                                          "height":  3000
+                                                          "width":  2400,
+                                                          "height":  1800
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/269944480_440182884495318_7379519869585507748_n.png",
@@ -2648,8 +2788,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 06",
                                                                       "ar":  "Diwan Bookstores — كادر 06"
                                                                   },
-                                                          "width":  3500,
-                                                          "height":  2524
+                                                          "width":  2400,
+                                                          "height":  1731
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/33.jpg",
@@ -2668,8 +2808,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 08",
                                                                       "ar":  "Diwan Bookstores — كادر 08"
                                                                   },
-                                                          "width":  4000,
-                                                          "height":  3000
+                                                          "width":  2400,
+                                                          "height":  1800
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/BOOK 12.jpg",
@@ -2678,8 +2818,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 09",
                                                                       "ar":  "Diwan Bookstores — كادر 09"
                                                                   },
-                                                          "width":  4000,
-                                                          "height":  3000
+                                                          "width":  2400,
+                                                          "height":  1800
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/BOOK 13.jpg",
@@ -2688,8 +2828,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 10",
                                                                       "ar":  "Diwan Bookstores — كادر 10"
                                                                   },
-                                                          "width":  4000,
-                                                          "height":  3000
+                                                          "width":  2400,
+                                                          "height":  1800
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/cardboard-bookmark-mockup.jpg",
@@ -2698,8 +2838,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 11",
                                                                       "ar":  "Diwan Bookstores — كادر 11"
                                                                   },
-                                                          "width":  5000,
-                                                          "height":  3333
+                                                          "width":  2400,
+                                                          "height":  1600
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/COSTER.jpg",
@@ -2708,8 +2848,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 12",
                                                                       "ar":  "Diwan Bookstores — كادر 12"
                                                                   },
-                                                          "width":  3000,
-                                                          "height":  2100
+                                                          "width":  2400,
+                                                          "height":  1680
                                                       },
                                                       {
                                                           "src":  "upload/design/Diwan book store/dd-01.jpg",
@@ -2718,8 +2858,8 @@ window.CONTENT = {
                                                                       "en":  "Diwan Bookstores — Frame 13",
                                                                       "ar":  "Diwan Bookstores — كادر 13"
                                                                   },
-                                                          "width":  3509,
-                                                          "height":  4962
+                                                          "width":  1697,
+                                                          "height":  2400
                                                       }
                                                   ]
                                    },
@@ -2780,8 +2920,8 @@ window.CONTENT = {
                                                                       "en":  "Book Cover Design — Frame 01",
                                                                       "ar":  "Book Cover Design — كادر 01"
                                                                   },
-                                                          "width":  3543,
-                                                          "height":  2480
+                                                          "width":  2400,
+                                                          "height":  1680
                                                       },
                                                       {
                                                           "src":  "upload/design/book cover/Untitled-3-Recovered.jpg",
@@ -2790,8 +2930,8 @@ window.CONTENT = {
                                                                       "en":  "Book Cover Design — Frame 02",
                                                                       "ar":  "Book Cover Design — كادر 02"
                                                                   },
-                                                          "width":  2480,
-                                                          "height":  3508
+                                                          "width":  1697,
+                                                          "height":  2400
                                                       }
                                                   ]
                                    },
@@ -2858,7 +2998,7 @@ window.CONTENT = {
                                                   ]
                                    }
                                ],
-                     "Count":  13
+                     "Count":  14
                  },
     "reviews":  [
                     {

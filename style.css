@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    YOUSSEF WARD — Portfolio v4.2 "Frame Line & Editorial Cinema"
    Layout concept: every image sits inside a camera frame line (2.39:1 hero,
    viewfinder corners on hover). Quiet editorial grid with dynamic discipline
@@ -894,9 +894,28 @@ html[lang="ar"] .project-title { font-family: var(--f-display-ar); }
   background: var(--night);
   border-radius: 16px;
   border: 1px solid var(--line);
-  margin: 0 0 48px 0;
+  margin: 0 0 40px 0;
+  max-height: min(65vh, 520px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.project-cover img { width: 100%; height: auto; object-fit: cover; }
+.project-cover button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-height: min(65vh, 520px);
+  cursor: zoom-in;
+}
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  max-height: min(65vh, 520px);
+  object-fit: cover;
+  object-position: center 25%;
+}
 .project-body {
   display: grid;
   grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
@@ -1001,11 +1020,11 @@ html[lang="ar"] .project-title { font-family: var(--f-display-ar); }
   line-height: 1.6;
 }
 
-/* Gallery inside project */
+/* Gallery inside project - Viewport-optimized balanced grid */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 24px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 22px);
   margin-bottom: 56px;
 }
 .gallery figure {
@@ -1015,13 +1034,41 @@ html[lang="ar"] .project-title { font-family: var(--f-display-ar); }
   border-radius: 12px;
   border: 1px solid var(--line);
   margin: 0;
+  max-height: min(58vh, 460px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.gallery figure.wide { grid-column: 1 / -1; }
-.gallery button { display: block; width: 100%; height: 100%; cursor: zoom-in; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease); }
+.gallery figure.wide {
+  grid-column: span 2;
+  max-height: min(62vh, 490px);
+}
+.gallery button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-height: inherit;
+  cursor: zoom-in;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  max-height: inherit;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s var(--ease);
+}
 .gallery figure:hover img { transform: scale(1.03); }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery figure.wide { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
   .gallery { grid-template-columns: 1fr; }
+  .gallery figure.wide { grid-column: 1 / -1; }
+  .gallery figure { max-height: 380px; }
 }
 
 /* Pager (Previous / Next project) */
