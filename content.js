@@ -4,51 +4,120 @@
  */
 
 window.CONTENT = {
-    "meta":  {
-                 "name":  {
-                              "en":  "Youssef Ward",
-                              "ar":  "يوسف ورد"
-                          },
-                 "title":  {
-                               "en":  "Cinematographer \u0026 Graphic Designer",
-                               "ar":  "مصور سينمائي ومصمم جرافيك"
-                           },
-                 "concept":  {
-                                 "en":  "One Visual Mind. Multiple Expressions.",
-                                 "ar":  "عقل بصري واحد. تعبيرات متعددة."
-                             },
-                 "location":  {
-                                  "en":  "Cairo, Egypt",
-                                  "ar":  "القاهرة، مصر"
-                              },
-                 "availability":  {
-                                      "en":  "Open to Cinematography \u0026 Strategic Design Projects",
-                                      "ar":  "متاح للتعاون الإبداعي والمشاريع السينمائية والتصميمية"
-                                  }
-             },
-    "mark":  "assets/brand-mark.svg",
-    "portrait":  "upload/portrait.jpg",
-    "cover":  "upload/cover.jpg",
-    "heroRole":  {
-                     "en":  "Cinematographer \u0026 Graphic Designer",
-                     "ar":  "مصور سينمائي ومصمم جرافيك"
-                 },
-    "heroTagline":  {
-                        "en":  "One visual mind bridging cinematic camera craft, dramatic set lighting, and graphic brand architecture.",
-                        "ar":  "عقل بصري واحد يجمع بين براعة الكاميرا السينمائية، وهندسة الإضاءة الدرامية، وبناء الهويات الجرافيكية."
-                    },
-    "email":  "youssef.ward88@gmail.com",
-    "phone":  "+20 1155729978",
-    "cv":  "assets/youssef-ward-cv.pdf",
-    "portfolio":  "assets/youssef-ward-portfolio.pdf",
-    "linkedin":  "https://www.linkedin.com/in/yousef-ward-/",
-    "instagram":  "https://www.instagram.com/youssefward_/",
-    "behance":  "https://www.behance.net/youssef_Ward",
-    "vimeo":  "https://vimeo.com/1239369594?share=copy\u0026fl=sv\u0026fe=ci",
-    "bio":  {
-                "en":  "I am a cinematographer and graphic designer with an academic foundation from the Faculty of Applied Arts in Cairo, bridging on-set camera operation, dramatic lighting design, and visual storytelling with rigorous brand architecture and typography. Guided by the principle that every visual decision is an intentional choice, my journey spans key camera department participation on prime-time Egyptian television drama sets, celebrity portraiture, commercial culinary films, cultural brand identities, and festival key art posters.",
-                "ar":  "مصور سينمائي ومصمم جرافيك ذو خلفية أكاديمية متخصصة من كلية الفنون التطبيقية بالقاهرة، أجمع بين حرفة الكاميرا الميدانية وهندسة الإضاءة الدرامية وبين بناء الهويات البصرية والتايبوجرافي المعاصر. ينطلق عملي من قناعة راسخة بأن كل قرار بصري هو خيار واعٍ ومقصود، ويمتد عبر المشاركة في قسم الكاميرا بأضخم المسلسلات الدرامية التلفزيونية، وتوثيق بورتريهات كبار المشاهير، وإخراج الإعلانات التجارية، وبناء الهويات الثقافية وتصميم أفيشات المهرجانات السينمائية."
-            },
+  "meta": {
+    "name": {
+      "en": "Youssef Ward",
+      "ar": "يوسف ورد"
+    },
+    "title": {
+      "en": "Multidisciplinary Designer & Art Director",
+      "ar": "مصمم متعدد التخصصات ومخرج فني"
+    },
+    "subtitle": {
+      "en": "With a Cinematic Eye.",
+      "ar": "بعين سينمائية."
+    },
+    "identity": {
+      "en": "Multidisciplinary Designer & Art Director — With a Cinematic Eye.",
+      "ar": "مصمم متعدد التخصصات ومخرج فني — بعين سينمائية."
+    },
+    "concept": {
+      "en": "One Visual Mind. Multiple Expressions.",
+      "ar": "عقل بصري واحد. تعبيرات متعددة."
+    },
+    "location": {
+      "en": "Cairo, Egypt",
+      "ar": "القاهرة، مصر"
+    },
+    "availability": {
+      "en": "Open to Collaborative & Strategic Design Projects",
+      "ar": "متاح للتعاون الإبداعي والمشاريع السينمائية والتصميمية"
+    }
+  },
+  "mark": "assets/brand-mark.svg",
+  "portrait": "upload/portrait.jpg",
+  "cover": "upload/cover.jpg",
+  "heroRole": {
+    "en": "Multidisciplinary Designer & Art Director",
+    "ar": "مصمم متعدد التخصصات ومخرج فني"
+  },
+  "heroTagline": {
+    "en": "With a Cinematic Eye.",
+    "ar": "بعين سينمائية."
+  },
+  "homeIntro": {
+    "title": {
+      "en": "Multidisciplinary Designer & Art Director",
+      "ar": "مصمم متعدد التخصصات ومخرج فني"
+    },
+    "subtitle": {
+      "en": "With a Cinematic Eye.",
+      "ar": "بعين سينمائية."
+    },
+    "body": {
+      "en": [
+        "I work across design, photography, and visual storytelling, exploring the space where creative vision meets visual communication.",
+        "Rooted in Applied Arts and shaped by cinematic experience, my approach is driven by composition, atmosphere, and a constant curiosity about how images communicate ideas."
+      ],
+      "ar": [
+        "أعمل عبر التصميم والتصوير والسرد البصري، مستكشفًا المساحة التي تلتقي فيها الرؤية الإبداعية بالتواصل البصري.",
+        "انطلاقًا من خلفيتي في الفنون التطبيقية، وتجاربي في السينما، أعتمد على التكوين، وصناعة الأجواء، والتفكير البصري في تحويل الأفكار إلى تجارب تحمل معنى وشخصية."
+      ]
+    },
+    "signature": {
+      "en": "One Visual Mind. Multiple Expressions.",
+      "ar": "عقل بصري واحد. تعبيرات متعددة."
+    },
+    "ctaWork": {
+      "en": "Explore Selected Work",
+      "ar": "اكتشف الأعمال المختارة"
+    },
+    "ctaAbout": {
+      "en": "About Me",
+      "ar": "من أنا"
+    }
+  },
+  "about": {
+    "title": {
+      "en": "About Youssef Ward",
+      "ar": "عن يوسف ورد"
+    },
+    "body": {
+      "en": [
+        "Youssef Ward is a multidisciplinary designer, photographer, and visual artist with a background in Applied Arts and a cinematic approach to visual storytelling.",
+        "His creative practice moves between cinematography, photography, graphic design, and art direction, bringing different visual disciplines together through a unified perspective.",
+        "With six years of experience in cinema and television productions, he has developed a strong understanding of visual composition, lighting, atmosphere, and the language of the image. This cinematic foundation continues to shape the way he approaches design, transforming ideas into thoughtful visual experiences.",
+        "Rather than limiting himself to a single medium, Youssef explores the intersection of image-making and design, combining artistic sensitivity with visual thinking to create work that is intentional, expressive, and distinctive."
+      ],
+      "ar": [
+        "يوسف ورد مصمم متعدد التخصصات، ومصور وفنان بصري، خريج كلية الفنون التطبيقية، يتبنى رؤية إبداعية تنطلق من السينما وتمتد إلى مختلف مجالات الصورة والتصميم.",
+        "تتنوع ممارساته البصرية بين التصوير السينمائي، والتصوير الفوتوغرافي، والتصميم الجرافيكي، والتوجيه الفني (Art Direction)، حيث يجمع بين هذه التخصصات من خلال منظور بصري واحد.",
+        "على مدار ست سنوات من العمل في الإنتاجات السينمائية والتليفزيونية، طوّر فهمًا عميقًا للتكوين البصري، والإضاءة، وصناعة الأجواء، ولغة الصورة. وهي خبرة أصبحت جزءًا أساسيًا من طريقته في التفكير والتعامل مع التصميم والصورة.",
+        "لا يحصر يوسف نفسه في وسيط إبداعي واحد، بل يستكشف المساحات المشتركة بين الصورة والتصميم، ساعيًا إلى تحويل الأفكار إلى تجارب بصرية تحمل معنى، وهوية، وشخصية مستقلة."
+      ]
+    },
+    "closing": {
+      "en": "One Visual Mind. Multiple Expressions.",
+      "ar": "عقل بصري واحد. تعبيرات متعددة."
+    }
+  },
+  "shortBio": {
+    "en": "Youssef Ward is a multidisciplinary designer, photographer, and visual artist based in Cairo, Egypt. With a background in Applied Arts and six years of experience in cinema and television productions, he brings a cinematic perspective to design, image-making, and art direction.",
+    "ar": "يوسف ورد مصمم متعدد التخصصات ومصور وفنان بصري، يقيم في القاهرة، مصر. بخلفية أكاديمية في الفنون التطبيقية، وست سنوات من الخبرة في الإنتاجات السينمائية والتليفزيونية، يجمع في أعماله بين الرؤية السينمائية والتصميم وصناعة الصورة والتوجيه الفني."
+  },
+  "email": "youssef.ward88@gmail.com",
+  "phone": "+20 1155729978",
+  "cv": "assets/youssef-ward-cv.pdf",
+  "portfolio": "assets/youssef-ward-portfolio.pdf",
+  "linkedin": "https://www.linkedin.com/in/yousef-ward-/",
+  "instagram": "https://www.instagram.com/youssefward_/",
+  "behance": "https://www.behance.net/youssef_Ward",
+  "vimeo": "https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci",
+  "bio": {
+    "en": "Youssef Ward is a multidisciplinary designer, photographer, and visual artist with a background in Applied Arts and a cinematic approach to visual storytelling. His creative practice moves between cinematography, photography, graphic design, and art direction, bringing different visual disciplines together through a unified perspective.",
+    "ar": "يوسف ورد مصمم متعدد التخصصات، ومصور وفنان بصري، خريج كلية الفنون التطبيقية، يتبنى رؤية إبداعية تنطلق من السينما وتمتد إلى مختلف مجالات الصورة والتصميم. تتنوع ممارساته البصرية بين التصوير السينمائي، والتصوير الفوتوغرافي، والتصميم الجرافيكي، والتوجيه الفني (Art Direction)، حيث يجمع بين هذه التخصصات من خلال منظور بصري واحد."
+  }
+,
     "disciplines":  [
                         {
                             "id":  "filmmaking",

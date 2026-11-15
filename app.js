@@ -85,7 +85,7 @@
       reelTitle: 'Showreel & Visual Motion', reelSub: 'Camera movement, dynamic lighting and rhythmic editing',
       play: 'Play showreel',
       aboutTitle: 'About Youssef Ward',
-      aboutCap: 'Cinematographer & Graphic Designer based in Cairo, Egypt.',
+      aboutCap: 'Youssef Ward is a multidisciplinary designer, photographer, and visual artist based in Cairo, Egypt. With a background in Applied Arts and six years of experience in cinema and television productions, he brings a cinematic perspective to design, image-making, and art direction.',
       cv: 'Download CV', pdf: 'Portfolio PDF',
       contactTitle: 'Project Inquiry & Collaboration',
       contactLead: 'Available for cinematography, drama camera departments, and strategic brand identity systems.',
@@ -119,7 +119,7 @@
       reelTitle: 'استعراض الحركة والسينما (Showreel)', reelSub: 'حركة الكاميرا وتوزيع الإضاءة والمونتاج الإيقاعي',
       play: 'تشغيل الشوريل',
       aboutTitle: 'عن يوسف ورد',
-      aboutCap: 'مصور سينمائي ومصمم جرافيك بالقاهرة، مصر.',
+      aboutCap: 'يوسف ورد مصمم متعدد التخصصات ومصور وفنان بصري، يقيم في القاهرة، مصر. بخلفية أكاديمية في الفنون التطبيقية، وست سنوات من الخبرة في الإنتاجات السينمائية والتليفزيونية، يجمع في أعماله بين الرؤية السينمائية والتصميم وصناعة الصورة والتوجيه الفني.',
       cv: 'تحميل السيرة الذاتية', pdf: 'البورتفوليو PDF',
       contactTitle: 'بدء مشروع وتواصل مباشر',
       contactLead: 'متاح لإدارة وتصوير الأعمال السينمائية والدراما التلفزيونية وبناء الهويات المؤسسية.',
@@ -175,6 +175,20 @@
     if (!val) return '';
     if (typeof val === 'string') return val;
     return val[lang] || val.ar || val.en || '';
+  }
+  function renderBioParagraphs(val) {
+    if (!val) return '';
+    if (Array.isArray(val)) {
+      return val.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
+    }
+    if (typeof val === 'object') {
+      var loc = val[lang] || val.ar || val.en || [];
+      if (Array.isArray(loc)) {
+        return loc.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
+      }
+      return '<p>' + esc(loc) + '</p>';
+    }
+    return '<p>' + esc(val) + '</p>';
   }
   function esc(s) {
     return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -279,10 +293,27 @@
   }
 
   /* ---------------- Shell (Header & Footer) ---------------- */
+  function updateMetadata() {
+    var title = lang === 'ar'
+      ? 'يوسف ورد — مصمم متعدد التخصصات ومخرج فني'
+      : 'Youssef Ward — Multidisciplinary Designer & Art Director';
+    document.title = title;
+
+    var bioText = (C.shortBio && L(C.shortBio)) || (lang === 'ar' ? 'يوسف ورد مصمم متعدد التخصصات ومصور وفنان بصري، يقيم في القاهرة، مصر. بخلفية أكاديمية في الفنون التطبيقية، وست سنوات من الخبرة في الإنتاجات السينمائية والتليفزيونية، يجمع في أعماله بين الرؤية السينمائية والتصميم وصناعة الصورة والتوجيه الفني.' : 'Youssef Ward is a multidisciplinary designer, photographer, and visual artist based in Cairo, Egypt. With a background in Applied Arts and six years of experience in cinema and television productions, he brings a cinematic perspective to design, image-making, and art direction.');
+
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', bioText);
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', bioText);
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+  }
+
   function renderShell() {
     var tx = t();
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    updateMetadata();
 
     document.getElementById('header').innerHTML =
       '<div class="wrap">' +
@@ -322,7 +353,16 @@
       lang = lang === 'ar' ? 'en' : 'ar';
       localStorage.setItem('yw_lang', lang);
       renderShell();
-      route();
+      if (currentRoute.type === 'project') {
+        var p = C.projects.find(function (x) { return x.id === currentRoute.id; });
+        if (p) renderProject(p);
+      } else {
+        renderHome();
+        var targetEl = document.getElementById(currentRoute.id);
+        if (targetEl && currentRoute.id !== 'work' && currentRoute.id !== 'home') {
+          targetEl.scrollIntoView();
+        }
+      }
     };
 
     var sfxBtn = document.getElementById('sfx-toggle');
@@ -402,6 +442,28 @@
             '</div>' +
           '</div>' +
 
+          '<!-- Approved Homepage Introduction -->' +
+          (C.homeIntro ?
+            '<div class="hero-intro">' +
+              '<div class="hero-intro-lead">' +
+                '<h2 class="hero-intro-title">' + esc(L(C.homeIntro.title)) + '</h2>' +
+                (C.homeIntro.subtitle ? '<p class="hero-intro-sub">' + esc(L(C.homeIntro.subtitle)) + '</p>' : '') +
+                '<div class="hero-intro-actions">' +
+                  '<a href="#work" class="btn btn-solid" id="hero-cta-work">' + esc(L(C.homeIntro.ctaWork)) + '</a>' +
+                  '<a href="#about" class="btn btn-outline" id="hero-cta-about">' + esc(L(C.homeIntro.ctaAbout)) + '</a>' +
+                '</div>' +
+              '</div>' +
+              '<div class="hero-intro-content">' +
+                '<div class="hero-intro-body">' +
+                  renderBioParagraphs(L(C.homeIntro.body)) +
+                '</div>' +
+                (C.homeIntro.signature ?
+                  '<div class="hero-intro-signature">' +
+                    '<span>' + esc(L(C.homeIntro.signature)) + '</span>' +
+                  '</div>' : '') +
+              '</div>' +
+            '</div>' : '') +
+
           '<!-- Interactive Discipline Selector in Hero -->' +
           '<div class="hero-discipline-pills">' +
             C.disciplines.map(function (d) {
@@ -435,12 +497,24 @@
         '<!-- About Section -->' +
         '<section class="about-section" id="about">' +
           '<div class="about-split">' +
-            '<div class="about-image">' +
-              '<img src="' + esc(ABOUT_IMAGE) + '" alt="' + esc(L(C.meta.name)) + '" loading="lazy">' +
+            '<div class="about-image-wrap">' +
+              '<figure class="about-image">' +
+                '<img src="' + esc(ABOUT_IMAGE) + '" alt="' + esc(L(C.meta.name)) + '" loading="lazy">' +
+                (C.shortBio ?
+                  '<figcaption class="about-image-caption">' +
+                    '<p>' + esc(L(C.shortBio)) + '</p>' +
+                  '</figcaption>' : '') +
+              '</figure>' +
             '</div>' +
             '<div class="about-text">' +
-              '<h2>' + esc(tx.aboutTitle) + '</h2>' +
-              '<p>' + esc(L(C.bio)) + '</p>' +
+              '<h2>' + esc(C.about ? L(C.about.title) : tx.aboutTitle) + '</h2>' +
+              '<div class="about-bio-body">' +
+                (C.about ? renderBioParagraphs(L(C.about.body)) : '<p>' + esc(L(C.bio)) + '</p>') +
+              '</div>' +
+              (C.about && C.about.closing ?
+                '<div class="about-closing-statement">' +
+                  '<span>' + esc(L(C.about.closing)) + '</span>' +
+                '</div>' : '') +
               '<div class="about-links">' +
                 (C.cv ? '<a class="about-link" href="' + esc(C.cv) + '" target="_blank" rel="noopener">📄 ' + tx.cv + '</a>' : '') +
                 (C.portfolio ? '<a class="about-link" href="' + esc(C.portfolio) + '" target="_blank" rel="noopener">📁 ' + tx.pdf + '</a>' : '') +
@@ -483,6 +557,24 @@
     renderFilters();
     renderGrid();
     startHero();
+
+    // Hero CTA click handlers
+    var ctaWork = document.getElementById('hero-cta-work');
+    if (ctaWork) {
+      ctaWork.onclick = function (e) {
+        playTick('pop');
+        var workEl = document.getElementById('work');
+        if (workEl) workEl.scrollIntoView({ behavior: 'smooth' });
+      };
+    }
+    var ctaAbout = document.getElementById('hero-cta-about');
+    if (ctaAbout) {
+      ctaAbout.onclick = function (e) {
+        playTick('pop');
+        var aboutEl = document.getElementById('about');
+        if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+      };
+    }
 
     // Hero discipline pill click
     document.querySelectorAll('[data-hero-d]').forEach(function (btn) {

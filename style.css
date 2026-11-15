@@ -453,6 +453,92 @@ html[lang="ar"] .hero-name { font-family: var(--f-display-ar); text-transform: n
 }
 .hero-dot.is-active { opacity: 1; transform: scale(1.25); background: var(--tungsten); }
 
+/* ---------- Homepage Introduction --------------------------------------- */
+.hero-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+  margin-top: clamp(28px, 4vw, 44px);
+  padding-bottom: clamp(28px, 4vw, 44px);
+  border-bottom: 1px solid var(--line);
+}
+@media (max-width: 840px) {
+  .hero-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.hero-intro-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-intro-title {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.15rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--paper);
+}
+html[lang="ar"] .hero-intro-title {
+  font-family: var(--f-display-ar);
+  font-weight: 700;
+  line-height: 1.35;
+}
+.hero-intro-sub {
+  margin: 0;
+  font-family: var(--f-mono);
+  font-size: var(--t-sm);
+  color: var(--tungsten);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+html[lang="ar"] .hero-intro-sub {
+  font-family: var(--f-body);
+  font-size: var(--t-md);
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.hero-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.hero-intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.hero-intro-body p {
+  margin: 0 0 14px 0;
+  color: var(--paper-2);
+  font-size: var(--t-md);
+  line-height: 1.85;
+}
+.hero-intro-body p:last-child {
+  margin-bottom: 0;
+}
+.hero-intro-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-inline-start: 14px;
+  border-inline-start: 2px solid var(--tungsten);
+  font-family: var(--f-mono);
+  font-size: var(--t-sm);
+  color: var(--paper);
+  font-weight: 500;
+}
+html[lang="ar"] .hero-intro-signature {
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: var(--t-md);
+}
+
 /* Interactive Discipline Selector in Hero */
 .hero-discipline-pills {
   display: grid;
@@ -754,6 +840,23 @@ html[lang="ar"] .project-title { font-family: var(--f-display-ar); }
 .btn-solid:hover {
   background: var(--tungsten);
 }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  border: 1px solid var(--line-strong);
+  color: var(--paper);
+  background: transparent;
+  transition: all 0.25s var(--ease);
+}
+.btn-outline:hover {
+  border-color: var(--paper);
+  background: rgba(244, 241, 234, 0.08);
+}
 
 /* Thinking / Approach Cards */
 .approach {
@@ -894,27 +997,67 @@ html[lang="ar"] .section-hdr h2 { font-family: var(--f-display-ar); }
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: clamp(32px, 5vw, 64px);
-  align-items: center;
+  align-items: start;
 }
 @media (max-width: 840px) {
   .about-split { grid-template-columns: 1fr; }
 }
+.about-image-wrap {
+  position: relative;
+}
+@media (min-width: 841px) {
+  .about-image-wrap {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+  }
+}
 .about-image {
+  margin: 0;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
+  background: var(--night);
 }
-.about-image img { width: 100%; height: auto; }
+.about-image img { width: 100%; height: auto; display: block; }
+.about-image-caption {
+  padding: 16px 20px;
+  background: var(--night-2);
+  border-top: 1px solid var(--line);
+}
+.about-image-caption p {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.7;
+  color: var(--paper-2);
+}
 .about-text h2 {
-  margin: 0 0 16px 0;
+  margin: 0 0 20px 0;
   font-family: var(--f-display);
   font-size: var(--t-2xl);
 }
 html[lang="ar"] .about-text h2 { font-family: var(--f-display-ar); }
-.about-text p {
+.about-bio-body p {
   color: var(--paper-2);
-  line-height: 1.8;
-  margin-bottom: 24px;
+  line-height: 1.85;
+  margin: 0 0 18px 0;
+  font-size: var(--t-md);
+}
+.about-closing-statement {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-inline-start: 16px;
+  border-inline-start: 3px solid var(--tungsten);
+  font-family: var(--f-mono);
+  font-size: var(--t-md);
+  color: var(--paper);
+  font-weight: 600;
+  margin: 8px 0 28px 0;
+}
+html[lang="ar"] .about-closing-statement {
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-size: var(--t-lg);
 }
 .about-links {
   display: flex;
