@@ -1,1369 +1,952 @@
-/* ============================================================
-   YOUSSEF WARD PORTFOLIO — APPLICATION ENGINE
-   Pure Vanilla JS · No Frameworks · No Build Tools
-   A+B Hybrid: Kinetic Editorial + Cinematic Art Direction
-   ============================================================ */
+/* ==========================================================================
+   YOUSSEF WARD — Portfolio Application Engine (v4.2 Frame Line Edition)
+   Pure Vanilla JS · Zero Dependencies · Fully Responsive & Bilingual
+   Strictly driven by upload/ directory via content.js
+   ========================================================================== */
 
 (function () {
   'use strict';
 
-  /* ── STATE ──────────────────────────────────────────────── */
-  const State = {
-    lang: 'en',
-    theme: 'dark',
-    route: { type: 'section', id: 'home' }, // { type: 'section'|'project', id: string }
-    lightbox: { items: [], index: 0 },
-    scrollY: 0,
+  var C = window.CONTENT;
+  if (!C) return;
+
+  /* ---------------- Config (Driven strictly by upload/ via content.js) ---------------- */
+  var HERO_FRAMES = C.projects
+    .filter(function (p) { return p.images && p.images.length > 0; })
+    .slice(0, 6)
+    .map(function (p) { return p.images[0].src; });
+
+  var firstFilmProj = C.projects.find(function (p) { return p.discipline === 'filmmaking' && p.images && p.images.length; }) || C.projects[0];
+  var REEL_POSTER = (firstFilmProj && firstFilmProj.images[0]) ? firstFilmProj.images[0].src : 'upload/choice/5K4A5867.JPG';
+  var ABOUT_IMAGE = C.cover || 'upload/cover.jpg';
+  var PORTRAIT_SRC = C.portrait || 'upload/portrait.jpg';
+
+  var ROW_PATTERN = [[7, 5], [4, 4, 4], [5, 7], [6, 6]];
+  var FILL = { 1: [12], 2: [6, 6] };
+
+  /* ---------------- Sound, Cursor & View State ---------------- */
+  var viewMode = 'masonry'; // 'masonry' | 'filmstrip'
+  var sfxEnabled = true;
+  var audioCtx = null;
+
+  var DISCIPLINE_AMBIENT = {
+    filmmaking: { rgb: [212, 180, 131], hex: '#D4B483', spec: 'ANAMORPHIC 2.39:1 · 24 FPS · LOW-KEY DRAMA' },
+    photography: { rgb: [142, 168, 178], hex: '#8EA8B2', spec: 'MEDIUM FORMAT · HIGH CONTRAST · LIVE SETS' },
+    design: { rgb: [217, 107, 67], hex: '#D96B43', spec: 'SWISS EDITORIAL · ARABIC CALLIGRAPHY · KEY ART' }
   };
 
-  /* ── HELPERS ────────────────────────────────────────────── */
-  const $ = (sel, ctx = document) => ctx.querySelector(sel);
-  const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
-  const toElement = (target) => {
-    if (!target) return null;
-    if (target instanceof Element) return target;
-    return target.parentElement instanceof Element ? target.parentElement : null;
-  };
-  const t = (obj) => {
-    if (!obj) return '';
-    if (typeof obj === 'string') return obj;
-    return obj[State.lang] || obj.ar || obj.en || '';
-  };
-  const esc = (s) => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  function setAmbient(disciplineId) {
+    var cfg = DISCIPLINE_AMBIENT[disciplineId] || DISCIPLINE_AMBIENT.filmmaking;
+    document.documentElement.style.setProperty('--ambient-r', cfg.rgb[0]);
+    document.documentElement.style.setProperty('--ambient-g', cfg.rgb[1]);
+    document.documentElement.style.setProperty('--ambient-b', cfg.rgb[2]);
+  }
 
-  /* ── CONTENT ALIAS ──────────────────────────────────────── */
-  const C = () => window.CONTENT || {};
+  function playTick(type) {
+    if (!sfxEnabled) return;
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      if (!audioCtx) audioCtx = new AC();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      var now = audioCtx.currentTime;
+      var osc = audioCtx.createOscillator();
+      var gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(type === 'shutter' ? 180 : (type === 'pop' ? 520 : 380), now);
+      osc.frequency.exponentialRampToValueAtTime(60, now + 0.035);
+      gain.gain.setValueAtTime(0.025, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.035);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + 0.04);
+    } catch (e) {}
+  }
 
-  /* ── CURSOR ─────────────────────────────────────────────── */
+  /* ---------------- Interface Copy (Bilingual) ---------------- */
+  var T = {
+    en: {
+      skip: 'Skip to content', menu: 'Menu',
+      nav: { work: 'Work', reel: 'Showreel', about: 'About', contact: 'Contact' },
+      langBtn: 'عربي', langLabel: 'اقرأ الموقع بالعربية',
+      viewWork: 'View work', watchReel: 'Watch showreel',
+      nowShowing: 'Now showing', frame: 'Frame', openProject: 'Open project',
+      based: 'Based in',
+      workTitle: 'Selected Works',
+      workNote: function (n) { return n + ' projects across film, photography and design.'; },
+      all: 'All', short: { filmmaking: 'Filmmaking', photography: 'Photography', design: 'Graphic Design' },
+      projects: function (n) { return n === 1 ? '1 project' : n + ' projects'; },
+      frames: function (n) { return n + ' frames'; },
+      explore: 'Explore',
+      reelTitle: 'Showreel & Visual Motion', reelSub: 'Camera movement, dynamic lighting and rhythmic editing',
+      play: 'Play showreel',
+      aboutTitle: 'About Youssef Ward',
+      aboutCap: 'Cinematographer & Graphic Designer based in Cairo, Egypt.',
+      cv: 'Download CV', pdf: 'Portfolio PDF',
+      contactTitle: 'Project Inquiry & Collaboration',
+      contactLead: 'Available for cinematography, drama camera departments, and strategic brand identity systems.',
+      copy: 'Copy email', copied: 'Email copied',
+      allWork: 'All Work',
+      spec: { year: 'Year', role: 'Role', client: 'Client', production: 'Production', deliverables: 'Deliverables' },
+      approach: { challenge: 'Challenge', decisions: 'Visual Decisions', outcome: 'Outcome' },
+      watch: 'Watch Film / Video',
+      prev: 'Previous Project', next: 'Next Project',
+      close: 'Close', prevImg: 'Previous Image', nextImg: 'Next Image',
+      openVimeo: 'Open on Vimeo', vimeoHint: 'Player not loading?',
+      viewGrid: 'Masonry Grid', viewFilmstrip: 'Horizontal Filmstrip',
+      sfxOn: 'SFX: ON', sfxMute: 'SFX: MUTE',
+      avail: 'Available for Projects',
+      sendBrief: 'Send Project Brief', briefSent: 'Inquiry received. Thank you!',
+      emptyFilter: 'No projects in this category yet.'
+    },
+    ar: {
+      skip: 'انتقل إلى المحتوى', menu: 'القائمة',
+      nav: { work: 'الأعمال', reel: 'الشوريل', about: 'نبذة', contact: 'تواصل' },
+      langBtn: 'English', langLabel: 'Read the site in English',
+      viewWork: 'شاهد الأعمال', watchReel: 'شاهد الشوريل',
+      nowShowing: 'على الشاشة', frame: 'كادر', openProject: 'افتح المشروع',
+      based: 'المقر',
+      workTitle: 'أعمال مختارة',
+      workNote: function (n) { return n + ' مشروعاً موزعاً بين السينما والفوتوغرافيا والتصميم.'; },
+      all: 'الكل', short: { filmmaking: 'صناعة الأفلام', photography: 'فوتوغرافيا', design: 'تصميم جرافيكي' },
+      projects: function (n) { return n === 1 ? 'مشروع واحد' : (n === 2 ? 'مشروعان' : n + ' مشاريع'); },
+      frames: function (n) { return n + ' كادر'; },
+      explore: 'استكشف',
+      reelTitle: 'استعراض الحركة والسينما (Showreel)', reelSub: 'حركة الكاميرا وتوزيع الإضاءة والمونتاج الإيقاعي',
+      play: 'تشغيل الشوريل',
+      aboutTitle: 'عن يوسف ورد',
+      aboutCap: 'مصور سينمائي ومصمم جرافيك بالقاهرة، مصر.',
+      cv: 'تحميل السيرة الذاتية', pdf: 'البورتفوليو PDF',
+      contactTitle: 'بدء مشروع وتواصل مباشر',
+      contactLead: 'متاح لإدارة وتصوير الأعمال السينمائية والدراما التلفزيونية وبناء الهويات المؤسسية.',
+      copy: 'نسخ البريد', copied: 'تم نسخ البريد',
+      allWork: 'كل الأعمال',
+      spec: { year: 'السنة', role: 'الدور', client: 'العميل', production: 'جهة الإنتاج', deliverables: 'المخرجات' },
+      approach: { challenge: 'التحدي', decisions: 'القرارات البصرية', outcome: 'النتيجة' },
+      watch: 'مشاهدة العمل (فيديو)',
+      prev: 'المشروع السابق', next: 'المشروع التالي',
+      close: 'إغلاق', prevImg: 'الصورة السابقة', nextImg: 'الصورة التالية',
+      openVimeo: 'افتح على Vimeo', vimeoHint: 'المشغل لا يعمل؟',
+      viewGrid: 'شبكة حرة (Grid)', viewFilmstrip: 'شريط سينمائي (Filmstrip)',
+      sfxOn: 'الصوت: مفعّل', sfxMute: 'الصوت: صامت',
+      avail: 'متاح للمشاريع',
+      sendBrief: 'إرسال تفاصيل المشروع', briefSent: 'تم استلام طلبك بنجاح، شكراً لك!',
+      emptyFilter: 'لا توجد مشاريع في هذا التصنيف حالياً.'
+    }
+  };
+
+  /* ---------------- SVG Icons ---------------- */
+  var ICON = {
+    left: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>',
+    right: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>',
+    play: '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>',
+    close: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>',
+    grid: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>',
+    filmstrip: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>'
+  };
+
+  var corners =
+    '<div class="frame-corners" aria-hidden="true">' +
+      '<span class="corner c-tl"></span><span class="corner c-tr"></span>' +
+      '<span class="corner c-bl"></span><span class="corner c-br"></span>' +
+    '</div>';
+
+  /* ---------------- State ---------------- */
+  var lang = (function () {
+    var stored = localStorage.getItem('yw_lang') || localStorage.getItem('yw-lang');
+    if (stored === 'ar' || stored === 'en') return stored;
+    return (navigator.language || '').toLowerCase().indexOf('ar') === 0 ? 'ar' : 'en';
+  })();
+
+  var filter = { d: 'all', s: 'all' };
+  var currentRoute = { type: 'home', id: 'work' };
+  var heroIndex = 0;
+  var heroTimer = null;
+  var currentLb = { images: [], index: 0 };
+  var lastFocus = null;
+
+  /* ---------------- Helpers ---------------- */
+  function t() { return T[lang]; }
+  function L(val) {
+    if (!val) return '';
+    if (typeof val === 'string') return val;
+    return val[lang] || val.ar || val.en || '';
+  }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function portrait(img) {
+    return img && img.height > img.width;
+  }
+  function cover(p) {
+    return (p && p.images && p.images[0]) ? p.images[0] : { src: '', width: 1920, height: 1080, alt: { en: '', ar: '' } };
+  }
+  function discipline(id) {
+    return C.disciplines.find(function (d) { return d.id === id; });
+  }
+  function splitName(p) {
+    var full = L(p.name);
+    var parts = full.split(' — ');
+    return { title: parts[0] || full, sub: parts[1] || L(p.subtitle) };
+  }
+  function vimeoId(url) {
+    if (!url) return '';
+    var m = url.match(/vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|video\/|)(\d+)/);
+    return m ? m[3] : '';
+  }
+
+  function imgTag(img, opts) {
+    if (!img || !img.src) return '';
+    opts = opts || {};
+    var alt = esc(L(img.alt));
+    var loading = opts.eager ? 'eager' : 'lazy';
+    return '<img src="' + esc(img.src) + '" alt="' + alt + '" width="' + (img.width || 1920) + '" height="' + (img.height || 1080) + '" loading="' + loading + '">';
+  }
+
+  function specRow(dt, ddHtml) {
+    if (!ddHtml) return '';
+    return '<div class="spec-row"><dt>' + esc(dt) + '</dt><dd>' + ddHtml + '</dd></div>';
+  }
+
+  /* ---------------- Ambient Cursor Pill ---------------- */
   function initCursor() {
-    const cursor = $('#cursor');
-    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!cursor || window.matchMedia('(pointer: coarse)').matches || prefersReduced) {
-      if (cursor) cursor.style.display = 'none';
-      return;
-    }
-    let mx = 0, my = 0, cx = 0, cy = 0;
-    document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; });
-    document.addEventListener('mouseenter', (e) => {
-      const el = toElement(e.target);
-      if (el && el.closest('a, button, [role="button"], .project-card, .discipline-tile, .gallery-item, .case-study-gallery-item, .case-study-nav-btn')) {
-        document.body.classList.add('cursor-hover');
-      } else {
-        document.body.classList.remove('cursor-hover');
-      }
-    }, true);
-    function loop() {
-      cx += (mx - cx) * 0.15;
-      cy += (my - cy) * 0.15;
-      cursor.style.transform = `translate(${cx - 20}px, ${cy - 20}px)`;
-      requestAnimationFrame(loop);
-    }
-    loop();
-  }
+    var cursor = document.getElementById('viewfinder-cursor');
+    if (!cursor) return;
+    var label = document.getElementById('cursor-label');
 
-  /* ── LANGUAGE SWITCHER ───────────────────────────────────── */
-  function getSavedLang() {
-    try {
-      return localStorage.getItem('yw-lang') || 'en';
-    } catch (e) {
-      return 'en';
-    }
-  }
-
-  function setSavedLang(lang) {
-    try {
-      localStorage.setItem('yw-lang', lang);
-    } catch (e) {}
-  }
-
-  function updateModalLabels(lang) {
-    const isAr = lang === 'ar';
-    const lb = $('#lightbox');
-    if (lb) {
-      lb.setAttribute('aria-label', isAr ? 'عرض الصورة' : 'Image viewer');
-      lb.querySelector('.lightbox-close')?.setAttribute('aria-label', isAr ? 'إغلاق' : 'Close');
-      lb.querySelector('.lightbox-prev')?.setAttribute('aria-label', isAr ? 'السابق' : 'Previous');
-      lb.querySelector('.lightbox-next')?.setAttribute('aria-label', isAr ? 'التالي' : 'Next');
-    }
-    const vm = $('#video-modal');
-    if (vm) {
-      vm.setAttribute('aria-label', isAr ? 'عرض الفيديو' : 'Video player');
-      vm.querySelector('.video-modal-close')?.setAttribute('aria-label', isAr ? 'إغلاق' : 'Close');
-    }
-  }
-
-  function setLang(lang) {
-    State.lang = lang;
-    setSavedLang(lang);
-    const html = document.documentElement;
-    html.lang = lang;
-    html.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    $$('.nav-lang-btn').forEach(btn => { btn.textContent = lang === 'ar' ? 'EN' : 'عربي'; });
-    updateModalLabels(lang);
-    renderNav();
-    transitionRoute(() => {
-      renderCurrentRoute();
-    });
-  }
-
-  /* ── THEME (DARK / LIGHT) ────────────────────────────────── */
-  function getSavedTheme() {
-    try {
-      const saved = localStorage.getItem('yw-theme');
-      if (saved === 'light' || saved === 'dark') return saved;
-      return 'dark';
-    } catch (e) {
-      return 'dark';
-    }
-  }
-
-  function setSavedTheme(theme) {
-    try {
-      localStorage.setItem('yw-theme', theme);
-    } catch (e) {}
-  }
-
-  function setTheme(theme) {
-    State.theme = theme;
-    document.documentElement.setAttribute('data-theme', theme);
-    setSavedTheme(theme);
-    $$('.nav-theme-btn').forEach(btn => {
-      btn.innerHTML = theme === 'dark' ? sunIcon() : moonIcon();
-    });
-  }
-
-  function toggleTheme() {
-    setTheme(State.theme === 'light' ? 'dark' : 'light');
-  }
-
-  const sunIcon = () => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
-  const moonIcon = () => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
-
-  /* ── ROUTER & HASH HANDLING ──────────────────────────────── */
-  function parseHash() {
-    const raw = (window.location.hash || '').replace(/^#\/?/, '').trim();
-    if (!raw) return { type: 'section', id: 'home' };
-
-    if (raw.startsWith('project/')) {
-      const pid = raw.replace('project/', '').trim();
-      return { type: 'project', id: pid };
-    }
-
-    const validSections = ['home', 'filmmaking', 'photography', 'design', 'about', 'contact'];
-    if (validSections.includes(raw)) {
-      return { type: 'section', id: raw };
-    }
-
-    return { type: 'section', id: 'home' };
-  }
-
-  /* ── ROUTE TRANSITION HELPER ─────────────────────────────── */
-  function transitionRoute(callback) {
-    const main = $('#main');
-    if (!main) {
-      callback();
-      return;
-    }
-    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) {
-      callback();
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      return;
-    }
-    main.classList.add('route-transitioning');
-    setTimeout(() => {
-      callback();
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      requestAnimationFrame(() => {
-        void main.offsetHeight; // force reflow
-        main.classList.remove('route-transitioning');
-      });
-    }, 130);
-  }
-
-  function navigateTo(target, pushHash = true) {
-    if (typeof target === 'string') {
-      if (target.startsWith('project/')) {
-        State.route = { type: 'project', id: target.replace('project/', '') };
-      } else {
-        State.route = { type: 'section', id: target };
-      }
-    } else if (target && target.type) {
-      State.route = target;
-    }
-
-    if (pushHash) {
-      const hashStr = State.route.type === 'project' ? `#/project/${State.route.id}` : `#/${State.route.id === 'home' ? '' : State.route.id}`;
-      if (window.location.hash !== hashStr) {
-        window.location.hash = hashStr;
-      }
-    }
-
-    updateNavActive();
-    transitionRoute(() => {
-      renderCurrentRoute();
-    });
-  }
-
-  function handleHashChange() {
-    const parsed = parseHash();
-    if (parsed.type !== State.route.type || parsed.id !== State.route.id) {
-      State.route = parsed;
-      updateNavActive();
-      transitionRoute(() => {
-        renderCurrentRoute();
-      });
-    }
-  }
-
-  /* ── NAVIGATION BAR ─────────────────────────────────────── */
-  function renderNav() {
-    const header = $('#header');
-    if (!header) return;
-    const isAr = State.lang === 'ar';
-
-    const navItems = [
-      { id: 'filmmaking',  en: 'Film',        ar: 'سينما' },
-      { id: 'photography', en: 'Photography',  ar: 'تصوير' },
-      { id: 'design',      en: 'Design',       ar: 'تصميم' },
-      { id: 'about',       en: 'About',        ar: 'عني'   },
-      { id: 'contact',     en: 'Contact',      ar: 'تواصل' },
-    ];
-
-    const currentActive = State.route.type === 'section' ? State.route.id : getParentDiscipline(State.route.id);
-
-    const linksHtml = navItems.map(item =>
-      `<button class="nav-link${currentActive === item.id ? ' active' : ''}" data-section="${esc(item.id)}">${isAr ? item.ar : item.en}</button>`
-    ).join('');
-
-    header.innerHTML = `
-      <div class="nav-backdrop"></div>
-      <nav class="nav" role="navigation" aria-label="${isAr ? 'القائمة الرئيسية' : 'Main navigation'}">
-        <button class="nav-logo" data-section="home">
-          YOUSSEF<span>.</span>WARD
-        </button>
-
-        <div class="nav-links" id="nav-links" role="list">
-          ${linksHtml}
-        </div>
-
-        <div class="nav-actions">
-          <button class="nav-lang-btn" id="lang-btn" aria-label="${isAr ? 'Switch to English' : 'التبديل للعربية'}">
-            ${isAr ? 'EN' : 'عربي'}
-          </button>
-          <button class="nav-theme-btn" id="theme-btn" aria-label="${isAr ? 'تبديل الوضع الليلي' : 'Toggle theme'}">
-            ${State.theme === 'dark' ? sunIcon() : moonIcon()}
-          </button>
-          <button class="nav-menu-btn" id="menu-btn" aria-label="${isAr ? 'فتح القائمة' : 'Open menu'}" aria-expanded="false">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </nav>
-    `;
-
-    $$('.nav-link', header).forEach(btn => {
-      btn.addEventListener('click', () => {
-        navigateTo(btn.dataset.section);
-        closeMobileMenu();
-      });
+    window.addEventListener('mousemove', function (e) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px');
+      document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px');
     });
 
-    $('.nav-logo', header).addEventListener('click', () => {
-      navigateTo('home');
-      closeMobileMenu();
-    });
-
-    $('#lang-btn', header).addEventListener('click', () => setLang(State.lang === 'ar' ? 'en' : 'ar'));
-    $('#theme-btn', header).addEventListener('click', toggleTheme);
-
-    const menuBtn = $('#menu-btn', header);
-    const navLinks = $('#nav-links', header);
-    if (menuBtn && navLinks) {
-      menuBtn.addEventListener('click', () => {
-        const open = navLinks.classList.toggle('open');
-        menuBtn.classList.toggle('open', open);
-        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        menuBtn.setAttribute('aria-label', open ? (isAr ? 'إغلاق القائمة' : 'Close menu') : (isAr ? 'فتح القائمة' : 'Open menu'));
-      });
-    }
-  }
-
-  function getParentDiscipline(projectId) {
-    const project = (C().projects || []).find(p => p.id === projectId);
-    return project ? project.discipline : '';
-  }
-
-  function closeMobileMenu() {
-    const navLinks = $('#nav-links');
-    const menuBtn = $('#menu-btn');
-    const isAr = State.lang === 'ar';
-    if (navLinks) navLinks.classList.remove('open');
-    if (menuBtn) {
-      menuBtn.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.setAttribute('aria-label', isAr ? 'فتح القائمة' : 'Open menu');
-    }
-  }
-
-  // Close mobile menu on Escape key or click outside
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMobileMenu();
-  });
-
-  document.addEventListener('click', (e) => {
-    const navLinks = $('#nav-links');
-    const menuBtn = $('#menu-btn');
-    if (navLinks && navLinks.classList.contains('open')) {
-      const el = toElement(e.target);
-      if (el && !navLinks.contains(el) && !menuBtn?.contains(el)) {
-        closeMobileMenu();
-      }
-    }
-  });
-
-  function updateNavActive() {
-    const currentActive = State.route.type === 'section' ? State.route.id : getParentDiscipline(State.route.id);
-    $$('.nav-link').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.section === currentActive);
-    });
-  }
-
-  function initScroll() {
-    const header = $('#header');
-    window.addEventListener('scroll', () => {
-      State.scrollY = window.scrollY;
-      if (header) header.classList.toggle('scrolled', State.scrollY > 20);
-    }, { passive: true });
-  }
-
-  /* ── INTERSECTION OBSERVER (REVEALS) ─────────────────────── */
-  let revealObserver;
-  function initReveal() {
-    revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-  }
-
-  function observeReveals(container = document) {
-    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) {
-      $$('.reveal, .clip-reveal', container).forEach(node => {
-        node.classList.add('in-view');
-      });
-      return;
-    }
-    if (!revealObserver) return;
-    $$('.reveal, .clip-reveal', container).forEach(node => {
-      revealObserver.observe(node);
-    });
-  }
-
-  /* ── ROUTE RENDERER ─────────────────────────────────────── */
-  function renderCurrentRoute() {
-    const main = $('#main');
-    if (!main) return;
-
-    if (State.route.type === 'project') {
-      renderCaseStudy(main, State.route.id);
-      return;
-    }
-
-    switch (State.route.id) {
-      case 'home':        renderHome(main); break;
-      case 'filmmaking':  renderDiscipline(main, 'filmmaking'); break;
-      case 'photography': renderDiscipline(main, 'photography'); break;
-      case 'design':      renderDiscipline(main, 'design'); break;
-      case 'about':       renderAbout(main); break;
-      case 'contact':     renderContact(main); break;
-      default:            renderHome(main);
-    }
-  }
-
-  /* ── HOME ───────────────────────────────────────────────── */
-  function renderHome(main) {
-    const isAr = State.lang === 'ar';
-    const content = C();
-    const disciplines = content.disciplines || [];
-
-    main.innerHTML = `
-      <!-- HERO SECTION -->
-      <section class="hero" id="hero" aria-label="${isAr ? 'المقدمة' : 'Introduction'}">
-        <div class="hero-media-wrapper">
-          <img
-            class="hero-cover"
-            src="${esc(content.heroImage || 'assets/images/productions/ekhteyar-1.jpg')}"
-            alt="${esc(t(content.heroImageAlt) || (isAr ? 'لقطة سينمائية — الاختيار' : 'Cinematography Still — El Ekhteyar'))}"
-            loading="eager"
-            fetchpriority="high"
-          >
-          <div class="hero-overlay" aria-hidden="true"></div>
-          <div class="hero-frame-badge" aria-hidden="true">
-            <span class="hero-badge-dot"></span>
-            <span>${esc(t(content.heroFrameBadge) || (isAr ? 'كادر سينمائي · الاختيار' : 'CINEMATOGRAPHY STILL · EL EKHTEYAR'))}</span>
-          </div>
-        </div>
-
-        <div class="hero-inner">
-          <div class="hero-content">
-            <p class="hero-index" aria-hidden="true">
-              ${isAr ? '— مصور سينمائي وجرافيك ديزاينر' : '— CINEMATOGRAPHER & GRAPHIC DESIGNER'}
-            </p>
-            <h1 class="hero-name">
-              <span>${isAr ? 'يوسف' : 'YOUSSEF'}</span>
-              <span>${isAr ? 'ورد' : 'WARD'}</span>
-            </h1>
-            <p class="hero-role">
-              <span>${esc(t(content.heroRole) || (isAr ? 'مصور سينمائي وجرافيك ديزاينر' : 'Cinematographer & Graphic Designer'))}</span>
-            </p>
-            <p class="hero-tagline">
-              <span>${esc(t(content.heroTagline) || (isAr ? 'عقل بصري واحد يجمع بين الكادر السينمائي ومنظومات التصميم الجرافيكي.' : 'One visual mind bridging cinematic camera craft and graphic design systems.'))}</span>
-            </p>
-            <div class="hero-cta">
-              <button class="btn btn-primary" data-nav="filmmaking">
-                ${isAr ? 'استكشف الأعمال' : 'Explore Selected Work'}
-              </button>
-              <button class="btn btn-secondary hero-film-btn" id="hero-film-btn" data-video="https://player.vimeo.com/video/1239369594?autoplay=1&color=bc171b&title=0&byline=0&portrait=0">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span>${isAr ? 'شاهد فيلم التخرج (المولوية)' : 'Watch Graduation Film — Mawlawya'}</span>
-              </button>
-              <button class="btn btn-ghost" data-nav="about">
-                ${isAr ? 'السيرة الذاتية' : 'Biography & CV'}
-              </button>
-            </div>
-          </div>
-
-          <aside class="hero-craft-card" aria-label="${isAr ? 'توثيق حرفة الكاميرا' : 'Camera Craft Documentation'}">
-            <div class="hero-craft-media">
-              <img
-                src="${esc(content.heroCraftImage || 'assets/images/productions/ekhteyar-3.jpg')}"
-                alt="${esc(t(content.heroCraftAlt) || (isAr ? 'رافعة الكاميرا وقت الغسق' : 'Camera Crane & Rigging at Twilight'))}"
-                loading="eager"
-              >
-              <div class="hero-craft-overlay" aria-hidden="true"></div>
-            </div>
-            <div class="hero-craft-info">
-              <span class="hero-craft-tag">${esc(t(content.heroCraftBadge) || (isAr ? 'موقع التصوير · حرفة الكاميرا' : 'ON SET · CAMERA CRAFT'))}</span>
-              <span class="hero-craft-desc">${esc(t(content.heroCraftTitle) || (isAr ? 'مسلسل الاختيار · كواليس ورافعة الكاميرا' : 'El Ekhteyar · Crane & Twilight Rigging'))}</span>
-            </div>
-          </aside>
-        </div>
-
-        <div class="hero-scroll" aria-hidden="true">
-          <div class="hero-scroll-line"></div>
-          <span class="hero-scroll-label">${isAr ? 'مرر' : 'SCROLL'}</span>
-        </div>
-      </section>
-
-      <!-- DISCIPLINES STRIP -->
-      <section class="disciplines-strip" aria-label="${isAr ? 'التخصصات الأساسية' : 'Core Disciplines'}">
-        <div class="container">
-          <div class="eyebrow reveal">
-            <span class="eyebrow-line"></span>
-            ${isAr ? 'المحاور البصرية الثلاثة' : 'THREE CORE DISCIPLINES'}
-          </div>
-          <div class="disciplines-grid reveal reveal-delay-1" style="margin-top:clamp(28px,4vw,44px);">
-            ${disciplines.map((d, i) => `
-              <div class="discipline-tile" role="button" tabindex="0" data-nav="${esc(d.id)}" aria-label="${esc(t(d.title))}">
-                <p class="tile-number">0${i + 1} —</p>
-                <h2 class="tile-title">${esc(t(d.title))}</h2>
-                <p class="tile-desc">${esc(t(d.description))}</p>
-                <p class="tile-cta">
-                  ${isAr ? 'استكشف التخصص' : 'View Projects'}
-                  <span class="tile-cta-arrow"></span>
-                </p>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURED WORK PREVIEW -->
-      ${renderFeaturedPreview(isAr)}
-
-      <!-- CONTACT CTA -->
-      <section class="contact-section" aria-label="${isAr ? 'تواصل' : 'Contact'}">
-        <div class="container" style="position:relative;z-index:1;">
-          <div class="eyebrow reveal" style="color:rgba(245,244,238,0.4);justify-content:center;">
-            <span class="eyebrow-line"></span>
-            ${isAr ? 'ابدأ محادثة' : "LET'S COLLABORATE"}
-          </div>
-          <h2 class="section-title reveal" style="color:var(--cream);text-align:center;margin:16px 0;">
-            ${isAr ? 'هل لديك مشروع أو رؤية تريد تجسيدها؟' : 'Have a project or vision to bring to life?'}
-          </h2>
-          <a href="mailto:${esc(content.email)}" class="contact-email reveal">
-            ${esc(content.email)}
-          </a>
-          <p class="contact-sub reveal">${isAr ? 'القاهرة، مصر · متاح للمشاريع المحلية والدولية' : 'Cairo, Egypt · Available for local and international projects'}</p>
-          <div class="contact-socials reveal reveal-delay-1">
-            <a href="${esc(content.behance)}" target="_blank" rel="noopener" class="contact-social">Behance</a>
-            <a href="${esc(content.linkedin)}" target="_blank" rel="noopener" class="contact-social">LinkedIn</a>
-            <a href="${esc(content.instagram)}" target="_blank" rel="noopener" class="contact-social">Instagram</a>
-            <a href="${esc(content.vimeo)}" target="_blank" rel="noopener" class="contact-social">Vimeo</a>
-          </div>
-        </div>
-      </section>
-    `;
-
-    // Hero loaded animation
-    requestAnimationFrame(() => {
-      const hero = $('#hero');
-      if (hero) {
-        const img = hero.querySelector('.hero-cover');
-        if (img && img.complete) hero.classList.add('loaded');
-        else if (img) img.addEventListener('load', () => hero.classList.add('loaded'), { once: true });
-      }
-    });
-
-    attachNavClicks(main);
-    attachProjectCardEvents(main);
-    observeReveals(main);
-    renderFooter();
-  }
-
-  function renderFeaturedPreview(isAr) {
-    const disciplines = C().disciplines || [];
-    const allProjects = C().projects || [];
-    const featured = disciplines.map(d => allProjects.find(p => p.discipline === d.id && p.featured)).filter(Boolean);
-    if (!featured.length) return '';
-
-    const cards = featured.map((p, i) => {
-      const img = p.images?.[0];
-      if (!img) return '';
-      const tags = (p.deliverables || []).slice(0, 3);
-      return `
-        <div class="project-card reveal reveal-delay-${i + 1}" data-project="${esc(p.id)}" role="button" tabindex="0" aria-label="${esc(t(p.name))} — ${esc(t(p.subdisciplineName || p.subdiscipline || ''))}">
-          <div class="project-card-media">
-            <img class="project-card-img" src="${esc(img.thumb || img.src)}" alt="${esc(t(p.name))}" loading="lazy" width="${img.width}" height="${img.height}">
-            <div class="project-card-overlay" aria-hidden="true"></div>
-            ${p.video ? `
-              <div class="project-card-video-pill" aria-hidden="true">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span>${isAr ? 'فيديو' : 'FILM'}</span>
-              </div>
-            ` : ''}
-            <div class="project-card-hover-info" aria-hidden="true">
-              <p class="project-card-hover-title">${esc(t(p.name))}</p>
-              <p class="project-card-hover-meta">${esc(p.agency || '')} &nbsp;·&nbsp; ${esc(p.year || '')}</p>
-            </div>
-          </div>
-          <div class="project-card-info">
-            <p class="project-card-eyebrow">
-              <span>${esc(t(p.subdisciplineName || p.subdiscipline || ''))}</span>
-              <span>${esc(p.year || '')}</span>
-            </p>
-            <h3 class="project-card-title">${esc(t(p.name))}</h3>
-            <p class="project-card-desc">${esc(t(p.description))}</p>
-            ${tags.length ? `
-              <div class="project-card-tags">
-                ${tags.map(tag => `<span class="project-card-tag">${esc(tag)}</span>`).join('')}
-              </div>
-            ` : ''}
-          </div>
-        </div>
-      `;
-    }).join('');
-
-    return `
-      <section class="section" aria-label="${isAr ? 'أبرز الأعمال والمشاريع' : 'Selected Highlights'}">
-        <div class="container">
-          <div class="eyebrow reveal"><span class="eyebrow-line"></span>${isAr ? 'مشاريع مختارة' : 'SELECTED HIGHLIGHTS'}</div>
-          <div class="project-grid" style="margin-top:clamp(32px,5vw,56px);">
-            ${cards}
-          </div>
-        </div>
-      </section>
-    `;
-  }
-
-  /* ── DISCIPLINE SECTION ─────────────────────────────────── */
-  function renderDiscipline(main, disciplineId) {
-    const isAr = State.lang === 'ar';
-    const content = C();
-    const disc = (content.disciplines || []).find(d => d.id === disciplineId);
-    if (!disc) { navigateTo('home'); return; }
-
-    const allProjects = content.projects || [];
-    const projects = allProjects.filter(p => p.discipline === disciplineId);
-    const cats = disc.categories || [];
-
-    const isCinematic = disciplineId === 'filmmaking';
-    const sectionClass = `discipline-section discipline-section--${disciplineId}`;
-
-    main.innerHTML = `
-      <div style="height:var(--nav-h);"></div>
-      <section class="${sectionClass}" id="disc-${esc(disciplineId)}">
-        <div class="container">
-          <div class="discipline-header">
-            <div class="discipline-header-start reveal">
-              <p class="discipline-number">${esc(disc.number)} —</p>
-              <h1 class="discipline-title">${esc(t(disc.title))}</h1>
-              <p class="discipline-desc">${esc(t(disc.description))}</p>
-            </div>
-            ${cats.length > 1 ? `
-              <div class="discipline-filter reveal reveal-delay-1" role="group" aria-label="${isAr ? 'تصفية الفئات' : 'Category filter'}">
-                ${cats.map(cat => `
-                  <button class="filter-btn${cat.id === 'all' ? ' active' : ''}" data-cat="${esc(cat.id)}">
-                    ${esc(t(cat.name))}
-                  </button>
-                `).join('')}
-              </div>
-            ` : ''}
-          </div>
-
-          <div class="project-grid" id="project-grid-${esc(disciplineId)}">
-            ${renderProjectCards(projects, isAr, isCinematic)}
-          </div>
-        </div>
-      </section>
-
-      ${renderDisciplineGallery(disciplineId, isAr)}
-    `;
-
-    // Filter functionality
-    $$('.filter-btn', main).forEach(btn => {
-      btn.addEventListener('click', () => {
-        $$('.filter-btn', main).forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.dataset.cat;
-        const filtered = cat === 'all' ? projects : projects.filter(p => p.subdiscipline === cat);
-        const grid = $(`#project-grid-${disciplineId}`, main);
-        if (grid) grid.innerHTML = renderProjectCards(filtered, isAr, isCinematic);
-        attachProjectCardEvents(main);
-        observeReveals(main);
-      });
-    });
-
-    attachProjectCardEvents(main);
-    observeReveals(main);
-    renderFooter();
-  }
-
-  function renderProjectCards(projects, isAr, dark = false) {
-    if (!projects.length) {
-      return `<p style="grid-column:1/-1;color:var(--muted);padding:40px 0;">${isAr ? 'لا توجد أعمال في هذه الفئة حالياً.' : 'No projects found in this category.'}</p>`;
-    }
-
-    return projects.map((p, i) => {
-      const img = p.images?.[0];
-      const titleColor = dark ? 'color:var(--cream)' : '';
-      const tags = (p.deliverables || []).slice(0, 3);
-      return `
-        <div class="project-card reveal reveal-delay-${(i % 3) + 1}" data-project="${esc(p.id)}" role="button" tabindex="0" aria-label="${esc(t(p.name))} — ${esc(t(p.subdisciplineName || p.subdiscipline || ''))}">
-          <div class="project-card-media">
-            ${img ? `<img class="project-card-img" src="${esc(img.thumb || img.src)}" alt="${esc(t(p.name))}" loading="lazy" width="${img.width}" height="${img.height}">` : '<div style="width:100%;height:100%;background:var(--surface-alt);"></div>'}
-            <div class="project-card-overlay" aria-hidden="true"></div>
-            ${p.video ? `
-              <div class="project-card-video-pill" aria-hidden="true">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span>${isAr ? 'فيديو' : 'FILM'}</span>
-              </div>
-            ` : ''}
-            <div class="project-card-hover-info" aria-hidden="true">
-              <p class="project-card-hover-title">${esc(t(p.name))}</p>
-              <p class="project-card-hover-meta">${esc(p.agency || '')}${p.year ? ' · ' + esc(p.year) : ''}</p>
-            </div>
-          </div>
-          <div class="project-card-info">
-            <p class="project-card-eyebrow">
-              <span>${esc(t(p.subdisciplineName || p.subdiscipline || ''))}</span>
-              <span>${esc(p.year || '')}</span>
-            </p>
-            <h3 class="project-card-title" style="${titleColor}">${esc(t(p.name))}</h3>
-            <p class="project-card-desc">${esc(t(p.description))}</p>
-            ${tags.length ? `
-              <div class="project-card-tags">
-                ${tags.map(tag => `<span class="project-card-tag">${esc(tag)}</span>`).join('')}
-              </div>
-            ` : ''}
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  function renderDisciplineGallery(disciplineId, isAr) {
-    // If photography, render Clove 2 lookbook strip
-    if (disciplineId === 'photography') {
-      const clove2Images = [
-        { src: 'assets/images/clove2/clove2-1.jpg', thumb: 'assets/images/clove2/clove2-1-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 01' : 'Clove Signature Cocktail 01' },
-        { src: 'assets/images/clove2/clove2-2.jpg', thumb: 'assets/images/clove2/clove2-2-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 02' : 'Clove Signature Cocktail 02' },
-        { src: 'assets/images/clove2/clove2-3.jpg', thumb: 'assets/images/clove2/clove2-3-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 03' : 'Clove Signature Cocktail 03' },
-        { src: 'assets/images/clove2/clove2-4.jpg', thumb: 'assets/images/clove2/clove2-4-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 04' : 'Clove Signature Cocktail 04' },
-        { src: 'assets/images/clove2/clove2-5.jpg', thumb: 'assets/images/clove2/clove2-5-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 05' : 'Clove Signature Cocktail 05' },
-        { src: 'assets/images/clove2/clove2-6.jpg', thumb: 'assets/images/clove2/clove2-6-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 06' : 'Clove Signature Cocktail 06' },
-        { src: 'assets/images/clove2/clove2-7.jpg', thumb: 'assets/images/clove2/clove2-7-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 07' : 'Clove Signature Cocktail 07' },
-        { src: 'assets/images/clove2/clove2-8.jpg', thumb: 'assets/images/clove2/clove2-8-thumb.jpg', caption: isAr ? 'كلوف — مشروب مبتكر 08' : 'Clove Signature Cocktail 08' },
-      ];
-
-      return `
-        <section class="section" style="border-top:1px solid var(--line);">
-          <div class="container">
-            <div class="eyebrow reveal"><span class="eyebrow-line"></span>${isAr ? 'شريط فوتوغرافي وتجاري — Clove II' : 'CULINARY & BEVERAGE STRIP — CLOVE II'}</div>
-            <div class="gallery-strip" style="margin-top:clamp(24px,4vw,44px);">
-              ${clove2Images.map((item, i) => `
-                <div class="gallery-item${i < 7 ? ' portrait' : ' wide'} reveal reveal-delay-${(i % 4) + 1}"
-                     data-lightbox-src="${esc(item.src)}"
-                     data-lightbox-caption="${esc(item.caption)}"
-                     data-lightbox-group="clove2-strip"
-                     role="button" tabindex="0">
-                  <img src="${esc(item.thumb)}" alt="${esc(item.caption)}" loading="lazy">
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        </section>
-      `;
-    }
-    return '';
-  }
-
-  /* ── CASE STUDY VIEW (DETAILED PROJECT PAGE) ─────────────── */
-  function renderCaseStudy(main, projectId) {
-    const isAr = State.lang === 'ar';
-    const allProjects = C().projects || [];
-    const projectIndex = allProjects.findIndex(p => p.id === projectId);
-    const project = allProjects[projectIndex];
-
-    if (!project) {
-      navigateTo('home');
-      return;
-    }
-
-    const prevProject = projectIndex > 0 ? allProjects[projectIndex - 1] : allProjects[allProjects.length - 1];
-    const nextProject = projectIndex < allProjects.length - 1 ? allProjects[projectIndex + 1] : allProjects[0];
-
-    const heroImg = project.images?.[0];
-    const images = project.images || [];
-    const thinking = project.thinking || {};
-    const deliverables = project.deliverables || [];
-
-    const disciplineNames = {
-      'filmmaking':  { en: 'Filmmaking & Cinema', ar: 'صناعة الأفلام والسينما' },
-      'photography': { en: 'Still Photography',    ar: 'التصوير الفوتوغرافي' },
-      'design':      { en: 'Graphic Design',       ar: 'التصميم الجرافيكي' }
-    };
-    const parentName = disciplineNames[project.discipline] || { en: 'Work', ar: 'الأعمال' };
-
-    main.innerHTML = `
-      <div style="height:var(--nav-h);"></div>
-      <article class="case-study" id="case-study-${esc(project.id)}">
-        <div class="container">
-
-          <!-- BACK NAVIGATION -->
-          <div class="case-study-back-wrap reveal">
-            <button class="case-study-back" data-nav="${esc(project.discipline)}">
-              <span class="case-study-back-arrow">←</span>
-              <span>${isAr ? `العودة إلى ${t(parentName)}` : `Back to ${t(parentName)}`}</span>
-            </button>
-          </div>
-
-          <!-- CINEMATIC HERO -->
-          ${heroImg ? `
-            <div class="case-study-hero reveal">
-              <img src="${esc(heroImg.src)}" alt="${esc(t(project.name))}" loading="eager" width="${heroImg.width}" height="${heroImg.height}">
-            </div>
-          ` : ''}
-
-          <!-- HEADER & LEAD -->
-          <header class="case-study-header">
-            <div class="case-study-eyebrow reveal">
-              <span class="eyebrow-line"></span>
-              <span>${esc(t(project.subdisciplineName || project.subdiscipline))} &nbsp;·&nbsp; ${esc(project.year || '')}</span>
-            </div>
-            <h1 class="case-study-title reveal reveal-delay-1">${esc(t(project.name))}</h1>
-            <p class="case-study-lead reveal reveal-delay-2">${esc(t(project.description))}</p>
-
-            <!-- METADATA GRID -->
-            <div class="case-study-meta-grid reveal reveal-delay-3">
-              <div class="case-study-meta-col">
-                <p class="case-study-meta-col-label">${isAr ? 'العميل / الجهة' : 'Client / Agency'}</p>
-                <p class="case-study-meta-col-value">${esc(project.client || project.agency || '—')}</p>
-              </div>
-              <div class="case-study-meta-col">
-                <p class="case-study-meta-col-label">${isAr ? 'الدور والمسؤولية' : 'Role & Scope'}</p>
-                <p class="case-study-meta-col-value">${esc(t(project.role) || '—')}</p>
-              </div>
-              <div class="case-study-meta-col">
-                <p class="case-study-meta-col-label">${isAr ? 'السنة' : 'Year'}</p>
-                <p class="case-study-meta-col-value">${esc(project.year || '—')}</p>
-              </div>
-              <div class="case-study-meta-col">
-                <p class="case-study-meta-col-label">${isAr ? 'التخصص' : 'Discipline'}</p>
-                <p class="case-study-meta-col-value">${esc(t(parentName))}</p>
-              </div>
-            </div>
-
-            ${deliverables.length ? `
-              <div class="case-study-tags reveal reveal-delay-4">
-                ${deliverables.map(tag => `<span class="case-study-tag">${esc(tag)}</span>`).join('')}
-              </div>
-            ` : ''}
-
-            ${project.video ? `
-              <div class="case-study-video-cta reveal reveal-delay-4" style="margin: 24px 0 8px;">
-                <button class="btn btn-secondary hero-film-btn case-study-play-btn" data-video="${esc(project.video)}">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                  <span>${project.videoLabel ? (isAr ? project.videoLabel.ar : project.videoLabel.en) : (isAr ? 'مشاهدة الفيديو' : 'Watch Video')}</span>
-                </button>
-              </div>
-            ` : ''}
-          </header>
-
-          <!-- VISUAL TREATMENT & LIGHTING ARCHITECTURE -->
-          ${(thinking.challenge || thinking.decisions || thinking.outcome) ? `
-            <section class="thinking-section" aria-label="${isAr ? 'الرؤية البصرية وتوزيع الإضاءة' : 'Visual Treatment & Lighting Architecture'}">
-              <div class="eyebrow reveal">
-                <span class="eyebrow-line"></span>
-                ${isAr ? 'الرؤية البصرية وتوزيع الإضاءة' : 'VISUAL TREATMENT & LIGHTING ARCHITECTURE'}
-              </div>
-              <div class="thinking-grid">
-                ${thinking.challenge ? `
-                  <div class="thinking-card reveal reveal-delay-1">
-                    <p class="thinking-card-number">01 —</p>
-                    <h3 class="thinking-card-title">${isAr ? 'الرؤية الإبداعية والأجواء' : 'Creative & Atmospheric Intent'}</h3>
-                    <p class="thinking-card-body">${esc(t(thinking.challenge))}</p>
-                  </div>
-                ` : ''}
-                ${thinking.decisions ? `
-                  <div class="thinking-card reveal reveal-delay-2">
-                    <p class="thinking-card-number">02 —</p>
-                    <h3 class="thinking-card-title">${isAr ? 'هندسة الإضاءة والكاميرا' : 'Lighting & Visual Architecture'}</h3>
-                    <p class="thinking-card-body">${esc(t(thinking.decisions))}</p>
-                  </div>
-                ` : ''}
-                ${thinking.outcome ? `
-                  <div class="thinking-card reveal reveal-delay-3">
-                    <p class="thinking-card-number">03 —</p>
-                    <h3 class="thinking-card-title">${isAr ? 'النتيجة والأثر البصري' : 'Visual Outcome & Delivery'}</h3>
-                    <p class="thinking-card-body">${esc(t(thinking.outcome))}</p>
-                  </div>
-                ` : ''}
-              </div>
-            </section>
-          ` : ''}
-
-          <!-- VISUAL STILLS & GALLERY -->
-          ${images.length > 0 ? `
-            <section class="case-study-gallery-section" aria-label="${isAr ? 'معرض المشاهد واللقطات' : 'Visual Gallery'}">
-              <div class="eyebrow reveal">
-                <span class="eyebrow-line"></span>
-                ${isAr ? 'معرض المشاهد واللقطات' : 'VISUAL STILLS & ARTIFACTS'}
-              </div>
-              <div class="case-study-gallery-grid">
-                ${images.map((img, i) => `
-                  <div class="case-study-gallery-item reveal reveal-delay-${(i % 3) + 1}"
-                       data-lightbox-src="${esc(img.src)}"
-                       data-lightbox-caption="${esc(img.alt || t(project.name))}"
-                       data-lightbox-group="project-${esc(project.id)}"
-                       role="button" tabindex="0"
-                       aria-label="${isAr ? 'عرض الكادر بالحجم الكامل' : 'Expand full frame'}">
-                    <img src="${esc(img.src)}" alt="${esc(img.alt || t(project.name))}" loading="lazy">
-                    <div class="item-hover-hint" aria-hidden="true">${isAr ? 'عرض الكادر بالحجم الكامل ✦' : 'Expand Full Frame ✦'}</div>
-                  </div>
-                `).join('')}
-              </div>
-            </section>
-          ` : ''}
-
-          <!-- PROJECT NAVIGATION FOOTER -->
-          <nav class="case-study-nav reveal" aria-label="${isAr ? 'التنقل بين المشاريع' : 'Project Navigation'}">
-            <button class="case-study-nav-btn prev" data-nav="project/${esc(prevProject.id)}">
-              <span class="case-study-nav-dir">
-                <span>←</span>
-                <span>${isAr ? 'المشروع السابق' : 'Previous Project'}</span>
-              </span>
-              <span class="case-study-nav-title">${esc(t(prevProject.name))}</span>
-            </button>
-            <button class="case-study-nav-btn next" data-nav="project/${esc(nextProject.id)}">
-              <span class="case-study-nav-dir">
-                <span>${isAr ? 'المشروع التالي' : 'Next Project'}</span>
-                <span>→</span>
-              </span>
-              <span class="case-study-nav-title">${esc(t(nextProject.name))}</span>
-            </button>
-          </nav>
-
-        </div>
-      </article>
-    `;
-
-    attachNavClicks(main);
-    observeReveals(main);
-    renderFooter();
-  }
-
-  /* ── ABOUT SECTION ──────────────────────────────────────── */
-  function renderAbout(main) {
-    const isAr = State.lang === 'ar';
-    const content = C();
-
-    main.innerHTML = `
-      <div style="height:var(--nav-h);"></div>
-      <section class="about-section">
-        <div class="container">
-          <div class="eyebrow reveal"><span class="eyebrow-line"></span>${isAr ? 'عن يوسف ورد' : 'BIOGRAPHY & PROFILE'}</div>
-          <div class="about-grid" style="margin-top:clamp(40px,6vw,72px);">
-            <div class="about-portrait-wrap reveal">
-              <img
-                class="about-portrait"
-                src="${esc(content.portrait)}"
-                alt="${isAr ? 'يوسف ورد' : 'Youssef Ward'}"
-                loading="lazy"
-              >
-            </div>
-            <div class="about-content">
-              <h1 class="section-title reveal" style="margin-bottom:8px;">
-                ${isAr ? 'يوسف ورد' : 'Youssef Ward'}
-              </h1>
-              <p class="eyebrow reveal" style="color:var(--red);margin-bottom:20px;">
-                ${isAr ? 'مصور سينمائي وجرافيك ديزاينر' : 'Cinematographer & Graphic Designer'}
-              </p>
-              <p class="about-bio reveal reveal-delay-1">${esc(t(content.bio))}</p>
-
-              <div class="about-meta reveal reveal-delay-2">
-                <div class="about-meta-item">
-                  <p class="about-meta-item-label">${isAr ? 'المقر' : 'Location'}</p>
-                  <p class="about-meta-item-value">${isAr ? 'القاهرة، مصر' : 'Cairo, Egypt'}</p>
-                </div>
-                <div class="about-meta-item">
-                  <p class="about-meta-item-label">${isAr ? 'التعليم الأكاديمي' : 'Education'}</p>
-                  <p class="about-meta-item-value">${isAr ? 'كلية الفنون التطبيقية' : 'Faculty of Applied Arts'}</p>
-                </div>
-                <div class="about-meta-item">
-                  <p class="about-meta-item-label">${isAr ? 'التخصصات' : 'Focus'}</p>
-                  <p class="about-meta-item-value">${isAr ? 'سينما وإضاءة · تصوير فوتوغرافي · هويات وتصميم' : 'Cinematography & Light · Stills · Brand Systems'}</p>
-                </div>
-                <div class="about-meta-item">
-                  <p class="about-meta-item-label">${isAr ? 'الحالة الحالية' : 'Current Status'}</p>
-                  <p class="about-meta-item-value" style="color:var(--red);">${isAr ? 'متاح للتعاون ✦' : 'Open to Opportunities ✦'}</p>
-                </div>
-              </div>
-
-              <div class="about-actions reveal reveal-delay-3">
-                <a href="${esc(content.cv)}" download class="btn btn-primary">${isAr ? 'تحميل السيرة الذاتية (CV)' : 'Download Curriculum Vitae'}</a>
-                <button class="btn btn-outline" data-nav="contact">${isAr ? 'تواصل معي' : 'Get In Touch'}</button>
-              </div>
-
-              <div class="about-socials reveal reveal-delay-4">
-                <a href="${esc(content.behance)}" target="_blank" rel="noopener" class="social-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H18.456c.29 2.017 2.023 2.136 3.058 2.136 1.065 0 1.872-.569 2.212-1.107zm-5.3-3.5c-.162-1.226-1.051-1.83-2.203-1.83-1.231 0-2.042.676-2.28 1.83h4.483z"/></svg>
-                  Behance
-                </a>
-                <a href="${esc(content.linkedin)}" target="_blank" rel="noopener" class="social-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-                  LinkedIn
-                </a>
-                <a href="${esc(content.instagram)}" target="_blank" rel="noopener" class="social-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                  Instagram
-                </a>
-                <a href="${esc(content.vimeo)}" target="_blank" rel="noopener" class="social-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.396 7.164c-.093 2.026-1.507 4.799-4.245 8.32C15.322 19.04 12.93 21 10.97 21c-1.214 0-2.24-1.119-3.079-3.359l-1.68-6.173C5.57 9.228 4.927 8.108 4.234 8.108c-.154 0-.693.324-1.616.972L1.5 7.787c1.017-.894 2.018-1.788 3.003-2.682 1.353-1.169 2.369-1.784 3.047-1.845 1.601-.154 2.587.94 2.956 3.28.399 2.523.676 4.094.832 4.709.462 2.102.969 3.151 1.523 3.151.431 0 1.078-.681 1.942-2.045.862-1.364 1.324-2.403 1.385-3.115.123-1.178-.34-1.769-1.386-1.769-.493 0-1.001.115-1.523.34 1.012-3.31 2.945-4.92 5.8-4.83 2.117.061 3.114 1.434 2.917 4.118z"/></svg>
-                  Vimeo
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    `;
-
-    attachNavClicks(main);
-    observeReveals(main);
-    renderFooter();
-  }
-
-  /* ── CONTACT SECTION ────────────────────────────────────── */
-  function renderContact(main) {
-    const isAr = State.lang === 'ar';
-    const content = C();
-
-    main.innerHTML = `
-      <div style="height:var(--nav-h);"></div>
-      <section class="contact-section" style="min-height:calc(100dvh - var(--nav-h));display:flex;align-items:center;">
-        <div class="container" style="position:relative;z-index:1;width:100%;">
-          <div class="eyebrow reveal" style="color:rgba(245,244,238,0.4);justify-content:center;">
-            <span class="eyebrow-line"></span>
-            ${isAr ? 'تواصل معي' : "GET IN TOUCH"}
-          </div>
-          <h1 class="section-title reveal" style="color:var(--cream);text-align:center;margin:20px 0 12px;">
-            ${isAr ? 'هل لديك مشروع أو رؤية تريد تجسيدها؟' : 'Have a creative project or vision?'}
-          </h1>
-          <p class="reveal" style="text-align:center;color:rgba(245,244,238,0.4);font-size:var(--small);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:32px;">
-            ${isAr ? 'القاهرة، مصر · متاح للعمل الميداني والمشاريع الدولية' : 'Cairo, Egypt · Available for field production & global projects'}
-          </p>
-          <a href="mailto:${esc(content.email)}" class="contact-email reveal">${esc(content.email)}</a>
-          <div class="contact-socials reveal reveal-delay-1">
-            <a href="${esc(content.behance)}" target="_blank" rel="noopener" class="contact-social">Behance</a>
-            <a href="${esc(content.linkedin)}" target="_blank" rel="noopener" class="contact-social">LinkedIn</a>
-            <a href="${esc(content.instagram)}" target="_blank" rel="noopener" class="contact-social">Instagram</a>
-            <a href="${esc(content.vimeo)}" target="_blank" rel="noopener" class="contact-social">Vimeo</a>
-          </div>
-        </div>
-      </section>
-    `;
-
-    observeReveals(main);
-    renderFooter();
-  }
-
-  /* ── FOOTER ─────────────────────────────────────────────── */
-  function renderFooter() {
-    const footer = $('#footer');
-    if (!footer) return;
-    const isAr = State.lang === 'ar';
-    const year = new Date().getFullYear();
-    footer.innerHTML = `
-      <div class="footer-inner">
-        <p class="footer-copy">© ${year} Youssef Ward. ${isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</p>
-        <p class="footer-mark">YW — ${isAr ? 'عقل بصري واحد · تعبيرات متعددة' : 'ONE VISUAL MIND · MULTIPLE EXPRESSIONS'}</p>
-      </div>
-    `;
-  }
-
-  /* ── EVENT ATTACHERS & DELEGATION ────────────────────────── */
-  function initDelegatedEvents() {
-    document.addEventListener('click', (e) => {
-      const el = toElement(e.target);
-      if (!el) return;
-      if (el.closest('[data-lightbox-src]') || el.closest('#hero-film-btn') || el.closest('.video-modal-close') || el.closest('.lightbox-close') || el.closest('.lightbox-prev') || el.closest('.lightbox-next')) {
-        return;
-      }
-      const card = el.closest('.project-card[data-project]');
+    document.addEventListener('mouseover', function (e) {
+      var card = e.target.closest('.card, .gallery figure, .hero-frame, .reel-card');
       if (card) {
-        navigateTo(`project/${card.dataset.project}`);
-        return;
+        cursor.classList.add('is-active');
+        if (label) {
+          if (card.matches('.reel-card')) label.textContent = 'PLAY';
+          else if (card.matches('.hero-frame')) label.textContent = 'EXPLORE';
+          else label.textContent = 'VIEW';
+        }
+      } else {
+        cursor.classList.remove('is-active');
       }
-      const navEl = el.closest('[data-nav]');
-      if (navEl) {
+    });
+  }
+
+  /* ---------------- Preloader ---------------- */
+  function initPreloader() {
+    var pre = document.getElementById('preloader');
+    if (!pre) return;
+    var tcEl = document.getElementById('preloader-tc');
+    var skipBtn = document.getElementById('skip-preloader');
+    var frame = 0;
+
+    var timer = setInterval(function () {
+      frame += 3;
+      var sec = Math.floor(frame / 24);
+      var ff = frame % 24;
+      if (tcEl) tcEl.textContent = '00:00:' + (sec < 10 ? '0' : '') + sec + ':' + (ff < 10 ? '0' : '') + ff;
+      if (frame >= 36) {
+        clearInterval(timer);
+        dismiss();
+      }
+    }, 40);
+
+    function dismiss() {
+      clearInterval(timer);
+      if (pre.classList.contains('is-open')) return;
+      playTick('shutter');
+      pre.classList.add('is-open');
+      setTimeout(function () {
+        pre.classList.add('is-done');
+        pre.style.display = 'none';
+      }, 700);
+    }
+
+    if (skipBtn) skipBtn.onclick = dismiss;
+    setTimeout(dismiss, 1200);
+  }
+
+  /* ---------------- Shell (Header & Footer) ---------------- */
+  function renderShell() {
+    var tx = t();
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.getElementById('header').innerHTML =
+      '<div class="wrap">' +
+        '<a class="brand" href="#work" aria-label="' + esc(L(C.meta.name)) + '">' +
+          '<span class="brand-avatar"><img src="' + esc(PORTRAIT_SRC) + '" alt="' + esc(L(C.meta.name)) + '"></span>' +
+          '<span class="brand-text">' +
+            '<span class="brand-lat" lang="en">YOUSSEF WARD</span>' +
+            '<span class="brand-sub">' + esc(L(C.meta.title)) + '</span>' +
+          '</span>' +
+        '</a>' +
+        '<nav class="nav" id="nav" aria-label="Main">' +
+          ['work', 'reel', 'about', 'contact'].map(function (k) {
+            return '<a href="#' + k + '" data-nav="' + k + '">' + tx.nav[k] + '</a>';
+          }).join('') +
+        '</nav>' +
+        '<div class="header-actions">' +
+          '<button class="sfx-toggle' + (sfxEnabled ? '' : ' is-muted') + '" type="button" id="sfx-toggle">' +
+            '<span class="sfx-dot"></span><span id="sfx-label">' + (sfxEnabled ? tx.sfxOn : tx.sfxMute) + '</span>' +
+          '</button>' +
+          '<button class="lang-toggle" type="button" id="lang-toggle" aria-label="' + esc(tx.langLabel) + '">' +
+            '<span>' + tx.langBtn + '</span>' +
+          '</button>' +
+          '<a class="avail-pill" href="#contact">' + esc(tx.avail) + '</a>' +
+          '<button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="' + tx.menu + '"><span>☰</span></button>' +
+        '</div>' +
+      '</div>';
+
+    document.getElementById('footer').innerHTML =
+      '<div class="wrap">' +
+        '<div><strong>Youssef Ward</strong> · ' + esc(L(C.meta.location)) + '</div>' +
+        '<div>© ' + new Date().getFullYear() + ' ' + esc(L(C.meta.name)) + '. ' + tx.allWork + '.</div>' +
+      '</div>';
+
+    // Event listeners
+    document.getElementById('lang-toggle').onclick = function () {
+      playTick('pop');
+      lang = lang === 'ar' ? 'en' : 'ar';
+      localStorage.setItem('yw_lang', lang);
+      renderShell();
+      route();
+    };
+
+    var sfxBtn = document.getElementById('sfx-toggle');
+    if (sfxBtn) {
+      sfxBtn.onclick = function () {
+        sfxEnabled = !sfxEnabled;
+        if (sfxEnabled) playTick('shutter');
+        var lbl = document.getElementById('sfx-label');
+        if (lbl) lbl.textContent = sfxEnabled ? tx.sfxOn : tx.sfxMute;
+        sfxBtn.classList.toggle('is-muted', !sfxEnabled);
+      };
+    }
+
+    var menuBtn = document.getElementById('menu-btn');
+    var nav = document.getElementById('nav');
+    if (menuBtn && nav) {
+      menuBtn.onclick = function () {
+        var open = nav.classList.toggle('is-open');
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.onclick = function () { nav.classList.remove('is-open'); };
+      });
+    }
+  }
+
+  /* ---------------- Hero Rotation ---------------- */
+  function startHero() {
+    stopHero();
+    var stills = document.querySelectorAll('.hero-frame .still');
+    var dots = document.querySelectorAll('.hero-dot');
+    if (!stills.length) return;
+
+    heroTimer = setInterval(function () {
+      stills[heroIndex].classList.remove('is-active');
+      if (dots[heroIndex]) dots[heroIndex].classList.remove('is-active');
+      heroIndex = (heroIndex + 1) % stills.length;
+      stills[heroIndex].classList.add('is-active');
+      if (dots[heroIndex]) dots[heroIndex].classList.add('is-active');
+    }, 4500);
+  }
+
+  function stopHero() {
+    if (heroTimer) { clearInterval(heroTimer); heroTimer = null; }
+  }
+
+  /* ---------------- Render Home ---------------- */
+  function renderHome() {
+    var tx = t();
+    setAmbient(filter.d === 'all' ? 'filmmaking' : filter.d);
+
+    var html =
+      '<div class="wrap">' +
+        '<!-- Hero Section -->' +
+        '<section class="hero" id="home">' +
+          '<div class="hero-status-bar">' +
+            '<span>' + esc(L(C.meta.concept)) + '</span>' +
+            '<span style="font-family:var(--f-mono)">CAIRO / EGYPT · 30.0444° N, 31.2357° E</span>' +
+          '</div>' +
+          '<div class="hero-frame" id="hero-frame">' +
+            HERO_FRAMES.map(function (src, i) {
+              return '<img class="still' + (i === 0 ? ' is-active' : '') + '" src="' + esc(src) + '" alt="Hero frame ' + (i + 1) + '" loading="eager">';
+            }).join('') +
+            '<div class="hero-scrim"></div>' +
+            '<div class="hero-meta">' +
+              '<div>' +
+                '<h1 class="hero-name">' + esc(L(C.meta.name)) + '</h1>' +
+                '<p style="margin:6px 0 0 0;font-size:var(--t-sm);color:var(--paper-2)">' + esc(L(C.meta.title)) + '</p>' +
+              '</div>' +
+              '<div class="hero-controls">' +
+                '<div class="hero-dots">' +
+                  HERO_FRAMES.map(function (_, i) {
+                    return '<span class="hero-dot' + (i === 0 ? ' is-active' : '') + '"></span>';
+                  }).join('') +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+
+          '<!-- Interactive Discipline Selector in Hero -->' +
+          '<div class="hero-discipline-pills">' +
+            C.disciplines.map(function (d) {
+              var count = C.projects.filter(function (p) { return p.discipline === d.id; }).length;
+              return '<button class="hero-pill' + (filter.d === d.id ? ' is-active' : '') + '" type="button" data-hero-d="' + d.id + '">' +
+                '<strong>' + esc(L(d.title)) + '</strong>' +
+                '<small>' + esc(L(d.subtitle)) + ' (' + count + ')</small>' +
+              '</button>';
+            }).join('') +
+          '</div>' +
+        '</section>' +
+
+        '<!-- Works Section -->' +
+        '<section class="work-section" id="work" style="padding-top:40px">' +
+          '<div class="filters-bar" id="filters-bar"></div>' +
+          '<div class="grid" id="grid"></div>' +
+        '</section>' +
+
+        '<!-- Showreel Section -->' +
+        '<section class="reel-section" id="reel">' +
+          '<div class="section-hdr">' +
+            '<h2>' + esc(tx.reelTitle) + '</h2>' +
+            '<p>' + esc(tx.reelSub) + '</p>' +
+          '</div>' +
+          '<div class="reel-card">' +
+            '<img src="' + esc(REEL_POSTER) + '" alt="' + esc(tx.reelTitle) + '" loading="lazy">' +
+            '<button class="reel-play-btn" type="button" id="reel-play" aria-label="' + esc(tx.play) + '">' + ICON.play + '</button>' +
+          '</div>' +
+        '</section>' +
+
+        '<!-- About Section -->' +
+        '<section class="about-section" id="about">' +
+          '<div class="about-split">' +
+            '<div class="about-image">' +
+              '<img src="' + esc(ABOUT_IMAGE) + '" alt="' + esc(L(C.meta.name)) + '" loading="lazy">' +
+            '</div>' +
+            '<div class="about-text">' +
+              '<h2>' + esc(tx.aboutTitle) + '</h2>' +
+              '<p>' + esc(L(C.bio)) + '</p>' +
+              '<div class="about-links">' +
+                (C.cv ? '<a class="about-link" href="' + esc(C.cv) + '" target="_blank" rel="noopener">📄 ' + tx.cv + '</a>' : '') +
+                (C.portfolio ? '<a class="about-link" href="' + esc(C.portfolio) + '" target="_blank" rel="noopener">📁 ' + tx.pdf + '</a>' : '') +
+                (C.vimeo ? '<a class="about-link" href="' + esc(C.vimeo) + '" target="_blank" rel="noopener">🎬 Vimeo</a>' : '') +
+                (C.instagram ? '<a class="about-link" href="' + esc(C.instagram) + '" target="_blank" rel="noopener">📷 Instagram</a>' : '') +
+                (C.linkedin ? '<a class="about-link" href="' + esc(C.linkedin) + '" target="_blank" rel="noopener">💼 LinkedIn</a>' : '') +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</section>' +
+
+        '<!-- Contact Section -->' +
+        '<section class="contact-section" id="contact">' +
+          '<div class="contact-grid">' +
+            '<div>' +
+              '<h2 style="font-family:var(--f-display);font-size:var(--t-2xl);margin:0 0 12px 0">' + esc(tx.contactTitle) + '</h2>' +
+              '<p style="color:var(--paper-2);margin:0 0 24px 0;line-height:1.7">' + esc(tx.contactLead) + '</p>' +
+              '<p style="font-family:var(--f-mono);font-size:var(--t-md);color:var(--tungsten);margin:0 0 16px 0">' + esc(C.email) + '</p>' +
+              '<p style="font-family:var(--f-mono);font-size:var(--t-sm);color:var(--mute);margin:0 0 24px 0">' + esc(C.phone) + '</p>' +
+              '<button class="btn btn-solid" type="button" id="copy-email-btn">' + tx.copy + '</button>' +
+            '</div>' +
+            '<form class="brief-card" id="brief-form">' +
+              '<div class="brief-row">' +
+                '<input class="brief-input" type="text" name="name" placeholder="' + (lang === 'ar' ? 'الاسم الكريم' : 'Your Name') + '" required>' +
+                '<input class="brief-input" type="email" name="email" placeholder="' + (lang === 'ar' ? 'البريد الإلكتروني' : 'Email Address') + '" required>' +
+              '</div>' +
+              '<div class="brief-row">' +
+                '<input class="brief-input" type="text" name="project" placeholder="' + (lang === 'ar' ? 'نوع المشروع (فيلم / فوتوغرافيا / هوية)' : 'Project Scope') + '">' +
+                '<input class="brief-input" type="text" name="timeline" placeholder="' + (lang === 'ar' ? 'الموعد المستهدف' : 'Timeline') + '">' +
+              '</div>' +
+              '<textarea class="brief-input" name="message" placeholder="' + (lang === 'ar' ? 'نبذة عن المشروع والمتطلبات البصرية...' : 'Tell me about the project...') + '" required></textarea>' +
+              '<button class="btn btn-solid" type="submit">' + tx.sendBrief + '</button>' +
+            '</form>' +
+          '</div>' +
+        '</section>' +
+      '</div>';
+
+    document.getElementById('main').innerHTML = html;
+
+    renderFilters();
+    renderGrid();
+    startHero();
+
+    // Hero discipline pill click
+    document.querySelectorAll('[data-hero-d]').forEach(function (btn) {
+      btn.onclick = function () {
+        playTick('pop');
+        var d = btn.dataset.heroD;
+        filter.d = (filter.d === d) ? 'all' : d;
+        filter.s = 'all';
+        renderFilters();
+        renderGrid();
+        // Update active hero pills
+        document.querySelectorAll('[data-hero-d]').forEach(function (b) {
+          b.classList.toggle('is-active', b.dataset.heroD === filter.d);
+        });
+        // Scroll smoothly to work
+        var workEl = document.getElementById('work');
+        if (workEl) workEl.scrollIntoView({ behavior: 'smooth' });
+      };
+    });
+
+    // Reel play
+    var reelBtn = document.getElementById('reel-play');
+    if (reelBtn) {
+      reelBtn.onclick = function () {
+        playTick('shutter');
+        openVideo(C.vimeo);
+      };
+    }
+
+    // Email copy
+    var copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn) {
+      copyBtn.onclick = function () {
+        playTick('pop');
+        navigator.clipboard.writeText(C.email).then(function () {
+          showToast(tx.copied);
+        });
+      };
+    }
+
+    // Brief form submit
+    var briefForm = document.getElementById('brief-form');
+    if (briefForm) {
+      briefForm.onsubmit = function (e) {
         e.preventDefault();
-        navigateTo(navEl.dataset.nav);
-        return;
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        const el = toElement(e.target);
-        if (!el) return;
-        const card = el.closest('.project-card[data-project]');
-        if (card && document.activeElement === card) {
-          e.preventDefault();
-          navigateTo(`project/${card.dataset.project}`);
-          return;
-        }
-        const navEl = el.closest('[data-nav]');
-        if (navEl && document.activeElement === navEl) {
-          e.preventDefault();
-          navigateTo(navEl.dataset.nav);
-          return;
-        }
-      }
-    });
-  }
-
-  function attachNavClicks(container = document) {
-    // Handled globally by initDelegatedEvents to prevent duplicate listeners
-  }
-
-  function attachProjectCardEvents(container = document) {
-    // Handled globally by initDelegatedEvents to prevent duplicate listeners
-  }
-
-  /* ── LIGHTBOX (EXPANDED STILLS) ─────────────────────────── */
-  let lastLightboxTrigger = null;
-
-  function trapDialogFocus(dialog, e) {
-    if (e.key !== 'Tab') return;
-    const focusable = dialog.querySelectorAll('button:not([disabled]), [tabindex="0"], a[href], video, iframe');
-    if (!focusable.length) return;
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-
-    if (e.shiftKey) {
-      if (document.activeElement === first || document.activeElement === dialog) {
-        e.preventDefault();
-        last.focus();
-      }
-    } else {
-      if (document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+        playTick('shutter');
+        briefForm.reset();
+        showToast(tx.briefSent);
+      };
     }
   }
 
-  function openLightbox(items, startIndex = 0) {
-    const lb = $('#lightbox');
-    if (!lb || !items || !items.length) return;
-    lastLightboxTrigger = document.activeElement;
-    State.lightbox.items = items;
-    State.lightbox.index = startIndex;
-    updateLightboxSlide();
-    lb.showModal();
-    document.body.style.overflow = 'hidden';
-    lb.querySelector('.lightbox-close')?.focus();
-  }
+  /* ---------------- Filters ---------------- */
+  function renderFilters() {
+    var tx = t(), el = document.getElementById('filters-bar');
+    if (!el) return;
 
-  function closeLightbox() {
-    const lb = $('#lightbox');
-    if (!lb) return;
-    try { lb.close(); } catch (e) {}
-    document.body.style.overflow = '';
-    if (lastLightboxTrigger && typeof lastLightboxTrigger.focus === 'function') {
-      lastLightboxTrigger.focus();
-      lastLightboxTrigger = null;
-    }
-  }
+    var top = [{ id: 'all', label: tx.all, n: C.projects.length }].concat(C.disciplines.map(function (d) {
+      return {
+        id: d.id,
+        label: tx.short[d.id] || L(d.title),
+        n: C.projects.filter(function (p) { return p.discipline === d.id; }).length
+      };
+    }));
 
-  function updateLightboxSlide() {
-    const lb = $('#lightbox');
-    const { items, index } = State.lightbox;
-    const item = items[index];
-    if (!item || !lb) return;
+    var html =
+      '<div class="chips-wrap">' +
+        '<div class="chips" role="group" aria-label="Discipline">' +
+          top.map(function (c) {
+            return '<button class="chip' + (filter.d === c.id ? ' is-active' : '') + '" type="button" data-d="' + c.id + '" aria-pressed="' + (filter.d === c.id) + '">' +
+              esc(c.label) + ' <span class="num">' + c.n + '</span>' +
+            '</button>';
+          }).join('') +
+        '</div>';
 
-    const img = lb.querySelector('img');
-    const caption = lb.querySelector('figcaption');
-    const counter = lb.querySelector('.lightbox-counter');
-
-    if (img) { img.src = item.src; img.alt = item.caption || ''; }
-    if (caption) caption.textContent = item.caption || '';
-    if (counter) counter.textContent = `${index + 1} / ${items.length}`;
-  }
-
-  function initLightbox() {
-    const lb = $('#lightbox');
-    if (!lb) return;
-
-    lb.addEventListener('close', () => {
-      document.body.style.overflow = '';
-      if (lastLightboxTrigger && typeof lastLightboxTrigger.focus === 'function') {
-        lastLightboxTrigger.focus();
-        lastLightboxTrigger = null;
-      }
-    });
-
-    lb.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
-    lb.querySelector('.lightbox-prev')?.addEventListener('click', () => {
-      const { items, index } = State.lightbox;
-      State.lightbox.index = (index - 1 + items.length) % items.length;
-      updateLightboxSlide();
-    });
-    lb.querySelector('.lightbox-next')?.addEventListener('click', () => {
-      const { items, index } = State.lightbox;
-      State.lightbox.index = (index + 1) % items.length;
-      updateLightboxSlide();
-    });
-
-    lb.addEventListener('click', (e) => {
-      if (e.target === lb) closeLightbox();
-    });
-
-    lb.addEventListener('keydown', (e) => {
-      trapDialogFocus(lb, e);
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (!lb.open) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-        const dir = (State.lang === 'ar' ? (e.key === 'ArrowLeft' ? 1 : -1) : (e.key === 'ArrowRight' ? 1 : -1));
-        const { items, index } = State.lightbox;
-        State.lightbox.index = (index + dir + items.length) % items.length;
-        updateLightboxSlide();
-      }
-    });
-
-    // Delegated click for lightbox triggers
-    document.addEventListener('click', (e) => {
-      const el = toElement(e.target);
-      const item = el ? el.closest('[data-lightbox-src]') : null;
-      if (!item) return;
-
-      const group = item.dataset.lightboxGroup;
-      const allItems = group ? $$(`[data-lightbox-group="${group}"]`) : [item];
-      const items = allItems.map(el => ({
-        src: el.dataset.lightboxSrc,
-        caption: el.dataset.lightboxCaption || ''
-      }));
-      const idx = allItems.indexOf(item);
-      openLightbox(items, Math.max(0, idx));
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        const el = toElement(e.target);
-        const item = el ? el.closest('[data-lightbox-src]') : null;
-        if (item && document.activeElement === item) {
-          e.preventDefault();
-          item.click();
-        }
-      }
-    });
-  }
-
-  /* ── VIDEO MODAL (VIMEO EMBED & NATIVE HTML5 CINEMA PLAYER) ── */
-  let lastVideoTrigger = null;
-
-  function openVideoModal(videoUrl) {
-    const modal = $('#video-modal');
-    const iframe = $('#video-modal-iframe');
-    const player = $('#video-modal-player');
-    if (!modal) return;
-    lastVideoTrigger = document.activeElement;
-
-    const isDirectVideo = videoUrl.endsWith('.mp4') || videoUrl.endsWith('.webm') || videoUrl.includes('assets/videos/');
-
-    if (isDirectVideo) {
-      if (iframe) {
-        iframe.src = '';
-        iframe.style.display = 'none';
-      }
-      if (player) {
-        player.src = videoUrl;
-        player.style.display = 'block';
-        player.play().catch(() => {});
-      }
-    } else {
-      if (player) {
-        try { player.pause(); } catch (e) {}
-        player.src = '';
-        player.style.display = 'none';
-      }
-      if (iframe) {
-        let src = videoUrl;
-        if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
-          const match = src.match(/vimeo\.com\/(\d+)/);
-          if (match) {
-            src = `https://player.vimeo.com/video/${match[1]}?autoplay=1&color=bc171b&title=0&byline=0&portrait=0`;
-          }
-        }
-        iframe.src = src;
-        iframe.style.display = 'block';
+    var d = discipline(filter.d);
+    if (d && d.categories) {
+      var subs = d.categories.filter(function (c) {
+        return c.id === 'all' || C.projects.some(function (p) { return p.discipline === d.id && p.subdiscipline === c.id; });
+      });
+      if (subs.length > 1) {
+        html +=
+          '<div class="chips chips-sub" role="group" aria-label="' + esc(L(d.title)) + '">' +
+            subs.map(function (c) {
+              var label = c.id === 'all' ? tx.all : L(c.name);
+              return '<button class="chip' + (filter.s === c.id ? ' is-active' : '') + '" type="button" data-s="' + c.id + '" aria-pressed="' + (filter.s === c.id) + '">' +
+                esc(label) +
+              '</button>';
+            }).join('') +
+          '</div>';
       }
     }
 
-    modal.showModal();
-    document.body.style.overflow = 'hidden';
-    modal.querySelector('#video-modal-close')?.focus();
+    html += '</div>';
+
+    // View mode switch buttons
+    html +=
+      '<div class="view-switch" role="group" aria-label="View mode">' +
+        '<button class="view-btn' + (viewMode === 'masonry' ? ' is-active' : '') + '" type="button" id="vm-masonry">' + ICON.grid + ' ' + esc(tx.viewGrid) + '</button>' +
+        '<button class="view-btn' + (viewMode === 'filmstrip' ? ' is-active' : '') + '" type="button" id="vm-filmstrip">' + ICON.filmstrip + ' ' + esc(tx.viewFilmstrip) + '</button>' +
+      '</div>';
+
+    el.innerHTML = html;
+
+    // Filter events
+    el.querySelectorAll('[data-d]').forEach(function (b) {
+      b.onclick = function () {
+        playTick('pop');
+        filter.d = b.dataset.d;
+        filter.s = 'all';
+        setAmbient(filter.d === 'all' ? 'filmmaking' : filter.d);
+        renderFilters();
+        renderGrid();
+      };
+    });
+
+    el.querySelectorAll('[data-s]').forEach(function (b) {
+      b.onclick = function () {
+        playTick('pop');
+        filter.s = b.dataset.s;
+        renderFilters();
+        renderGrid();
+      };
+    });
+
+    var bMasonry = document.getElementById('vm-masonry');
+    var bFilmstrip = document.getElementById('vm-filmstrip');
+    if (bMasonry) {
+      bMasonry.onclick = function () {
+        playTick('pop');
+        viewMode = 'masonry';
+        renderFilters();
+        renderGrid();
+      };
+    }
+    if (bFilmstrip) {
+      bFilmstrip.onclick = function () {
+        playTick('pop');
+        viewMode = 'filmstrip';
+        renderFilters();
+        renderGrid();
+      };
+    }
   }
 
-  function closeVideoModal() {
-    const modal = $('#video-modal');
-    const iframe = $('#video-modal-iframe');
-    const player = $('#video-modal-player');
-    if (!modal) return;
-    try { modal.close(); } catch (e) {}
-    if (iframe) {
-      iframe.src = '';
-      iframe.style.display = 'none';
-    }
-    if (player) {
-      try { player.pause(); } catch (e) {}
-      player.src = '';
-      player.style.display = 'none';
-    }
-    document.body.style.overflow = '';
-    if (lastVideoTrigger && typeof lastVideoTrigger.focus === 'function') {
-      lastVideoTrigger.focus();
-      lastVideoTrigger = null;
-    }
-  }
+  /* ---------------- Grid Rendering ---------------- */
+  function renderGrid() {
+    var tx = t(), el = document.getElementById('grid');
+    if (!el) return;
 
-  function initVideoModal() {
-    const modal = $('#video-modal');
-    if (!modal) return;
-
-    modal.addEventListener('close', () => {
-      closeVideoModal();
+    var list = C.projects.filter(function (p) {
+      if (filter.d !== 'all' && p.discipline !== filter.d) return false;
+      if (filter.s !== 'all' && p.subdiscipline !== filter.s) return false;
+      return true;
     });
 
-    $('#video-modal-close')?.addEventListener('click', closeVideoModal);
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeVideoModal();
-    });
-
-    modal.addEventListener('keydown', (e) => {
-      trapDialogFocus(modal, e);
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.hasAttribute('open')) {
-        closeVideoModal();
-      }
-    });
-
-    document.addEventListener('click', (e) => {
-      const el = toElement(e.target);
-      const btn = el ? el.closest('[data-video], .hero-film-btn, .case-study-play-btn') : null;
-      if (btn) {
-        e.preventDefault();
-        const url = btn.dataset.video || 'https://player.vimeo.com/video/1239369594?autoplay=1&color=bc171b&title=0&byline=0&portrait=0';
-        openVideoModal(url);
-      }
-    });
-  }
-
-  /* ── INITIALIZATION ─────────────────────────────────────── */
-  function init() {
-    if (!window.CONTENT) {
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init, { once: true });
-        return;
-      }
-      console.warn('Youssef Ward Portfolio: window.CONTENT not yet available, deferring init.');
-      window.addEventListener('load', () => {
-        if (window.CONTENT && !document.querySelector('#header .nav')) {
-          init();
-        }
-      }, { once: true });
+    if (!list.length) {
+      el.className = 'grid';
+      el.innerHTML = '<p class="empty" style="grid-column:1/-1;text-align:center;padding:48px 0;color:var(--mute)">' + esc(tx.emptyFilter) + '</p>';
       return;
     }
 
-    // Language (Default English)
-    const savedLang = getSavedLang();
-    State.lang = savedLang;
-    const html = document.documentElement;
-    html.lang = savedLang;
-    html.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
-    updateModalLabels(savedLang);
+    if (viewMode === 'filmstrip') {
+      el.className = 'grid is-filmstrip';
+    } else {
+      el.className = 'grid';
+    }
 
-    // Theme
-    const savedTheme = getSavedTheme();
-    setTheme(savedTheme);
+    // Assign span patterns for masonry
+    var spans = [];
+    if (viewMode === 'masonry') {
+      var pat = ROW_PATTERN[0];
+      var pos = 0;
+      var curPat = ROW_PATTERN[0];
+      for (var i = 0; i < list.length; i++) {
+        var pIdx = Math.floor(i / 2) % ROW_PATTERN.length;
+        curPat = ROW_PATTERN[pIdx];
+        var span = curPat[i % curPat.length] || 6;
+        spans.push(span);
+      }
+    }
 
-    // Initial Route from Hash
-    State.route = parseHash();
+    el.innerHTML = list.map(function (p, i) {
+      var n = splitName(p);
+      var img = cover(p);
+      var spanStyle = (viewMode === 'masonry' && spans[i]) ? 'grid-column: span ' + spans[i] + ';' : '';
+      var d = discipline(p.discipline);
 
-    // Setup Systems
+      return '<article class="card" style="' + spanStyle + '">' +
+        '<a href="#p-' + esc(p.id) + '" aria-label="' + esc(n.title) + '" data-proj="' + esc(p.id) + '">' +
+          '<div class="card-media">' +
+            imgTag(img, { sizes: '(max-width: 820px) 100vw, 50vw' }) +
+            corners +
+          '</div>' +
+          '<div class="card-meta">' +
+            '<div>' +
+              '<h3 class="card-title">' + esc(n.title) + '</h3>' +
+              (n.sub ? '<p class="card-sub">' + esc(n.sub) + '</p>' : '') +
+            '</div>' +
+            '<span style="font-size:11px;font-family:var(--f-mono);color:var(--mute)">' + esc(d ? L(d.title) : '') + '</span>' +
+          '</div>' +
+        '</a>' +
+      '</article>';
+    }).join('');
+
+    // Click handler for cards
+    el.querySelectorAll('[data-proj]').forEach(function (a) {
+      a.onclick = function (e) {
+        playTick('shutter');
+      };
+    });
+  }
+
+  /* ---------------- Single Project View (#p-<id>) ---------------- */
+  function renderProject(p) {
+    stopHero();
+    var tx = t(), n = splitName(p), d = discipline(p.discipline), img = cover(p);
+    setAmbient(p.discipline);
+
+    // Navigation between projects within discipline or all
+    var discProjects = C.projects.filter(function (x) { return x.discipline === p.discipline; });
+    if (discProjects.length <= 1) discProjects = C.projects;
+    var idx = discProjects.indexOf(p);
+    var prev = discProjects[(idx - 1 + discProjects.length) % discProjects.length];
+    var next = discProjects[(idx + 1) % discProjects.length];
+
+    var rest = (p.images || []).filter(function (im) { return im.src !== img.src; });
+    var vid = p.video;
+
+    var html =
+      '<article class="project">' +
+        '<div class="wrap">' +
+          '<!-- Breadcrumb -->' +
+          '<nav class="crumbs" aria-label="Breadcrumb">' +
+            '<a href="#work">' + ICON.left + ' ' + esc(tx.allWork) + '</a>' +
+            '<span class="sep" aria-hidden="true"></span>' +
+            '<a href="#work" data-goto-d="' + esc(p.discipline) + '">' + esc(d ? L(d.title) : '') + '</a>' +
+            (p.subdisciplineName ? '<span class="sep" aria-hidden="true"></span><span>' + esc(L(p.subdisciplineName)) + '</span>' : '') +
+          '</nav>' +
+
+          '<h1 class="project-title">' + esc(n.title) + '</h1>' +
+          (n.sub ? '<p class="project-sub">' + esc(n.sub) + '</p>' : '') +
+
+          '<figure class="project-cover">' +
+            '<button type="button" data-lb="0" aria-label="' + esc(L(img.alt)) + '" style="display:block;width:100%">' +
+              imgTag(img, { eager: true }) +
+            '</button>' +
+            corners +
+          '</figure>' +
+
+          '<div class="project-body">' +
+            '<dl class="spec">' +
+              specRow(tx.spec.year, esc(p.year)) +
+              specRow(tx.spec.role, esc(L(p.role))) +
+              specRow(tx.spec.client, esc(p.client)) +
+              (p.agency && p.agency !== p.client ? specRow(tx.spec.production, esc(p.agency)) : '') +
+              (p.deliverables && p.deliverables.length ? specRow(tx.spec.deliverables, '<ul>' + p.deliverables.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>') : '') +
+            '</dl>' +
+            '<div>' +
+              '<p class="lead">' + esc(L(p.description)) + '</p>' +
+              (vid ? '<div class="btn-row"><button class="btn btn-solid" type="button" id="proj-play-video">' + ICON.play + ' ' + esc(p.videoLabel ? L(p.videoLabel) : tx.watch) + '</button></div>' : '') +
+              (p.thinking ? '<div class="approach">' + ['challenge', 'decisions', 'outcome'].map(function (k) {
+                return p.thinking[k] ? '<div class="approach-item"><h3>' + esc(tx.approach[k]) + '</h3><p>' + esc(L(p.thinking[k])) + '</p></div>' : '';
+              }).join('') + '</div>' : '') +
+            '</div>' +
+          '</div>' +
+
+          '<!-- Gallery of its own frames ONLY -->' +
+          (rest.length ?
+            '<div class="gallery">' +
+              rest.map(function (im, i) {
+                var isWide = !portrait(im) && i % 3 === 0;
+                var ratio = im.width && im.height ? (im.width + ' / ' + im.height) : (isWide ? '16 / 9' : '4 / 3');
+                return '<figure class="' + (isWide ? 'wide' : '') + '" style="aspect-ratio:' + ratio + '">' +
+                  '<button type="button" data-lb="' + (i + 1) + '" aria-label="' + esc(L(im.alt)) + '">' +
+                    imgTag(im) +
+                  '</button>' +
+                  corners +
+                '</figure>';
+              }).join('') +
+            '</div>' : '') +
+
+          '<!-- Prev / Next Project Pager -->' +
+          '<nav class="pager" aria-label="Project pager">' +
+            (prev ? '<a class="prev" href="#p-' + esc(prev.id) + '">' +
+              '<small>' + ICON.left + ' ' + esc(tx.prev) + '</small>' +
+              '<strong>' + esc(splitName(prev).title) + '</strong>' +
+            '</a>' : '<div></div>') +
+            (next ? '<a class="next" href="#p-' + esc(next.id) + '">' +
+              '<small>' + esc(tx.next) + ' ' + ICON.right + '</small>' +
+              '<strong>' + esc(splitName(next).title) + '</strong>' +
+            '</a>' : '<div></div>') +
+          '</nav>' +
+        '</div>' +
+      '</article>';
+
+    document.getElementById('main').innerHTML = html;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Breadcrumb discipline click
+    var discBreadcrumb = document.querySelector('[data-goto-d]');
+    if (discBreadcrumb) {
+      discBreadcrumb.onclick = function (e) {
+        e.preventDefault();
+        filter.d = discBreadcrumb.dataset.gotoD;
+        filter.s = 'all';
+        location.hash = '#work';
+      };
+    }
+
+    // Play video
+    var playBtn = document.getElementById('proj-play-video');
+    if (playBtn && vid) {
+      playBtn.onclick = function () {
+        playTick('shutter');
+        openVideo(vid);
+      };
+    }
+
+    // Lightbox triggers
+    currentLb.images = p.images || [];
+    document.querySelectorAll('[data-lb]').forEach(function (btn) {
+      btn.onclick = function () {
+        playTick('shutter');
+        var idx = parseInt(btn.dataset.lb, 10) || 0;
+        openLightbox(currentLb.images, idx);
+      };
+    });
+  }
+
+  /* ---------------- Lightbox ---------------- */
+  function openLightbox(images, index) {
+    if (!images || !images.length) return;
+    var dlg = document.getElementById('lightbox'), tx = t();
+    currentLb.images = images;
+    currentLb.index = index || 0;
+    lastFocus = document.activeElement;
+
+    function renderStage() {
+      var cur = currentLb.images[currentLb.index];
+      var num = (currentLb.index + 1) + ' / ' + currentLb.images.length;
+      dlg.innerHTML =
+        '<div class="lb-bar">' +
+          '<span>' + num + '</span>' +
+          '<button class="icon-btn" type="button" id="lb-close" aria-label="' + esc(tx.close) + '">' + ICON.close + '</button>' +
+        '</div>' +
+        '<div class="lb-stage">' +
+          (currentLb.images.length > 1 ? '<button class="lb-nav lb-prev" type="button" id="lb-prev" aria-label="' + esc(tx.prevImg) + '">' + ICON.left + '</button>' : '') +
+          '<img src="' + esc(cur.src) + '" alt="' + esc(L(cur.alt)) + '">' +
+          (currentLb.images.length > 1 ? '<button class="lb-nav lb-next" type="button" id="lb-next" aria-label="' + esc(tx.nextImg) + '">' + ICON.right + '</button>' : '') +
+        '</div>' +
+        '<p class="lb-cap">' + esc(L(cur.alt)) + '</p>';
+
+      var bClose = dlg.querySelector('#lb-close');
+      if (bClose) bClose.onclick = function () { dlg.close(); };
+
+      var bPrev = dlg.querySelector('#lb-prev');
+      if (bPrev) bPrev.onclick = function () {
+        playTick('pop');
+        currentLb.index = (currentLb.index - 1 + currentLb.images.length) % currentLb.images.length;
+        renderStage();
+      };
+
+      var bNext = dlg.querySelector('#lb-next');
+      if (bNext) bNext.onclick = function () {
+        playTick('pop');
+        currentLb.index = (currentLb.index + 1) % currentLb.images.length;
+        renderStage();
+      };
+    }
+
+    renderStage();
+    dlg.showModal();
+
+    dlg.onkeydown = function (e) {
+      if (e.key === 'ArrowLeft') {
+        playTick('pop');
+        currentLb.index = (currentLb.index - 1 + currentLb.images.length) % currentLb.images.length;
+        renderStage();
+      } else if (e.key === 'ArrowRight') {
+        playTick('pop');
+        currentLb.index = (currentLb.index + 1) % currentLb.images.length;
+        renderStage();
+      }
+    };
+
+    dlg.onclose = function () {
+      if (lastFocus) lastFocus.focus();
+    };
+  }
+
+  /* ---------------- Video Modal ---------------- */
+  function openVideo(url) {
+    if (!url) return;
+    var dlg = document.getElementById('video-modal'), tx = t(), id = vimeoId(url);
+    lastFocus = document.activeElement;
+
+    var player = id
+      ? '<iframe src="https://player.vimeo.com/video/' + id + '?autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vimeo"></iframe>'
+      : '<video src="' + esc(url) + '" controls autoplay playsinline></video>';
+
+    dlg.innerHTML =
+      '<div class="lb-bar">' +
+        '<span></span>' +
+        '<button class="icon-btn" type="button" id="vm-close" aria-label="' + esc(tx.close) + '">' + ICON.close + '</button>' +
+      '</div>' +
+      '<div class="vm-stage">' +
+        '<div class="vm-box">' + player + '</div>' +
+      '</div>' +
+      (id ? '<p class="vm-foot">' + tx.vimeoHint + ' <a href="' + esc(url) + '" target="_blank" rel="noopener">' + tx.openVimeo + '</a></p>' : '<p class="vm-foot"></p>');
+
+    dlg.querySelector('#vm-close').onclick = function () { dlg.close(); };
+    dlg.showModal();
+
+    dlg.onclose = function () {
+      dlg.innerHTML = '';
+      if (lastFocus) lastFocus.focus();
+    };
+  }
+
+  /* ---------------- Toast ---------------- */
+  function showToast(msg) {
+    var toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('is-on');
+    setTimeout(function () { toast.classList.remove('is-on'); }, 3200);
+  }
+
+  /* ---------------- Routing ---------------- */
+  function route() {
+    var hash = (location.hash || '#work').replace(/^#/, '');
+
+    if (hash.indexOf('p-') === 0) {
+      var projId = hash.slice(2);
+      var p = C.projects.find(function (x) { return x.id === projId; });
+      if (p) {
+        currentRoute = { type: 'project', id: projId };
+        renderProject(p);
+        updateNavState(null);
+        return;
+      }
+    }
+
+    currentRoute = { type: 'home', id: hash };
+    if (!document.getElementById('home')) {
+      renderHome();
+    }
+
+    var targetEl = document.getElementById(hash);
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth' });
+    }
+    updateNavState(hash);
+  }
+
+  function updateNavState(activeId) {
+    document.querySelectorAll('#nav a').forEach(function (a) {
+      var k = a.dataset.nav;
+      a.classList.toggle('is-active', k === activeId);
+    });
+  }
+
+  window.addEventListener('hashchange', route);
+
+  /* ---------------- Init ---------------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    renderShell();
+    initPreloader();
     initCursor();
-    initScroll();
-    initReveal();
-    initLightbox();
-    initVideoModal();
-    initDelegatedEvents();
-
-    // Render Nav
-    renderNav();
-
-    // Render Page
-    renderCurrentRoute();
-
-    // Listen for back/forward navigation
-    window.addEventListener('hashchange', handleHashChange);
-  }
-
-  /* ── DOM READY ──────────────────────────────────────────── */
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+    route();
+  });
 
 })();

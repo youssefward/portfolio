@@ -1,82 +1,51 @@
 <!doctype html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="Youssef Ward — Cinematographer & Graphic Designer. Camera, Lighting, Still Photography, and Brand Systems based in Cairo.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Youssef Ward | يوسف ورد — Cinematographer & Graphic Designer based in Cairo. Camera, light, still photography and brand systems.">
+  <meta property="og:title" content="Youssef Ward — Cinematographer & Graphic Designer">
+  <meta property="og:description" content="Camera, light, still photography and brand systems. Cairo, Egypt.">
   <title>Youssef Ward — Cinematographer & Graphic Designer</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23080808%22/><text x=%2250%22 y=%2266%22 font-family=%22system-ui,sans-serif%22 font-size=%2244%22 font-weight=%22700%22 fill=%22%23E8E4DC%22 text-anchor=%22middle%22>YW</text></svg>">
-
-  <!-- Google Fonts: Alexandria (100 to 900) -->
+  <link rel="icon" type="image/jpeg" href="upload/portrait.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap">
-
-  <!-- Portfolio Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3.2">
-
-  <!-- Scripts -->
-  <script defer src="content.js?v=3.2"></script>
-  <script defer src="motion.js?v=3.2"></script>
-  <script defer src="app.js?v=3.2"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css?v=4.2">
+  <script defer src="content.js?v=4.2"></script>
+  <script defer src="app.js?v=4.2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Site Cursor -->
-  <div id="cursor" aria-hidden="true"><div class="cursor-dot"></div></div>
+  <!-- Subtle Dynamic Ambient Backdrop -->
+  <div id="ambient-backdrop" aria-hidden="true"></div>
 
-  <!-- Navigation -->
-  <header id="header"></header>
+  <!-- Minimalist Editorial Cursor Pill -->
+  <div id="viewfinder-cursor" aria-hidden="true">
+    <span class="cursor-dot"></span>
+    <span id="cursor-label">VIEW</span>
+  </div>
 
-  <!-- Main Content -->
-  <main id="main"></main>
-
-  <!-- Footer -->
-  <footer id="footer"></footer>
-
-  <!-- Lightbox Modal -->
-  <dialog id="lightbox" aria-label="Image viewer">
-    <button class="lightbox-close" aria-label="Close">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
-    <button class="lightbox-prev" aria-label="Previous">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <polyline points="15 18 9 12 15 6"/>
-      </svg>
-    </button>
-    <figure>
-      <img alt="" loading="lazy">
-      <figcaption aria-live="polite"></figcaption>
-    </figure>
-    <button class="lightbox-next" aria-label="Next">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <polyline points="9 18 15 12 9 6"/>
-      </svg>
-    </button>
-    <div class="lightbox-counter" aria-live="polite"></div>
-  </dialog>
-
-  <!-- Video Modal -->
-  <dialog id="video-modal" class="video-modal" aria-label="Video player">
-    <button class="video-modal-close" id="video-modal-close" aria-label="Close">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
-    <div class="video-modal-wrapper">
-      <iframe id="video-modal-iframe" src="" allow="autoplay; fullscreen; picture-in-picture" title="Video player"></iframe>
-      <video id="video-modal-player" controls playsinline preload="auto" style="display: none;"></video>
+  <!-- Fast Cinema Shutter Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="shutter-blade shutter-top">
+      <span class="shutter-tag">YOUSSEF WARD — VISUAL ARCHIVE</span>
+      <div id="preloader-tc" class="num">00:00:00:00</div>
     </div>
-  </dialog>
+    <div class="shutter-blade shutter-bottom">
+      <span class="shutter-sub">CINEMATOGRAPHY · PHOTOGRAPHY · GRAPHIC DESIGN</span>
+      <button type="button" id="skip-preloader">SKIP // تخطي</button>
+    </div>
+  </div>
 
-  <noscript>
-    <p>Please enable JavaScript to explore the interactive portfolio / يرجى تفعيل JavaScript لاستكشاف البورتفوليو.</p>
-  </noscript>
+  <header class="site-header" id="header"></header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer" id="footer"></footer>
+  <dialog class="lb" id="lightbox" aria-label="Image viewer"></dialog>
+  <dialog class="vm" id="video-modal" aria-label="Video player"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p style="padding:24px">Please enable JavaScript to view the portfolio. يرجى تفعيل JavaScript لعرض البورتفوليو.</p></noscript>
 </body>
 </html>

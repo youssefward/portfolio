@@ -1,1457 +1,2610 @@
-/**
- * YOUSSEF WARD — PORTFOLIO CONTENT ENGINE
- * Multidisciplinary Designer & Art Director — With a Cinematic Eye
- * Structured by 3 Core Disciplines: Filmmaking & Cinema, Still Photography, Graphic Design & Key Art
+﻿/**
+ * YOUSSEF WARD - PORTFOLIO CONTENT ENGINE (v4.2 Frame Line Edition)
+ * Single Source of Truth: upload/ directory
  */
 
 window.CONTENT = {
-  meta: {
-    name: { en: 'Youssef Ward', ar: 'يوسف ورد' },
-    title: { en: 'Cinematographer & Graphic Designer', ar: 'مصور سينمائي وجرافيك ديزاينر' },
-    concept: { en: 'One Visual Mind. Multiple Expressions.', ar: 'عقل بصري واحد. تعبيرات متعددة.' },
-    location: { en: 'Cairo, Egypt', ar: 'القاهرة، مصر' },
-    availability: { en: 'Open to Opportunities & Strategic Collaborations', ar: 'متاح للتعاون الإبداعي والمشاريع الاستراتيجية' }
-  },
-
-  mark: 'assets/brand-mark.svg',
-  portrait: 'assets/images/portrait/youssef-ward.jpg',
-  heroRole: {
-    en: 'Cinematographer & Graphic Designer',
-    ar: 'مصور سينمائي وجرافيك ديزاينر'
-  },
-  heroTagline: {
-    en: 'One visual mind bridging cinematic camera craft and graphic design systems.',
-    ar: 'عقل بصري واحد يجمع بين الكادر السينمائي ومنظومات التصميم الجرافيكي.'
-  },
-  heroImage: 'assets/images/productions/ekhteyar-1.jpg',
-  heroImageAlt: {
-    en: 'Cinematography Still — El Ekhteyar Production, Directional Backlight & Silhouettes',
-    ar: 'لقطة سينمائية — مسلسل الاختيار، إضاءة خلفية وظلال درامية'
-  },
-  heroCraftImage: 'assets/images/productions/ekhteyar-3.jpg',
-  heroCraftAlt: {
-    en: 'On Set — Camera Crane & Rigging at Twilight, El Ekhteyar',
-    ar: 'في موقع التصوير — رافعة الكاميرا والإضاءة وقت الغسق، مسلسل الاختيار'
-  },
-  heroCraftBadge: {
-    en: 'ON SET · CAMERA CRAFT',
-    ar: 'موقع التصوير · حرفة الكاميرا'
-  },
-  heroCraftTitle: {
-    en: 'El Ekhteyar · Crane & Twilight Rigging',
-    ar: 'مسلسل الاختيار · كواليس ورافعة الكاميرا'
-  },
-  heroFrameBadge: {
-    en: 'CINEMATOGRAPHY STILL · EL EKHTEYAR',
-    ar: 'لقطة سينمائية · مسلسل الاختيار'
-  },
-  email: 'youssef.ward88@gmail.com',
-  phone: '+20 1155729978',
-  cv: 'assets/youssef-ward-cv.pdf',
-  portfolio: 'assets/youssef-ward-portfolio.pdf',
-  linkedin: 'https://www.linkedin.com/in/yousef-ward-/',
-  instagram: 'https://www.instagram.com/youssefward_/',
-  behance: 'https://www.behance.net/youssef_Ward',
-  vimeo: 'https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci',
-
-  bio: {
-    en: 'I am a cinematographer and graphic designer with an academic foundation from the Faculty of Applied Arts, bridging camera work, lighting, and visual storytelling with graphic design disciplines. Guided by the principle that every visual decision is an intentional choice, my work spans on-set camera department participation, dramatic lighting, still photography, brand systems, and editorial typography. Drawing from hands-on experience across television drama sets and visual studies, I approach image-making with an acute awareness of composition, spatial structure, and cinematic atmosphere.',
-    ar: 'مصور سينمائي وجرافيك ديزاينر ذو خلفية أكاديمية من كلية الفنون التطبيقية، يجمع بين إدارة الكاميرا والضوء وبين منظومات التصميم الجرافيكي. ينطلق عملي من مبدأ أن كل قرار بصري هو خيار واعٍ ومقصود، ويمتد عبر العمل الميداني في قسم الكاميرا، وتوزيع الإضاءة الدرامية، والتصوير الفوتوغرافي، وبناء الهويات البصرية وهندسة التيبوغرافي. واستناداً إلى خبرة عملية في مواقع تصوير الأعمال الدرامية والتلفزيونية والتجارب المستقلة، أتعامل مع بناء الصورة بفهم عميق للتكوين والضوء والأجواء السينمائية.'
-  },
-
-  disciplines: [
-    {
-      id: 'filmmaking',
-      number: '01',
-      title: { en: 'Filmmaking & Cinema', ar: 'صناعة الأفلام والسينما' },
-      subtitle: { en: 'Camera Department · Drama Sets · Visual Studies', ar: 'قسم الكاميرا · كواليس الدراما · تجارب سينمائية' },
-      description: {
-        en: 'Camera department experience and on-set visual documentation across television drama productions and independent cinematic studies, focused on camera movement, low-key lighting, and scene composition.',
-        ar: 'مشاركة ميدانية في قسم الكاميرا وتوثيق بصري لكواليس كبرى الأعمال الدرامية والتلفزيونية وتجارب بصرية مستقلة، مع التركيز على حركة الكاميرا، توزيع الإضاءة المنخفضة، وبناء الكادر.'
-      },
-      categories: [
-        { id: 'all', name: { en: 'All Film Work', ar: 'جميع أعمال السينما' } },
-        { id: 'commercial', name: { en: 'Commercials', ar: 'إعلانات تجارية' } },
-        { id: 'drama', name: { en: 'Drama & TV Series', ar: 'الدراما والمسلسلات' } },
-        { id: 'broadcast', name: { en: 'Television Shows', ar: 'الإنتاج والبرامج' } },
-        { id: 'visual-studies', name: { en: 'Graduation Film', ar: 'فيلم التخرج' } }
-      ]
-    },
-    {
-      id: 'photography',
-      number: '02',
-      title: { en: 'Still Photography', ar: 'التصوير الفوتوغرافي' },
-      subtitle: { en: 'Commercial · Fashion · Portraits · Street', ar: 'تجاري وأطعمة · أزياء · بورتريه · شوارع' },
-      description: {
-        en: 'Commercial food and beverage photography, editorial fashion, directional light studies in portraiture, and quiet atmospheric street observations across Cairo.',
-        ar: 'تصوير تجاري للأطعمة والمشروبات، تصوير الأزياء التحريري، دراسات الضوء الموجه في البورتريه، والتصوير التوثيقي لشوارع ومعمار القاهرة.'
-      },
-      categories: [
-        { id: 'all', name: { en: 'All Photography', ar: 'جميع أعمال التصوير' } },
-        { id: 'fashion', name: { en: 'Commercial & Fashion', ar: 'تجاري وأزياء' } },
-        { id: 'portrait', name: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' } },
-        { id: 'documentary', name: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' } }
-      ]
-    },
-    {
-      id: 'design',
-      number: '03',
-      title: { en: 'Graphic Design & Key Art', ar: 'التصميم الجرافيكي والبوستر' },
-      subtitle: { en: 'Brand Identity · Book Architecture · Key Art', ar: 'هويات مؤسسية · معمار الكتب · بوسترات' },
-      description: {
-        en: 'Visual identity systems, book cover typography, cultural packaging items, and promotional key art grounded in an Applied Arts design methodology.',
-        ar: 'بناء الهويات البصرية، هندسة وتيبوغرافي أغلفة الكتب، المقتنيات الثقافية، والبوسترات الترويجية بمرجعية أكاديمية من الفنون التطبيقية.'
-      },
-      categories: [
-        { id: 'all', name: { en: 'All Design', ar: 'جميع أعمال التصميم' } },
-        { id: 'identity', name: { en: 'Brand Identity', ar: 'هويات بصرية' } },
-        { id: 'editorial', name: { en: 'Book & Editorial', ar: 'أغلفة ومطبوعات' } },
-        { id: 'posters', name: { en: 'Key Art & Posters', ar: 'بوسترات ومواد دعائية' } }
-      ]
-    }
-  ],
-
-  projects: [
-    /* ════════════════════════════════════════════════════════════
-       1. FILMMAKING: DRAMA & TV SERIES
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'ekhteyar',
-      name: { en: 'El Ekhteyar — On-Set Filmography & Stills', ar: 'مسلسل الاختيار — توثيق ولقطات موقع التصوير' },
-      discipline: 'filmmaking',
-      subdiscipline: 'drama',
-      subdisciplineName: { en: 'Drama & TV Series', ar: 'الدراما والمسلسلات' },
-      agency: 'Synergy Productions',
-      client: 'Synergy Productions / UMS',
-      year: '2020 - 2021',
-      featured: true,
-      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
-      deliverables: ['On-Set Production Stills', 'Lighting Documentation', 'Live-Action Scene Tracking'],
-      description: {
-        en: 'On-set camera department participation and production stills for the historical drama series El Ekhteyar, documenting action sequences, low-key lighting setups, and field composition.',
-        ar: 'مشاركة ميدانية في قسم الكاميرا وتوثيق فوتوغرافي لكواليس وإطارات الملحمة الدرامية "الاختيار"، مع التركيز على اللقطات التكتيكية وتوزيع الإضاءة المنخفضة في مواقع التصوير.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Documenting high-intensity combat setups under dust, low-light night setups, and rapid scene transitions while respecting principal camera lines and on-set protocol.',
-          ar: 'التقاط إطارات متوازنة وسط مشاهد حية وتكتيكية متطلبة وسريعة، مع مراعاة خطوط حركة الكاميرا الرئيسية وتغيرات الإضاءة الليلية وغبار المعارك دون التأثير على سير التصوير.'
-        },
-        decisions: {
-          en: 'Used low-angle framing to convey visual gravity, balancing directional highlights against background dust to maintain clean silhouette separation.',
-          ar: 'اعتماد زوايا تصوير منخفضة لتعزيز هيبة الكادر، مع موازنة الإضاءات الجانبية والخلفية لفصل الأجسام بوضوح وسط بيئة مشبعة بالأتربة والدخان.'
-        },
-        outcome: {
-          en: 'A focused visual archive documenting tactical blocking, atmospheric lighting setups, and character focus across demanding production locations.',
-          ar: 'سلسلة صور وتوثيق بصري تركز على حركة وتوزيع الإضاءة المنخفضة، تكوين الكادرات الميدانية، والتقاط اللحظات التعبيرية للشخصيات في بيئات التصوير المتطلبة.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/productions/ekhteyar-1.jpg',
-          thumb: 'assets/images/productions/ekhteyar-1-thumb.jpg',
-          alt: 'El Ekhteyar — Military Set Still 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/ekhteyar-2.jpg',
-          thumb: 'assets/images/productions/ekhteyar-2-thumb.jpg',
-          alt: 'El Ekhteyar — On Set Tactical Frame 02',
-          width: 1920,
-          height: 1225
-        },
-        {
-          src: 'assets/images/productions/ekhteyar-3.jpg',
-          thumb: 'assets/images/productions/ekhteyar-3-thumb.jpg',
-          alt: 'El Ekhteyar — Night Operation Frame 03',
-          width: 1920,
-          height: 1133
-        },
-        {
-          src: 'assets/images/productions/ekhteyar-4.jpg',
-          thumb: 'assets/images/productions/ekhteyar-4-thumb.jpg',
-          alt: 'El Ekhteyar — Desert Field Operation Still 04',
-          width: 1920,
-          height: 1277
-        },
-        {
-          src: 'assets/images/productions/ekhteyar-5.jpg',
-          thumb: 'assets/images/productions/ekhteyar-5-thumb.jpg',
-          alt: 'El Ekhteyar — Tactical Setup & Vehicle Line 05',
-          width: 1920,
-          height: 1277
-        },
-        {
-          src: 'assets/images/productions/ekhteyar-6.jpg',
-          thumb: 'assets/images/productions/ekhteyar-6-thumb.jpg',
-          alt: 'El Ekhteyar — Night Operation Scene Tracking 06',
-          width: 1920,
-          height: 1277
-        }
-      ]
-    },
-
-    {
-      id: 'cairo-kabul',
-      name: { en: 'Cairo Kabul — Dramatic Set Lighting & Camera', ar: 'مسلسل القاهرة كابول — إضاءة وتكوين درامي' },
-      discipline: 'filmmaking',
-      subdiscipline: 'drama',
-      subdisciplineName: { en: 'Drama & TV Series', ar: 'الدراما والمسلسلات' },
-      agency: 'Synergy Drama Productions',
-      client: 'Synergy Drama',
-      year: '2021',
-      featured: true,
-      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
-      deliverables: ['Dramatic Scene Stills', 'Close-Up Framing', 'Low-Key Lighting Documentation'],
-      description: {
-        en: 'On-set camera department support and dramatic stills capturing intimate character confrontation and directional shadow falloff for the television series Cairo Kabul.',
-        ar: 'مشاركة في قسم الكاميرا وتوثيق الإطارات الدرامية لمسلسل "القاهرة كابول"، مع التركيز على تباين الظل والنور وزوايا اللقطات المقربة في المشاهد الحوارية.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Maintaining visual tension within enclosed dialogue rooms and confrontation spaces, requiring careful framing and controlled shadow depth.',
-          ar: 'خلق حالة من التوتر البصري داخل غرف حوار مغلقة ومواجهات محتدمة، ما تطلب دقة في تأطير الكادر والتحكم في عمق الظلال خلف الشخصيات.'
-        },
-        decisions: {
-          en: 'Focused on strong directional key lighting and deliberate static framing to direct viewer attention toward subtle facial expressions and eye lines.',
-          ar: 'التركيز على مصدر ضوء موجه بزوايا حادة مع تقليل إضاءة الملء لتعميق الظلال، والاعتماد على ثبات الكادر لإبراز التعبيرات الدقيقة للوجوه.'
-        },
-        outcome: {
-          en: 'High-contrast dramatic stills documenting dialogue scenes, directional light falloff, and intimate character framing.',
-          ar: 'إطارات فوتوغرافية تركز على تباين الظل والنور، وتوزيع الإضاءة الموجهة، وتوثيق تفاصيل التعبير في المشاهد الحوارية المقربة.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/productions/cairo-kabul-1.jpg',
-          thumb: 'assets/images/productions/cairo-kabul-1-thumb.jpg',
-          alt: 'Cairo Kabul — Dramatic Confrontation 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/cairo-kabul-2.jpg',
-          thumb: 'assets/images/productions/cairo-kabul-2-thumb.jpg',
-          alt: 'Cairo Kabul — Chiaroscuro Portrait 02',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/cairo-kabul-3.jpg',
-          thumb: 'assets/images/productions/cairo-kabul-3-thumb.jpg',
-          alt: 'Cairo Kabul — Atmosphere Still 03',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/cairo-kabul-4.jpg',
-          thumb: 'assets/images/productions/cairo-kabul-4-thumb.jpg',
-          alt: 'Cairo Kabul — Tense Dialogue Framing 04',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/cairo-kabul-5.jpg',
-          thumb: 'assets/images/productions/cairo-kabul-5-thumb.jpg',
-          alt: 'Cairo Kabul — Low-Key Shadow Depth 05',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/cairo-kabul-6.jpg',
-          thumb: 'assets/images/productions/cairo-kabul-6-thumb.jpg',
-          alt: 'Cairo Kabul — Character Focus Close-Up 06',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    {
-      id: 'hawadet',
-      name: { en: 'Hawadet El Champ-Elysees — Period Drama Stills', ar: 'مسلسل حواديت الشانزليزيه — دراما تاريخية وتوثيق موقع التصوير' },
-      discipline: 'filmmaking',
-      subdiscipline: 'drama',
-      subdisciplineName: { en: 'Drama & TV Series', ar: 'الدراما والمسلسلات' },
-      agency: 'Synergy Productions',
-      client: 'Synergy Productions / UMS',
-      year: '2019 - 2020',
-      featured: false,
-      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
-      deliverables: ['Period Drama Production Stills', '1950s Atmosphere Recreation', 'On-Set Camera Documentation'],
-      description: {
-        en: 'Camera department participation and production stills capturing the 1950s period aesthetic, vintage vehicle blocking, and classic studio lighting for the historical drama series Hawadet El Champ-Elysees.',
-        ar: 'مشاركة في قسم الكاميرا وتوثيق فوتوغرافي لأجواء حقبة الخمسينيات الكلاسيكية، وتوزيع الإضاءة الدافئة، وتكوينات مواقع التصوير لمسلسل "حواديت الشانزليزيه".'
-      },
-      thinking: {
-        challenge: {
-          en: 'Documenting intricate period costumes, vintage automobiles, and expansive historical sets while adhering to tight filming schedules and camera blocking.',
-          ar: 'توثيق تفاصيل الأزياء التاريخية والديكورات الكلاسيكية والسيارات القديمة وسط جداول تصوير مكثفة وحركة كاميرا مستمرة دون إعاقة مسارات التصوير الرئيسية.'
-        },
-        decisions: {
-          en: 'Used vintage-toned warm key lighting references and wide-angle compositional depth to preserve the nostalgic texture of 1950s Cairo.',
-          ar: 'التركيز على إبراز درجات الإضاءة الدافئة وتأطير المشاهد بزوايا تبرز عمق الديكور الكلاسيكي والملامح البصرية للقاهرة في منتصف القرن العشرين.'
-        },
-        outcome: {
-          en: 'A curated photographic collection capturing classic character wardrobe, atmospheric set design, and vintage drama production.',
-          ar: 'سلسلة لقطات فوتوغرافية توثق طابع العمل التاريخي، تفاصيل الديكور والإضاءة الكلاسيكية، ولحظات الأداء الدرامي في موقع التصوير.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/productions/hawadet-1.jpg',
-          thumb: 'assets/images/productions/hawadet-1-thumb.jpg',
-          alt: 'Hawadet El Champ-Elysees — 1950s Street & Vintage Cars 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/hawadet-2.jpg',
-          thumb: 'assets/images/productions/hawadet-2-thumb.jpg',
-          alt: 'Hawadet El Champ-Elysees — Classic Palace Interior Lighting 02',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/hawadet-3.jpg',
-          thumb: 'assets/images/productions/hawadet-3-thumb.jpg',
-          alt: 'Hawadet El Champ-Elysees — Period Drama Cast Still 03',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/hawadet-4.jpg',
-          thumb: 'assets/images/productions/hawadet-4-thumb.jpg',
-          alt: 'Hawadet El Champ-Elysees — Low-Key Evening Atmosphere 04',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       1. FILMMAKING: TELEVISION BROADCAST
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'sahranen',
-      name: { en: 'Sahranen TV Production — Celebrity Visuals', ar: 'برنامج سهرانين — تصوير نجوم الإنتاج التلفزيوني' },
-      discipline: 'filmmaking',
-      subdiscipline: 'broadcast',
-      subdisciplineName: { en: 'Television Shows', ar: 'الإنتاج والبرامج' },
-      agency: 'ON E / Egyptian Media Group',
-      client: 'ON E Broadcast Channel',
-      year: '2021 - 2022',
-      featured: true,
-      role: { en: 'Camera Department & Production', ar: 'قسم الكاميرا والإنتاج' },
-      deliverables: ['Stage Performance Coverage', 'Celebrity Key Stills', 'Studio Lighting Documentation'],
-      description: {
-        en: 'Studio visual documentation and celebrity portrait capture on the set of the Sahranen broadcast show featuring prominent figures from Arab cinema and music.',
-        ar: 'توثيق بصري وإضاءة استوديو لنجوم الفن والغناء في بلاطو برنامج "سهرانين" الترفيهي على قناة ON E.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Balancing bright multi-camera broadcast lighting with portrait-focused framing during live musical performances and seated interviews.',
-          ar: 'الموازنة بين الإضاءة العامة الساطعة المطلوبة للبث التلفزيوني متعدد الكاميرات، وبين التقاط كادرات بورتريه متزنة أثناء الفقرات الغنائية والحوارية.'
-        },
-        decisions: {
-          en: 'Framed subjects using rim lighting and soft directional fill to separate performers cleanly from the luminous stage backdrop.',
-          ar: 'استخدام إضاءات جانبية وخلفية لفصل الضيوف عن عمق المسرح، وضبط التكوين لإبراز حضور الفنانين وسط أضواء البلاطو.'
-        },
-        outcome: {
-          en: 'Studio production stills documenting celebrity guests, stage lighting, and musical performances on set.',
-          ar: 'توثيق فوتوغرافي لضيوف البرنامج، حركة الإضاءة المسرحية، والعروض الغنائية الحية داخل الاستوديو.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/productions/sahranen-1.jpg',
-          thumb: 'assets/images/productions/sahranen-1-thumb.jpg',
-          alt: 'Sahranen — Celebrity Live Still 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/sahranen-2.jpg',
-          thumb: 'assets/images/productions/sahranen-2-thumb.jpg',
-          alt: 'Sahranen — Stage Performance 02',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/sahranen-3.jpg',
-          thumb: 'assets/images/productions/sahranen-3-thumb.jpg',
-          alt: 'Sahranen — Host & Guest Dynamic 03',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/sahranen-4.jpg',
-          thumb: 'assets/images/productions/sahranen-4-thumb.jpg',
-          alt: 'Sahranen — Mohamed Ramadan Live On Stage 04',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/sahranen-5.jpg',
-          thumb: 'assets/images/productions/sahranen-5-thumb.jpg',
-          alt: 'Sahranen — Sherif Mounir Dialogue & Stage Light 05',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/productions/sahranen-6.jpg',
-          thumb: 'assets/images/productions/sahranen-6-thumb.jpg',
-          alt: 'Sahranen — Wael Jassar Musical Performance 06',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       1. FILMMAKING: COMMERCIALS & FOOD FILM
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'clove-commercial',
-      name: { en: 'Clove Restaurant — Cinematic Culinary Commercial', ar: 'مطعم Clove — إعلان سينمائي ترويجي' },
-      discipline: 'filmmaking',
-      subdiscipline: 'commercial',
-      subdisciplineName: { en: 'Commercial Film & Food', ar: 'إعلانات وتصوير طعام سينمائي' },
-      agency: 'Clove Restaurant & Lounge',
-      client: 'Clove Restaurant & Lounge',
-      year: '2021',
-      featured: true,
-      role: { en: 'Cinematography & Commercial Direction', ar: 'مدير تصوير وإخراج إعلاني' },
-      deliverables: ['Culinary Commercial Film (1080p)', 'High-Speed Searing & Flame Tracking', 'Slow-Motion Plating Choreography'],
-      video: 'assets/videos/clove-commercial.mp4',
-      videoLabel: { en: 'Watch Cinematic Commercial (1080p HD)', ar: 'مشاهدة الإعلان السينمائي (1080p HD)' },
-      description: {
-        en: 'A fast-paced, high-contrast culinary commercial crafted for Clove restaurant, capturing the rhythmic sizzle of dry-aged steaks on open flame, slow-motion pasta tossing, and meticulous chef plating.',
-        ar: 'إعلان سينمائي ترويجي سريع وعالي التباين لمطعم Clove، يرصد إيقاع طهي شرائح اللحم الفاخرة على اللهب المفتوح، تقليب الباستا بالحركة البطيئة، وفنون تقديم الأطباق الراقية بلمسات الشيف.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Balancing volatile kitchen action — open flame grills, intense sizzle steam, and rapid pan tossing — with precise cinematic framing and appetizing lighting in a live kitchen environment.',
-          ar: 'الموازنة بين ديناميكية حركة المطبخ السريعة — ألسنة اللهب على الشواية، بخار الطهي المتصاعد، وتقليب المقالي — مع الحفاظ على دقة الكادر السينمائي والتحكم في إضاءة تُبرز جاذبية الأطعمة.'
-        },
-        decisions: {
-          en: 'Shot at 24fps high-shutter and selective slow-motion angles using focused directional lighting to emphasize glowing embers, sauce reflections, and the crisp texture of seared meats against deep shadows.',
-          ar: 'التصوير بزوايا إضاءة جانبية مركزة لإبراز وهج الفحم ولهب الشواء، لمعان الصلصات، وتفاصيل تسوية اللحم الدقيقة في مواجهة خلفية مطبخ داكنة تعزز الإحساس بالفخامة والعمق.'
-        },
-        outcome: {
-          en: 'A complete 49-second promotional commercial highlighting the craftsmanship and culinary excellence of Clove restaurant for digital and social campaigns.',
-          ar: 'إعلان ترويجي متكامل مدته 49 ثانية يبرز حرفية الطهي وتفرد تجربة الطعام في مطعم Clove للاستخدام في الحملات الرقمية ومنصات التواصل الاجتماعي.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/filmmaking/clove-commercial-poster.jpg',
-          thumb: 'assets/images/filmmaking/clove-commercial-poster-thumb.jpg',
-          alt: 'Clove Commercial — Master Chef Plating & Final Gourmet Dish Presentation',
-          width: 1920,
-          height: 1080
-        },
-        {
-          src: 'assets/images/filmmaking/clove-film-2.jpg',
-          thumb: 'assets/images/filmmaking/clove-film-2-thumb.jpg',
-          alt: 'Clove Commercial — Live Open Flame Grill Sear & Rising Smoke',
-          width: 1920,
-          height: 1080
-        },
-        {
-          src: 'assets/images/filmmaking/clove-film-3.jpg',
-          thumb: 'assets/images/filmmaking/clove-film-3-thumb.jpg',
-          alt: 'Clove Commercial — Artisanal Spaghetti Sizzle in Stainless Steel Pan',
-          width: 1920,
-          height: 1080
-        },
-        {
-          src: 'assets/images/filmmaking/clove-film-4.jpg',
-          thumb: 'assets/images/filmmaking/clove-film-4-thumb.jpg',
-          alt: 'Clove Commercial — Delicate Plating with Yellow Cherry Tomatoes & Glaze',
-          width: 1920,
-          height: 1080
-        },
-        {
-          src: 'assets/images/filmmaking/clove-film-1.jpg',
-          thumb: 'assets/images/filmmaking/clove-film-1-thumb.jpg',
-          alt: 'Clove Commercial — Seasoning Prime Cut Ribeye on Prep Station',
-          width: 1920,
-          height: 1080
-        },
-        {
-          src: 'assets/images/filmmaking/clove-film-6.jpg',
-          thumb: 'assets/images/filmmaking/clove-film-6-thumb.jpg',
-          alt: 'Clove Commercial — In Love of Food Closing Title Card',
-          width: 1920,
-          height: 1080
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       1. FILMMAKING: CINEMATIC STUDIES
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'mawlawya',
-      name: { en: 'Mawlawya — Graduation Film & Visual Study', ar: 'المولوية — فيلم التخرج والدراسة البصرية' },
-      discipline: 'filmmaking',
-      subdiscipline: 'visual-studies',
-      subdisciplineName: { en: 'Graduation Film', ar: 'فيلم التخرج' },
-      agency: 'Faculty of Applied Arts',
-      client: 'Graduation Film',
-      year: '2024',
-      featured: true,
-      role: { en: 'Director of Photography & Visual Concept (Graduation Film)', ar: 'مدير التصوير والرؤية البصرية (فيلم التخرج)' },
-      deliverables: ['Continuous Motion Tracking', 'Kinetic Shutter Blur Study', 'Light Choreography Documentation'],
-      video: 'https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci',
-      vimeoId: '1239369594',
-      videoLabel: { en: 'Watch Full Graduation Film (Vimeo HD)', ar: 'مشاهدة فيلم التخرج كاملًا (Vimeo HD)' },
-      description: {
-        en: 'Graduation project from the Faculty of Applied Arts: an authored cinematic visual study exploring rotational movement, garment rhythm, and warm directional light during traditional Sufi Mawlawya ceremonies.',
-        ar: 'مشروع التخرج من كلية الفنون التطبيقية: دراسة بصرية سينمائية ترصد الحركة الدورانية، وتناغم الضوء مع ثنايا الرداء في طقوس المولوية التراثية، بالتركيز على مسارات الحركة والظل.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Translating continuous circular motion into two-dimensional cinema while maintaining visual clarity and respect for the ritual context.',
-          ar: 'ترجمة حركة الدوران الصوفي المستمرة إلى كادر سينمائي ثنائي الأبعاد، مع الحفاظ على وضوح التكوين ووقار الطقس الروحي.'
-        },
-        decisions: {
-          en: 'Employed intentional motion blur across rotating garments while holding the subject face in stable framing, using warm amber lighting pools set against dark surroundings.',
-          ar: 'توظيف انسيابية حركية ناعمة في ثنايا الرداء أثناء الدوران مع الحفاظ على ثبات ملامح الوجه، واستخدام إضاءة كهرمانية دافئة وسط خلفية داكنة.'
-        },
-        outcome: {
-          en: 'A visual study documenting the kinetic rhythm, costume motion, and warm directional lighting of the whirling ceremony.',
-          ar: 'دراسة بصرية توثق إيقاع الحركة الدورانية، وحركة الأقمشة، وتوزيع الإضاءة الدافئة أثناء طقوس الدوران الصوفي.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/mawlawya/mawlawya-1.jpg',
-          thumb: 'assets/images/mawlawya/mawlawya-1-thumb.jpg',
-          alt: 'Mawlawya — Spiritual Whirling 01',
-          width: 1920,
-          height: 1080
-        },
-        {
-          src: 'assets/images/mawlawya/mawlawya-2.jpg',
-          thumb: 'assets/images/mawlawya/mawlawya-2-thumb.jpg',
-          alt: 'Mawlawya — Motion & Light Study 02',
-          width: 1920,
-          height: 1080
-        },
-        {
-          src: 'assets/images/mawlawya/mawlawya-3.jpg',
-          thumb: 'assets/images/mawlawya/mawlawya-3-thumb.jpg',
-          alt: 'Mawlawya — Dervish Silhouette 03',
-          width: 1920,
-          height: 1080
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       2. PHOTOGRAPHY: FASHION & EDITORIAL
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'clove',
-      name: { en: 'Clove Restaurant — Culinary & Fine Dining', ar: 'مطعم Clove — تصوير الأطعمة وفنون الطهي' },
-      discipline: 'photography',
-      subdiscipline: 'fashion',
-      subdisciplineName: { en: 'Commercial & Culinary', ar: 'تصوير تجاري وأطعمة' },
-      agency: 'Clove Restaurant',
-      client: 'Clove Restaurant & Lounge',
-      year: '2023',
-      featured: true,
-      role: { en: 'Food & Beverage Photographer', ar: 'تصوير أطعمة ومشروبات' },
-      deliverables: ['Gourmet Plating Stills', 'Chef Technique Captures', 'Directional Food Lighting'],
-      video: 'assets/videos/clove-commercial.mp4',
-      videoLabel: { en: 'Watch Accompanying Commercial Film (1080p HD)', ar: 'مشاهدة الفيلم الإعلاني المصاحب (1080p HD)' },
-      description: {
-        en: 'High-contrast commercial food photography for Clove restaurant, capturing gourmet plating, fresh ingredients, and culinary craftsmanship under directional studio lighting.',
-        ar: 'تصوير أطعمة احترافي عالي التباين لمطعم Clove، يوثق فنون تقديم الأطباق الراقية، المكونات الطازجة، وتكنيك الشيف تحت إضاءة استوديو موجهة.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Capturing the rich textures, glazes, and steam of gourmet dishes under studio lights while maintaining appetizing color fidelity and sharp focus.',
-          ar: 'إبراز الملامس الشهية، لمعان الصلصات، وتناسق ألوان المكونات الطازجة تحت إضاءة الاستوديو مع الحفاظ على حرارة وجودة الطبق التقديمي.'
-        },
-        decisions: {
-          en: 'Used directional low-key key lighting with subtle bounce reflectors to accentuate sauce glazes, sear marks, and the organic textures of plated ingredients.',
-          ar: 'توظيف إضاءة جانبية موجهة مع عواكس ناعمة لتعميق الظلال وإبراز تفاصيل الشواء، لمعان الصلصات، وتدرجات الألوان الطبيعية للأطباق.'
-        },
-        outcome: {
-          en: 'A polished culinary photography series documenting gourmet steaks, pastas, and chef table preparations for Clove restaurant menu and promotional campaigns.',
-          ar: 'سلسلة فوتوغرافية راقية توثق أطباق اللحوم والباستا ولمسات الشيف التقديمية، مخصصة لقائمة طعام وحملات مطعم Clove الترويجية.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/photography/clove-master-1.jpg',
-          thumb: 'assets/images/photography/clove-master-1-thumb.jpg',
-          alt: 'Clove Culinary — Gourmet Plated Presentation 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/clove-master-2.jpg',
-          thumb: 'assets/images/photography/clove-master-2-thumb.jpg',
-          alt: 'Clove Culinary — Fresh Fine Dining Artistry 02',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/clove-master-3.jpg',
-          thumb: 'assets/images/photography/clove-master-3-thumb.jpg',
-          alt: 'Clove Beverage — Layered Artisanal Cocktail 03',
-          width: 1280,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/clove-master-4.jpg',
-          thumb: 'assets/images/photography/clove-master-4-thumb.jpg',
-          alt: 'Clove Mixology — Signature Glassware & Ice 04',
-          width: 1280,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/clove-master-5.jpg',
-          thumb: 'assets/images/photography/clove-master-5-thumb.jpg',
-          alt: 'Clove Culinary — Chef Table Plating 05',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/clove-master-6.jpg',
-          thumb: 'assets/images/photography/clove-master-6-thumb.jpg',
-          alt: 'Clove Beverage — Craft Citrus Mix 06',
-          width: 1280,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/clove-ambience-1.jpg',
-          thumb: 'assets/images/photography/clove-ambience-1-thumb.jpg',
-          alt: 'Clove Architecture — Dining Room & Warm Ambient Lights 07',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/clove-ambience-2.jpg',
-          thumb: 'assets/images/photography/clove-ambience-2-thumb.jpg',
-          alt: 'Clove Hospitality — Intimate Seating Atmosphere 08',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/clove-ambience-3.jpg',
-          thumb: 'assets/images/photography/clove-ambience-3-thumb.jpg',
-          alt: 'Clove Interior — Dining Perspective & Table Setting 09',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/clove-ambience-4.jpg',
-          thumb: 'assets/images/photography/clove-ambience-4-thumb.jpg',
-          alt: 'Clove Lounge — Architectural Banquette Design 10',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/clove-ambience-5.jpg',
-          thumb: 'assets/images/photography/clove-ambience-5-thumb.jpg',
-          alt: 'Clove Interior — Bar & Lounge Environment 11',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    {
-      id: 'clove-editorial-ii',
-      name: { en: 'Clove Lounge — Craft Beverages & Atmosphere', ar: 'مطعم Clove — تصوير المشروبات المبتكرة وأجواء المكان' },
-      discipline: 'photography',
-      subdiscipline: 'fashion',
-      subdisciplineName: { en: 'Commercial & Culinary', ar: 'تصوير تجاري وأطعمة' },
-      agency: 'Clove Restaurant',
-      client: 'Clove Restaurant & Lounge',
-      year: '2024',
-      featured: true,
-      role: { en: 'Beverage Photographer & Art Direction', ar: 'تصوير مشروبات وتوجيه فني' },
-      deliverables: ['Signature Cocktail Stills', 'Glassware Condensation Textures', 'Bar Atmosphere Lighting'],
-      description: {
-        en: 'Commercial beverage photography and art direction capturing Clove lounge’s signature layered cocktails, ice clarity, and ambient mood.',
-        ar: 'تصوير تجاري للمشروبات وإخراج فني يوثق الكوكتيلات الابتكارية، نقاء الثلج وتكثف القطرات على الزجاج، وأجواء المكان المميزة في Clove.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Highlighting liquid clarity, layered color gradients, and glass condensation droplets without reflections washing out the drink tones.',
-          ar: 'إبراز طبقات السوائل الملونة وتدرجاتها، قطرات التكثف الباردة، وشفافية الزجاج دون انعكاسات عشوائية تشوش على لون المشروب.'
-        },
-        decisions: {
-          en: 'Backlit the glassware with narrow rim lights to illuminate beverage gradients from within, using fresh citrus wheels and mint garnishes as textural contrast.',
-          ar: 'إضاءة الكؤوس من الخلف بحواف ضوئية دقيقة لإبراز ألوان المشروب من الداخل، مع توظيف شرائح الليمون وأوراق النعناع الطازجة كعناصر تباين ملمسية.'
-        },
-        outcome: {
-          en: 'A visual beverage series showcasing signature craft mocktails, ice textures, and atmospheric bar lighting for Clove lounge.',
-          ar: 'سلسلة بصرية متكاملة تبرز تشكيلة المشروبات والعصائر الابتكارية، ملامس الثلج، والأجواء الضوئية المميزة لمطعم وبار Clove.'
-        }
-      },
-      images: [
-        { src: 'assets/images/clove2/clove2-1.jpg', thumb: 'assets/images/clove2/clove2-1-thumb.jpg', alt: 'Clove Signature Cocktail 01', width: 1466, height: 1920 },
-        { src: 'assets/images/clove2/clove2-2.jpg', thumb: 'assets/images/clove2/clove2-2-thumb.jpg', alt: 'Clove Signature Cocktail 02', width: 1170, height: 1920 },
-        { src: 'assets/images/clove2/clove2-3.jpg', thumb: 'assets/images/clove2/clove2-3-thumb.jpg', alt: 'Clove Signature Cocktail 03', width: 1144, height: 1920 },
-        { src: 'assets/images/clove2/clove2-4.jpg', thumb: 'assets/images/clove2/clove2-4-thumb.jpg', alt: 'Clove Signature Cocktail 04', width: 1381, height: 1920 },
-        { src: 'assets/images/clove2/clove2-5.jpg', thumb: 'assets/images/clove2/clove2-5-thumb.jpg', alt: 'Clove Signature Cocktail 05', width: 1381, height: 1920 },
-        { src: 'assets/images/clove2/clove2-6.jpg', thumb: 'assets/images/clove2/clove2-6-thumb.jpg', alt: 'Clove Signature Cocktail 06', width: 1381, height: 1920 },
-        { src: 'assets/images/clove2/clove2-7.jpg', thumb: 'assets/images/clove2/clove2-7-thumb.jpg', alt: 'Clove Signature Cocktail 07', width: 1392, height: 1920 },
-        { src: 'assets/images/clove2/clove2-8.jpg', thumb: 'assets/images/clove2/clove2-8-thumb.jpg', alt: 'Clove Signature Cocktail 08', width: 1920, height: 1298 }
-      ]
-    },
-
-    {
-      id: 'kojak',
-      name: { en: 'Kojak Studio — Avant-Garde Haute Couture', ar: 'مهند كوجاك — فوتوغرافيا أزياء معاصرة وطليعية' },
-      discipline: 'photography',
-      subdiscipline: 'fashion',
-      subdisciplineName: { en: 'Fashion & Editorial', ar: 'أزياء وفاشن' },
-      agency: 'Kojak Studio',
-      client: 'Mohanad Kojak',
-      year: '2022',
-      featured: true,
-      role: { en: 'Fashion Photographer', ar: 'مصور أزياء تحريري' },
-      deliverables: ['Couture Editorial Stills', 'High-Contrast Silhouette Framing', 'Garment Detail Documentation'],
-      description: {
-        en: 'Fashion photography for Egyptian designer Mohanad Kojak, featuring directional illumination, sculptural silhouette framing, and tailored garment details.',
-        ar: 'تصوير أزياء لمجموعات المصمم مهند كوجاك، بإضاءة موجهة عالية التباين، وزوايا تبرز تفاصيل الخياطة الراقية والأقمشة المنسوجة.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Documenting the theatrical and expressive aesthetic of Kojak designs while preserving structural tailoring and embroidery textures.',
-          ar: 'التعبير عن الطابع التعبيري البارز لتصاميم كوجاك دون التضحية بالتفاصيل البنائية الدقيقة للتطريز وجودة الحياكة.'
-        },
-        decisions: {
-          en: 'Focused directional light beams onto specific garment textures while letting background areas drop into shadow to emphasize sculptural cuts.',
-          ar: 'تركيز مسارات الضوء الموجه على تفاصيل وخامات الأقمشة مع إبقاء الخلفية في عتمة محسوبة لإبراز المنحنيات الهندسية للثوب.'
-        },
-        outcome: {
-          en: 'High-contrast editorial stills highlighting the sculptural silhouettes, embroidery details, and tailored textures of Kojak couture.',
-          ar: 'لقطات تحريرية عالية التباين تبرز التفاصيل الهندسية للأزياء، دقة التطريز، وملامس الخياطة الراقية لتصاميم مهند كوجاك.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/productions/kojak-1.jpg',
-          thumb: 'assets/images/productions/kojak-1-thumb.jpg',
-          alt: 'Kojak Avant-Garde Fashion 01',
-          width: 1280,
-          height: 1920
-        },
-        {
-          src: 'assets/images/productions/kojak-2.jpg',
-          thumb: 'assets/images/productions/kojak-2-thumb.jpg',
-          alt: 'Kojak Avant-Garde Fashion 02',
-          width: 1280,
-          height: 1920
-        },
-        {
-          src: 'assets/images/productions/kojak-3.jpg',
-          thumb: 'assets/images/productions/kojak-3-thumb.jpg',
-          alt: 'Kojak Avant-Garde Fashion 03',
-          width: 1280,
-          height: 1920
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       2. PHOTOGRAPHY: STUDIO PORTRAITURE
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'alpha-portraits',
-      name: { en: 'Light Sculpting — Studio Portraits', ar: 'نحت الضوء — بورتريه الاستوديو والتعبير الإنساني' },
-      discipline: 'photography',
-      subdiscipline: 'portrait',
-      subdisciplineName: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' },
-      agency: 'Personal Studio Study',
-      client: 'Independent Studio Series',
-      year: '2023',
-      featured: true,
-      role: { en: 'Portrait Photographer (Personal Study)', ar: 'مصور بورتريه (دراسة شخصية)' },
-      deliverables: ['Monochrome Portrait Stills', 'Directional Key Studies', 'Facial Geometry Framing'],
-      description: {
-        en: 'A personal studio portrait series exploring directional key lighting, deep shadow falloff, and subtle facial expression.',
-        ar: 'دراسة بورتريه استوديو شخصية تركز على زوايا سقوط الضوء والظلال لإبراز الملامح والتعبير الإنساني.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Creating compelling human portraits with minimal background elements, relying entirely on lighting angles to define facial planes.',
-          ar: 'خلق بورتريه إنساني صريح بأقل عناصر ممكنة في الخلفية، والاعتماد الكلي على زاوية الضوء لتحديد ملامح الوجه.'
-        },
-        decisions: {
-          en: 'Explored directional single-source lighting and shadow angles to accentuate facial planes and portrait expression.',
-          ar: 'دراسة زوايا سقوط الضوء الأحادي والظلال لإبراز ملامح الوجه والتعبير الإنساني في البورتريه.'
-        },
-        outcome: {
-          en: 'A personal studio portrait series focused on directional key lighting, facial planes, and monochrome contrast.',
-          ar: 'سلسلة بورتريهات استوديو شخصية تركز على زاوية سقوط الضوء الموجه، تشريح الوجه، وتدرجات التباين الأحادي.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/photography/sony-01.jpg',
-          thumb: 'assets/images/photography/sony-01-thumb.jpg',
-          alt: 'Studio Portrait — Sculpted Light 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/sony-02.jpg',
-          thumb: 'assets/images/photography/sony-02-thumb.jpg',
-          alt: 'Studio Portrait — Shadow & Gaze 02',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    {
-      id: 'awalm-editorial',
-      name: { en: 'Awalm — Editorial Fashion & Movement Stills', ar: 'مشروع عوالم — فوتوغرافيا أزياء وبورتريه معاصر' },
-      discipline: 'photography',
-      subdiscipline: 'portrait',
-      subdisciplineName: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' },
-      agency: 'Independent Visual Project',
-      client: 'Contemporary Editorial Series',
-      year: '2021 - 2022',
-      featured: true,
-      role: { en: 'Fashion & Portrait Photographer', ar: 'مصور أزياء وبورتريه' },
-      deliverables: ['Editorial Fashion Stills', 'Dynamic Movement Framing', 'Soft-Key Shadow Modeling'],
-      description: {
-        en: 'An editorial fashion and contemporary portrait series exploring fluid fabric movement, soft shadow gradients, and sharp prime-lens character definition.',
-        ar: 'سلسلة فوتوغرافيا أزياء وبورتريه معاصرة ترصد انسيابية حركة الأقمشة والظلال الناعمة، بالاعتماد على عدسة ثابتة 50mm وإضاءة موجهة.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Capturing spontaneous garment flow and expressive body language while maintaining razor-sharp eye focus and controlled rim highlights.',
-          ar: 'توثيق حركة الأقمشة التلقائية ولغة الجسد التعبيرية، مع الحفاظ على حدة التركيز البصري وتدرج الظلال على خلفية الكادر.'
-        },
-        decisions: {
-          en: 'Employed a fast 50mm prime lens at open apertures, balancing shallow depth of field with directional side lighting to sculpt sculptural contours.',
-          ar: 'استخدام عدسة 50mm بفتحة واسعة مع إضاءة جانبية ناعمة لتجسيد الملامح وإبراز حركة الثنيات والانحناءات بتدرج لوني سينمائي.'
-        },
-        outcome: {
-          en: 'An editorial visual archive documenting fabric movement, contemporary styling, and intimate portrait expressions.',
-          ar: 'سلسلة لقطات تحريرية تحتفي بحركة الثياب، التعبير الإنساني، والتكوين البصري المعاصر المستلهم من طابع الاستوديو السينمائي.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/photography/awalm-1.jpg',
-          thumb: 'assets/images/photography/awalm-1-thumb.jpg',
-          alt: 'Awalm Series — Contemporary Movement & Silhouette 01',
-          width: 1277,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/awalm-2.jpg',
-          thumb: 'assets/images/photography/awalm-2-thumb.jpg',
-          alt: 'Awalm Series — Editorial Portrait & Fabric Flow 02',
-          width: 1277,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/awalm-3.jpg',
-          thumb: 'assets/images/photography/awalm-3-thumb.jpg',
-          alt: 'Awalm Series — Dynamic Studio Gesture 03',
-          width: 1343,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/awalm-4.jpg',
-          thumb: 'assets/images/photography/awalm-4-thumb.jpg',
-          alt: 'Awalm Series — Horizontal Composition & Shadow Planes 04',
-          width: 1920,
-          height: 1205
-        },
-        {
-          src: 'assets/images/photography/awalm-5.jpg',
-          thumb: 'assets/images/photography/awalm-5-thumb.jpg',
-          alt: 'Awalm Series — Expressive Portrait Study 05',
-          width: 1277,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/awalm-6.jpg',
-          thumb: 'assets/images/photography/awalm-6-thumb.jpg',
-          alt: 'Awalm Series — Cinematic Atmosphere Frame 06',
-          width: 1920,
-          height: 1277
-        },
-        {
-          src: 'assets/images/photography/awalm-7.jpg',
-          thumb: 'assets/images/photography/awalm-7-thumb.jpg',
-          alt: 'Awalm Series — Studio Editorial Balance 07',
-          width: 1920,
-          height: 1277
-        }
-      ]
-    },
-
-    {
-      id: 'conceptual-art',
-      name: { en: 'Conceptual Series — High-Impact Visual Studies', ar: 'سلسلة بصرية مفاهيمية — دراسات وتكوينات بصرية' },
-      discipline: 'photography',
-      subdiscipline: 'portrait',
-      subdisciplineName: { en: 'Studio & Portraits', ar: 'بورتريه واستوديو' },
-      agency: 'Authored Fine Art Project',
-      client: 'Visual Arts Exhibition Series',
-      year: '2024',
-      featured: false,
-      role: { en: 'Visual Concept & Art Direction', ar: 'رؤية بصرية وإخراج فني' },
-      deliverables: ['Large-Format Exhibition Prints', 'Conceptual Color Blocking', 'Typographic & Visual Juxtaposition'],
-      description: {
-        en: 'A bold conceptual photography series featuring stark graphical contrast, vibrant color pools, and layered visual storytelling designed for large-scale exhibition displays.',
-        ar: 'سلسلة فوتوغرافية ومفاهيمية تعتمد على التباين الجرافيكي الحاد، وتوزيع الألوان الصريحة، وبناء المشهد البصري المخصص للمعارض الفنية والمطبوعات الكبرى.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Harmonizing intense color saturation with dark negative space while ensuring high typographic readability in fine-art exhibition prints.',
-          ar: 'تحقيق التوازن بين تشبع الألوان وقوة المساحات السلبية الداكنة، لضمان وضوح المعنى والتأثير البصري في المعارض المطبوعة.'
-        },
-        decisions: {
-          en: 'Constructed rigid vertical proportions with centered framing to emphasize iconic visual gravity and dramatic focal weight.',
-          ar: 'بناء تكوينات رأسية هندسية مع تركيز نقطة الجذب في منتصف الكادر لإضفاء هيبة بصرية وتأثير مباشر على المتلقي.'
-        },
-        outcome: {
-          en: 'An expressive exhibition print series combining contemporary photography aesthetics with graphic art direction.',
-          ar: 'مجموعة لوحات بصرية تجمع بين نقاء الفوتوغرافيا المعاصرة وقوة التوجيه الفني والطباعي.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/photography/conceptual-1.jpg',
-          thumb: 'assets/images/photography/conceptual-1-thumb.jpg',
-          alt: 'Conceptual Series — Exhibition Piece 01',
-          width: 1387,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/conceptual-2.jpg',
-          thumb: 'assets/images/photography/conceptual-2-thumb.jpg',
-          alt: 'Conceptual Series — Exhibition Piece 02',
-          width: 1387,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/conceptual-3.jpg',
-          thumb: 'assets/images/photography/conceptual-3-thumb.jpg',
-          alt: 'Conceptual Series — Exhibition Piece 03',
-          width: 1387,
-          height: 1920
-        },
-        {
-          src: 'assets/images/photography/conceptual-4.jpg',
-          thumb: 'assets/images/photography/conceptual-4-thumb.jpg',
-          alt: 'Conceptual Series — Exhibition Piece 04',
-          width: 1387,
-          height: 1920
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       2. PHOTOGRAPHY: STREET & ARCHITECTURE
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'cairo-streets',
-      name: { en: 'Cairo Transitions — Cityscape & Solitude', ar: 'شوارع القاهرة — انطباعات وعزلة المدينة' },
-      discipline: 'photography',
-      subdiscipline: 'documentary',
-      subdisciplineName: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' },
-      agency: 'Personal Documentary Series',
-      client: 'Independent Documentary Archive',
-      year: '2023 - 2024',
-      featured: true,
-      role: { en: 'Documentary Photographer (Personal Series)', ar: 'مصور وثائقي (سلسلة شخصية)' },
-      deliverables: ['Cityscape Architectural Stills', 'Dawn & Twilight Studies', 'Urban Geometry Framing'],
-      description: {
-        en: 'Personal documentary observations of Cairo’s evolving urban geography, dawn light transitions, and architectural forms amid metropolitan density.',
-        ar: 'لقطات توثيقية شخصية لعمران وضواحي القاهرة، ومراقبة درجات ضوء الغسق والظلال وسكون الكادر وسط زخم المدينة.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Observing the quieter moments and geometric lines of Cairo without relying on visual clichés or standard tourist angles.',
-          ar: 'إبراز الجانب الساكن والخطوط الهندسية لمدينة القاهرة دون اللجوء إلى الصور النمطية أو الزوايا المألوفة.'
-        },
-        decisions: {
-          en: 'Documented during blue hour and dawn, framing prominent structural intersections where architectural scale contrasts with small human silhouettes.',
-          ar: 'التصوير خلال ساعات الفجر والغسق، وتأطير الخطوط الهندسية المعمارية بحيث تظهر الشخصيات كعناصر تؤكد مقياس وهيبة المكان.'
-        },
-        outcome: {
-          en: 'A personal documentary series observing Cairo’s architectural forms, street geometry, and twilight light transitions.',
-          ar: 'سلسلة توثيقية شخصية ترصد التكوينات المعمارية وهندسة شوارع القاهرة خلال تدرجات ضوء الغسق والفجر.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/photography/cairo-panorama.jpg',
-          thumb: 'assets/images/photography/cairo-panorama-thumb.jpg',
-          alt: 'Cairo Panorama — Metropolitan Geometry',
-          width: 1920,
-          height: 1344
-        },
-        {
-          src: 'assets/images/photography/cairo-01.jpg',
-          thumb: 'assets/images/photography/cairo-01-thumb.jpg',
-          alt: 'Cairo Transitions — Urban Quietude 01',
-          width: 1920,
-          height: 1344
-        },
-        {
-          src: 'assets/images/photography/cairo-02.jpg',
-          thumb: 'assets/images/photography/cairo-02-thumb.jpg',
-          alt: 'Cairo Transitions — Architectural Stillness 02',
-          width: 1400,
-          height: 1000
-        },
-        {
-          src: 'assets/images/photography/cairo-03.jpg',
-          thumb: 'assets/images/photography/cairo-03-thumb.jpg',
-          alt: 'Cairo Transitions — Street Geometry 03',
-          width: 1400,
-          height: 1000
-        },
-        {
-          src: 'assets/images/photography/cairo-04.jpg',
-          thumb: 'assets/images/photography/cairo-04-thumb.jpg',
-          alt: 'Cairo Transitions — Dusk Horizon 04',
-          width: 1400,
-          height: 1000
-        }
-      ]
-    },
-
-    {
-      id: 'cinema-stills',
-      name: { en: 'Cinema Photography — Production Stills & Camera Work', ar: 'فوتوغرافيا السينما — توثيق موقع التصوير والدراما' },
-      discipline: 'photography',
-      subdiscipline: 'documentary',
-      subdisciplineName: { en: 'Street & Architecture', ar: 'شوارع وتوثيق' },
-      agency: 'Film & Drama Production Archives',
-      client: 'Cinema & Television Sets Archive',
-      year: '2020 - 2022',
-      featured: true,
-      role: { en: 'Cinema & Production Stills Photographer', ar: 'مصور فوتوغرافيا سينما وتوثيق مواقع' },
-      deliverables: ['Live Action Set Documentation', 'Behind-the-Scenes Lighting Tracking', 'Tactical & Period Scene Captures'],
-      description: {
-        en: 'A comprehensive cinema photography archive capturing real-time production moments, camera department setups, and intense dramatic scenes across major television productions.',
-        ar: 'أرشيف فوتوغرافيا سينمائي متكامل يرصد لحظات العمل الحية في مواقع التصوير، وحركة قسم الكاميرا، وتكوينات المشاهد الدرامية والتكتيكية للأعمال التلفزيونية الكبرى.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Operating within high-pressure film sets, coordinating with primary camera crews, and capturing decisive moments without disrupting sound recording or lighting rigs.',
-          ar: 'التقاط الإطارات الحاسمة وسط بيئة تصوير مشدودة وسريعة، والتنسيق الدقيق مع طاقم الكاميرا الرئيسي وتجنب أي تشويش على أجهزة الصوت والإضاءة.'
-        },
-        decisions: {
-          en: 'Framed candid behind-the-scenes interactions and live scene blocking from unobtrusive vantage points, matching camera exposures to principal cinematography look.',
-          ar: 'التمركز في زوايا تصوير ذكية لتوثيق حركة العمل والكواليس دون إعاقة الكاميرات، وضبط التعريض بما يتطابق مع هوية الإضاءة السينمائية للمشهد.'
-        },
-        outcome: {
-          en: 'An authentic visual portfolio documenting professional cinema photography, director coordination, and on-set atmospheric lighting.',
-          ar: 'سجل بصري احترافي يوثق خبرة العمل كمصور فوتوغرافي في موقع التصوير السينمائي، مع التركيز على هيبة الكادر وجماليات الضوء الميداني.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/photography/cinema-still-1.jpg',
-          thumb: 'assets/images/photography/cinema-still-1-thumb.jpg',
-          alt: 'Cinema Stills — Action Sequence Field Capture 01',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/cinema-still-2.jpg',
-          thumb: 'assets/images/photography/cinema-still-2-thumb.jpg',
-          alt: 'Cinema Stills — Set Preparation & Vehicle Line 02',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/cinema-still-3.jpg',
-          thumb: 'assets/images/photography/cinema-still-3-thumb.jpg',
-          alt: 'Cinema Stills — Tactical Reconnaissance Setup 03',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/cinema-still-4.jpg',
-          thumb: 'assets/images/photography/cinema-still-4-thumb.jpg',
-          alt: 'Cinema Stills — On-Set Camera Tracking 04',
-          width: 1920,
-          height: 1225
-        },
-        {
-          src: 'assets/images/photography/cinema-still-5.jpg',
-          thumb: 'assets/images/photography/cinema-still-5-thumb.jpg',
-          alt: 'Cinema Stills — Night Operation Lighting Rig 05',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/cinema-still-6.jpg',
-          thumb: 'assets/images/photography/cinema-still-6-thumb.jpg',
-          alt: 'Cinema Stills — Field Actor Coordination 06',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/cinema-still-7.jpg',
-          thumb: 'assets/images/photography/cinema-still-7-thumb.jpg',
-          alt: 'Cinema Stills — Dynamic Explosion & Dust Setup 07',
-          width: 1920,
-          height: 1273
-        },
-        {
-          src: 'assets/images/photography/cinema-still-8.jpg',
-          thumb: 'assets/images/photography/cinema-still-8-thumb.jpg',
-          alt: 'Cinema Stills — 1950s Historical Set & Classic Street 08',
-          width: 1920,
-          height: 1280
-        },
-        {
-          src: 'assets/images/photography/cinema-still-9.jpg',
-          thumb: 'assets/images/photography/cinema-still-9-thumb.jpg',
-          alt: 'Cinema Stills — Vintage Period Interior & Cast 09',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       3. GRAPHIC DESIGN: BRAND IDENTITY
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'diwan-identity',
-      name: { en: 'Diwan — Brand Identity & Cultural Ecosystem', ar: 'دار ديوان — الهوية البصرية والمقتنيات الثقافية' },
-      discipline: 'design',
-      subdiscipline: 'identity',
-      subdisciplineName: { en: 'Brand Identity', ar: 'هويات بصرية' },
-      agency: 'Diwan Publishing House',
-      client: 'Diwan Cultural Enterprise',
-      year: '2023',
-      featured: true,
-      role: { en: 'Brand Identity Designer & Art Director', ar: 'مصمم هوية بصرية وتوجيه فني' },
-      deliverables: ['Visual Identity Guidelines', 'Kufic Emblem Grid Construction', 'Linen Tote Bag & Cultural Packaging', 'Stationery & Coaster Items'],
-      description: {
-        en: 'Brand identity system, stationery, and cultural merchandise for Diwan Publishing House, combining literary heritage with contemporary layout principles.',
-        ar: 'تصميم الهوية البصرية الشاملة، المنظومة الطباعية والمقتنيات الثقافية (الحقيبة القماشية، الكوستر، وبطاقات الهوية) لدار ديوان للنشر.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Creating a unified brand system that respects Diwan’s literary heritage while functioning effectively across modern lifestyle goods and stationery.',
-          ar: 'صياغة هوية بصرية تحتفي بالمكانة الأدبية لدار ديوان، وفي الوقت نفسه تصلح للتطبيق العملي على المنتجات والمقتنيات الثقافية المعاصرة.'
-        },
-        decisions: {
-          en: 'Designed a clean typographic grid balancing Arabic and Latin letterforms, applying the identity across tactile, natural materials including linen and uncoated paper.',
-          ar: 'بناء شبكة تيبوغرافية متوازنة بين الحرفين العربي واللاتيني، وتطبيق عناصر الهوية على خامات طبيعية ملموسة مثل الكتان والورق غير المصقول.'
-        },
-        outcome: {
-          en: 'A cohesive brand identity system applied across cultural merchandise, packaging items, coasters, and linen tote bags for Diwan.',
-          ar: 'منظومة هوية بصرية متكاملة مطبقة عبر المنتجات الثقافية، أدوات التغليف، الكوسترات، والحقائب القماشية لدار ديوان.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/design/diwan-tote-clean.jpg',
-          thumb: 'assets/images/design/diwan-tote-clean-thumb.jpg',
-          alt: 'Diwan Merchandise — Minimalist Natural Linen Tote Bag',
-          width: 1920,
-          height: 1385
-        },
-        {
-          src: 'assets/images/design/diwan-brand-ecosystem.jpg',
-          thumb: 'assets/images/design/diwan-brand-ecosystem-thumb.jpg',
-          alt: 'Diwan Brand Ecosystem — Master Brand Guidelines & Cultural Artifacts',
-          width: 1920,
-          height: 2715
-        },
-        {
-          src: 'assets/images/design/diwan-kufic-mark.jpg',
-          thumb: 'assets/images/design/diwan-kufic-mark-thumb.jpg',
-          alt: 'Diwan Emblem — Square Kufic Geometry & Grid Construction',
-          width: 1092,
-          height: 1280
-        },
-        {
-          src: 'assets/images/design/diwan-tote-pattern.jpg',
-          thumb: 'assets/images/design/diwan-tote-pattern-thumb.jpg',
-          alt: 'Diwan Merchandise — Patterned Linen Tote Bag',
-          width: 1920,
-          height: 1385
-        },
-        {
-          src: 'assets/images/design/diwan-coasters-cyan.jpg',
-          thumb: 'assets/images/design/diwan-coasters-cyan-thumb.jpg',
-          alt: 'Diwan Cultural Artifacts — 3D Floating Coasters & Packaging',
-          width: 1920,
-          height: 1344
-        },
-        {
-          src: 'assets/images/design/diwan-spread-1.jpg',
-          thumb: 'assets/images/design/diwan-spread-1-thumb.jpg',
-          alt: 'Diwan Brand Architecture Spread',
-          width: 1920,
-          height: 1385
-        }
-      ]
-    },
-
-    {
-      id: 'mawlawya-brand',
-      name: { en: 'Mawlawya — Cultural Brand Architecture', ar: 'المولوية — منظومة الهوية البصرية الصوفية' },
-      discipline: 'design',
-      subdiscipline: 'identity',
-      subdisciplineName: { en: 'Brand Identity', ar: 'هويات بصرية' },
-      agency: 'Faculty of Applied Arts',
-      client: 'Graduation Project',
-      year: '2024',
-      featured: false,
-      role: { en: 'Brand Identity Designer & Art Director (Graduation Project)', ar: 'تصميم الهوية البصرية والتوجيه الفني (مشروع التخرج)' },
-      deliverables: ['Circular Brand Mark', 'Geometric Grid Layout', 'Exhibition Application Guidelines'],
-      description: {
-        en: 'Graduation project identity system derived from the geometry and meditative rotational movement of traditional Sufi Mawlawya whirling ceremonies.',
-        ar: 'منظومة هوية بصرية لمشروع التخرج مستوحاة من الهندسة الدائرية وحركة الدوران التأملية لطقوس الطريقة المولوية التراثية.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Translating classical calligraphic and geometric motifs into a functional brand mark that remains legible across both digital screens and large-scale exhibition displays.',
-          ar: 'تطوير الرموز الحرفية والهندسية المتوارثة إلى علامة تجارية حديثة تحتفظ بوقارها وتظل واضحة المعالم على الشاشات الرقمية والمطبوعات الكبيرة.'
-        },
-        decisions: {
-          en: 'Derived the emblem circular curve from the centrifugal motion of the whirling skirt, establishing geometric proportion and balanced typographic spacing.',
-          ar: 'استلهام المنحنى الدائري للشعار من حركة دوران رداء الدرويش ليكون هو المحدد الهندسي لحركة الخطوط وتوازن المسافات التيبوغرافية.'
-        },
-        outcome: {
-          en: 'A circular typographic brand mark and identity layout system derived from Sufi whirling motion geometry.',
-          ar: 'شعار تيبوغرافي دائري وشبكة تصميمية للهوية مستلهمة من حركة الدوران الهندسي للطريقة المولوية.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/mawlawya/mawlawya-logo.jpg',
-          thumb: 'assets/images/mawlawya/mawlawya-logo-thumb.jpg',
-          alt: 'Mawlawya Brand Identity Mark',
-          width: 1920,
-          height: 1920
-        },
-        {
-          src: 'assets/images/mawlawya/mawlawya-1.jpg',
-          thumb: 'assets/images/mawlawya/mawlawya-1-thumb.jpg',
-          alt: 'Mawlawya Ritual Stills in Context',
-          width: 1920,
-          height: 1080
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       3. GRAPHIC DESIGN: BOOK & EDITORIAL
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'diwan-books',
-      name: { en: 'Diwan — Book Architecture & Editorial Design', ar: 'دار ديوان — معمار أغلفة الكتب والتيبوغرافي' },
-      discipline: 'design',
-      subdiscipline: 'editorial',
-      subdisciplineName: { en: 'Book & Editorial', ar: 'أغلفة ومطبوعات' },
-      agency: 'Diwan Publishing',
-      client: 'Diwan Editions',
-      year: '2023',
-      featured: true,
-      role: { en: 'Book Cover & Editorial Designer', ar: 'مصمم أغلفة وتيبوغرافي' },
-      deliverables: ['3D Hardcover Architecture & Mockups', 'Production Wrap Spreads (Front, Spine, Back)', 'Typographic Hierarchy & Grid System', 'Die-Cut Literary Bookmarks'],
-      description: {
-        en: 'Editorial book cover design systems, typography hierarchy rules, and bookmark layouts for literary publications.',
-        ar: 'معمار وتصميم أغلفة الكتب، قواعد التراتبية التيبوغرافية، وتصاميم فواصل القراءة للإصدارات الأدبية.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Establishing a flexible cover grid that can adapt to different literary titles and genres while maintaining a recognizable visual family for the publishing house.',
-          ar: 'ابتكار شبكة تصميمية مرنة لأغلفة الكتب تستوعب عناوين وأجناساً أدبية متعددة مع الحفاظ على هوية بصرية مألوفة لإصدارات الدار.'
-        },
-        decisions: {
-          en: 'Built a three-tier typographic layout prioritizing author name, title, and publisher mark, using deliberate white space to give prominence to typography.',
-          ar: 'بناء تراتبية بصرية من ثلاثة مستويات تراعي أولوية اسم المؤلف والعنوان وشعار الدار، مع استخدام الفراغ المدروس لإبراز التيبوغرافي.'
-        },
-        outcome: {
-          en: 'A structured editorial cover design system establishing a clear visual hierarchy for book titles, author credits, and bookmark designs.',
-          ar: 'منظومة تصميمية لأغلفة الكتب تحدد تراتبية بصرية واضحة لعناوين الإصدارات، أسماء المؤلفين، وتصاميم فواصل القراءة.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/design/diwan-book-mohamed-ali-3d.jpg',
-          thumb: 'assets/images/design/diwan-book-mohamed-ali-3d-thumb.jpg',
-          alt: 'Diwan Book Architecture — Mohamed Ali Monograph 3D Hardcover',
-          width: 1920,
-          height: 1440
-        },
-        {
-          src: 'assets/images/design/diwan-book-mohamed-ali-spread.jpg',
-          thumb: 'assets/images/design/diwan-book-mohamed-ali-spread-thumb.jpg',
-          alt: 'Diwan Book Architecture — Mohamed Ali Full Wrap Jacket Spread',
-          width: 1280,
-          height: 901
-        },
-        {
-          src: 'assets/images/design/diwan-book-sculpture-3d.jpg',
-          thumb: 'assets/images/design/diwan-book-sculpture-3d-thumb.jpg',
-          alt: 'Diwan Book Architecture — Classical Sculpture Edition 3D Hardcover',
-          width: 1920,
-          height: 1440
-        },
-        {
-          src: 'assets/images/design/diwan-book-sculpture-spread.jpg',
-          thumb: 'assets/images/design/diwan-book-sculpture-spread-thumb.jpg',
-          alt: 'Diwan Book Architecture — Classical Sculpture Full Wrap Jacket Spread',
-          width: 1280,
-          height: 901
-        },
-        {
-          src: 'assets/images/design/diwan-book-coptic-3d.jpg',
-          thumb: 'assets/images/design/diwan-book-coptic-3d-thumb.jpg',
-          alt: 'Diwan Book Architecture — Coptic Heritage Monograph 3D Hardcover',
-          width: 1920,
-          height: 1440
-        },
-        {
-          src: 'assets/images/design/diwan-book-coptic-spread.jpg',
-          thumb: 'assets/images/design/diwan-book-coptic-spread-thumb.jpg',
-          alt: 'Diwan Book Architecture — Coptic Heritage Full Wrap Jacket Spread',
-          width: 1280,
-          height: 901
-        },
-        {
-          src: 'assets/images/design/diwan-bookmark-diecut.jpg',
-          thumb: 'assets/images/design/diwan-bookmark-diecut-thumb.jpg',
-          alt: 'Diwan Literary Artifact — Die-Cut Cardboard Bookmark',
-          width: 1920,
-          height: 1280
-        }
-      ]
-    },
-
-    {
-      id: 'hona-al-qahira',
-      name: { en: 'Hona Al Qahira — Novel Cover Architecture', ar: 'رواية هنا القاهرة — معمار الغلاف والتصميم التحريري' },
-      discipline: 'design',
-      subdiscipline: 'editorial',
-      subdisciplineName: { en: 'Book & Editorial', ar: 'أغلفة ومطبوعات' },
-      agency: 'Dar Al Hadaf Publishing',
-      client: 'Dar Al Hadaf / Author Hossam Hamdy',
-      year: '2023',
-      featured: true,
-      role: { en: 'Book Cover Designer & Typographer', ar: 'تصميم الغلاف والتيبوغرافي' },
-      deliverables: ['Full Wrap Cover Spread (Front, Spine, Back)', 'Cairo Urban Photomontage Collage', 'High-Contrast Typographic Hierarchy'],
-      description: {
-        en: 'Full wrap cover design and architectural typography for the published novel "Hona Al Qahira — Qahran Wa Laysa Makan" by author Hossam Hamdy, published by Dar Al Hadaf.',
-        ar: 'تصميم الغلاف الكامل (الواجهة، الكعب، والغلاف الخلفي) والمعمار التيبوغرافي لرواية "هنا القاهرة — قهراً وليس مكاناً" للكاتب حسام حمدي، الصادرة عن دار الهدف للنشر والتوزيع.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Translating the psychological weight and urban intensity of the novel title ("Oppression, not merely a place") into a striking, unmissable cover presence in bookstores.',
-          ar: 'تجسيد الثقل النفسي والزخم البصري للمدينة كما يعبر عنها عنوان الرواية ("قهراً وليس مكاناً") في غلاف لافت ومعبر يحقق حضوراً استثنائياً على أرفف المكتبات ومعارض الكتب.'
-        },
-        decisions: {
-          en: 'Employed an arresting high-voltage canary yellow background contrasted against stark monochrome architectural photomontage of Cairo (the Tower, Islamic minarets, and street vendors), crowned with heavy brutalist Arabic typography.',
-          ar: 'توظيف خلفية صفراء ساطعة تخلق تبايناً حاداً مع كولاج فوتوغرافي مونوكرومي لمعالم القاهرة (البرج، المآذن التاريخية، وبائع الخبز المتجول)، وتتويج التكوين بخط عربي عريض حاد البنية يعكس صدمة وجرأة العنوان.'
-        },
-        outcome: {
-          en: 'A published literary cover spread and promotional key art capturing the novel’s visceral urban narrative through bold color blocking and photomontage.',
-          ar: 'غلاف روائي منشور ومادة ترويجية تجسد السردية الحضرية للرواية من خلال كتل لونية صريحة وتوليف بصري تيبوغرافي معبّر.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/design/hona-al-qahira-cover-spread.jpg',
-          thumb: 'assets/images/design/hona-al-qahira-cover-spread-thumb.jpg',
-          alt: 'Hona Al Qahira — Full Wrap Novel Cover Spread (Dar Al Hadaf)',
-          width: 1920,
-          height: 1344
-        },
-        {
-          src: 'assets/images/design/hona-al-qahira-poster-front.jpg',
-          thumb: 'assets/images/design/hona-al-qahira-poster-front-thumb.jpg',
-          alt: 'Hona Al Qahira — Front Cover Architecture & Key Art Poster',
-          width: 1920,
-          height: 2716
-        }
-      ]
-    },
-
-    /* ════════════════════════════════════════════════════════════
-       3. GRAPHIC DESIGN: KEY ART & POSTERS
-       ════════════════════════════════════════════════════════════ */
-    {
-      id: 'diwan-keyart',
-      name: { en: 'Cultural Key Art & Exhibition Posters', ar: 'البوسترات الثقافية والملتقيات الأدبية' },
-      discipline: 'design',
-      subdiscipline: 'posters',
-      subdisciplineName: { en: 'Key Art & Posters', ar: 'بوسترات ومواد دعائية' },
-      agency: 'Cultural Exhibition Projects',
-      client: 'Literary Forums & Visual Arts',
-      year: '2023 - 2024',
-      featured: true,
-      role: { en: 'Poster & Key Art Designer', ar: 'مصمم بوسترات ومواد إعلانية' },
-      deliverables: ['Large-Format Exhibition Posters', 'Typographic Monogram & Identity Studies', 'Promotional Print Layouts'],
-      description: {
-        en: 'Promotional posters, typographic identity studies, and key art designs created for literary gatherings, cultural forums, and design exhibitions.',
-        ar: 'تصميم البوسترات الترويجية، دراسات الهوية التيبوغرافية، والمواد المطبوعة الخاصة بالملتقيات الثقافية والمعارض الفنية.'
-      },
-      thinking: {
-        challenge: {
-          en: 'Designing exhibition posters that catch attention at a distance while organizing event program details legibly.',
-          ar: 'تصميم بوسترات معارض تلفت الانتباه من مسافة بعيدة مع تنظيم تفاصيل وبرامج الفعاليات بصورة واضحة ومقروءة.'
-        },
-        decisions: {
-          en: 'Anchored layouts with high-contrast architectural imagery and structural typographic numbers, paired with clean contemporary Arabic letterforms.',
-          ar: 'الاعتماد على عناصر بصرية معمارية عالية التباين وأرقام تيبوغرافية بارزة، وموازنتها بخطوط عربية حديثة واضحة وموزونة.'
-        },
-        outcome: {
-          en: 'A set of exhibition posters and promotional graphic layouts balancing bold typography, architectural imagery, and event information.',
-          ar: 'مجموعة بوسترات معارض ومواد ترويجية توازن بين التيبوغرافي البارز، الصور المعمارية، وتفاصيل الفعاليات الثقافية.'
-        }
-      },
-      images: [
-        {
-          src: 'assets/images/design/diwan-poster-1.jpg',
-          thumb: 'assets/images/design/diwan-poster-1-thumb.jpg',
-          alt: 'Cultural Forum Key Art 01',
-          width: 1358,
-          height: 1920
-        },
-        {
-          src: 'assets/images/design/diwan-poster-2.jpg',
-          thumb: 'assets/images/design/diwan-poster-2-thumb.jpg',
-          alt: 'Exhibition Promotional Poster 02',
-          width: 1357,
-          height: 1920
-        },
-        {
-          src: 'assets/images/design/keyart-editorial.jpg',
-          thumb: 'assets/images/design/keyart-editorial-thumb.jpg',
-          alt: 'Typographic Key Art Composition 03',
-          width: 1357,
-          height: 1920
-        },
-        {
-          src: 'assets/images/design/ward-typographic-monogram.jpg',
-          thumb: 'assets/images/design/ward-typographic-monogram-thumb.jpg',
-          alt: 'Youssef Ward — Typographic Monogram & Geometric Identity Study',
-          width: 1400,
-          height: 1000
-        }
-      ]
-    }
-  ]
+    "meta":  {
+                 "name":  {
+                              "en":  "Youssef Ward",
+                              "ar":  "يوسف ورد"
+                          },
+                 "title":  {
+                               "en":  "Cinematographer & Graphic Designer",
+                               "ar":  "مصور سينمائي ومصمم جرافيك"
+                           },
+                 "concept":  {
+                                 "en":  "One Visual Mind. Multiple Expressions.",
+                                 "ar":  "عقل بصري واحد. تعبيرات متعددة."
+                             },
+                 "location":  {
+                                  "en":  "Cairo, Egypt",
+                                  "ar":  "القاهرة، مصر"
+                              },
+                 "availability":  {
+                                      "en":  "Open to Cinematography & Strategic Design Projects",
+                                      "ar":  "متاح للتعاون الإبداعي والمشاريع السينمائية والتصميمية"
+                                  }
+             },
+    "mark":  "assets/brand-mark.svg",
+    "portrait":  "upload/portrait.jpg",
+    "cover":  "upload/cover.jpg",
+    "heroRole":  {
+                     "en":  "Cinematographer & Graphic Designer",
+                     "ar":  "مصور سينمائي ومصمم جرافيك"
+                 },
+    "heroTagline":  {
+                        "en":  "One visual mind bridging cinematic camera craft, dramatic set lighting, and graphic brand architecture.",
+                        "ar":  "عقل بصري واحد يجمع بين براعة الكاميرا السينمائية، وهندسة الإضاءة الدرامية، وبناء الهويات الجرافيكية."
+                    },
+    "email":  "youssef.ward88@gmail.com",
+    "phone":  "+20 1155729978",
+    "cv":  "assets/youssef-ward-cv.pdf",
+    "portfolio":  "assets/youssef-ward-portfolio.pdf",
+    "linkedin":  "https://www.linkedin.com/in/yousef-ward-/",
+    "instagram":  "https://www.instagram.com/youssefward_/",
+    "behance":  "https://www.behance.net/youssef_Ward",
+    "vimeo":  "https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci",
+    "bio":  {
+                "en":  "I am a cinematographer and graphic designer with an academic foundation from the Faculty of Applied Arts in Cairo, bridging on-set camera operation, dramatic lighting design, and visual storytelling with rigorous brand architecture and typography. Guided by the principle that every visual decision is an intentional choice, my journey spans key camera department participation on prime-time Egyptian television drama sets, celebrity portraiture, commercial culinary films, cultural brand identities, and festival key art posters.",
+                "ar":  "مصور سينمائي ومصمم جرافيك ذو خلفية أكاديمية متخصصة من كلية الفنون التطبيقية بالقاهرة، أجمع بين حرفة الكاميرا الميدانية وهندسة الإضاءة الدرامية وبين بناء الهويات البصرية والتايبوجرافي المعاصر. ينطلق عملي من قناعة راسخة بأن كل قرار بصري هو خيار واعٍ ومقصود، ويمتد عبر المشاركة في قسم الكاميرا بأضخم المسلسلات الدرامية التلفزيونية، وتوثيق بورتريهات كبار المشاهير، وإخراج الإعلانات التجارية، وبناء الهويات الثقافية وتصميم أفيشات المهرجانات السينمائية."
+            },
+    "disciplines":  [
+                        {
+                            "id":  "filmmaking",
+                            "number":  "01",
+                            "title":  {
+                                          "en":  "Filmmaking & Cinema",
+                                          "ar":  "صناعة الأفلام والسينما"
+                                      },
+                            "subtitle":  {
+                                             "en":  "Camera Department · Drama Sets · Visual Studies",
+                                             "ar":  "قسم الكاميرا · كواليس الدراما · تجارب سينمائية"
+                                         },
+                            "spec":  "ANAMORPHIC 2.39:1 · 24 FPS · LOW-KEY DRAMA",
+                            "description":  {
+                                                "en":  "Camera department operation and dramatic lighting across landmark Egyptian television drama productions and independent visual studies. Focused on fluid camera movement, low-key lighting setups, and deep composition.",
+                                                "ar":  "العمل الميداني في قسم الكاميرا وهندسة الإضاءة الدرامية عبر أضخم الإنتاجات التلفزيونية والتجارب السينمائية المستقلة، مع التركيز على حركة الكاميرا الانسيابية، الإضاءة الخافتة المركزة، وعمق بناء الكادر."
+                                            },
+                            "categories":  [
+                                               {
+                                                   "id":  "all",
+                                                   "name":  {
+                                                                "en":  "All Film",
+                                                                "ar":  "كل الأعمال"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "drama",
+                                                   "name":  {
+                                                                "en":  "Television Drama",
+                                                                "ar":  "دراما تلفزيونية"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "commercial",
+                                                   "name":  {
+                                                                "en":  "Commercials",
+                                                                "ar":  "إعلانات تجارية"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "experimental",
+                                                   "name":  {
+                                                                "en":  "Visual Studies",
+                                                                "ar":  "دراسات بصرية"
+                                                            }
+                                               }
+                                           ]
+                        },
+                        {
+                            "id":  "photography",
+                            "number":  "02",
+                            "title":  {
+                                          "en":  "Still Photography",
+                                          "ar":  "التصوير الفوتوغرافي"
+                                      },
+                            "subtitle":  {
+                                             "en":  "Celebrity Stills · Studio Portraits · Culinary Craft",
+                                             "ar":  "بورتريهات المشاهير · استوديو ونحت الضوء · تصوير الأطعمة"
+                                         },
+                            "spec":  "MEDIUM FORMAT · HIGH CONTRAST · LIVE SETS",
+                            "description":  {
+                                                "en":  "Studio and on-location still photography capturing Egypt leading cultural icons, haute couture fashion, and commercial culinary craftsmanship with sculptural lighting and candid authenticity.",
+                                                "ar":  "التصوير الفوتوغرافي داخل الاستوديو وفي مواقع التصوير الحية لتوثيق كبار نجوم الفن، وجلسات تصوير الأزياء الراقية، وتصوير الأطعمة والمشروبات بأسلوب ضوئي منحوت يجمع بين العفوية والدقة الفنية."
+                                            },
+                            "categories":  [
+                                               {
+                                                   "id":  "all",
+                                                   "name":  {
+                                                                "en":  "All Photos",
+                                                                "ar":  "كل الصور"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "celebrity",
+                                                   "name":  {
+                                                                "en":  "Celebrity & Entertainment",
+                                                                "ar":  "مشاهير وترفيه"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "editorial",
+                                                   "name":  {
+                                                                "en":  "Editorial & Fashion",
+                                                                "ar":  "أزياء وبورتريه"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "commercial-photo",
+                                                   "name":  {
+                                                                "en":  "Food & Culinary",
+                                                                "ar":  "أطعمة ومشروبات"
+                                                            }
+                                               }
+                                           ]
+                        },
+                        {
+                            "id":  "design",
+                            "number":  "03",
+                            "title":  {
+                                          "en":  "Graphic Design & Key Art",
+                                          "ar":  "التصميم الجرافيكي وفنون الأفيش"
+                                      },
+                            "subtitle":  {
+                                             "en":  "Brand Architecture · Film Posters · Book Covers · Typography",
+                                             "ar":  "بناء الهويات · أفيشات سينمائية · أغلفة كتب · تايبوجرافي"
+                                         },
+                            "spec":  "SWISS EDITORIAL · ARABIC CALLIGRAPHY · KEY ART",
+                            "description":  {
+                                                "en":  "Comprehensive brand systems, theatrical movie key art, literary book jackets, and contemporary Arabic typography rooted in cultural heritage and modernist editorial design.",
+                                                "ar":  "بناء منظومات الهوية البصرية المتكاملة، وتصميم أفيشات السينما للمهرجانات، وأغلفة الكتب والروايات، ودراسات التايبوجرافي العربي المعاصر المستلهم من التراث الثقافي والتصميم السويسري الحديث."
+                                            },
+                            "categories":  [
+                                               {
+                                                   "id":  "all",
+                                                   "name":  {
+                                                                "en":  "All Design",
+                                                                "ar":  "كل التصاميم"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "branding",
+                                                   "name":  {
+                                                                "en":  "Visual Identity",
+                                                                "ar":  "هويات بصرية"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "keyart",
+                                                   "name":  {
+                                                                "en":  "Key Art & Posters",
+                                                                "ar":  "أفيشات وملصقات"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "editorial-design",
+                                                   "name":  {
+                                                                "en":  "Book Covers",
+                                                                "ar":  "أغلفة كتب"
+                                                            }
+                                               },
+                                               {
+                                                   "id":  "typography",
+                                                   "name":  {
+                                                                "en":  "Typography",
+                                                                "ar":  "تايبوجرافي"
+                                                            }
+                                               }
+                                           ]
+                        }
+                    ],
+    "projects":  [
+                     {
+                         "id":  "ekhteyar",
+                         "discipline":  "filmmaking",
+                         "subdiscipline":  "drama",
+                         "subdisciplineName":  {
+                                                   "en":  "Television Drama",
+                                                   "ar":  "دراما تلفزيونية"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "El Ekhteyar — On-Set Cinematography & Camera Craft",
+                                      "ar":  "مسلسل الاختيار — كادر الكاميرا وإضاءة مواقع الدراما"
+                                  },
+                         "subtitle":  {
+                                          "en":  "On-Set Camera Craft · Low-Key Lighting · Tactical Realism",
+                                          "ar":  "حرفة الكاميرا · إضاءة خافتة · واقعية تكتيكية"
+                                      },
+                         "year":  "2020 - 2021",
+                         "role":  {
+                                      "en":  "Camera Department · Focus Puller & Operator",
+                                      "ar":  "قسم الكاميرا · مشغل كاميرا وضابط فوكس"
+                                  },
+                         "client":  "Synergy Production · ON TV",
+                         "agency":  "Synergy Art Production",
+                         "deliverables":  [
+                                              "On-Set Camera Operation",
+                                              "Low-Key Lighting Setup",
+                                              "Tactical Drama Stills"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Camera department operation and lighting rigging across the landmark Egyptian patriotic drama production. Working on dynamic live locations requiring high-stakes coordination, directional low-key backlight to carve silhouettes through battlefield haze, and visceral mobile camera tracking.",
+                                             "ar":  "العمل داخل قسم الكاميرا وضبط الإضاءة في أضخم إنتاج درامي تلفزيوني وطني. التواجد في مواقع تصوير حية تتطلب تنسيقاً عالي الدقة، وتوظيف الإضاءة الخلفية الخافتة لنحت الظلال الدرامية عبر دخان المعارك، وحركة كاميرا محفزة للاشتباك الواقعي."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "High-intensity tactical night operations involving live dust, practical explosions, and rapid camera mobility.",
+                                                            "ar":  "مشاهد ليلية تكتيكية شاقة تضم أتربة حية وانفجارات عملية وتتطلب حركة كاميرا سريعة وثابتة."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Hard directional backlight cutting through ambient particles combined with steady mobile camera rigs.",
+                                                            "ar":  "اعتماد إضاءة خلفية حادة تخترق الغبار العالق في الجو مع استخدام حوامل كاميرا متحركة تمنح الكادر وزناً واقعياً."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "Visceral cinematic realism that defined one of the most culturally impactful drama franchises in the region.",
+                                                          "ar":  "واقعية سينمائية شديدة التأثير رسخت العمل كأحد أهم الإنتاجات الدرامية في العالم العربي."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/choice/_K4A6005.JPG",
+                                            "thumb":  "upload/choice/_K4A6005.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 01",
+                                                        "ar":  "El Ekhteyar — كادر 01"
+                                                    },
+                                            "width":  5759,
+                                            "height":  3839
+                                        },
+                                        {
+                                            "src":  "upload/choice/_K4A6086.JPG",
+                                            "thumb":  "upload/choice/_K4A6086.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 02",
+                                                        "ar":  "El Ekhteyar — كادر 02"
+                                                    },
+                                            "width":  5212,
+                                            "height":  3475
+                                        },
+                                        {
+                                            "src":  "upload/choice/5K4A5867.JPG",
+                                            "thumb":  "upload/choice/5K4A5867.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 03",
+                                                        "ar":  "El Ekhteyar — كادر 03"
+                                                    },
+                                            "width":  5760,
+                                            "height":  3840
+                                        },
+                                        {
+                                            "src":  "upload/choice/5K4A5892.JPG",
+                                            "thumb":  "upload/choice/5K4A5892.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 04",
+                                                        "ar":  "El Ekhteyar — كادر 04"
+                                                    },
+                                            "width":  5760,
+                                            "height":  3840
+                                        },
+                                        {
+                                            "src":  "upload/choice/5K4A5910.JPG",
+                                            "thumb":  "upload/choice/5K4A5910.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 05",
+                                                        "ar":  "El Ekhteyar — كادر 05"
+                                                    },
+                                            "width":  4464,
+                                            "height":  2976
+                                        },
+                                        {
+                                            "src":  "upload/choice/5K4A5942.JPG",
+                                            "thumb":  "upload/choice/5K4A5942.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 06",
+                                                        "ar":  "El Ekhteyar — كادر 06"
+                                                    },
+                                            "width":  5760,
+                                            "height":  3840
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3574.JPG",
+                                            "thumb":  "upload/choice/IMG_3574.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 07",
+                                                        "ar":  "El Ekhteyar — كادر 07"
+                                                    },
+                                            "width":  3876,
+                                            "height":  2472
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3576.JPG",
+                                            "thumb":  "upload/choice/IMG_3576.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 08",
+                                                        "ar":  "El Ekhteyar — كادر 08"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3594.JPG",
+                                            "thumb":  "upload/choice/IMG_3594.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 09",
+                                                        "ar":  "El Ekhteyar — كادر 09"
+                                                    },
+                                            "width":  3456,
+                                            "height":  4320
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3602.JPG",
+                                            "thumb":  "upload/choice/IMG_3602.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 10",
+                                                        "ar":  "El Ekhteyar — كادر 10"
+                                                    },
+                                            "width":  3456,
+                                            "height":  5184
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3672.JPG",
+                                            "thumb":  "upload/choice/IMG_3672.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 11",
+                                                        "ar":  "El Ekhteyar — كادر 11"
+                                                    },
+                                            "width":  4245,
+                                            "height":  3396
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3893.JPG",
+                                            "thumb":  "upload/choice/IMG_3893.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 12",
+                                                        "ar":  "El Ekhteyar — كادر 12"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3937.JPG",
+                                            "thumb":  "upload/choice/IMG_3937.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 13",
+                                                        "ar":  "El Ekhteyar — كادر 13"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/choice/IMG_3943.JPG",
+                                            "thumb":  "upload/choice/IMG_3943.JPG",
+                                            "alt":  {
+                                                        "en":  "El Ekhteyar — Frame 14",
+                                                        "ar":  "El Ekhteyar — كادر 14"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "cairo-kabul",
+                         "discipline":  "filmmaking",
+                         "subdiscipline":  "drama",
+                         "subdisciplineName":  {
+                                                   "en":  "Television Drama",
+                                                   "ar":  "دراما تلفزيونية"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Cairo Kabul — Set Lighting & Visual Drama",
+                                      "ar":  "مسلسل القاهرة كابول — هندسة الضوء الدرامي وتكوين الكادر"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Atmospheric Drama · Chiaroscuro Set Lighting · Deep Framing",
+                                          "ar":  "دراما نفسية · إضاءة كياروسكورو · كادرات مكانية عميقة"
+                                      },
+                         "year":  "2021",
+                         "role":  {
+                                      "en":  "Camera Department & Lighting Setup",
+                                      "ar":  "قسم الكاميرا وهندسة الإضاءة"
+                                  },
+                         "client":  "Synergy Art Production",
+                         "agency":  "Synergy Production",
+                         "deliverables":  [
+                                              "Dramatic Set Lighting",
+                                              "Camera Rigging",
+                                              "Scene Continuity Stills"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Cinematic set lighting and camera blocking for the acclaimed psychological political drama. Crafting heavy shadow contrasts, moody tungsten practicals, and deep depth-of-field compositions to reflect complex ideological confrontations.",
+                                             "ar":  "هندسة الإضاءة الدرامية وتكوين الكادرات لمسلسل الدراما السياسية والنفسية الملحمي. بناء تباين ظلال عميق واستخدام إضاءة التنجستن الدافئة لتجسيد الصراعات الفكرية المعقدة في غرف الحوار المغلقة."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Creating claustrophobic tension within dialogue-heavy interior spaces across disparate cultural locations.",
+                                                            "ar":  "خلق توتر بصري محتدم داخل مساحات داخلية تعتمد على الحوار العميق بين أربع شخصيات محورية."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Chiaroscuro directional lighting, purposeful framing through architectural portals, and controlled contrast ratios.",
+                                                            "ar":  "توظيف إضاءة كياروسكورو ذات ظلال حادة، والتأطير عبر الأبواب والممرات لتعميق عزلة الشخصيات."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "Critical acclaim for atmospheric cinematography that intensified the ideological stakes of every interrogation.",
+                                                          "ar":  "إشادة نقدية واسعة بأجواء التصوير السينمائي التي رفعت من وتيرة التوتر في كل مشهد مواجهة."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5109.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5109.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 01",
+                                                        "ar":  "Cairo Kabul — كادر 01"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5110.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5110.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 02",
+                                                        "ar":  "Cairo Kabul — كادر 02"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5112.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5112.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 03",
+                                                        "ar":  "Cairo Kabul — كادر 03"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5116.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5116.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 04",
+                                                        "ar":  "Cairo Kabul — كادر 04"
+                                                    },
+                                            "width":  3722,
+                                            "height":  2978
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5118.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5118.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 05",
+                                                        "ar":  "Cairo Kabul — كادر 05"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5124.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5124.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 06",
+                                                        "ar":  "Cairo Kabul — كادر 06"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5129.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5129.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 07",
+                                                        "ar":  "Cairo Kabul — كادر 07"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5132.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5132.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 08",
+                                                        "ar":  "Cairo Kabul — كادر 08"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5133.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5133.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 09",
+                                                        "ar":  "Cairo Kabul — كادر 09"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_5137.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_5137.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 10",
+                                                        "ar":  "Cairo Kabul — كادر 10"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6334.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6334.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 11",
+                                                        "ar":  "Cairo Kabul — كادر 11"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6362.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6362.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 12",
+                                                        "ar":  "Cairo Kabul — كادر 12"
+                                                    },
+                                            "width":  4057,
+                                            "height":  2705
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6364.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6364.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 13",
+                                                        "ar":  "Cairo Kabul — كادر 13"
+                                                    },
+                                            "width":  3456,
+                                            "height":  5184
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6365.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6365.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 14",
+                                                        "ar":  "Cairo Kabul — كادر 14"
+                                                    },
+                                            "width":  2967,
+                                            "height":  4451
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6366.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6366.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 15",
+                                                        "ar":  "Cairo Kabul — كادر 15"
+                                                    },
+                                            "width":  3456,
+                                            "height":  5184
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6367.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6367.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 16",
+                                                        "ar":  "Cairo Kabul — كادر 16"
+                                                    },
+                                            "width":  3456,
+                                            "height":  5184
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6369.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6369.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 17",
+                                                        "ar":  "Cairo Kabul — كادر 17"
+                                                    },
+                                            "width":  2914,
+                                            "height":  3642
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6371.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6371.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 18",
+                                                        "ar":  "Cairo Kabul — كادر 18"
+                                                    },
+                                            "width":  4041,
+                                            "height":  3233
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6372.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6372.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 19",
+                                                        "ar":  "Cairo Kabul — كادر 19"
+                                                    },
+                                            "width":  4311,
+                                            "height":  3449
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6373.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6373.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 20",
+                                                        "ar":  "Cairo Kabul — كادر 20"
+                                                    },
+                                            "width":  3642,
+                                            "height":  2914
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6377.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6377.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 21",
+                                                        "ar":  "Cairo Kabul — كادر 21"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6382.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6382.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 22",
+                                                        "ar":  "Cairo Kabul — كادر 22"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6718.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6718.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 23",
+                                                        "ar":  "Cairo Kabul — كادر 23"
+                                                    },
+                                            "width":  4765,
+                                            "height":  3331
+                                        },
+                                        {
+                                            "src":  "upload/cairo - kapol/IMG_6719.JPG",
+                                            "thumb":  "upload/cairo - kapol/IMG_6719.JPG",
+                                            "alt":  {
+                                                        "en":  "Cairo Kabul — Frame 24",
+                                                        "ar":  "Cairo Kabul — كادر 24"
+                                                    },
+                                            "width":  4546,
+                                            "height":  3031
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "hawadet",
+                         "discipline":  "filmmaking",
+                         "subdiscipline":  "drama",
+                         "subdisciplineName":  {
+                                                   "en":  "Period Drama",
+                                                   "ar":  "دراما تاريخية"
+                                               },
+                         "featured":  false,
+                         "name":  {
+                                      "en":  "Hawadet El Champs-Elysées — Period Drama Lighting & Texture",
+                                      "ar":  "مسلسل حواديت الشانزليزيه — إضاءة الحقبة الذهبية وأجواء الخمسينات"
+                                  },
+                         "subtitle":  {
+                                          "en":  "1950s Golden Age · Warm Tungsten Glow · Aristocratic Interior Stills",
+                                          "ar":  "حقبة الخمسينات · توهج التنجستن الذهبي · أناقة الديكور الكلاسيكي"
+                                      },
+                         "year":  "2019 - 2020",
+                         "role":  {
+                                      "en":  "Camera Department & Period Lighting",
+                                      "ar":  "قسم الكاميرا والإضاءة الكلاسيكية"
+                                  },
+                         "client":  "Synergy Art Production",
+                         "agency":  "Synergy Production",
+                         "deliverables":  [
+                                              "Period Lighting Design",
+                                              "Camera Movement",
+                                              "Wardrobe & Set Stills"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Lighting and camera documentation for a lavish period drama set in 1950s Cairo. Utilizing warm tungsten palettes, soft diffusion filters, and painterly compositions that honor the golden age of Egyptian cinema while maintaining contemporary technical precision.",
+                                             "ar":  "تصميم الإضاءة وتوثيق كادرات الكاميرا لدراما تاريخية فاخرة تدور أحداثها في قاهرة الخمسينات. استخدام إضاءة التنجستن الذهبية وفلاتر التنعيم السينمائي لتجسيد نوستالجيا العصر الذهبي للسينما المصرية بأسلوب بصري حديث ومتقن."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Balancing period authenticity and rich costume textures without appearing artificial or over-lit.",
+                                                            "ar":  "إبراز فخامة الأزياء والديكورات الكلاسيكية دون الوقوع في الإضاءة المسرحية الزائدة."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Soft amber side-fill sources, rich velvet shadows, and slow fluid camera tracking along ornate hallways.",
+                                                            "ar":  "استخدام إضاءة جانبية كهرمانية ناعمة مع ظلال مخملية وحركة كاميرا انسيابية بطيئة في القاعات الفخمة."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "A rich visual identity praised for authentic vintage elegance and atmospheric nostalgia.",
+                                                          "ar":  "بصمة بصرية ساحرة نالت إشادة الجمهور لأناقتها الكلاسيكية ونوستالجيا القاهرة الملكية."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/7wadet/IMG_0396.JPG",
+                                            "thumb":  "upload/7wadet/IMG_0396.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 01",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 01"
+                                                    },
+                                            "width":  3157,
+                                            "height":  4735
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1081.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1081.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 02",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 02"
+                                                    },
+                                            "width":  3456,
+                                            "height":  5184
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1116.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1116.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 03",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 03"
+                                                    },
+                                            "width":  5184,
+                                            "height":  3456
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1318.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1318.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 04",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 04"
+                                                    },
+                                            "width":  4245,
+                                            "height":  3396
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1390.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1390.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 05",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 05"
+                                                    },
+                                            "width":  2160,
+                                            "height":  1728
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1391.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1391.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 06",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 06"
+                                                    },
+                                            "width":  2160,
+                                            "height":  1728
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1400.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1400.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 07",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 07"
+                                                    },
+                                            "width":  1728,
+                                            "height":  2160
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1401.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1401.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 08",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 08"
+                                                    },
+                                            "width":  1683,
+                                            "height":  2104
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1403.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1403.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 09",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 09"
+                                                    },
+                                            "width":  1728,
+                                            "height":  2160
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1404.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1404.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 10",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 10"
+                                                    },
+                                            "width":  1728,
+                                            "height":  2160
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1417.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1417.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 11",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 11"
+                                                    },
+                                            "width":  1578,
+                                            "height":  1973
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1418.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1418.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 12",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 12"
+                                                    },
+                                            "width":  1578,
+                                            "height":  1973
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1428.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1428.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 13",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 13"
+                                                    },
+                                            "width":  1574,
+                                            "height":  1967
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1429.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1429.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 14",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 14"
+                                                    },
+                                            "width":  1376,
+                                            "height":  1720
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1430.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1430.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 15",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 15"
+                                                    },
+                                            "width":  1376,
+                                            "height":  1720
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1431.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1431.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 16",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 16"
+                                                    },
+                                            "width":  1728,
+                                            "height":  2160
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1432.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1432.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 17",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 17"
+                                                    },
+                                            "width":  1728,
+                                            "height":  2160
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1433.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1433.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 18",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 18"
+                                                    },
+                                            "width":  1728,
+                                            "height":  2160
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1444.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1444.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 19",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 19"
+                                                    },
+                                            "width":  1399,
+                                            "height":  1749
+                                        },
+                                        {
+                                            "src":  "upload/7wadet/IMG_1447.JPG",
+                                            "thumb":  "upload/7wadet/IMG_1447.JPG",
+                                            "alt":  {
+                                                        "en":  "Hawadet El Champs-Elysees — Frame 20",
+                                                        "ar":  "Hawadet El Champs-Elysees — كادر 20"
+                                                    },
+                                            "width":  1967,
+                                            "height":  1574
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "mawlawya-film",
+                         "discipline":  "filmmaking",
+                         "subdiscipline":  "experimental",
+                         "subdisciplineName":  {
+                                                   "en":  "Visual Studies & Film",
+                                                   "ar":  "تجارب سينمائية"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Mawlawya — Graduation Film & Visual Study",
+                                      "ar":  "فيلم مولوية — دراسة بصرية وتجربة سينمائية صوفية"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Anamorphic 2.39:1 · Sufi Whirling Motion · Mystical Spotlight",
+                                          "ar":  "نسبة سينمائية 2.39:1 · حركة صوفية دائرية · إضاءة روحية"
+                                      },
+                         "year":  "2022",
+                         "role":  {
+                                      "en":  "Cinematographer & Director of Photography",
+                                      "ar":  "مدير التصوير ومخرج الرؤية البصرية"
+                                  },
+                         "client":  "Faculty of Applied Arts Graduation Thesis",
+                         "agency":  "Applied Arts Cinema Department",
+                         "deliverables":  [
+                                              "Cinematography (2.39:1)",
+                                              "Visual Direction",
+                                              "Lighting Design",
+                                              "Color Grading"
+                                          ],
+                         "video":  "https://vimeo.com/1239369594?share=copy&fl=sv&fe=ci",
+                         "videoLabel":  {
+                                            "en":  "Watch Graduation Film (Vimeo)",
+                                            "ar":  "مشاهدة الفيلم كاملاً (فيميو)"
+                                        },
+                         "description":  {
+                                             "en":  "A spiritual cinematic exploration of the Mawlawi whirling dervish tradition. Crafted in an anamorphic 2.39:1 aspect ratio, the visual language mirrors the eternal circular rhythm of Sufi contemplation through sweeping camera arcs, singular shafts of light piercing darkness, and disciplined color harmonies.",
+                                             "ar":  "دراسة بصرية سينمائية متكاملة تستكشف فلسفة رقصة التنورة والدراويش الصوفية. تم بناء العمل على نسبة سينمائية 2.39:1، حيث تحاكي حركة الكاميرا الدائرية الدوران الروحي الأبدي، وسط حزم ضوئية أحادية تخترق الظلمة لتعكس السكون الداخلي."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Translating spiritual trance and continuous rotational movement without causing visual vertigo.",
+                                                            "ar":  "ترجمة حالة الوجد الصوفي والحركة الدورانية المستمرة دون تشتيت عين المشاهد."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Circular tracking dolly locked to the dancer rotational center, paired with high-contrast top-down spotlights.",
+                                                            "ar":  "تثبيت مسار كاميرا دائري محوري متزامن مع دوران الدراويش مع إضاءة علوية ساقطة شديدة التركيز."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "Distinction award from the Faculty of Applied Arts and international festival screenings.",
+                                                          "ar":  "مرتبة الشرف الأولى من كلية الفنون التطبيقية ومشاركات في مهرجانات للأفلام التجريبية."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/design/mawlwya posters/first.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/first.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 02",
+                                                        "ar":  "Mawlawya Film Poster — كادر 02"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/secound.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/secound.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 04",
+                                                        "ar":  "Mawlawya Film Poster — كادر 04"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/third.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/third.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 05",
+                                                        "ar":  "Mawlawya Film Poster — كادر 05"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/fourth.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/fourth.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 03",
+                                                        "ar":  "Mawlawya Film Poster — كادر 03"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/fifth.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/fifth.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 01",
+                                                        "ar":  "Mawlawya Film Poster — كادر 01"
+                                                    },
+                                            "width":  6142,
+                                            "height":  17362
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "clove-commercial",
+                         "discipline":  "filmmaking",
+                         "subdiscipline":  "commercial",
+                         "subdisciplineName":  {
+                                                   "en":  "Commercial Film",
+                                                   "ar":  "إعلان تجاري"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Clove Restaurant — Commercial Film & Atmosphere",
+                                      "ar":  "كلوف ريستورانت — إعلان تجاري وأجواء الضيافة"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Hospitality Commercial · Macro Culinary Craft · Mood Lighting",
+                                          "ar":  "إعلان تجاري · تصوير ماكرو للأطباق · إضاءة مزاجية دافئة"
+                                      },
+                         "year":  "2023",
+                         "role":  {
+                                      "en":  "Cinematographer & Video Editor",
+                                      "ar":  "مصور سينمائي ومونتير"
+                                  },
+                         "client":  "Clove Restaurant & Lounge",
+                         "agency":  "Clove Hospitality Group",
+                         "deliverables":  [
+                                              "Commercial Film (4K)",
+                                              "Color Grading",
+                                              "Sound Design Integration",
+                                              "Social Cutdowns"
+                                          ],
+                         "video":  "upload/filmmaking/Clove_Restaurant.mp4",
+                         "videoLabel":  {
+                                            "en":  "Play Commercial Film (MP4)",
+                                            "ar":  "تشغيل الإعلان التجاري (فيديو)"
+                                        },
+                         "description":  {
+                                             "en":  "A dynamic commercial film capturing the artisanal gastronomy, cocktail craftsmanship, and intimate lounge ambiance of Clove Restaurant. Featuring rich macro cinematography, steam capture, rhythmic speed ramping, and warm candlelight lighting.",
+                                             "ar":  "إعلان تجاري مبتكر يبرز دقة فنون الطهي وصناعة المشروبات المبتكرة والأجواء الدافئة لمطعم كلوف. يجمع العمل بين لقطات الماكرو الفائقة، وتصوير البخار والسوائل، وتدرج السرعات المتناغم مع إضاءة حميمية ساحرة."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Capturing dynamic food preparation and cozy night atmosphere within an operating restaurant without disrupting service.",
+                                                            "ar":  "تصوير مراحل الطهي الدقيقة والأجواء الليلية داخل المطعم أثناء التشغيل الحي دون تعطيل حركة المكان."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Ultra-compact cinema rig, fast T1.5 prime lenses, and targeted battery-powered LED rim tubes.",
+                                                            "ar":  "استخدام كاميرا سينمائية مدمجة وعدسات فائقة الاتساع مع أنابيب إضاءة LED لاسلكية موجهة لإبراز لمعان الأطباق."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "A high-converting commercial promo campaign that generated record reservations and social buzz.",
+                                                          "ar":  "حملة إعلانية ناجحة حققت أعلى نسبة تفاعل وحجوزات جديدة للمطعم على منصات التواصل."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/food/2H4A2822.JPG",
+                                            "thumb":  "upload/food/2H4A2822.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 01",
+                                                        "ar":  "Food and Beverage — كادر 01"
+                                                    },
+                                            "width":  2571,
+                                            "height":  3122
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2835.JPG",
+                                            "thumb":  "upload/food/2H4A2835.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 02",
+                                                        "ar":  "Food and Beverage — كادر 02"
+                                                    },
+                                            "width":  4962,
+                                            "height":  3970
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2859.JPG",
+                                            "thumb":  "upload/food/2H4A2859.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 03",
+                                                        "ar":  "Food and Beverage — كادر 03"
+                                                    },
+                                            "width":  4451,
+                                            "height":  3561
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2865.JPG",
+                                            "thumb":  "upload/food/2H4A2865.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 04",
+                                                        "ar":  "Food and Beverage — كادر 04"
+                                                    },
+                                            "width":  4480,
+                                            "height":  6429
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2874.JPG",
+                                            "thumb":  "upload/food/2H4A2874.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 05",
+                                                        "ar":  "Food and Beverage — كادر 05"
+                                                    },
+                                            "width":  4186,
+                                            "height":  5233
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2879.JPG",
+                                            "thumb":  "upload/food/2H4A2879.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 06",
+                                                        "ar":  "Food and Beverage — كادر 06"
+                                                    },
+                                            "width":  4909,
+                                            "height":  3927
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "sahranen",
+                         "discipline":  "photography",
+                         "subdiscipline":  "celebrity",
+                         "subdisciplineName":  {
+                                                   "en":  "Celebrity & Entertainment",
+                                                   "ar":  "مشاهير وترفيه"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Sahranen — Celebrity Portraits & Entertainment Stills",
+                                      "ar":  "برنامج سهرانين — بورتريهات المشاهير وتصوير الكواليس"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Television Studio Stills · Celebrity Candid Portraits · Live Music",
+                                          "ar":  "كواليس الاستوديو الضخم · لقطات عفوية للنجوم · عروض موسيقية حية"
+                                      },
+                         "year":  "2021 - 2023",
+                         "role":  {
+                                      "en":  "Still Photographer & Production Stills",
+                                      "ar":  "المصور الفوتوغرافي الرئيسي لكواليس البرنامج"
+                                  },
+                         "client":  "ON TV · Amir Karara Show",
+                         "agency":  "Synergy Productions",
+                         "deliverables":  [
+                                              "Key Cast Portraits",
+                                              "Live Performance Stills",
+                                              "Social Media Campaign Assets"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Extensive still photography capturing Egypt and the Arab world premier music and acting stars during filming of the prime-time talk show Sahranen, hosted by Amir Karara. Combining spontaneous candid expressions with theatrical studio key lights.",
+                                             "ar":  "التغطية الفوتوغرافية الشاملة لكبار نجوم الغناء والتمثيل في مصر والوطن العربي أثناء تسجيل حلقات برنامج سهرانين مع النجم أمير كرارة. اقتناص الانفعالات العفوية والضحكات الصادقة وسط الإضاءة المسرحية الملونة."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Photographing in a dynamic multi-camera television studio with spontaneous guest movements and zero pauses.",
+                                                            "ar":  "التصوير في استوديو تلفزيوني ضخم ومتعدد الكاميرات مع حركة مستمرة للضيوف دون توقف للقطات ثابتة."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "High-speed silent shutter mirrorless systems with fast 50mm and 85mm prime lenses anticipating emotional beats.",
+                                                            "ar":  "استخدام كاميرات صامتة سريعة وعدسات برايم فائقة الحدة مع توقع اللحظات العاطفية والانفعالات الحية."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "A definitive archive of over 50 celebrity portraits used as official network promotional key art.",
+                                                          "ar":  "أرشيف فوتوغرافي مميز يضم أكثر من 50 بورتريهاً رسمياً للنجوم تم اعتماده في الحملات الإعلانية للشبكة."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/sahranen/_MG_3623.JPG",
+                                            "thumb":  "upload/sahranen/_MG_3623.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 01",
+                                                        "ar":  "Sahranen — كادر 01"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_3927.JPG",
+                                            "thumb":  "upload/sahranen/_MG_3927.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 02",
+                                                        "ar":  "Sahranen — كادر 02"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4143.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4143.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 03",
+                                                        "ar":  "Sahranen — كادر 03"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4153.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4153.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 04",
+                                                        "ar":  "Sahranen — كادر 04"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4200.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4200.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 05",
+                                                        "ar":  "Sahranen — كادر 05"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4204.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4204.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 06",
+                                                        "ar":  "Sahranen — كادر 06"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4207.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4207.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 07",
+                                                        "ar":  "Sahranen — كادر 07"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4433.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4433.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 08",
+                                                        "ar":  "Sahranen — كادر 08"
+                                                    },
+                                            "width":  4560,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4581.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4581.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 09",
+                                                        "ar":  "Sahranen — كادر 09"
+                                                    },
+                                            "width":  4560,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4735.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4735.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 10",
+                                                        "ar":  "Sahranen — كادر 10"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4805.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4805.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 11",
+                                                        "ar":  "Sahranen — كادر 11"
+                                                    },
+                                            "width":  4560,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4816.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4816.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 12",
+                                                        "ar":  "Sahranen — كادر 12"
+                                                    },
+                                            "width":  4560,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4872.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4872.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 13",
+                                                        "ar":  "Sahranen — كادر 13"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4951.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4951.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 14",
+                                                        "ar":  "Sahranen — كادر 14"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_4961.JPG",
+                                            "thumb":  "upload/sahranen/_MG_4961.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 15",
+                                                        "ar":  "Sahranen — كادر 15"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_5100.JPG",
+                                            "thumb":  "upload/sahranen/_MG_5100.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 16",
+                                                        "ar":  "Sahranen — كادر 16"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_5130.JPG",
+                                            "thumb":  "upload/sahranen/_MG_5130.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 17",
+                                                        "ar":  "Sahranen — كادر 17"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_5192.JPG",
+                                            "thumb":  "upload/sahranen/_MG_5192.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 18",
+                                                        "ar":  "Sahranen — كادر 18"
+                                                    },
+                                            "width":  4363,
+                                            "height":  3490
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_5193.JPG",
+                                            "thumb":  "upload/sahranen/_MG_5193.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 19",
+                                                        "ar":  "Sahranen — كادر 19"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_5206.JPG",
+                                            "thumb":  "upload/sahranen/_MG_5206.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 20",
+                                                        "ar":  "Sahranen — كادر 20"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/_MG_5210.JPG",
+                                            "thumb":  "upload/sahranen/_MG_5210.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 21",
+                                                        "ar":  "Sahranen — كادر 21"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/IMG_0074.JPG",
+                                            "thumb":  "upload/sahranen/IMG_0074.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 22",
+                                                        "ar":  "Sahranen — كادر 22"
+                                                    },
+                                            "width":  3456,
+                                            "height":  5184
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/IMG_0119.JPG",
+                                            "thumb":  "upload/sahranen/IMG_0119.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 23",
+                                                        "ar":  "Sahranen — كادر 23"
+                                                    },
+                                            "width":  3456,
+                                            "height":  5184
+                                        },
+                                        {
+                                            "src":  "upload/sahranen/IMG_0293.JPG",
+                                            "thumb":  "upload/sahranen/IMG_0293.JPG",
+                                            "alt":  {
+                                                        "en":  "Sahranen — Frame 24",
+                                                        "ar":  "Sahranen — كادر 24"
+                                                    },
+                                            "width":  3397,
+                                            "height":  4246
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "kojak",
+                         "discipline":  "photography",
+                         "subdiscipline":  "editorial",
+                         "subdisciplineName":  {
+                                                   "en":  "Editorial & Fashion",
+                                                   "ar":  "أزياء وبورتريه"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Kojak Studio — Light Sculpting & Editorial Fashion",
+                                      "ar":  "كوجاك ستوديو — نحت الضوء والبورتريه الدرامي"
+                                  },
+                         "subtitle":  {
+                                          "en":  "High-Concept Fashion · Hard Key Lighting · Avant-Garde Texture",
+                                          "ar":  "أزياء تجريبية · إضاءة استوديو منحوتة · ملامح وتفاصيل حادة"
+                                      },
+                         "year":  "2022",
+                         "role":  {
+                                      "en":  "Studio Photographer & Lighting Designer",
+                                      "ar":  "مصور استوديو ومصمم إضاءة"
+                                  },
+                         "client":  "Kojak Studio (Mohanad Kojak)",
+                         "agency":  "Kojak Haute Couture",
+                         "deliverables":  [
+                                              "Editorial Studio Photography",
+                                              "Creative Lighting Craft",
+                                              "Lookbook & Press Visuals"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Studio portraiture and fashion editorial photography for avant-garde designer Mohanad Kojak. Focused on high-contrast lighting to chisel dramatic bone structure and accentuate bespoke fabric textures, embroidery, and sculptural silhouettes.",
+                                             "ar":  "جلسات تصوير أزياء وبورتريهات استوديو تجريبية للمصمم المبتكر مهند كوجاك. التركيز على نحت الملامح بإضاءة حادة التباين لإبراز دقة الخامات والتطريزات والأشكال المعمارية لقطع الأزياء الراقية."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Rendering experimental garment volumes and textured textiles while maintaining bold character portraiture.",
+                                                            "ar":  "إبراز تفاصيل وخامات الأزياء غير التقليدية مع الحفاظ على قوة الشخصية والبورتريه الإنساني في الكادر."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Narrow grid-spotted key lights combined with negative black fill to prevent spill and maximize micro-contrast.",
+                                                            "ar":  "استخدام إضاءة مركزة عبر شبكات العسل (Grids) مع ألواح العزل الأسود لمنع ارتداد الضوء وزيادة التباين الحاد."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "A compelling high-fashion portfolio featured in international fashion press and brand campaigns.",
+                                                          "ar":  "مجموعة صور افتتاحية جريئة نشرت في منصات الموضة وحسابات العلامة التجارية."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/kojak/IMG_7396.JPG",
+                                            "thumb":  "upload/kojak/IMG_7396.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 01",
+                                                        "ar":  "Kojak Studio — كادر 01"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7439.JPG",
+                                            "thumb":  "upload/kojak/IMG_7439.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 02",
+                                                        "ar":  "Kojak Studio — كادر 02"
+                                                    },
+                                            "width":  3491,
+                                            "height":  4343
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7494.JPG",
+                                            "thumb":  "upload/kojak/IMG_7494.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 03",
+                                                        "ar":  "Kojak Studio — كادر 03"
+                                                    },
+                                            "width":  3648,
+                                            "height":  4538
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7554.JPG",
+                                            "thumb":  "upload/kojak/IMG_7554.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 04",
+                                                        "ar":  "Kojak Studio — كادر 04"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7575.JPG",
+                                            "thumb":  "upload/kojak/IMG_7575.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 05",
+                                                        "ar":  "Kojak Studio — كادر 05"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5040
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7591.JPG",
+                                            "thumb":  "upload/kojak/IMG_7591.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 06",
+                                                        "ar":  "Kojak Studio — كادر 06"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7593.JPG",
+                                            "thumb":  "upload/kojak/IMG_7593.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 07",
+                                                        "ar":  "Kojak Studio — كادر 07"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7600.JPG",
+                                            "thumb":  "upload/kojak/IMG_7600.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 08",
+                                                        "ar":  "Kojak Studio — كادر 08"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7606.JPG",
+                                            "thumb":  "upload/kojak/IMG_7606.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 09",
+                                                        "ar":  "Kojak Studio — كادر 09"
+                                                    },
+                                            "width":  3361,
+                                            "height":  5041
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7631.JPG",
+                                            "thumb":  "upload/kojak/IMG_7631.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 10",
+                                                        "ar":  "Kojak Studio — كادر 10"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7650.JPG",
+                                            "thumb":  "upload/kojak/IMG_7650.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 11",
+                                                        "ar":  "Kojak Studio — كادر 11"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7656.JPG",
+                                            "thumb":  "upload/kojak/IMG_7656.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 12",
+                                                        "ar":  "Kojak Studio — كادر 12"
+                                                    },
+                                            "width":  2774,
+                                            "height":  3468
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7658.JPG",
+                                            "thumb":  "upload/kojak/IMG_7658.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 13",
+                                                        "ar":  "Kojak Studio — كادر 13"
+                                                    },
+                                            "width":  2711,
+                                            "height":  4066
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7659.JPG",
+                                            "thumb":  "upload/kojak/IMG_7659.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 14",
+                                                        "ar":  "Kojak Studio — كادر 14"
+                                                    },
+                                            "width":  3648,
+                                            "height":  4560
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7663.JPG",
+                                            "thumb":  "upload/kojak/IMG_7663.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 15",
+                                                        "ar":  "Kojak Studio — كادر 15"
+                                                    },
+                                            "width":  3648,
+                                            "height":  4560
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7717-2.JPG",
+                                            "thumb":  "upload/kojak/IMG_7717-2.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 16",
+                                                        "ar":  "Kojak Studio — كادر 16"
+                                                    },
+                                            "width":  3364,
+                                            "height":  4205
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7719.JPG",
+                                            "thumb":  "upload/kojak/IMG_7719.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 17",
+                                                        "ar":  "Kojak Studio — كادر 17"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7721.JPG",
+                                            "thumb":  "upload/kojak/IMG_7721.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 18",
+                                                        "ar":  "Kojak Studio — كادر 18"
+                                                    },
+                                            "width":  3174,
+                                            "height":  4761
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7726-2.JPG",
+                                            "thumb":  "upload/kojak/IMG_7726-2.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 19",
+                                                        "ar":  "Kojak Studio — كادر 19"
+                                                    },
+                                            "width":  3482,
+                                            "height":  4353
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7729..2.JPG",
+                                            "thumb":  "upload/kojak/IMG_7729..2.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 20",
+                                                        "ar":  "Kojak Studio — كادر 20"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7729.JPG",
+                                            "thumb":  "upload/kojak/IMG_7729.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 21",
+                                                        "ar":  "Kojak Studio — كادر 21"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7746.JPG",
+                                            "thumb":  "upload/kojak/IMG_7746.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 22",
+                                                        "ar":  "Kojak Studio — كادر 22"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7747.JPG",
+                                            "thumb":  "upload/kojak/IMG_7747.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 23",
+                                                        "ar":  "Kojak Studio — كادر 23"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7761.JPG",
+                                            "thumb":  "upload/kojak/IMG_7761.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 24",
+                                                        "ar":  "Kojak Studio — كادر 24"
+                                                    },
+                                            "width":  3648,
+                                            "height":  5472
+                                        },
+                                        {
+                                            "src":  "upload/kojak/IMG_7765.JPG",
+                                            "thumb":  "upload/kojak/IMG_7765.JPG",
+                                            "alt":  {
+                                                        "en":  "Kojak Studio — Frame 25",
+                                                        "ar":  "Kojak Studio — كادر 25"
+                                                    },
+                                            "width":  5472,
+                                            "height":  3648
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "food-photography",
+                         "discipline":  "photography",
+                         "subdiscipline":  "commercial-photo",
+                         "subdisciplineName":  {
+                                                   "en":  "Food & Culinary",
+                                                   "ar":  "أطعمة ومشروبات"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Food & Beverage — Culinary Light Craft & Texture",
+                                      "ar":  "تصوير الأطعمة والمشروبات — صياغة الضوء وشهية المشهد"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Gastronomic Still Life · Liquid & Texture Glaze · Macro Precision",
+                                          "ar":  "أطباق طهي راقية · إبراز لمعان السوائل · دقة الماكرو"
+                                      },
+                         "year":  "2023",
+                         "role":  {
+                                      "en":  "Commercial Still Photographer & Food Stylist",
+                                      "ar":  "مصور تجاري ومصمم لقطات الأطعمة"
+                                  },
+                         "client":  "Clove Restaurant & Artisanal Kitchens",
+                         "agency":  "Clove Hospitality Group",
+                         "deliverables":  [
+                                              "Commercial Menu Photography",
+                                              "Beverage & Cocktail Stills",
+                                              "Social & Digital Display Imagery"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Commercial still life and beverage photography celebrating the artistry of modern cuisine. Precision directional back-lighting highlights the glistening surface of gourmet dishes, the fizz of handcrafted cocktails, and rich ingredient textures.",
+                                             "ar":  "تصوير فوتوغرافي تجاري للأطعمة والمشروبات يبرز جماليات المطبخ العصري. توظيف الإضاءة الخلفية الموجهة بدقة لإبراز لمعان الأطباق، وحبيبات الملح والبهارات، وانتعاش المشروبات المصنوعة يدوياً."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Preserving freshness, condensation, and color vibrancy under hot photographic studio lights.",
+                                                            "ar":  "الحفاظ على نضارة الأطباق وسخونتها وقطرات الندى على المشروبات تحت أضواء التصوير المركزة."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Rapid-fire strobe lighting with cross-polarized rim lights to eliminate unwanted hot glare while enhancing appetizing texture.",
+                                                            "ar":  "استخدام ومضات فلاش سريعة مع فلاتر استقطاب لمنع التوهج العشوائي وإظهار الملمس الشهي للطبق."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "Mouth-watering commercial imagery driving menu sales and brand reputation across hospitality venues.",
+                                                          "ar":  "مكتبة صور تجارية جذابة ساهمت في تعزيز هوية المطعم وزيادة طلبات الأطباق المميزة."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/food/2H4A2822.JPG",
+                                            "thumb":  "upload/food/2H4A2822.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 01",
+                                                        "ar":  "Food and Beverage — كادر 01"
+                                                    },
+                                            "width":  2571,
+                                            "height":  3122
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2835.JPG",
+                                            "thumb":  "upload/food/2H4A2835.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 02",
+                                                        "ar":  "Food and Beverage — كادر 02"
+                                                    },
+                                            "width":  4962,
+                                            "height":  3970
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2859.JPG",
+                                            "thumb":  "upload/food/2H4A2859.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 03",
+                                                        "ar":  "Food and Beverage — كادر 03"
+                                                    },
+                                            "width":  4451,
+                                            "height":  3561
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2865.JPG",
+                                            "thumb":  "upload/food/2H4A2865.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 04",
+                                                        "ar":  "Food and Beverage — كادر 04"
+                                                    },
+                                            "width":  4480,
+                                            "height":  6429
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2874.JPG",
+                                            "thumb":  "upload/food/2H4A2874.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 05",
+                                                        "ar":  "Food and Beverage — كادر 05"
+                                                    },
+                                            "width":  4186,
+                                            "height":  5233
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2879.JPG",
+                                            "thumb":  "upload/food/2H4A2879.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 06",
+                                                        "ar":  "Food and Beverage — كادر 06"
+                                                    },
+                                            "width":  4909,
+                                            "height":  3927
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2899.JPG",
+                                            "thumb":  "upload/food/2H4A2899.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 07",
+                                                        "ar":  "Food and Beverage — كادر 07"
+                                                    },
+                                            "width":  4190,
+                                            "height":  6284
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A2911.JPG",
+                                            "thumb":  "upload/food/2H4A2911.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 08",
+                                                        "ar":  "Food and Beverage — كادر 08"
+                                                    },
+                                            "width":  3454,
+                                            "height":  4318
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3041.JPG",
+                                            "thumb":  "upload/food/2H4A3041.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 09",
+                                                        "ar":  "Food and Beverage — كادر 09"
+                                                    },
+                                            "width":  2693,
+                                            "height":  3366
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3049.JPG",
+                                            "thumb":  "upload/food/2H4A3049.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 10",
+                                                        "ar":  "Food and Beverage — كادر 10"
+                                                    },
+                                            "width":  3462,
+                                            "height":  4328
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3247.JPG",
+                                            "thumb":  "upload/food/2H4A3247.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 11",
+                                                        "ar":  "Food and Beverage — كادر 11"
+                                                    },
+                                            "width":  9478,
+                                            "height":  7582
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3259.JPG",
+                                            "thumb":  "upload/food/2H4A3259.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 12",
+                                                        "ar":  "Food and Beverage — كادر 12"
+                                                    },
+                                            "width":  9478,
+                                            "height":  7582
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3294.JPG",
+                                            "thumb":  "upload/food/2H4A3294.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 13",
+                                                        "ar":  "Food and Beverage — كادر 13"
+                                                    },
+                                            "width":  3276,
+                                            "height":  3794
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3305.JPG",
+                                            "thumb":  "upload/food/2H4A3305.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 14",
+                                                        "ar":  "Food and Beverage — كادر 14"
+                                                    },
+                                            "width":  3528,
+                                            "height":  3503
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3318.JPG",
+                                            "thumb":  "upload/food/2H4A3318.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 15",
+                                                        "ar":  "Food and Beverage — كادر 15"
+                                                    },
+                                            "width":  4402,
+                                            "height":  4014
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3322.JPG",
+                                            "thumb":  "upload/food/2H4A3322.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 16",
+                                                        "ar":  "Food and Beverage — كادر 16"
+                                                    },
+                                            "width":  3955,
+                                            "height":  4972
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3328.JPG",
+                                            "thumb":  "upload/food/2H4A3328.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 17",
+                                                        "ar":  "Food and Beverage — كادر 17"
+                                                    },
+                                            "width":  3738,
+                                            "height":  5401
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3340.JPG",
+                                            "thumb":  "upload/food/2H4A3340.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 18",
+                                                        "ar":  "Food and Beverage — كادر 18"
+                                                    },
+                                            "width":  11751,
+                                            "height":  8862
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3386.JPG",
+                                            "thumb":  "upload/food/2H4A3386.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 19",
+                                                        "ar":  "Food and Beverage — كادر 19"
+                                                    },
+                                            "width":  4480,
+                                            "height":  3584
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3389.JPG",
+                                            "thumb":  "upload/food/2H4A3389.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 20",
+                                                        "ar":  "Food and Beverage — كادر 20"
+                                                    },
+                                            "width":  4480,
+                                            "height":  5600
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3392.JPG",
+                                            "thumb":  "upload/food/2H4A3392.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 21",
+                                                        "ar":  "Food and Beverage — كادر 21"
+                                                    },
+                                            "width":  4451,
+                                            "height":  5564
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3418.JPG",
+                                            "thumb":  "upload/food/2H4A3418.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 22",
+                                                        "ar":  "Food and Beverage — كادر 22"
+                                                    },
+                                            "width":  6720,
+                                            "height":  4480
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3427.JPG",
+                                            "thumb":  "upload/food/2H4A3427.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 23",
+                                                        "ar":  "Food and Beverage — كادر 23"
+                                                    },
+                                            "width":  6720,
+                                            "height":  4480
+                                        },
+                                        {
+                                            "src":  "upload/food/2H4A3443.JPG",
+                                            "thumb":  "upload/food/2H4A3443.JPG",
+                                            "alt":  {
+                                                        "en":  "Food and Beverage — Frame 24",
+                                                        "ar":  "Food and Beverage — كادر 24"
+                                                    },
+                                            "width":  6720,
+                                            "height":  4480
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "mawlawya-branding",
+                         "discipline":  "design",
+                         "subdiscipline":  "branding",
+                         "subdisciplineName":  {
+                                                   "en":  "Visual Identity",
+                                                   "ar":  "هويات بصرية"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Mawlawya — Cultural Brand Architecture & Identity",
+                                      "ar":  "مولوية — الهوية المؤسسية والنسق البصري الثقافي"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Sufi Heritage · Whirling Geometry · Comprehensive Brand System",
+                                          "ar":  "تراث صوفي · هندسة الدوران · منظومة هوية شاملة"
+                                      },
+                         "year":  "2022",
+                         "role":  {
+                                      "en":  "Lead Brand Designer & Visual Identity Architect",
+                                      "ar":  "المصمم الرئيسي للهوية المعمارية والبصرية"
+                                  },
+                         "client":  "Mawlawya Cultural Initiative",
+                         "agency":  "Faculty of Applied Arts",
+                         "deliverables":  [
+                                              "Brand Identity System",
+                                              "Comprehensive 100+ Page Brand Book (PDF)",
+                                              "Stationery Suite",
+                                              "Packaging & Collateral"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "A comprehensive brand architecture system translating the philosophical and spiritual depth of the Mawlawi tradition into a modern corporate identity. Encompassing circular dynamic logomarks, organic parchment and charcoal color palettes, and extensive physical collateral guidelines documented in a master brand manual.",
+                                             "ar":  "بناء منظومة هوية بصرية وثقافية متكاملة تترجم الفلسفة الصوفية ورقصة الدراويش إلى نسق مؤسسي معاصر. تشمل الشعار الهندسي الدائري، درجات الألوان الترابية والروحية، ومجموعة مطبوعات وأدلة استخدام شاملة في كتاب هوية موسع."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Distilling centuries of mystical heritage into a minimal, functional modern identity that speaks to contemporary audiences.",
+                                                            "ar":  "صياغة إرث صوفي عريق في شعار معاصر بسيط ووظيفي يناسب الاستخدام الرقمي والمطبوع."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "A dynamic circular glyph inspired by the centrifugal arc of the Sufi skirt, paired with disciplined bilingual typography.",
+                                                            "ar":  "ابتكار رمز دائري ديناميكي مستوحى من حركة التنورة المتسعة، متناغم مع تايبوجرافي عربي ولاتيني رصين."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "A master brand book and design ecosystem celebrated for authentic cultural resonance and visual rigor.",
+                                                          "ar":  "كتاب هوية مرجعي متكامل نال إشادة أساتذة التصميم ونال جائزة أفضل مشروع هوية بصرية."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/design/c6bff87f83058d9336592c7391cbc72c.jpg",
+                                            "thumb":  "upload/design/c6bff87f83058d9336592c7391cbc72c.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Brand Identity and Guidelines",
+                                                        "ar":  "Mawlawya Brand Identity"
+                                                    },
+                                            "width":  564,
+                                            "height":  423
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/first.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/first.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 02",
+                                                        "ar":  "Mawlawya Film Poster — كادر 02"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/secound.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/secound.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 04",
+                                                        "ar":  "Mawlawya Film Poster — كادر 04"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/third.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/third.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 05",
+                                                        "ar":  "Mawlawya Film Poster — كادر 05"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/fourth.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/fourth.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 03",
+                                                        "ar":  "Mawlawya Film Poster — كادر 03"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/fifth.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/fifth.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 01",
+                                                        "ar":  "Mawlawya Film Poster — كادر 01"
+                                                    },
+                                            "width":  6142,
+                                            "height":  17362
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "mawlawya-posters",
+                         "discipline":  "design",
+                         "subdiscipline":  "keyart",
+                         "subdisciplineName":  {
+                                                   "en":  "Key Art & Posters",
+                                                   "ar":  "أفيشات وملصقات"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Mawlawya — Cinematic Film Posters & Key Art",
+                                      "ar":  "أفيشات فيلم مولوية — فنون الأفيش والهرمية البصرية"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Theatrical Key Art · Arabic Typographic Title · Contemplative Scale",
+                                          "ar":  "أفيشات سينمائية رسمية · عنوان تايبوجرافي مدمج · هرمية بصرية"
+                                      },
+                         "year":  "2022",
+                         "role":  {
+                                      "en":  "Key Art & Poster Designer",
+                                      "ar":  "مصمم الأفيش السينمائي والهوية الإعلانية"
+                                  },
+                         "client":  "Independent Film Release & Festival Circuit",
+                         "agency":  "Mawlawya Productions",
+                         "deliverables":  [
+                                              "5 Theatrical Master Posters",
+                                              "Festival Banners",
+                                              "Collector Art Prints"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "A series of 5 collector-grade theatrical key art posters designed for the film Mawlawya. Integrating bold Arabic calligraphic title treatments directly into the silhouette contours of whirling dervishes, achieving powerful graphic contrast and meditative scale.",
+                                             "ar":  "مجموعة من 5 أفيشات سينمائية رسمية صممت لفيلم مولوية للمشاركة في المهرجانات السينمائية. دمج الخط العربي التعبيري مع ظلال الدراويش الدوارة، لتحقيق تباين بصري درامي يجذب العين من النظرة الأولى ويعبر عن روح الفيلم."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Creating key art with strong immediate stopping power while preserving contemplative spiritual depth.",
+                                                            "ar":  "تصميم أفيش سينمائي يمتلك جاذبية بصرية فورية في صالات العرض دون التخلي عن الطابع التأملي."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "High-contrast monochromatic silhouette mastery with warm ochre highlights and asymmetric typographic hierarchy.",
+                                                            "ar":  "الاعتماد على التباين الشديد للظلال مع لمسات المغرة الذهبية وترتيب تايبوجرافي غير متماثل يمنح الكادر وزناً درامياً."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "Official festival posters exhibited at premier film gatherings and published in design monographs.",
+                                                          "ar":  "أفيشات رسمية اعتمدت في المهرجانات السينمائية ونالت إعجاب النقاد الفنيين."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/design/mawlwya posters/first.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/first.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 02",
+                                                        "ar":  "Mawlawya Film Poster — كادر 02"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/secound.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/secound.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 04",
+                                                        "ar":  "Mawlawya Film Poster — كادر 04"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/third.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/third.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 05",
+                                                        "ar":  "Mawlawya Film Poster — كادر 05"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/fourth.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/fourth.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 03",
+                                                        "ar":  "Mawlawya Film Poster — كادر 03"
+                                                    },
+                                            "width":  6142,
+                                            "height":  8504
+                                        },
+                                        {
+                                            "src":  "upload/design/mawlwya posters/fifth.jpg",
+                                            "thumb":  "upload/design/mawlwya posters/fifth.jpg",
+                                            "alt":  {
+                                                        "en":  "Mawlawya Film Poster — Frame 01",
+                                                        "ar":  "Mawlawya Film Poster — كادر 01"
+                                                    },
+                                            "width":  6142,
+                                            "height":  17362
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "diwan-identity",
+                         "discipline":  "design",
+                         "subdiscipline":  "branding",
+                         "subdisciplineName":  {
+                                                   "en":  "Brand Collateral",
+                                                   "ar":  "منتجات ثقافية"
+                                               },
+                         "featured":  true,
+                         "name":  {
+                                      "en":  "Diwan Bookstores — Brand Applications & Literary Collateral",
+                                      "ar":  "مكتبات ديوان — تطبيقات الهوية والمنتجات الثقافية"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Cultural Merchandising · Typographic Bookmarks · Retail Packaging",
+                                          "ar":  "منتجات ثقافية · فواصل كتب تايبوجرافية · تغليف وهدايا القراءة"
+                                      },
+                         "year":  "2021 - 2022",
+                         "role":  {
+                                      "en":  "Brand Collateral & Product Designer",
+                                      "ar":  "مصمم المنتجات وتطبيقات الهوية الثقافية"
+                                  },
+                         "client":  "Diwan Bookstores Egypt",
+                         "agency":  "Diwan Publishing & Retail",
+                         "deliverables":  [
+                                              "Literary Bookmarks Suite",
+                                              "Canvas Tote Bags",
+                                              "Ceramic Coasters",
+                                              "Book Wrap Packaging"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Comprehensive merchandise and collateral design for Cairo most iconic cultural bookstore chain, Diwan. Designing bespoke typographic bookmarks, ceramic coasters, organic canvas tote bags, and reading accessories that celebrate the romance of literature.",
+                                             "ar":  "تصميم باقة منتجات ثقافية وتطبيقات هوية لسلسلة مكتبات ديوان الرائدة في القاهرة. شمل العمل تصميم فواصل كتب فنية، وقواعد أكواب خزفية، وحقائب قماشية، وأغلفة هدايا تكرس متعة القراءة وتعمق ارتباط القارئ بالعلامة."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Crafting retail products that book lovers genuinely want to keep, collect, and use every day.",
+                                                            "ar":  "ابتكار منتجات تذكارية ترتبط بالقراءة اليومية وتتحول إلى قطع يقتنيها عشاق الكتب."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Pairing tactile textured cardstock and natural fabrics with minimalist literary quotes and elegant geometry.",
+                                                            "ar":  "اختيار خامات ورق وقماش طبيعية وملموسة وتطعيمها باقتباسات أدبية مصاغة بتايبوجرافي ناعم."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "Best-selling product lines distributed across all Diwan branches throughout Egypt.",
+                                                          "ar":  "منتجات حققت مبيعات واسعة في جميع فروع مكتبات ديوان في مصر."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/design/Diwan book store/11.png",
+                                            "thumb":  "upload/design/Diwan book store/11.png",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 01",
+                                                        "ar":  "Diwan Bookstores — كادر 01"
+                                                    },
+                                            "width":  3500,
+                                            "height":  2524
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/12.jpg",
+                                            "thumb":  "upload/design/Diwan book store/12.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 02",
+                                                        "ar":  "Diwan Bookstores — كادر 02"
+                                                    },
+                                            "width":  1280,
+                                            "height":  901
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/14.jpg",
+                                            "thumb":  "upload/design/Diwan book store/14.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 03",
+                                                        "ar":  "Diwan Bookstores — كادر 03"
+                                                    },
+                                            "width":  1280,
+                                            "height":  901
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/15.jpg",
+                                            "thumb":  "upload/design/Diwan book store/15.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 04",
+                                                        "ar":  "Diwan Bookstores — كادر 04"
+                                                    },
+                                            "width":  1280,
+                                            "height":  901
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/269867693_1323091121437922_7677609926589591270_n.jpg",
+                                            "thumb":  "upload/design/Diwan book store/269867693_1323091121437922_7677609926589591270_n.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 05",
+                                                        "ar":  "Diwan Bookstores — كادر 05"
+                                                    },
+                                            "width":  4000,
+                                            "height":  3000
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/269944480_440182884495318_7379519869585507748_n.png",
+                                            "thumb":  "upload/design/Diwan book store/269944480_440182884495318_7379519869585507748_n.png",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 06",
+                                                        "ar":  "Diwan Bookstores — كادر 06"
+                                                    },
+                                            "width":  3500,
+                                            "height":  2524
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/33.jpg",
+                                            "thumb":  "upload/design/Diwan book store/33.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 07",
+                                                        "ar":  "Diwan Bookstores — كادر 07"
+                                                    },
+                                            "width":  1092,
+                                            "height":  1280
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/book 1.jpg",
+                                            "thumb":  "upload/design/Diwan book store/book 1.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 08",
+                                                        "ar":  "Diwan Bookstores — كادر 08"
+                                                    },
+                                            "width":  4000,
+                                            "height":  3000
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/BOOK 12.jpg",
+                                            "thumb":  "upload/design/Diwan book store/BOOK 12.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 09",
+                                                        "ar":  "Diwan Bookstores — كادر 09"
+                                                    },
+                                            "width":  4000,
+                                            "height":  3000
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/BOOK 13.jpg",
+                                            "thumb":  "upload/design/Diwan book store/BOOK 13.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 10",
+                                                        "ar":  "Diwan Bookstores — كادر 10"
+                                                    },
+                                            "width":  4000,
+                                            "height":  3000
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/cardboard-bookmark-mockup.jpg",
+                                            "thumb":  "upload/design/Diwan book store/cardboard-bookmark-mockup.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 11",
+                                                        "ar":  "Diwan Bookstores — كادر 11"
+                                                    },
+                                            "width":  5000,
+                                            "height":  3333
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/COSTER.jpg",
+                                            "thumb":  "upload/design/Diwan book store/COSTER.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 12",
+                                                        "ar":  "Diwan Bookstores — كادر 12"
+                                                    },
+                                            "width":  3000,
+                                            "height":  2100
+                                        },
+                                        {
+                                            "src":  "upload/design/Diwan book store/dd-01.jpg",
+                                            "thumb":  "upload/design/Diwan book store/dd-01.jpg",
+                                            "alt":  {
+                                                        "en":  "Diwan Bookstores — Frame 13",
+                                                        "ar":  "Diwan Bookstores — كادر 13"
+                                                    },
+                                            "width":  3509,
+                                            "height":  4962
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "book-covers",
+                         "discipline":  "design",
+                         "subdiscipline":  "editorial-design",
+                         "subdisciplineName":  {
+                                                   "en":  "Book Covers",
+                                                   "ar":  "أغلفة كتب"
+                                               },
+                         "featured":  false,
+                         "name":  {
+                                      "en":  "Book Covers & Literary Jacket Architecture",
+                                      "ar":  "أغلفة الكتب — هندسة الغلاف والتصميم التحريري"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Novel Cover Architecture · Narrative Symbolism · Shelf Impact",
+                                          "ar":  "تصميم أغلفة الروايات · رمزية سردية · حضور بارز على الرفوف"
+                                      },
+                         "year":  "2021",
+                         "role":  {
+                                      "en":  "Editorial & Book Cover Designer",
+                                      "ar":  "مصمم أغلفة كتب وتصميم تحريري"
+                                  },
+                         "client":  "Literary Publishers · Novel Releases (e.g. Hona Al Qahira)",
+                         "agency":  "Independent Literary Presses",
+                         "deliverables":  [
+                                              "Full Jacket Layout (Front, Spine, Back)",
+                                              "Title Lettering",
+                                              "Print Production Specs"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Architectural book cover design and typography for literary publications and novels, including Hona Al Qahira. Balancing narrative symbolism, expressive illustration, and shelf visibility to create covers that honor the author manuscript.",
+                                             "ar":  "تصميم أغلفة كتب وروايات أدبية معاصرة تشمل رواية هنا القاهرة. تحقيق التوازن المثالي بين رمزية السرد الروائي، والخط العربي التعبيري، وقوة الجذب البصري للغلاف على رفوف المكتبات."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Condensing an entire novel narrative and historical atmosphere into a single compelling frontal plane.",
+                                                            "ar":  "تكثيف روح الرواية وأجوائها التاريخية والدرامية في مساحة غلاف واحدة تخاطب وجدان القارئ."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Symbolic architectural motifs, carefully tuned color palette, and bespoke title typography that sets the mood.",
+                                                            "ar":  "توظيف عناصر معمارية رمزية مع باليت ألوان دافئة وخط مخصص لعنوان العمل يعكس روحه."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "Distinctive book presentations that received praise from authors, publishers, and readers alike.",
+                                                          "ar":  "أغلفة متميزة لاقت ترحيباً واسعاً من الكُتّاب والناشرين وحققت صدى طيباً لدى القراء."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/design/book cover/cairo.jpg",
+                                            "thumb":  "upload/design/book cover/cairo.jpg",
+                                            "alt":  {
+                                                        "en":  "Book Cover Design — Frame 01",
+                                                        "ar":  "Book Cover Design — كادر 01"
+                                                    },
+                                            "width":  3543,
+                                            "height":  2480
+                                        },
+                                        {
+                                            "src":  "upload/design/book cover/Untitled-3-Recovered.jpg",
+                                            "thumb":  "upload/design/book cover/Untitled-3-Recovered.jpg",
+                                            "alt":  {
+                                                        "en":  "Book Cover Design — Frame 02",
+                                                        "ar":  "Book Cover Design — كادر 02"
+                                                    },
+                                            "width":  2480,
+                                            "height":  3508
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "typography-studies",
+                         "discipline":  "design",
+                         "subdiscipline":  "typography",
+                         "subdisciplineName":  {
+                                                   "en":  "Typography",
+                                                   "ar":  "تايبوجرافي"
+                                               },
+                         "featured":  false,
+                         "name":  {
+                                      "en":  "Typography Studies & Arabic Lettering Systems",
+                                      "ar":  "دراسات الخط والتايبوجرافي — استكشاف الحرف العربي واللاتيني"
+                                  },
+                         "subtitle":  {
+                                          "en":  "Experimental Arabic Letterforms · Geometric Balance · Kinetic Display",
+                                          "ar":  "حروفيات عربية معاصرة · توازن هندسي · خطوط للعناوين السينمائية"
+                                      },
+                         "year":  "2022 - 2023",
+                         "role":  {
+                                      "en":  "Typographer & Lettering Artist",
+                                      "ar":  "مصمم تايبوجرافي وفنون الخط"
+                                  },
+                         "client":  "Visual Research & Brand Explorations",
+                         "agency":  "Design Studio Lab",
+                         "deliverables":  [
+                                              "Custom Letterform Sets",
+                                              "Kinetic Arabic Glyphs",
+                                              "Display Type Specimens"
+                                          ],
+                         "video":  null,
+                         "videoLabel":  null,
+                         "description":  {
+                                             "en":  "Experimental typography research and custom Arabic lettering explorations. Investigating modern geometric grid systems applied to classical Arabic letterforms, creating expressive headline typography suitable for film titles and modern brand systems.",
+                                             "ar":  "دراسات وأبحاث تجريبية في تصميم الخطوط وتطوير الحرف العربي المعاصر. استكشاف العلاقات الهندسية والنسب الفاضلة في تكوين الحروف، لإنتاج خطوط مميزة تصلح لعناوين الأفلام والهويات البصرية الحديثة."
+                                         },
+                         "thinking":  {
+                                          "challenge":  {
+                                                            "en":  "Innovating Arabic letterforms without breaking calligraphic legibility or cultural identity.",
+                                                            "ar":  "تطوير خطوط عربية حديثة غير تقليدية دون الإخلال بجماليات وقواعد القراءة التلقائية."
+                                                        },
+                                          "decisions":  {
+                                                            "en":  "Strict modular grid rules balanced with organic stroke termination and extreme contrast variations.",
+                                                            "ar":  "بناء شبكة هندسية دقيقة تحكم زوايا وسماكات الحروف مع نهايات حرة تمنح الخط طاقة حيوية."
+                                                        },
+                                          "outcome":  {
+                                                          "en":  "A versatile library of experimental lettering used across personal cinematic projects and commercial designs.",
+                                                          "ar":  "مكتبة خطوط وتكوينات حروفية مبتكرة تم توظيفها في عناوين الأفلام وأفيشات المعارض."
+                                                      }
+                                      },
+                         "images":  [
+                                        {
+                                            "src":  "upload/design/typography/cover.jpg",
+                                            "thumb":  "upload/design/typography/cover.jpg",
+                                            "alt":  {
+                                                        "en":  "Typography Studies — Frame 01",
+                                                        "ar":  "Typography Studies — كادر 01"
+                                                    },
+                                            "width":  1400,
+                                            "height":  1000
+                                        }
+                                    ]
+                     }
+                 ],
+    "reviews":  [
+                    {
+                        "quote":  {
+                                      "en":  "Youssef brings an architectural sense of light and space to every camera position. His visual discipline makes complex sets feel effortless and deeply cinematic.",
+                                      "ar":  "يضفي يوسف حسّاً معمارياً أصيلاً على توزيع الإضاءة وحركة الكاميرا في كل موقع تصوير. انضباطه البصري يجعل المشاهد المعقدة تبدو انسيابية وشديدة السينمائية."
+                                  },
+                        "author":  {
+                                       "en":  "Drama Production Director",
+                                       "ar":  "مخرج إنتاج درامي"
+                                   },
+                        "role":  {
+                                     "en":  "Senior Production Lead",
+                                     "ar":  "مدير قطاع الإنتاج"
+                                 }
+                    },
+                    {
+                        "quote":  {
+                                      "en":  "Rarely do you find an art director who transitions so seamlessly between high-end fashion still photography and large-scale film sets. A truly cohesive visual mind.",
+                                      "ar":  "نادراً ما تجد فناناً بصرياً يتنقل بهذه السلاسة الفائقة بين تصوير أزياء الاستوديو الراقية ومواقع تصوير السينما والدراما الكبرى. عقل بصري استثنائي ومتناغم."
+                                  },
+                        "author":  {
+                                       "en":  "Creative Agency Lead",
+                                       "ar":  "رئيس وكالة إبداعية"
+                                   },
+                        "role":  {
+                                     "en":  "Executive Creative Director",
+                                     "ar":  "المدير الإبداعي التنفيذي"
+                                 }
+                    }
+                ]
 };
