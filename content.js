@@ -37,6 +37,14 @@ window.CONTENT = {
   "mark": "assets/brand-mark.svg",
   "portrait": "upload/portrait.jpg",
   "cover": "upload/cover.jpg",
+  "heroFrames": [
+    "upload/7awdet/IMG_0652.JPG",
+    "upload/choice/_K4A6005.JPG",
+    "upload/Cairo kapul/DSC07201.JPG",
+    "upload/sahranen/_MG_3623.JPG",
+    "upload/kojak/IMG_7396.JPG",
+    "upload/food/2H4A2822.JPG"
+  ],
   "heroRole": {
     "en": "Multidisciplinary Designer & Art Director",
     "ar": "مصمم متعدد التخصصات ومخرج فني"
@@ -762,7 +770,7 @@ window.CONTENT = {
                                                                  "en":  "Period Drama",
                                                                  "ar":  "دراما تاريخية"
                                                              },
-                                       "featured":  false,
+                                       "featured":  true,
                                        "name":  {
                                                     "en":  "Hawadet El Champs-Elysées — Period Drama Lighting \u0026 Texture",
                                                     "ar":  "مسلسل حواديت الشانزليزيه — إضاءة الحقبة الذهبية وأجواء الخمسينات"
@@ -805,14 +813,14 @@ window.CONTENT = {
                                                     },
                                        "images":  [
                                                       {
-                                                          "src":  "upload/7awdet/IMG_0394.JPG",
-                                                          "thumb":  "upload/7awdet/IMG_0394.JPG",
+                                                          "src":  "upload/7awdet/IMG_0652.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0652.JPG",
                                                           "alt":  {
-                                                                      "en":  "Hawadet El Champs-Elysees - Frame 01",
-                                                                      "ar":  "Hawadet El Champs-Elysees - Frame 01"
+                                                                       "en":  "Hawadet El Champs-Elysees - Frame 01",
+                                                                       "ar":  "Hawadet El Champs-Elysees - Frame 01"
                                                                   },
-                                                          "width":  3157,
-                                                          "height":  4735
+                                                          "width":  4755,
+                                                          "height":  3456
                                                       },
                                                       {
                                                           "src":  "upload/7awdet/IMG_0396.JPG",
@@ -845,14 +853,14 @@ window.CONTENT = {
                                                           "height":  3456
                                                       },
                                                       {
-                                                          "src":  "upload/7awdet/IMG_0652.JPG",
-                                                          "thumb":  "upload/7awdet/IMG_0652.JPG",
+                                                          "src":  "upload/7awdet/IMG_0394.JPG",
+                                                          "thumb":  "upload/7awdet/IMG_0394.JPG",
                                                           "alt":  {
-                                                                      "en":  "Hawadet El Champs-Elysees - Frame 05",
-                                                                      "ar":  "Hawadet El Champs-Elysees - Frame 05"
+                                                                       "en":  "Hawadet El Champs-Elysees - Frame 05",
+                                                                       "ar":  "Hawadet El Champs-Elysees - Frame 05"
                                                                   },
-                                                          "width":  4755,
-                                                          "height":  3456
+                                                          "width":  3157,
+                                                          "height":  4735
                                                       },
                                                       {
                                                           "src":  "upload/7awdet/IMG_0655.JPG",

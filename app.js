@@ -14,10 +14,14 @@
   }
 
   /* ---------------- Config (Driven strictly by upload/ via content.js) ---------------- */
-  var HERO_FRAMES = C.projects
-    .filter(function (p) { return p.images && p.images.length > 0; })
-    .slice(0, 6)
-    .map(function (p) { return p.images[0].src; });
+  var HERO_FRAMES = (C.heroFrames && C.heroFrames.length) ? C.heroFrames : [
+    'upload/7awdet/IMG_0652.JPG',
+    'upload/choice/_K4A6005.JPG',
+    'upload/Cairo kapul/DSC07201.JPG',
+    'upload/sahranen/_MG_3623.JPG',
+    'upload/kojak/IMG_7396.JPG',
+    'upload/food/2H4A2822.JPG'
+  ];
 
   var firstFilmProj = C.projects.find(function (p) { return p.discipline === 'filmmaking' && p.images && p.images.length; }) || C.projects[0];
   var REEL_POSTER = (firstFilmProj && firstFilmProj.images[0]) ? firstFilmProj.images[0].src : 'upload/choice/5K4A5867.JPG';
