@@ -575,10 +575,6 @@
       '<div class="wrap">' +
         '<!-- Hero Section -->' +
         '<section class="hero" id="home">' +
-          '<div class="hero-status-bar">' +
-            '<span>' + esc(L(C.meta.concept)) + '</span>' +
-            '<span style="font-family:var(--f-mono)">CAIRO / EGYPT · 30.0444° N, 31.2357° E</span>' +
-          '</div>' +
           '<div class="hero-frame" id="hero-frame" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Featured frames">' +
             '<div class="hero-slider" id="hero-slider">' +
               HERO_FRAMES.map(function (src, i) {
