@@ -121,6 +121,54 @@ window.CONTENT = {
     "instagram":  "https://www.instagram.com/youssefward_/",
     "behance":  "https://www.behance.net/youssef_Ward",
     "vimeo":  "https://vimeo.com/1239369594?share=copy\u0026fl=sv\u0026fe=ci",
+    "filmmakingVideos": [
+        {
+            "id": "mawlawya-film",
+            "title": {
+                "en": "Mawlawya — Graduation Film & Visual Study",
+                "ar": "فيلم المولوية — مشروع التخرج والدراسة البصرية"
+            },
+            "badge": {
+                "en": "Short Film · Anamorphic 2.39:1",
+                "ar": "فيلم سينمائي · أنامورفيك 2.39:1"
+            },
+            "duration": "02:37",
+            "role": {
+                "en": "Cinematographer & Director of Photography",
+                "ar": "مدير التصوير وإخراج بصري"
+            },
+            "description": {
+                "en": "A spiritual cinematic study exploring the circular rhythm of Sufi whirling dervishes. Shot in anamorphic 2.39:1 with high-contrast mystical lighting.",
+                "ar": "دراسة سينمائية بصرية تستكشف حركة ودوران الدراويش الصوفية، مصورة بنسبة سينمائية 2.39:1 وإضاءة مسرحية درامية عالية التباين."
+            },
+            "video": "upload/filmmaking/Youssef_Ward_Mawlawya.mp4",
+            "poster": "upload/filmmaking/mawlawya_poster.jpg",
+            "projectId": "mawlawya-film"
+        },
+        {
+            "id": "clove-commercial",
+            "title": {
+                "en": "Clove Restaurant — Commercial Film & Atmosphere",
+                "ar": "كلوف ريستورانت — إعلان تجاري وأجواء الضيافة"
+            },
+            "badge": {
+                "en": "Commercial · 4K Macro Cinema",
+                "ar": "إعلان تجاري · تصوير ماكرو سينمائي"
+            },
+            "duration": "00:50",
+            "role": {
+                "en": "Cinematographer & Video Editor",
+                "ar": "مصور سينمائي ومونتير"
+            },
+            "description": {
+                "en": "Artisanal gastronomy and intimate lounge ambiance brought to life through macro cinematography, rhythmic speed ramping, and warm candlelight.",
+                "ar": "إعلان تجاري مبتكر يبرز دقة فنون الطهي والأجواء الدافئة من خلال تصوير ماكرو دقيق وحركة سينمائية إيقاعية وإضاءة شمعية جذابة."
+            },
+            "video": "upload/filmmaking/Clove_Restaurant.mp4",
+            "poster": "upload/filmmaking/clove_poster.jpg",
+            "projectId": "clove-commercial"
+        }
+    ],
     "bio":  {
                 "en":  "Youssef Ward is a multidisciplinary designer, photographer, and visual artist with a background in Applied Arts and a cinematic approach to visual storytelling. His creative practice moves between cinematography, photography, graphic design, and art direction, bringing different visual disciplines together through a unified perspective.",
                 "ar":  "يوسف ورد مصمم متعدد التخصصات، ومصور وفنان بصري، خريج كلية الفنون التطبيقية، يتبنى رؤية إبداعية تنطلق من السينما وتمتد إلى مختلف مجالات الصورة والتصميم. تتنوع ممارساته البصرية بين التصوير السينمائي، والتصوير الفوتوغرافي، والتصميم الجرافيكي، والتوجيه الفني (Art Direction)، حيث يجمع بين هذه التخصصات من خلال منظور بصري واحد."
@@ -1023,9 +1071,12 @@ window.CONTENT = {
                                                             "Lighting Design",
                                                             "Color Grading"
                                                         ],
-                                       "video":  "https://vimeo.com/1239369594?share=copy\u0026fl=sv\u0026fe=ci",
+                                       "video":  "upload/filmmaking/Youssef_Ward_Mawlawya.mp4",
+                                       "videoPoster":  "upload/filmmaking/mawlawya_poster.jpg",
+                                       "videoDuration":  "02:37",
+                                       "isVideo":  true,
                                        "videoLabel":  {
-                                                          "en":  "Watch Graduation Film (Vimeo)",
+                                                          "en":  "Watch Full Film (1080p)",
                                                           "ar":  "مشاهدة الفيلم كاملاً (فيميو)"
                                                       },
                                        "description":  {
@@ -1130,8 +1181,11 @@ window.CONTENT = {
                                                             "Social Cutdowns"
                                                         ],
                                        "video":  "upload/filmmaking/Clove_Restaurant.mp4",
+                                       "videoPoster":  "upload/filmmaking/clove_poster.jpg",
+                                       "videoDuration":  "00:50",
+                                       "isVideo":  true,
                                        "videoLabel":  {
-                                                          "en":  "Play Commercial Film (MP4)",
+                                                          "en":  "Play Commercial Film (1080p)",
                                                           "ar":  "تشغيل الإعلان التجاري (فيديو)"
                                                       },
                                        "description":  {

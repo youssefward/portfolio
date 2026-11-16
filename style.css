@@ -1098,24 +1098,216 @@ html[lang="ar"] .project-title { font-family: var(--f-display-ar); }
 html[lang="ar"] .pager strong { font-family: var(--f-display-ar); }
 .pager a:hover strong { color: var(--tungsten); }
 
-/* ---------- Showreel Section -------------------------------------------- */
+/* ---------- Filmmaking & Cinema Motion Section --------------------------- */
+.cinema-section,
 .reel-section {
   padding-block: clamp(48px, 8vw, 96px);
   border-top: 1px solid var(--line);
 }
-.section-hdr {
-  margin-bottom: 32px;
+.cinema-tagline {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--tungsten);
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
-.section-hdr h2 {
-  margin: 0 0 6px 0;
-  font-family: var(--f-display);
-  font-size: var(--t-2xl);
+.cinema-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+  gap: clamp(24px, 4vw, 36px);
+  align-items: stretch;
 }
-html[lang="ar"] .section-hdr h2 { font-family: var(--f-display-ar); }
-.section-hdr p {
+.cinema-card {
+  position: relative;
+  background: rgba(18, 18, 18, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.cinema-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+.cinema-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cinema-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.cinema-card:hover .cinema-frame img {
+  transform: scale(1.05);
+}
+.cinema-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.45) 0%, rgba(10, 10, 10, 0.1) 40%, rgba(10, 10, 10, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  transition: background 0.3s ease;
+}
+.cinema-card:hover .cinema-overlay {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.05) 40%, rgba(10, 10, 10, 0.92) 100%);
+}
+.cinema-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cinema-pill {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--paper);
+}
+.cinema-duration {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 999px;
+  color: var(--tungsten);
+}
+.cinema-play-btn {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s var(--ease), background 0.2s, box-shadow 0.2s;
+}
+.cinema-play-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+.cinema-frame:hover .cinema-play-btn {
+  transform: scale(1.08);
+  background: var(--tungsten);
+  color: #fff;
+  box-shadow: 0 14px 40px rgba(212, 180, 131, 0.35);
+}
+.cinema-bottom-tag {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--paper-2);
+  text-transform: uppercase;
+}
+.cinema-info {
+  padding: clamp(20px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+.cinema-meta-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cinema-title {
   margin: 0;
-  color: var(--mute);
+  font-family: var(--f-display);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.35;
+  color: var(--paper);
+}
+html[lang="ar"] .cinema-title {
+  font-family: var(--f-display-ar);
+}
+.cinema-role {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--tungsten);
+  letter-spacing: 0.04em;
+}
+.cinema-desc {
+  margin: 0;
+  color: var(--paper-2);
   font-size: var(--t-sm);
+  line-height: 1.65;
+  flex: 1;
+}
+.cinema-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.cinema-actions .btn {
+  font-size: 12px;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cinema-actions .btn svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+/* Card video badge in works grid */
+.card-video-badge {
+  position: absolute;
+  top: 12px;
+  inset-inline-start: 12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 180, 131, 0.4);
+  color: var(--tungsten);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  pointer-events: none;
+}
+.card-video-badge svg {
+  width: 10px;
+  height: 10px;
+  fill: currentColor;
 }
 
 .reel-card {

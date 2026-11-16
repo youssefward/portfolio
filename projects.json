@@ -745,9 +745,12 @@
                              "Lighting Design",
                              "Color Grading"
                          ],
-        "video":  "https://vimeo.com/1239369594?share=copy\u0026fl=sv\u0026fe=ci",
+        "video":  "upload/filmmaking/Youssef_Ward_Mawlawya.mp4",
+        "videoPoster":  "upload/filmmaking/mawlawya_poster.jpg",
+        "videoDuration":  "02:37",
+        "isVideo":  true,
         "videoLabel":  {
-                           "en":  "Watch Graduation Film (Vimeo)",
+                           "en":  "Watch Full Film (1080p)",
                            "ar":  "مشاهدة الفيلم كاملاً (فيميو)"
                        },
         "description":  {
@@ -852,8 +855,11 @@
                              "Social Cutdowns"
                          ],
         "video":  "upload/filmmaking/Clove_Restaurant.mp4",
+        "videoPoster":  "upload/filmmaking/clove_poster.jpg",
+        "videoDuration":  "00:50",
+        "isVideo":  true,
         "videoLabel":  {
-                           "en":  "Play Commercial Film (MP4)",
+                           "en":  "Play Commercial Film (1080p)",
                            "ar":  "تشغيل الإعلان التجاري (فيديو)"
                        },
         "description":  {

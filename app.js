@@ -75,7 +75,7 @@
   var T = {
     en: {
       skip: 'Skip to content', menu: 'Menu',
-      nav: { work: 'Work', reel: 'Showreel', about: 'About', contact: 'Contact' },
+      nav: { work: 'Work', films: 'Films & Motion', about: 'About', contact: 'Contact' },
       langBtn: 'عربي', langLabel: 'اقرأ الموقع بالعربية',
       viewWork: 'View work', watchReel: 'Watch showreel',
       nowShowing: 'Now showing', frame: 'Frame', openProject: 'Open project',
@@ -86,6 +86,11 @@
       projects: function (n) { return n === 1 ? '1 project' : n + ' projects'; },
       frames: function (n) { return n + ' frames'; },
       explore: 'Explore',
+      filmsTitle: 'Films & Cinema Motion',
+      filmsSub: 'Directed, shot, and crafted for the screen — original film studies and high-end commercials.',
+      filmsBadge: 'CINEMA & MOTION SHOWCASE // DIRECTED & SHOT',
+      playFilm: 'Play Video',
+      watchProject: 'Project Stills & Details',
       reelTitle: 'Showreel & Visual Motion', reelSub: 'Camera movement, dynamic lighting and rhythmic editing',
       play: 'Play showreel',
       aboutTitle: 'About Youssef Ward',
@@ -109,7 +114,7 @@
     },
     ar: {
       skip: 'انتقل إلى المحتوى', menu: 'القائمة',
-      nav: { work: 'الأعمال', reel: 'الشوريل', about: 'نبذة', contact: 'تواصل' },
+      nav: { work: 'الأعمال', films: 'السينما والفيديو', about: 'نبذة', contact: 'تواصل' },
       langBtn: 'English', langLabel: 'Read the site in English',
       viewWork: 'شاهد الأعمال', watchReel: 'شاهد الشوريل',
       nowShowing: 'على الشاشة', frame: 'كادر', openProject: 'افتح المشروع',
@@ -120,6 +125,11 @@
       projects: function (n) { return n === 1 ? 'مشروع واحد' : (n === 2 ? 'مشروعان' : n + ' مشاريع'); },
       frames: function (n) { return n + ' كادر'; },
       explore: 'استكشف',
+      filmsTitle: 'الأفلام والأعمال السينمائية',
+      filmsSub: 'أعمال سينمائية وإعلانية أصلية — من حركة الكاميرا وإدارة الإضاءة إلى الإيقاع البصري.',
+      filmsBadge: 'أفلام وسرد سينمائي // إخراج وتصوير بصري',
+      playFilm: 'تشغيل الفيديو',
+      watchProject: 'لقطات وتفاصيل العمل',
       reelTitle: 'استعراض الحركة والسينما (Showreel)', reelSub: 'حركة الكاميرا وتوزيع الإضاءة والمونتاج الإيقاعي',
       play: 'تشغيل الشوريل',
       aboutTitle: 'عن يوسف ورد',
@@ -245,11 +255,11 @@
     });
 
     document.addEventListener('mouseover', function (e) {
-      var card = e.target.closest('.card, .gallery figure, .hero-frame, .reel-card');
+      var card = e.target.closest('.card, .gallery figure, .hero-frame, .reel-card, .cinema-card, .cinema-frame');
       if (card) {
         cursor.classList.add('is-active');
         if (label) {
-          if (card.matches('.reel-card')) label.textContent = 'PLAY';
+          if (card.matches('.reel-card, .cinema-card, .cinema-frame')) label.textContent = 'PLAY';
           else if (card.matches('.hero-frame')) label.textContent = 'EXPLORE';
           else label.textContent = 'VIEW';
         }
@@ -330,7 +340,7 @@
           '</span>' +
         '</a>' +
         '<nav class="nav" id="nav" aria-label="Main">' +
-          ['work', 'reel', 'about', 'contact'].map(function (k) {
+          ['work', 'films', 'about', 'contact'].map(function (k) {
             return '<a href="#' + k + '" data-nav="' + k + '">' + tx.nav[k] + '</a>';
           }).join('') +
         '</nav>' +
@@ -566,6 +576,45 @@
     startHero();
   }
 
+  /* ---------------- Cinema & Video Showcase ---------------- */
+  function renderCinemaCards() {
+    var vids = C.filmmakingVideos || [];
+    var tx = t();
+    return vids.map(function (v) {
+      return '<article class="cinema-card">' +
+        '<div class="cinema-frame" role="button" tabindex="0" data-play-vid="' + esc(v.video) + '" data-vid-title="' + esc(L(v.title)) + '" data-vid-poster="' + esc(v.poster) + '" aria-label="' + esc(tx.playFilm) + ' — ' + esc(L(v.title)) + '">' +
+          '<img src="' + esc(v.poster) + '" alt="' + esc(L(v.title)) + '" loading="lazy">' +
+          '<div class="cinema-overlay">' +
+            '<div class="cinema-badge-row">' +
+              '<span class="cinema-pill">' + esc(L(v.badge)) + '</span>' +
+              '<span class="cinema-duration">⏱ ' + esc(v.duration) + '</span>' +
+            '</div>' +
+            '<button class="cinema-play-btn" type="button" aria-label="' + esc(tx.playFilm) + '">' +
+              ICON.play +
+              '<span>' + esc(tx.playFilm) + '</span>' +
+            '</button>' +
+            '<div class="cinema-bottom-tag">1080p HD · CINEMA SOUND</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="cinema-info">' +
+          '<div class="cinema-meta-head">' +
+            '<h3 class="cinema-title">' + esc(L(v.title)) + '</h3>' +
+            '<span class="cinema-role">' + esc(L(v.role)) + '</span>' +
+          '</div>' +
+          '<p class="cinema-desc">' + esc(L(v.description)) + '</p>' +
+          '<div class="cinema-actions">' +
+            '<button class="btn btn-solid cinema-action-play" type="button" data-play-vid="' + esc(v.video) + '" data-vid-title="' + esc(L(v.title)) + '" data-vid-poster="' + esc(v.poster) + '">' +
+              ICON.play + ' ' + esc(tx.playFilm) +
+            '</button>' +
+            '<a class="btn btn-outline cinema-action-view" href="#p-' + esc(v.projectId) + '">' +
+              esc(tx.watchProject) + (lang === 'ar' ? ' ←' : ' →') +
+            '</a>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+  }
+
   /* ---------------- Render Home ---------------- */
   function renderHome() {
     var tx = t();
@@ -648,15 +697,15 @@
           '<div class="grid" id="grid"></div>' +
         '</section>' +
 
-        '<!-- Showreel Section -->' +
-        '<section class="reel-section" id="reel">' +
+        '<!-- Filmmaking & Cinema Motion Section -->' +
+        '<section class="cinema-section" id="films">' +
           '<div class="section-hdr">' +
-            '<h2>' + esc(tx.reelTitle) + '</h2>' +
-            '<p>' + esc(tx.reelSub) + '</p>' +
+            '<div class="cinema-tagline">' + esc(tx.filmsBadge) + '</div>' +
+            '<h2>' + esc(tx.filmsTitle) + '</h2>' +
+            '<p>' + esc(tx.filmsSub) + '</p>' +
           '</div>' +
-          '<div class="reel-card">' +
-            '<img src="' + esc(REEL_POSTER) + '" alt="' + esc(tx.reelTitle) + '" loading="lazy">' +
-            '<button class="reel-play-btn" type="button" id="reel-play" aria-label="' + esc(tx.play) + '">' + ICON.play + '</button>' +
+          '<div class="cinema-grid">' +
+            renderCinemaCards() +
           '</div>' +
         '</section>' +
 
@@ -761,12 +810,27 @@
       };
     });
 
+    // Cinema video play triggers
+    document.querySelectorAll('[data-play-vid]').forEach(function (btn) {
+      btn.onclick = function (e) {
+        e.stopPropagation();
+        playTick('shutter');
+        openVideo(btn.dataset.playVid, btn.dataset.vidTitle, btn.dataset.vidPoster);
+      };
+      btn.onkeydown = function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      };
+    });
+
     // Reel play
     var reelBtn = document.getElementById('reel-play');
     if (reelBtn) {
       reelBtn.onclick = function () {
         playTick('shutter');
-        openVideo(C.vimeo);
+        openVideo(C.vimeo, tx.reelTitle);
       };
     }
 
@@ -928,11 +992,13 @@
       var img = cover(p);
       var spanStyle = (viewMode === 'masonry' && spans[i]) ? 'grid-column: span ' + spans[i] + ';' : '';
       var d = discipline(p.discipline);
+      var hasVid = !!p.video;
 
       return '<article class="card" style="' + spanStyle + '">' +
         '<a href="#p-' + esc(p.id) + '" aria-label="' + esc(n.title) + '" data-proj="' + esc(p.id) + '">' +
           '<div class="card-media">' +
             imgTag(img, { sizes: '(max-width: 820px) 100vw, 50vw' }) +
+            (hasVid ? '<span class="card-video-badge">' + ICON.play + ' ' + (lang === 'ar' ? 'فيديو' : 'VIDEO') + '</span>' : '') +
             corners +
           '</div>' +
           '<div class="card-meta">' +
@@ -1057,7 +1123,7 @@
     if (playBtn && vid) {
       playBtn.onclick = function () {
         playTick('shutter');
-        openVideo(vid);
+        openVideo(vid, splitName(p).title, p.videoPoster);
       };
     }
 
@@ -1134,18 +1200,18 @@
   }
 
   /* ---------------- Video Modal ---------------- */
-  function openVideo(url) {
+  function openVideo(url, title, poster) {
     if (!url) return;
     var dlg = document.getElementById('video-modal'), tx = t(), id = vimeoId(url);
     lastFocus = document.activeElement;
 
     var player = id
       ? '<iframe src="https://player.vimeo.com/video/' + id + '?autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vimeo"></iframe>'
-      : '<video src="' + esc(url) + '" controls autoplay playsinline></video>';
+      : '<video src="' + esc(url) + '" ' + (poster ? 'poster="' + esc(poster) + '" ' : '') + 'controls autoplay playsinline preload="auto"></video>';
 
     dlg.innerHTML =
       '<div class="lb-bar">' +
-        '<span></span>' +
+        '<span style="font-family:var(--f-mono);font-size:12px;letter-spacing:0.04em;color:var(--paper)">' + esc(title || tx.watch) + '</span>' +
         '<button class="icon-btn" type="button" id="vm-close" aria-label="' + esc(tx.close) + '">' + ICON.close + '</button>' +
       '</div>' +
       '<div class="vm-stage">' +
@@ -1153,10 +1219,16 @@
       '</div>' +
       (id ? '<p class="vm-foot">' + tx.vimeoHint + ' <a href="' + esc(url) + '" target="_blank" rel="noopener">' + tx.openVimeo + '</a></p>' : '<p class="vm-foot"></p>');
 
-    dlg.querySelector('#vm-close').onclick = function () { dlg.close(); };
+    dlg.querySelector('#vm-close').onclick = function () {
+      var v = dlg.querySelector('video');
+      if (v) v.pause();
+      dlg.close();
+    };
     dlg.showModal();
 
     dlg.onclose = function () {
+      var v = dlg.querySelector('video');
+      if (v) v.pause();
       dlg.innerHTML = '';
       if (lastFocus) lastFocus.focus();
     };
@@ -1186,6 +1258,8 @@
       }
     }
 
+    if (hash === 'reel') hash = 'films';
+
     currentRoute = { type: 'home', id: hash };
     if (!document.getElementById('home')) {
       renderHome();
@@ -1199,6 +1273,7 @@
   }
 
   function updateNavState(activeId) {
+    if (activeId === 'reel') activeId = 'films';
     document.querySelectorAll('#nav a').forEach(function (a) {
       var k = a.dataset.nav;
       a.classList.toggle('is-active', k === activeId);
