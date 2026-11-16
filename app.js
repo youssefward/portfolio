@@ -741,7 +741,6 @@
               '<div class="about-links">' +
                 (C.whatsapp ? '<a class="about-link" href="' + esc(C.whatsappUrl || ('https://wa.me/' + C.whatsapp.replace(/[^0-9]/g, ''))) + '" target="_blank" rel="noopener">💬 WhatsApp</a>' : '') +
                 (C.cv ? '<a class="about-link" href="' + esc(C.cv) + '" target="_blank" rel="noopener">📄 ' + tx.cv + '</a>' : '') +
-                (C.portfolio ? '<a class="about-link" href="' + esc(C.portfolio) + '" target="_blank" rel="noopener">📁 ' + tx.pdf + '</a>' : '') +
                 (C.vimeo ? '<a class="about-link" href="' + esc(C.vimeo) + '" target="_blank" rel="noopener">🎬 Vimeo</a>' : '') +
                 (C.instagram ? '<a class="about-link" href="' + esc(C.instagram) + '" target="_blank" rel="noopener">📷 Instagram</a>' : '') +
                 (C.linkedin ? '<a class="about-link" href="' + esc(C.linkedin) + '" target="_blank" rel="noopener">💼 LinkedIn</a>' : '') +

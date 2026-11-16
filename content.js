@@ -119,7 +119,6 @@ window.CONTENT = {
     "whatsapp":  "+20 115 572 9978",
     "whatsappUrl":  "https://wa.me/201155729978",
     "cv":  "assets/youssef-ward-cv.pdf",
-    "portfolio":  "assets/youssef-ward-portfolio.pdf",
     "linkedin":  "https://www.linkedin.com/in/yousef-ward-/",
     "instagram":  "https://www.instagram.com/youssefward_/",
     "behance":  "https://www.behance.net/youssef_Ward",
