@@ -114,7 +114,10 @@ window.CONTENT = {
                      "ar":  "يوسف ورد مصمم متعدد التخصصات ومصور وفنان بصري، يقيم في القاهرة، مصر. بخلفية أكاديمية في الفنون التطبيقية، وست سنوات من الخبرة في الإنتاجات السينمائية والتليفزيونية، يجمع في أعماله بين الرؤية السينمائية والتصميم وصناعة الصورة والتوجيه الفني."
                  },
     "email":  "youssef.ward88@gmail.com",
-    "phone":  "+20 1155729978",
+    "phone":  "+20 109 125 9197",
+    "phoneRaw":  "+201091259197",
+    "whatsapp":  "+20 115 572 9978",
+    "whatsappUrl":  "https://wa.me/201155729978",
     "cv":  "assets/youssef-ward-cv.pdf",
     "portfolio":  "assets/youssef-ward-portfolio.pdf",
     "linkedin":  "https://www.linkedin.com/in/yousef-ward-/",

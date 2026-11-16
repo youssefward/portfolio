@@ -1445,6 +1445,93 @@ html[lang="ar"] .about-closing-statement {
 @media (max-width: 840px) {
   .contact-grid { grid-template-columns: 1fr; }
 }
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+.contact-channel-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--night);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.contact-channel-card:hover {
+  border-color: var(--line-strong);
+  background: rgba(244, 241, 234, 0.03);
+}
+.contact-channel-card.is-whatsapp {
+  border-color: rgba(37, 211, 102, 0.3);
+}
+.contact-channel-card.is-whatsapp:hover {
+  border-color: rgba(37, 211, 102, 0.6);
+  background: rgba(37, 211, 102, 0.05);
+}
+.contact-channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(244, 241, 234, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--paper);
+  flex-shrink: 0;
+}
+.contact-channel-card.is-whatsapp .contact-channel-icon {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25D366;
+}
+.contact-channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+.contact-channel-label {
+  font-size: 11px;
+  font-family: var(--f-mono);
+  color: var(--mute);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.contact-channel-val {
+  color: var(--paper);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contact-channel-val.num {
+  font-family: var(--f-mono);
+  letter-spacing: 0.03em;
+}
+.contact-channel-val:hover {
+  color: var(--tungsten);
+}
+.contact-channel-btn {
+  font-size: 11px;
+  padding: 8px 14px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.contact-channel-card.is-whatsapp .btn-solid {
+  background: #25D366;
+  color: #0A0A0A;
+  font-weight: 600;
+}
+.contact-channel-card.is-whatsapp .btn-solid:hover {
+  background: #20BA5A;
+}
 .brief-card {
   background: var(--night);
   border: 1px solid var(--line);
