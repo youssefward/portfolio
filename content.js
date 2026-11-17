@@ -118,7 +118,7 @@ window.CONTENT = {
     "phoneRaw":  "+201091259197",
     "whatsapp":  "+20 115 572 9978",
     "whatsappUrl":  "https://wa.me/201155729978",
-    "cv":  "assets/youssef-ward-cv.pdf",
+    "cv":  "assets/youssef-ward-cv.pdf?v=20261117",
     "linkedin":  "https://www.linkedin.com/in/yousef-ward-/",
     "instagram":  "https://www.instagram.com/youssefward_/",
     "behance":  "https://www.behance.net/youssef_Ward",
